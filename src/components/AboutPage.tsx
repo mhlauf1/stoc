@@ -273,7 +273,8 @@ const AboutPage = () => {
                   </h3>
                   <p className="text-sm text-gray-600">
                     Apply a 360-degree approach to diligence, ensuring alignment
-                    with clients' core purpose, values, and strategic vision.
+                    with clients&#39; core purpose, values, and strategic
+                    vision.
                   </p>
                 </div>
               </div>
