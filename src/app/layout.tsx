@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 import localFont from "next/font/local";
 import Footer from "@/components2/Footer";
 
-export const inter = Inter_Tight({
+const inter = Inter_Tight({
   subsets: ["latin"],
   display: "swap",
 });
