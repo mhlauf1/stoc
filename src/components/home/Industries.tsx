@@ -81,7 +81,7 @@ const Industries = () => {
 
       {/* Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 md:border border-neutral-300 rounded-lg overflow-hidden">
-        {industriesData.map((industry, index) => {
+        {industriesData.map((industry) => {
           const IconComponent = industry.icon;
           return (
             <div

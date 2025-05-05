@@ -27,7 +27,7 @@ const AboutUs = () => {
             business.
           </p>
           <button className="mt-16 flex flex-row gap-4 items-center font-medium bg-[#07171E] text-white px-8 py-4 rounded-full text-lg hover:bg-neutral-200 cursor-pointer transition">
-            Explore Services
+            Meet the Team
             <ArrowUpRight size={28} strokeWidth={"2"} />
           </button>
         </div>

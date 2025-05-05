@@ -1,4 +1,5 @@
 import React from "react";
+import type { LucideIcon } from "lucide-react";
 import {
   Briefcase,
   BriefcaseMedical,
@@ -12,7 +13,7 @@ import {
 type Industry = {
   id: number;
   title: string;
-  Icon: any;
+  Icon: LucideIcon;
 };
 
 const industries: Industry[] = [

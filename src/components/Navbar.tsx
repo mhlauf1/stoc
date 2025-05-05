@@ -24,7 +24,6 @@ const menuVariants = {
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const pathname = usePathname();
 
   // on scroll, flip scrolled flag
   useEffect(() => {
