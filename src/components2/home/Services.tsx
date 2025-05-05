@@ -1,4 +1,5 @@
 import React from "react";
+import type { LucideIcon } from "lucide-react";
 import {
   TrendingUp,
   Handshake,
@@ -10,7 +11,7 @@ import {
 type Service = {
   id: number;
   title: string;
-  Icon: any;
+  Icon: LucideIcon;
   description: string;
 };
 
