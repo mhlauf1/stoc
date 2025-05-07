@@ -11,14 +11,16 @@ const ServiceList: React.FC<ServiceListProps> = ({ cardRefs }) => {
   return (
     <>
       {servicesData.map((svc, i) => (
-        <Service
-          key={svc.id}
-          ref={cardRefs[i]}
-          id={svc.id}
-          title={svc.title}
-          description={svc.description}
-          Icon={svc.Icon}
-        />
+        <div key={svc.id}>
+          <Service
+            key={svc.id}
+            ref={cardRefs[i]}
+            id={svc.id}
+            title={svc.title}
+            description={svc.description}
+            Icon={svc.Icon}
+          />
+        </div>
       ))}
     </>
   );

@@ -79,12 +79,14 @@ const Mission: React.FC = () => (
           </p>
           <div className="flex flex-col gap-6">
             {values.map((v) => (
-              <ValuePillar
-                key={v.id}
-                title={v.title}
-                text={v.text}
-                Icon={v.Icon}
-              />
+              <div key={v.id}>
+                <ValuePillar
+                  key={v.id}
+                  title={v.title}
+                  text={v.text}
+                  Icon={v.Icon}
+                />
+              </div>
             ))}
           </div>
         </div>

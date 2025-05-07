@@ -15,7 +15,9 @@ const Industry = ({ id, title, tags, badge, desc1, desc2 }: IndustryProps) => {
         </div>
         <div className="flex mt-4 flex-row gap-4 items-center">
           {tags.map((tag) => (
-            <p className="text-sm text-neutral-500">{tag}</p>
+            <p key={tag} className="text-sm text-neutral-500">
+              {tag}
+            </p>
           ))}
         </div>
       </div>
