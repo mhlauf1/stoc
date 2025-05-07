@@ -1,6 +1,4 @@
-// app/components/IntroServices.jsx
 "use client";
-
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import { ArrowUpRight } from "lucide-react";
@@ -21,7 +19,7 @@ export default function IntroServices() {
   const driftFactor = 0.02;
 
   return (
-    <section className="relative py-48 bg-white overflow-hidden">
+    <section className="relative py-24 md:py-36 bg-white overflow-hidden">
       <div className="flex items-center justify-center relative">
         {/* Left Image */}
         <div

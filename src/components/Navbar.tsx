@@ -38,7 +38,7 @@ export default function Navbar() {
   return (
     <nav
       className={`
-        fixed top-0 w-full z-50 py-4 transition-all duration-300
+        fixed top-0 w-full z-50 py-2 transition-all duration-300
         ${isDarkBg ? "bg-white border-b border-neutral-200" : "bg-transparent"}
       `}
     >

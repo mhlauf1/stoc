@@ -17,8 +17,9 @@ const ServiceList: React.FC<ServiceListProps> = ({ cardRefs }) => {
             ref={cardRefs[i]}
             id={svc.id}
             title={svc.title}
-            description={svc.description}
+            description={svc.longDesc}
             Icon={svc.Icon}
+            image={svc.image}
           />
         </div>
       ))}

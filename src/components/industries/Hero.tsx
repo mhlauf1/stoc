@@ -1,8 +1,19 @@
+import { ArrowUpRight } from "lucide-react";
+import Link from "next/link";
+
 export default function Hero() {
   return (
     <section className="relative h-[95vh] bg-white flex">
       <div className="px-6 justify-between flex flex-col items-center w-full md:px-12 pb-24 pt-24 md:pt-64 lg:px-32">
         <div className="flex items-center flex-col">
+          <Link className="z-10" href="/about">
+            <button className="bg-neutral-900 tracking-wide cursor-pointer gap-2 flex text-sm border mb-6 border-white/20 hover:border-white/60 duration-200 hover:text-white hover:shadow-xs text-neutral-200 px-4 py-1.5 rounded-full">
+              Sign up for the stoc newsletter.{" "}
+              <span className="text-white font-semibold flex flex-row gap-1 items-center">
+                Sign up now <ArrowUpRight size={16} strokeWidth={"2"} />
+              </span>
+            </button>
+          </Link>
           <h1 className="text-5xl text-center tracking-tighter max-w-[20ch] md:text-6xl font-gambetta lg:text-7xl leading-tight ">
             Industry expertise that <br />{" "}
             <span className="font-gambetta italic">
