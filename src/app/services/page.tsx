@@ -1,9 +1,13 @@
-import ServicesPage from "@/components/services/ServicesPage";
+import Hero from "@/components/services/Hero";
+import ServicesSection from "@/components/services/ServicesSection";
+import CTA from "@/components/CTA";
 
 export default function Home() {
   return (
     <main>
-      <ServicesPage />
+      <Hero />
+      <ServicesSection />
+      <CTA />
     </main>
   );
 }

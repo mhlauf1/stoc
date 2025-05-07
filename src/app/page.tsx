@@ -1,10 +1,10 @@
-import Hero from "@/components2/home/Hero";
+import Hero from "@/components/home/Hero";
 import IntroServices from "@/components/home/IntroServices";
-import Services from "@/components2/home/Services";
-import Industries from "@/components2/home/Industries";
-import Trust from "@/components2/home/Trust";
-import AboutUs from "@/components2/home/AboutUs";
-import CTA from "@/components2/CTA";
+import Services from "@/components/home/Services";
+import Industries from "@/components/home/Industries";
+import Trust from "@/components/home/Trust";
+import AboutUs from "@/components/home/AboutUs";
+import CTA from "@/components/CTA";
 
 export default function Home() {
   return (

@@ -1,87 +1,71 @@
-"use client";
-import React, { useState } from "react";
-import TransactionAdvisoryPanel from "./TransactionAdvisoryPanel";
+import React from "react";
+import { ArrowUpRight } from "lucide-react";
 
-const servicesData = [
-  {
-    id: 0,
-    title: "Transaction Advisory Services",
-    image: "tas.png",
-    description:
-      "From Quality of Earnings (QoE) to working capital analysis, we uncover insights that drive informed decisions and mitigate risk across transactions.",
-  },
-  {
-    id: 1,
-    title: "Corporate Development Services",
-    image: "cds.png",
-    description:
-      "From Quality of Earnings (QoE) to working capital analysis, we uncover insights that drive informed decisions and mitigate risk across transactions.",
-  },
-  {
-    id: 2,
-    title: "Growth Enablement Services",
-    image: "ges.png",
-    description:
-      "From Quality of Earnings (QoE) to working capital analysis, we uncover insights that drive informed decisions and mitigate risk across transactions.",
-  },
-  {
-    id: 3,
-    title: "CFO Advisory",
-    image: "cfoa.png",
-    description:
-      "From Quality of Earnings (QoE) to working capital analysis, we uncover insights that drive informed decisions and mitigate risk across transactions.",
-  },
-  {
-    id: 4,
-    title: "Restructuring & Turnaround",
-    image: "rt.png",
-    description:
-      "From Quality of Earnings (QoE) to working capital analysis, we uncover insights that drive informed decisions and mitigate risk across transactions.",
-  },
-];
+import { ServiceProps } from "@/utils/types";
+import { servicesData } from "@/utils/data";
 
-const panelComponents = [
-  TransactionAdvisoryPanel,
-  /* CorporateDevelopmentPanel, GrowthEnablementPanel, CFOAdvisoryPanel, RestructuringPanel */
-];
-
-const Services = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const ActivePanel = panelComponents[activeIndex];
-
-  return (
-    <section className="px-4 md:px-12 lg:px-12 flex flex-col md:flex-row gap-2">
-      {/* Left side: image + description */}
-      <div className="flex flex-col flex-1 border bg-neutral-900 text-white">
-        <ActivePanel />
-        <p className="text-center text-sm md:text-base max-w-md mx-auto py-4">
-          {servicesData[activeIndex].description}
-        </p>
+const ServiceCard: React.FC<ServiceProps> = ({ Icon, title, description }) => (
+  <div
+    className="
+      group
+      flex flex-col relative items-start p-8
+      bg-[#16333A] text-white
+      rounded-2xl border border-[#16333A]
+      transition-colors duration-300 ease-out
+      hover:bg-[#2D474D]
+    "
+  >
+    <div className="flex justify-end items-end w-full">
+      <div className="border flex border-white/20 bg-white p-2 mb-5 rounded-lg group-hover:border-white">
+        <Icon className="h-6 w-6 text-[#16333A]" />
       </div>
+    </div>
 
-      {/* Right side: service list */}
-      <div className="flex flex-col gap-2 flex-1">
-        {servicesData.map((item, index) => (
-          <div
-            key={item.id}
-            onMouseEnter={() => setActiveIndex(index)}
-            className={`relative py-12 px-8 ${
-              activeIndex === index ? "bg-neutral-100 rounded-md" : ""
-            } cursor-pointer transition`}
-          >
-            <h2 className="font-gambetta tracking-tighter text-2xl sm:text-3xl md:text-4xl">
-              {item.title}
-            </h2>
-            {activeIndex === index && (
-              <span className="absolute right-8 top-1/2 -translate-y-1/2 text-sm text-neutral-600">
-                ↳ View service
-              </span>
-            )}
-          </div>
-        ))}
-      </div>
-    </section>
-  );
-};
+    <h3 className="text-3xl md:text-4xl max-w-[15ch] tracking-tighter font-gambetta mb-4">
+      {title}
+    </h3>
+    <p className="flex-1 text-lg leading-8 mb-8">{description}</p>
+    <a href="#" className="underline">
+      Learn More
+    </a>
+  </div>
+);
+
+const ServicesGrid: React.FC = () => (
+  <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+    {servicesData.map((svc) => (
+      <ServiceCard key={svc.id} {...svc} />
+    ))}
+
+    {/* Plain-text slot */}
+    <div className="p-8 flex flex-col justify-center items-start">
+      <p className="text-gray-600 text-lg leading-8">
+        Our seasoned advisors deliver data-driven insights and hands-on
+        support—guiding decisions, optimizing performance, and turning strategic
+        vision into measurable outcomes.
+      </p>
+      <button className="mt-16 flex flex-row gap-4 items-center font-medium bg-[#07171E] text-white duration-300 px-8 py-4 rounded-full text-lg hover:bg-[#07171E]/80 cursor-pointer transition">
+        Explore Services
+        <ArrowUpRight size={28} strokeWidth={2} />
+      </button>
+    </div>
+  </div>
+);
+
+const Services: React.FC = () => (
+  <section className="flex flex-col px-4 sm:px-12 md:px-20 pb-16 md:pb-28">
+    <div className="flex items-center mb-12 justify-center gap-4">
+      <div className="h-[1px] bg-neutral-300 w-[60px]" />
+      <span
+        style={{ letterSpacing: "3px" }}
+        className="uppercase text-gray-600 text-xs font-mono"
+      >
+        What we do
+      </span>
+      <div className="h-[1px] bg-neutral-300 w-[60px]" />
+    </div>
+    <ServicesGrid />
+  </section>
+);
 
 export default Services;

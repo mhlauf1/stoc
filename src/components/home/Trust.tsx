@@ -1,4 +1,3 @@
-// app/components/Trust.tsx
 import React from "react";
 
 const trustData = [

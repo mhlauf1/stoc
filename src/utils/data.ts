@@ -1,0 +1,183 @@
+import { ServiceProps, IndustryProps, TeamMemberProps } from "@/utils/types";
+import {
+    TrendingUp,
+    Handshake,
+    Rocket,
+    PieChart,
+    RefreshCcw,
+} from "lucide-react";
+
+
+export const servicesData: ServiceProps[] = [
+    {
+        id: 0,
+        title: "Transaction Advisory Services",
+        Icon: TrendingUp,
+        description:
+            "Conduct comprehensive financial and operational due diligence to maximize deal value and mitigate risks.",
+    },
+    {
+        id: 1,
+        title: "Corporate Development Services",
+        Icon: Handshake,
+        description:
+            "Identify and execute strategic acquisitions, divestitures, and integrations for sustained growth.",
+    },
+    {
+        id: 2,
+        title: "Growth Enablement Services",
+        Icon: Rocket,
+        description:
+            "Design and implement targeted initiatives that optimize operations and accelerate market expansion.",
+    },
+    {
+        id: 3,
+        title: "CFO Advisory",
+        Icon: PieChart,
+        description:
+            "Enhance reporting, forecasting, and capital strategies to reinforce financial leadership and performance.",
+    },
+    {
+        id: 4,
+        title: "Restructuring & Turnaround",
+        Icon: RefreshCcw,
+        description:
+            "Develop and oversee restructuring plans that restore stability, improve cash flow, and drive profitability.",
+    },
+];
+
+
+export const industryData: IndustryProps[] = [
+    {
+        id: 0,
+        title: "Business Services",
+        // src: "",
+        tags: ["Performance improvement", "Value creation", "Financial analysis", "Revenue optimization"],
+        badge: "Business & Professional Services",
+        desc1: "The business services industry is experiencing rapid growth and disruption, and the fight for talent and differentiation is highly competitive. To truly stand out, businesses must embrace change and embark on frequent initiatives to best serve their clients’ evolving needs.",
+        desc2: "STOC has the understanding and expertise to analyze the revenue streams, costs, and the critical key performance indicators of what makes a services business profitable. We use this familiarity to assist transportation and logistics companies, advertising and marketing specialists, professional services firms, and other business service organizations with a broad range of financial and operational projects to optimize performance and value creation."
+    },
+    {
+        id: 1,
+        title: "Healthcare",
+        // src: "",
+        tags: ["Operational optimization", "Regulatory compliance", "Revenue management"],
+        badge: "Healthcare Industry Expertise",
+        desc1: "The healthcare industry is changing fast, as complex and uncertain regulatory requirements, an aging population requiring increasingly expensive clinical and drug therapies, looming cybersecurity threats, ever-evolving payor models, and the rise of telemedicine and other technologies continue to disrupt the US healthcare system. As medical providers, insurers, and patients each adjust to the shifting marketplace; the industry must adapt to the current pace of change or risk getting left behind. Many stakeholders are staying relevant by facing these forces head-on through new clinical and operating models, aggressive revenue management and cost control, mergers and acquisitions, horizontal and vertical integration, and partnership strategies.",
+        desc2: "We partner with companies across the healthcare industry—hospitals and healthcare systems, delivery providers, senior care facilities, medical suppliers, payors and health plans, and more—to identify opportunities and implement solutions to optimize both clinical and non-clinical operations. We understand healthcare organizations’ evolving challenges and drive positive transformation to enable businesses to continue delivering the best care possible while growing the bottom line. Our focus on healthcare’s operational complexities, regulatory requirements, reimbursement methodologies, and transaction services allows us to bring proven and practical capabilities to each engagement."
+    },
+    {
+        id: 2,
+        title: "Cannabis",
+        // src: "",
+        tags: ["Valuation and banking support", "Acquisition disputes", "Regulatory compliance"],
+        badge: "Cannabis Industry Expertise",
+        desc1: "As the number of states legalizing cannabis for medical and recreational use increases, businesses involved in the legal cultivation, processing, and distribution of cannabis, as well as those providing ancillary services, face an array of business issues, including: accounting, acquisition disputes, anti-money laundering, banking, branding, IP, cybersecurity, taxation advisory, regulatory compliance, and valuation.",
+        desc2: "Our firm understands these complex business issues. STOC has been active in all sectors multi-faceted legal cannabis industry. We are uniquely qualified to help clients achieve their business goals in this rapidly growing industry."
+    },
+    {
+        id: 3,
+        title: "Hospitality & Entertainment",
+        // src: "",
+        tags: ["Mergers & acquisitions", "Debt restructuring", "Customer acquisition & retention"],
+        badge: "Hospitality & Entertainment Industry Expertise",
+        desc1: "Shifting global dynamics and a post-COVID environment define a shifting landscape for tourism and business travel. As a result, the hospitality and entertainment industry is forced to adapt and evolve for future growth. Marked by increased mergers and acquisitions activity and a high rate of new property development, industry players must meet these growing headwinds with innovative financing, debt restructuring, and partnership agreements. Meanwhile, competition among properties, brands, and service offerings and today’s economic volatility present a constant challenge for hospitality organizations, resulting in the rapid evolution of marketing efforts, digital strategies, and operational initiatives aimed at increasing customer acquisition and retention.",
+    },
+    {
+        id: 4,
+        title: "Manufacturing & Distribution",
+        // src: "",
+        tags: ["Supply chain optimization", "Operational strategy", "Global market insights"],
+        badge: "Manufacturing & Distribution Industry Expertise",
+        desc1: "The manufacturing and distribution sectors face rising production costs, supply chain transformations, and global market pressures. To remain competitive and build long-term success, companies must continuously adapt their strategies and operations.",
+        desc2: "STOC partners with manufacturing and distribution firms worldwide, bringing financial and operational insights to support decision-making today and prepare for tomorrow. With a focus on collaboration and value creation, we help businesses navigate complexity and drive innovation."
+    },
+    {
+        id: 5,
+        title: "Retail & Consumer Products",
+        // src: "",
+        tags: ["Consumer behavior insights", "Operational efficiency", "E-commerce strategy"],
+        badge: "Retail Industry Expertise",
+        desc1: "Retail is evolving at an unprecedented pace, driven by technology adoption, shifts in consumer behavior, and the acceleration of e-commerce. Success today requires embracing innovation while prioritizing sustainability and customer experience.",
+        desc2: "STOC helps retailers — from department stores to e-commerce platforms — adapt to these changes, optimize operations, and unlock growth opportunities. With experience across all segments, we bring insights that drive performance and future-proof strategies."
+    },
+    {
+        id: 6,
+        title: "Technology, Media, & Telecommunications",
+        // src: "",
+        tags: ["Consumer behavior insights", "Operational efficiency", "E-commerce strategy"],
+        badge: "Retail Industry Expertise",
+        desc1: "Retail is evolving at an unprecedented pace, driven by technology adoption, shifts in consumer behavior, and the acceleration of e-commerce. Success today requires embracing innovation while prioritizing sustainability and customer experience.",
+        desc2: "STOC helps retailers — from department stores to e-commerce platforms — adapt to these changes, optimize operations, and unlock growth opportunities. With experience across all segments, we bring insights that drive performance and future-proof strategies."
+    },
+]
+
+
+export const teamMeberData: TeamMemberProps[] = [
+    {
+        id: 0,
+        name: "Andrew Swihart",
+        image: "/Andrew_Swihart.jpg",
+        location: "Dallas, TX"
+    },
+    {
+        id: 1,
+        name: "Anne Federico",
+        image: "/Anne_Federico.jpg",
+        location: "Baltimore, MD"
+    },
+    {
+        id: 2,
+        name: "Gunnar Waldt",
+        image: "/Gunnar_Waldt.jpg",
+        location: "Baltimore, MD"
+    },
+    {
+        id: 3,
+        name: "Matt Hottman",
+        image: "/Matt_Hottman.jpg",
+        location: "Baltimore, MD"
+    },
+    {
+        id: 4,
+        name: "Michael O’Heir",
+        image: "/Michael_OHeir1.jpg",
+        location: "Baltimore, MD"
+    },
+    {
+        id: 5,
+        name: "Sam Luetgers",
+        image: "/Sam_Luetgers.jpg",
+        location: "Tampa Bay, FL"
+    },
+    {
+        id: 6,
+        name: "Saqib Saddiqui",
+        image: "/Saqib_Saddiqui.jpg",
+        location: "New York, NY"
+    },
+    {
+        id: 7,
+        name: "Sean Egan",
+        image: "/Sean_Egan.jpg",
+        location: "Minneapolis, MN"
+    },
+    {
+        id: 8,
+        name: "Unknown Name",
+        image: "/Unknown_name.jpg",
+        location: "Minneapolis, MN"
+    },
+    {
+        id: 9,
+        name: "Thomson Thamsir",
+        image: "/Thomson_Thamsir.JPG",
+        location: "Minneapolis, MN"
+    },
+    {
+        id: 10,
+        name: "Lucius Burch",
+        image: "/Lucius_Burch.jpg",
+        location: "Minneapolis, MN"
+    },
+]

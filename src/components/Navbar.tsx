@@ -3,36 +3,30 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import { usePathname } from "next/navigation";
 
 const NAV_ITEMS = [
-  { label: "Services", href: "/" },
-  { label: "Industries", href: "/" },
-  { label: "About", href: "/" },
-  { label: "Careers", href: "/" },
+  { label: "Services", href: "/services" },
+  { label: "Industries", href: "/industries" },
+  { label: "About", href: "/about" },
 ];
 
-const menuVariants = {
-  closed: {
-    opacity: 0,
-    x: "100%",
-    transition: { duration: 0.25, ease: "easeInOut" },
-  },
-  open: { opacity: 1, x: 0, transition: { duration: 0.25, ease: "easeInOut" } },
-};
-
 export default function Navbar() {
+  const pathname = usePathname();
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
   // on scroll, flip scrolled flag
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
-    window.addEventListener("scroll", onScroll);
+    window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  // decide styles
-  const isDarkBg = scrolled;
+  // override to dark on /industries
+  const alwaysDark = pathname === "/industries";
+  const isDarkBg = scrolled || alwaysDark;
+
   const linkBase = isDarkBg
     ? "text-neutral-800 hover:text-[#16333A]"
     : "text-white hover:text-white/75";
@@ -45,7 +39,7 @@ export default function Navbar() {
     <nav
       className={`
         fixed top-0 w-full z-50 py-4 transition-all duration-300
-        ${isDarkBg ? "bg-white shadow-md" : "bg-transparent"}
+        ${isDarkBg ? "bg-white border-b border-neutral-200" : "bg-transparent"}
       `}
     >
       <div className="flex items-center justify-between px-6 md:px-12 lg:px-16">
@@ -122,7 +116,14 @@ export default function Navbar() {
             initial="closed"
             animate="open"
             exit="closed"
-            variants={menuVariants}
+            variants={{
+              closed: {
+                opacity: 0,
+                x: "100%",
+                transition: { duration: 0.25, ease: "easeInOut" },
+              },
+              open: { opacity: 1, x: 0, transition: { duration: 0.25 } },
+            }}
             className="fixed inset-y-0 right-0 w-full max-w-sm bg-black/80 backdrop-blur-sm p-8 md:hidden"
           >
             <button

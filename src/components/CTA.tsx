@@ -3,7 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 
 const CTA: React.FC = () => {
   return (
-    <section className="bg-white px-6 md:px-12 lg:px-32 py-24">
+    <section className="bg-white px-6 md:px-12 lg:px-32 py-16 md:py-28">
       <div className="mx-auto max-w-7xl bg-[#232323] rounded-2xl px-12 md:px-20 py-8 md:py-24 flex flex-col items-center text-center gap-8">
         {/* Tagline */}
         <div className="flex items-center gap-4">
