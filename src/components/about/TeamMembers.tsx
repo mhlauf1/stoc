@@ -7,13 +7,11 @@ const TeamMember = ({ id, name, image, location }: TeamMemberProps) => (
   <div key={id} className="flex flex-col items-start">
     <div className="relative w-full max-h-[700px] h-[700px] flex-1 aspect-square">
       <Image fill src={image} alt={name} className="rounded-lg object-cover" />
-      <div className="absolute top-4 right-4 bg-white py-2 px-5 rounded-full">
-        <p className="text-sm text-neutral-500">{location}</p>
-      </div>
     </div>
     <h3 className="mt-4 text-xl md:text-2xl lg:text-3xl font-gambetta tracking-tighter ">
       {name}
     </h3>
+    <p className="text-sm tracking-wide text-neutral-500">{location}</p>
   </div>
 );
 

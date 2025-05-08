@@ -30,7 +30,7 @@ export default function Hero() {
         </p>
         <div className="flex flex-col items-start text-white  ">
           <button className=" z-1 flex flex-row gap-4 items-center font-medium bg-white text-green-950  px-8 py-4 rounded-full text-lg hover:bg-neutral-200 cursor-pointer transition">
-            Schedule a Consultation <ArrowUpRight size={28} strokeWidth={"2"} />
+            Talk to an Advisor <ArrowUpRight size={28} strokeWidth={"2"} />
           </button>
         </div>
       </div>

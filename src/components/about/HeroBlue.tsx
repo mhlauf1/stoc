@@ -6,12 +6,7 @@ export default function Hero() {
   return (
     <section className="relative h-screen  flex">
       <div className="absolute top-0 left-0 right-0 bottom-0">
-        <Image
-          className="-z-1"
-          fill
-          src="/dark-green-bg.png"
-          alt="STOC About"
-        />
+        <Image className="-z-1" fill src="/blue-bg.png" alt="STOC About" />
       </div>
       <div className="flex z-10 flex-col w-full px-6 md:px-12 lg:px-32 items-center pb-24 pt-24 md:pt-64">
         <Link className="z-10" href="/about">
@@ -27,7 +22,7 @@ export default function Hero() {
           Built on Expertise. <br />{" "}
           <span className="font-gambetta italic">Defined by Trust.</span>
         </h1>
-        <p className="mt-8 mb-16  text-lg text-center md:text-xl max-w-2xl text-white">
+        <p className="mt-8 mb-16  text-lg text-center md:text-xl max-w-4xl text-white">
           At STOC Advisory, we turn complexity into clarity—offering hands-on
           support in due diligence, negotiation, and integration to ensure your
           transactions deliver measurable value.

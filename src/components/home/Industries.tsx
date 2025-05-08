@@ -48,7 +48,7 @@ const IndustryGrid: React.FC = () => (
     ))}
 
     {/* Plain-text slot */}
-    <div className="p-8 flex items-center">
+    <div className="pt-4 flex items-center">
       <p className="text-gray-600 text-lg leading-8">
         Our unique backgrounds and experiences in public accounting, investment
         banking, private equity, and consulting provides clients with a breadth

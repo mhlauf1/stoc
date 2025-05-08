@@ -14,13 +14,13 @@ export default function Hero() {
               </span>
             </button>
           </Link>
-          <h1 className="text-5xl text-center tracking-tighter max-w-[20ch] md:text-6xl font-gambetta lg:text-7xl leading-tight ">
+          <h1 className="text-5xl text-center tracking-tighter max-w-[20ch] md:text-6xl font-gambetta lg:text-7xl leading-tight">
             Industry expertise that <br />{" "}
             <span className="font-gambetta italic">
               drives transaction success
             </span>
           </h1>
-          <p className="mt-8 mb-16 text-center text-lg md:text-xl max-w-lg ">
+          <p className="mt-8 mb-16 text-center text-lg md:text-xl max-w-2xl">
             We combine deep sector expertise with a proven transformation
             playbook—helping you navigate complexity, mitigate risk, and seize
             new opportunities.

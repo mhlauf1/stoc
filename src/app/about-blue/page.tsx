@@ -1,8 +1,8 @@
-import Hero from "@/components/about/Hero";
+import Hero from "@/components/about/HeroBlue";
 import Mission from "@/components/about/Mission";
 import TeamMembers from "@/components/about/TeamMembers";
 
-export default function About() {
+export default function About2() {
   return (
     <main>
       <Hero />

@@ -35,8 +35,7 @@ const Industry: React.FC<IndustryProps> = ({
       </div>
       {/* RIGHT COLUMN */}
       <div className="flex flex-col items-start flex-1">
-        <div className="relative w-full h-[600px] flex flex-col justify-between py-8 items-center rounded-xl overflow-hidden bg-gradient-to-br from-emerald-900 via-emerald-950 to-[#192e06] shadow-sm">
-          {/* color overlay for duotone effect */}
+        <div className="relative w-full h-[600px] flex flex-col justify-between py-8 items-center rounded-xl overflow-hidden bg-gradient-to-bl from-[#07171E] via-[#232323] to-[#0f1c04] shadow-sm">
           <div></div>
           <div>
             <p className="text-neutral-300 w-[36ch] text-center text-xl">

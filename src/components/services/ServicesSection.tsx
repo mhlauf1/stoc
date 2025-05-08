@@ -53,7 +53,7 @@ const ServicesSection: React.FC = () => {
             {servicesData.map((svc, i) => {
               const isActive = progress[i] > 0 && progress[i] < 1;
               return (
-                <div key={svc.id}>
+                <div className="w-[80%]" key={svc.id}>
                   <span
                     className={`text-xl font-gambetta tracking-tighter font-medium transition-colors duration-150 ${
                       isActive ? "text-black" : "text-gray-400"
