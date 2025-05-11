@@ -7,7 +7,6 @@ import {
   Music,
   Package as Box,
   ShoppingCart,
-  ArrowUpRight,
 } from "lucide-react";
 import { PrimaryButton } from "../Button";
 import Link from "next/link";
