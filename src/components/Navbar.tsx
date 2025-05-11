@@ -24,7 +24,7 @@ export default function Navbar() {
   }, []);
 
   // override to dark on /industries
-  const alwaysDark = pathname === "/industries";
+  const alwaysDark = pathname === "/industries" || "contact";
   const isDarkBg = scrolled || alwaysDark;
 
   const linkBase = isDarkBg
@@ -45,20 +45,16 @@ export default function Navbar() {
       <div className="flex items-center justify-between px-6 md:px-12 lg:px-16">
         {/* logo */}
         <Link href="/">
-          <div className="flex items-center gap-2">
-            {isDarkBg ? (
-              <Image src="/black-logo.png" width={28} height={28} alt="STOC" />
-            ) : (
-              <Image src="/logo-stoc-2.png" width={28} height={28} alt="STOC" />
-            )}
-            <h3
-              className={`${
-                isDarkBg ? "text-neutral-800" : "text-white"
-              } font-medium tracking-wide`}
-            >
-              Stoc Advisory
-            </h3>
-          </div>
+          <Image
+            src="/stoc-logo-main.png"
+            width={200}
+            height={100}
+            alt="STOC"
+            className={`
+    transition-all duration-300
+    ${isDarkBg ? "" : "filter brightness-0 invert"}
+  `}
+          />
         </Link>
 
         {/* desktop nav */}

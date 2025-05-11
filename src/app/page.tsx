@@ -5,6 +5,7 @@ import Industries from "@/components/home/Industries";
 import Trust from "@/components/home/Trust";
 import AboutUs from "@/components/home/AboutUs";
 import CTA from "@/components/CTA";
+import NewsletterCtaSection from "@/components/NewsletterCtaSection";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <Hero />
       <IntroServices />
       <Services />
+      <NewsletterCtaSection />
       <Industries />
       <Trust />
       <AboutUs />

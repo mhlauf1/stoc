@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { PrimaryButton } from "../Button";
+import { PrimaryButtonBlue } from "@/components/Button";
 
 const AboutUs = () => {
   return (
@@ -27,7 +27,7 @@ const AboutUs = () => {
             prepare and execute all aspects of changes experienced across the
             business.
           </p>
-          <PrimaryButton>Meet the Team</PrimaryButton>
+          <PrimaryButtonBlue>Meet the Team</PrimaryButtonBlue>
         </div>
         <div className="flex justify-end flex-1">
           <Image

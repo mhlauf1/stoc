@@ -39,7 +39,7 @@ interface ValuePillarProps {
 }
 
 const ValuePillar: React.FC<ValuePillarProps> = ({ title, text, Icon }) => (
-  <div className="flex flex-row gap-4 p-6 rounded-md border border-neutral-200 items-center bg-[#F7F7F7]">
+  <div className="flex flex-row gap-4  items-center ">
     <div className="flex items-center justify-center border border-white/20 bg-[#16333A] p-6 rounded-lg">
       <Icon className="size-6 text-white" />
     </div>
@@ -51,8 +51,8 @@ const ValuePillar: React.FC<ValuePillarProps> = ({ title, text, Icon }) => (
 );
 
 const Mission: React.FC = () => (
-  <section className="px-6 md:px-12 lg:px-32 py-24 md:py-32">
-    <div className="flex flex-col md:flex-row gap-12">
+  <section className="px-6 md:px-12 lg:px-[5vw] py-24 md:py-32">
+    <div className="flex flex-col md:flex-row gap-[5vw]">
       {/* Left Column */}
       <div className="flex-1 flex flex-col items-start">
         <div className="flex items-center mb-6 gap-4">
@@ -77,7 +77,7 @@ const Mission: React.FC = () => (
           <p className="mb-4 text-lg font-medium text-neutral-700">
             Value Pillars
           </p>
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-10">
             {values.map((v) => (
               <div key={v.id}>
                 <ValuePillar
@@ -93,13 +93,13 @@ const Mission: React.FC = () => (
       </div>
 
       {/* Right Column */}
-      <div className="flex-1 flex justify-end">
+      <div className=" flex justify-end">
         <Image
           src="/about-2.png"
           alt="Meet the STOC Team"
           width={660}
           height={420}
-          className="rounded-2xl object-cover"
+          className="rounded-2xl w-[35vw] min-w-[450px] object-cover"
         />
       </div>
     </div>

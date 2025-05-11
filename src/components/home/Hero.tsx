@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { ArrowUpRight } from "lucide-react";
-import Link from "next/link";
+import { PrimaryButton, WhiteButton } from "../Button";
+import NewsLetterBadge from "../NewsletterBadge";
 
 export default function Hero() {
   return (
@@ -9,14 +9,7 @@ export default function Hero() {
         <Image className="-z-1" fill src="/hero-stoc.png" alt="STOC hero" />
       </div>
       <div className="flex z-10 flex-col w-full px-6 md:px-12 lg:px-32 items-center justify-center">
-        <Link className="z-10" href="/about">
-          <button className="bg-white/10 tracking-wide cursor-pointer flex text-sm border mb-6 gap-2 border-white/20 hover:border-white/60 duration-200 hover:text-white hover:shadow-xs text-neutral-200 px-4 py-1.5 rounded-full">
-            Sign up for the stoc newsletter.{" "}
-            <span className="text-white font-semibold flex flex-row gap-1 items-center">
-              Sign up now <ArrowUpRight size={16} strokeWidth={"2"} />
-            </span>
-          </button>
-        </Link>
+        <NewsLetterBadge />
 
         <h1 className="text-5xl text-center tracking-tighter max-w-[20ch] md:text-6xl font-gambetta lg:text-7xl leading-tight text-white">
           Where Strategic Transactions{" "}
@@ -28,10 +21,9 @@ export default function Hero() {
           Guiding you through every stage of the acquisition lifecycle with
           precision, insight, and proven expertise.{" "}
         </p>
-        <div className="flex flex-col items-start text-white  ">
-          <button className=" z-1 flex flex-row gap-4 items-center font-medium bg-white text-green-950  px-8 py-4 rounded-full text-lg hover:bg-neutral-200 cursor-pointer transition">
-            Talk to an Advisor <ArrowUpRight size={28} strokeWidth={"2"} />
-          </button>
+        <div className="flex flex-row items-center gap-6">
+          <WhiteButton>Explore Services</WhiteButton>
+          <PrimaryButton>Talk to an Advisor </PrimaryButton>
         </div>
       </div>
     </section>

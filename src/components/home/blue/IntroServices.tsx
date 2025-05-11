@@ -1,7 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { ArrowUpRight } from "lucide-react";
 
 export default function IntroServices() {
   const [offsetY, setOffsetY] = useState(0);
@@ -28,7 +27,7 @@ export default function IntroServices() {
         >
           <div className="relative w-[15vw] h-[300px]">
             <Image
-              src="/services-1.png"
+              src="/blue-intro-1.jpeg"
               alt="Left"
               fill
               className="rounded-r-lg object-cover shadow-lg"
@@ -49,14 +48,10 @@ export default function IntroServices() {
             <div className="h-[1px] bg-neutral-300 w-[60px]" />
           </div>
           <p className="text-3xl tracking-tighter max-w-[42ch] md:text-4xl font-gambetta text-neutral-900 leading-relaxed">
-            STOC partners with middle-market businesses and private equity
-            sponsors to unlock value at every stage—accelerating growth and
-            delivering lasting impact.
+            STOC Advisory partners with middle-market businesses and private
+            equity sponsors to unlock value at every stage—accelerating growth
+            and delivering lasting impact.
           </p>
-          <button className="mt-16 flex flex-row gap-4 items-center font-medium bg-[#07171E] text-white px-8 py-4 rounded-full text-lg hover:bg-neutral-700 cursor-pointer transition">
-            Explore Services
-            <ArrowUpRight size={28} strokeWidth={2} />
-          </button>
         </div>
 
         {/* Right Image */}
@@ -66,7 +61,7 @@ export default function IntroServices() {
         >
           <div className="relative w-[15vw] h-[300px]">
             <Image
-              src="/services-2.png"
+              src="/home-img-1.jpeg"
               alt="Right"
               fill
               className="rounded-l-lg object-cover shadow-lg"
