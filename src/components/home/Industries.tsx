@@ -9,6 +9,8 @@ import {
   ShoppingCart,
   ArrowUpRight,
 } from "lucide-react";
+import { PrimaryButton } from "../Button";
+import Link from "next/link";
 
 type Industry = {
   id: number;
@@ -62,7 +64,7 @@ const Industries: React.FC = () => (
   <section className="bg-[#F7F7F7] py-16 md:py-28">
     <div className="flex flex-col  px-4 sm:px-12 md:px-20">
       <div className="flex flex-col md:flex-row justify-between mb-12 items-end gap-4">
-        <div className="flex flex-col gap-4">
+        <div className="flex mb-16 flex-col gap-4">
           <div className="flex flex-row gap-4 items-center">
             <div className="h-[1px] bg-neutral-300 w-[60px]" />
             <span
@@ -78,10 +80,9 @@ const Industries: React.FC = () => (
             advisory.
           </h2>
         </div>
-        <button className="mt-16 flex flex-row gap-4 items-center font-medium bg-[#07171E] text-white px-8 py-4 rounded-full text-lg hover:bg-neutral-200 cursor-pointer transition">
-          Explore Services
-          <ArrowUpRight size={28} strokeWidth={"2"} />
-        </button>
+        <Link href="/industries">
+          <PrimaryButton>Explore Services</PrimaryButton>
+        </Link>
       </div>
       <IndustryGrid />
     </div>

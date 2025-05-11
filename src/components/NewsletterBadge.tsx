@@ -4,7 +4,7 @@ import Link from "next/link";
 export default function NewsLetterBadge() {
   return (
     <Link
-      href="/about" // or wherever your signup lives
+      href="/contact" // or wherever your signup lives
       className="
         z-10
         flex items-center gap-3

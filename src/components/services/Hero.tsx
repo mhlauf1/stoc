@@ -23,10 +23,6 @@ export default function Hero() {
             every deal captures maximum value.
           </p>
           <div className="flex flex-row gap-4 items-center">
-            <button className=" z-1 flex flex-row gap-4 items-center font-medium bg-reen-950 text-white border px-8 py-4 rounded-full text-lg hover:bg-neutral-200 cursor-pointer transition">
-              Explore Our Services{" "}
-              <ArrowUpRight className="rotate-90" size={28} strokeWidth={"2"} />
-            </button>{" "}
             <button className=" z-1 flex flex-row gap-4 items-center font-medium bg-white text-green-950  px-8 py-4 rounded-full text-lg hover:bg-neutral-200 cursor-pointer transition">
               Talk to an Advisor <ArrowUpRight size={28} strokeWidth={"2"} />
             </button>

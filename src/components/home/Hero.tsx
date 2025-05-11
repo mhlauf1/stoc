@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { PrimaryButton, WhiteButton } from "../Button";
 import NewsLetterBadge from "../NewsletterBadge";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -22,8 +23,12 @@ export default function Hero() {
           precision, insight, and proven expertise.{" "}
         </p>
         <div className="flex flex-row items-center gap-6">
-          <WhiteButton>Explore Services</WhiteButton>
-          <PrimaryButton>Talk to an Advisor </PrimaryButton>
+          <Link href="/services">
+            <WhiteButton>Explore Services</WhiteButton>
+          </Link>
+          <Link href="/contact">
+            <PrimaryButton>Talk to an Advisor </PrimaryButton>
+          </Link>
         </div>
       </div>
     </section>
