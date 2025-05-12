@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import { PrimaryButton } from "../Button";
+import Link from "next/link";
 
 const AboutUs = () => {
   return (
@@ -29,7 +30,9 @@ const AboutUs = () => {
             prepare and execute all aspects of changes experienced across the
             business.
           </p>
-          <PrimaryButton>Meet the Team</PrimaryButton>
+          <Link href="/about" className="w-full md:w-auto">
+            <PrimaryButton>Meet the Team</PrimaryButton>
+          </Link>
         </div>
         <div className="flex justify-end flex-1">
           <Image
