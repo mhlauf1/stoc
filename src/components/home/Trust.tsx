@@ -34,8 +34,8 @@ const TrustItem: React.FC<TrustItemProps> = ({ title, text }) => (
 );
 
 const Trust: React.FC = () => (
-  <section className="bg-[#07171E] px-6 md:px-12 lg:px-32 py-12 md:py-24">
-    <div className="mx-auto flex px-8 md:px-28  border-dashed border border-white/10 py-20 md:py-32  rounded-2xl flex-col items-center text-center text-white gap-8">
+  <section className="bg-[#07171E] px-0 md:px-12 lg:px-32 py-6 md:py-24">
+    <div className="mx-auto flex px-4 sm:px-8 md:px-28  md:border-dashed md:border border-white/10 py-20 md:py-32  rounded-2xl flex-col items-center text-center text-white gap-8">
       <div className="flex items-center justify-center gap-4">
         <div className="h-[1px] bg-neutral-300 w-[60px]" />
         <span
@@ -46,11 +46,11 @@ const Trust: React.FC = () => (
         </span>
         <div className="h-[1px] bg-neutral-300 w-[60px]" />
       </div>
-      <h2 className=" text-3xl md:text-4xl max-w-4xl lg:text-6xl tracking-tighter leading-tight">
+      <h2 className=" text-3xl md:text-4xl max-w-4xl lg:text-6xl tracking-tight leading-tight">
         <span className=" italic font-gambetta">
-          Deep expertise, tailored guidance, <br />
+          Deep expertise, tailored guidance,{" "}
         </span>
-        <span className="text-white/70 font-gambetta">
+        <span className="text-white/90 tracking-tighter font-gambetta">
           and a proven process— delivering results you can rely on.
         </span>
       </h2>

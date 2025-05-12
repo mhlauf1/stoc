@@ -25,7 +25,7 @@ const ServiceCard: React.FC<ServiceProps> = ({ Icon, title, description }) => (
       {title}
     </h3>
     <p className="flex-1 text-lg leading-8 mb-8">{description}</p>
-    <a href="#" className="underline">
+    <a href="/services" className="underline">
       Learn More
     </a>
   </div>

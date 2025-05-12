@@ -12,8 +12,8 @@ export default function NewsletterCtaSection() {
   };
 
   return (
-    <section className="bg-[#07171E] py-20 md:py-32 px-8 md:px-12">
-      <div className="max-w-4xl mx-auto flex flex-col items-center w-full text-center">
+    <section className="bg-[#07171E] py-20 md:py-32 px-4 sm:px-8 md:px-12">
+      <div className="md:max-w-4xl mx-auto flex flex-col items-center w-full text-center">
         <div className="flex flex-row gap-4 mb-6 items-center">
           <div className="h-[1px] bg-neutral-300 w-[60px]" />
           <span
