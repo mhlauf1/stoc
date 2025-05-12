@@ -54,7 +54,6 @@ const Trust: React.FC = () => (
           and a proven process— delivering results you can rely on.
         </span>
       </h2>
-
       <div className="grid mt-8 w-full grid-cols-1 gap-16 md:gap-24 md:grid-cols-3">
         {trustData.map(({ id, title, text }) => (
           <TrustItem key={id} title={title} text={text} />

@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, FormEvent } from "react";
 import { PrimaryButton } from "./Button";
+import Link from "next/link";
 
 export default function NewsletterCtaSection() {
   const [email, setEmail] = useState<string>("");
@@ -54,8 +55,9 @@ export default function NewsletterCtaSection() {
               focus:outline-none focus:ring-2 focus:ring-[#16333A]
             "
           />
-
-          <PrimaryButton>Subscribe</PrimaryButton>
+          <Link href="/" className="w-full flex flex-1 md:w-auto">
+            <PrimaryButton>Subscribe</PrimaryButton>
+          </Link>
         </form>
       </div>
     </section>
