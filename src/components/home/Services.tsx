@@ -1,8 +1,8 @@
 import React from "react";
-import { ArrowUpRight } from "lucide-react";
-
+import { PrimaryButton } from "../Button";
 import { ServiceProps } from "@/utils/types";
 import { servicesData } from "@/utils/data";
+import Link from "next/link";
 
 const ServiceCard: React.FC<ServiceProps> = ({ Icon, title, description }) => (
   <div
@@ -38,16 +38,15 @@ const ServicesGrid: React.FC = () => (
     ))}
 
     {/* Plain-text slot */}
-    <div className="p-8 flex flex-col justify-center items-start">
-      <p className="text-gray-600 text-lg leading-8">
+    <div className="p-4 md:p-8 flex flex-col justify-center items-start">
+      <p className="text-gray-600 mb-12 md:mb-16 text-lg leading-8">
         Our seasoned advisors deliver data-driven insights and hands-on
         support—guiding decisions, optimizing performance, and turning strategic
         vision into measurable outcomes.
       </p>
-      <button className="mt-16 flex flex-row gap-4 items-center font-medium bg-[#07171E] text-white duration-300 px-8 py-4 rounded-full text-lg hover:bg-[#07171E]/80 cursor-pointer transition">
-        Explore Services
-        <ArrowUpRight size={28} strokeWidth={2} />
-      </button>
+      <Link className="w-full md:w-auto" href="/services">
+        <PrimaryButton>Explore Services</PrimaryButton>
+      </Link>
     </div>
   </div>
 );

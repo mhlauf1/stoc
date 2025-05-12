@@ -34,13 +34,13 @@ const TrustItem: React.FC<TrustItemProps> = ({ title, text }) => (
 );
 
 const Trust: React.FC = () => (
-  <section className="bg-[#07171E] px-6 md:px-12 lg:px-32 py-24">
-    <div className="mx-auto flex px-28  border-dashed border border-white/10 py-32  rounded-2xl flex-col items-center text-center text-white gap-8">
+  <section className="bg-[#07171E] px-6 md:px-12 lg:px-32 py-12 md:py-24">
+    <div className="mx-auto flex px-8 md:px-28  border-dashed border border-white/10 py-20 md:py-32  rounded-2xl flex-col items-center text-center text-white gap-8">
       <div className="flex items-center justify-center gap-4">
         <div className="h-[1px] bg-neutral-300 w-[60px]" />
         <span
           style={{ letterSpacing: "3px" }}
-          className="uppercase text-gray-200 text-xs font-mono"
+          className="uppercase text-gray-200 text-xs"
         >
           Built on trust, every engagement.
         </span>
@@ -55,7 +55,7 @@ const Trust: React.FC = () => (
         </span>
       </h2>
 
-      <div className="grid mt-8 w-full grid-cols-1 gap-24 md:grid-cols-3">
+      <div className="grid mt-8 w-full grid-cols-1 gap-16 md:gap-24 md:grid-cols-3">
         {trustData.map(({ id, title, text }) => (
           <TrustItem key={id} title={title} text={text} />
         ))}

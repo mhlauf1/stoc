@@ -60,11 +60,11 @@ const IndustryGrid: React.FC = () => (
 );
 
 const Industries: React.FC = () => (
-  <section className="bg-[#F7F7F7] py-16 md:py-28">
+  <section className="bg-[#F7F7F7] py-24 md:py-28">
     <div className="flex flex-col  px-4 sm:px-12 md:px-20">
-      <div className="flex flex-col md:flex-row justify-between mb-12 items-end gap-4">
-        <div className="flex mb-16 flex-col gap-4">
-          <div className="flex flex-row gap-4 items-center">
+      <div className="flex flex-col md:flex-row justify-between mb-12 md:mb-16 items-center md:items-end gap-4">
+        <div className="flex md:mb-0 mb-8 flex-col gap-4">
+          <div className="flex flex-row md:justify-start justify-center gap-4 items-center">
             <div className="h-[1px] bg-neutral-300 w-[60px]" />
             <span
               style={{ letterSpacing: "3px" }}
@@ -74,13 +74,13 @@ const Industries: React.FC = () => (
             </span>
             <div className="h-[1px] bg-neutral-300 w-[60px]" />
           </div>
-          <h2 className="text-3xl  tracking-tighter max-w-[24ch] md:text-4xl font-gambetta lg:text-5xl leading-tight">
+          <h2 className="text-3xl text-center md:text-start tracking-tighter max-w-[24ch] md:text-4xl font-gambetta lg:text-5xl leading-tight">
             Driving sector-specific growth and resilience through expert
             advisory.
           </h2>
         </div>
-        <Link href="/industries">
-          <PrimaryButton>Explore Services</PrimaryButton>
+        <Link className="w-full md:w-auto" href="/industries">
+          <PrimaryButton>Explore Industries</PrimaryButton>
         </Link>
       </div>
       <IndustryGrid />

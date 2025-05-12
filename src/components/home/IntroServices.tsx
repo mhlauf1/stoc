@@ -1,7 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import { ArrowUpRight } from "lucide-react";
 
 export default function IntroServices() {
   const [offsetY, setOffsetY] = useState(0);
@@ -19,11 +18,11 @@ export default function IntroServices() {
   const driftFactor = 0.02;
 
   return (
-    <section className="relative py-24 md:py-36 bg-white overflow-hidden">
-      <div className="flex items-center justify-center relative">
+    <section className="relative py-24 md:px-0 sm:px-8 px-4 md:py-36 bg-white overflow-hidden">
+      <div className="flex  items-center justify-center relative">
         {/* Left Image */}
         <div
-          className="hidden md:block absolute left-0 top-1/2 -translate-y-1/2"
+          className="hidden md:flex flex-1"
           style={{ transform: `translateY(${offsetY * driftFactor}px)` }}
         >
           <div className="relative w-[15vw] h-[300px]">
@@ -37,8 +36,8 @@ export default function IntroServices() {
         </div>
 
         {/* Center Content */}
-        <div className="flex flex-col text-center items-center">
-          <div className="flex items-center mb-12 justify-center gap-4">
+        <div className="flex flex-col flex-2 text-center items-center">
+          <div className="flex items-center mb-8 md:mb-12 justify-center gap-4">
             <div className="h-[1px] bg-neutral-300 w-[60px]" />
             <span
               style={{ letterSpacing: "3px" }}
@@ -48,20 +47,16 @@ export default function IntroServices() {
             </span>
             <div className="h-[1px] bg-neutral-300 w-[60px]" />
           </div>
-          <p className="text-3xl tracking-tighter max-w-[42ch] md:text-4xl font-gambetta text-neutral-900 leading-relaxed">
+          <p className="text-2xl  sm:text-3xl tracking-tighter lg:max-w-[42ch] md:text-4xl font-gambetta text-neutral-900 leading-normal md:leading-relaxed">
             STOC partners with middle-market businesses and private equity
             sponsors to unlock value at every stage—accelerating growth and
             delivering lasting impact.
           </p>
-          <button className="mt-16 flex flex-row gap-4 items-center font-medium bg-[#07171E] text-white px-8 py-4 rounded-full text-lg hover:bg-neutral-700 cursor-pointer transition">
-            Explore Services
-            <ArrowUpRight size={28} strokeWidth={2} />
-          </button>
         </div>
 
         {/* Right Image */}
         <div
-          className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2"
+          className="hidden justify-end md:flex flex-1"
           style={{ transform: `translateY(-${offsetY * driftFactor}px)` }}
         >
           <div className="relative w-[15vw] h-[300px]">

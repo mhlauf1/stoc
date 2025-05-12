@@ -12,21 +12,21 @@ export default function Hero() {
       <div className="flex z-10 flex-col w-full px-6 md:px-12 lg:px-32 items-center justify-center">
         <NewsLetterBadge />
 
-        <h1 className="text-5xl text-center tracking-tighter max-w-[20ch] md:text-6xl font-gambetta lg:text-7xl leading-tight text-white">
+        <h1 className="text-4xl sm:text-5xl text-center tracking-tighter max-w-[20ch] md:text-6xl font-gambetta lg:text-7xl leading-tight text-white">
           Where Strategic Transactions{" "}
           <span className="font-gambetta italic">
             Meet Exceptional Advising
           </span>
         </h1>
-        <p className="mt-6 mb-12 text-lg text-center md:text-xl max-w-lg text-white">
+        <p className="mt-6 mb-12 text-md sm:text-lg text-center md:text-xl w-full md:max-w-lg text-white">
           Guiding you through every stage of the acquisition lifecycle with
           precision, insight, and proven expertise.{" "}
         </p>
-        <div className="flex flex-row items-center gap-6">
-          <Link href="/services">
+        <div className="flex flex-col md:flex-row md:justify-center items-center md:w-auto w-full gap-4 md:gap-6">
+          <Link className="md:w-auto w-full" href="/services">
             <WhiteButton>Explore Services</WhiteButton>
           </Link>
-          <Link href="/contact">
+          <Link className="md:w-auto w-full" href="/contact">
             <PrimaryButton>Talk to an Advisor </PrimaryButton>
           </Link>
         </div>
