@@ -48,7 +48,7 @@ export default function NewsletterCtaSection() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className="
-              w-full sm:flex-1
+              w-full sm:flex-2
               bg-white text-neutral-900 placeholder-gray-500
               px-6 py-4
               rounded-full
