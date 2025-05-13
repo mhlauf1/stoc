@@ -14,11 +14,7 @@ const Industry: React.FC<IndustryProps> = ({
   return (
     <div
       key={id}
-      className={`flex ${
-        reverse
-          ? "flex-col-reverse md:flex-row-reverse"
-          : "flex-col md:flex-row"
-      }  gap-16 items-center md:h-[700px]`}
+      className="flex flex-col md:flex-row gap-16 items-center md:h-[700px]"
     >
       {/* LEFT COLUMN */}
       <div className="flex flex-col justify-between flex-1">
@@ -44,7 +40,7 @@ const Industry: React.FC<IndustryProps> = ({
           </div>
           {/* pills container positioned bottom-left */}
           <div className=" flex flex-row gap-2">
-            {tags!.map((item) => (
+            {tags?.map((item) => (
               <div className="bg-white py-2 px-4 rounded-full" key={item}>
                 <p className="text-neutral-500 text-sm">{item}</p>
               </div>

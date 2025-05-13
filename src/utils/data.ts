@@ -88,7 +88,7 @@ export const industryData: IndustryProps[] = [
     {
         id: 2,
         title: "Healthcare",
-        src: "/cds-1.jpeg",
+        src: "/saqib_live.png",
         Icon: BriefcaseMedical,
         tags: ["Operational optimization", "Regulatory compliance", "Revenue management"],
         badge: "Healthcare Industry Expertise",

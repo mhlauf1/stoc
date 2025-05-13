@@ -18,10 +18,10 @@ const OverviewBento = () => {
         <div className="flex md:flex-row flex-col gap-4">
           <div className="flex flex-col flex-1 bg-[#F7F7F7] px-12 py-16 rounded-md justify-between items-start">
             <div>
-              <h2 className="text-3xl  tracking-tighter max-w-[24ch] md:text-4xl font-gambetta lg:text-5xl text-center md:text-start leading-tight">
+              <h2 className="text-3xl  tracking-tighter max-w-[24ch] md:text-4xl font-gambetta lg:text-5xl text-start leading-tight">
                 Our Core Services
               </h2>
-              <p className="leading-7 md:leading-8 text-md md:text-lg text-neutral-600 text-center md:text-start mt-4 mb-10">
+              <p className="leading-7 md:leading-8 text-md md:text-lg text-neutral-600 text-start mt-4 mb-10">
                 Explore our specialized services designed to guide your business
                 through complex transactions.
               </p>
@@ -33,10 +33,10 @@ const OverviewBento = () => {
           </div>
           <div className="flex flex-col  justify-between flex-1 bg-[#F7F7F7] px-12 py-16 rounded-md items-start">
             <div>
-              <h2 className="text-3xl  tracking-tighter max-w-[24ch] md:text-4xl font-gambetta lg:text-5xl text-center md:text-start leading-tight">
+              <h2 className="text-3xl  tracking-tighter max-w-[24ch] md:text-4xl font-gambetta lg:text-5xl text-start leading-tight">
                 Industries We Serve
               </h2>
-              <p className="leading-7 md:leading-8 text-md md:text-lg text-neutral-600 text-center md:text-start mt-4 mb-10">
+              <p className="leading-7 md:leading-8 text-md md:text-lg text-neutral-600 text-start mt-4 mb-10">
                 Driving sector‑specific growth and resilience through expert
                 advisory.
               </p>
@@ -47,7 +47,7 @@ const OverviewBento = () => {
             </Link>
           </div>
         </div>
-        <div className="flex flex-col flex-1 bg-[#232323] md:rounded-2xl px-4 sm:px-12 md:px-20 py-16 md:py-24  items-center text-center gap-8">
+        <div className="flex flex-col flex-1 bg-[#232323] rounded-2xl px-4 sm:px-12 md:px-20 py-16 md:py-24  items-center text-center gap-8">
           {/* Tagline */}
           <div className="flex items-center gap-4">
             <div className="h-px bg-neutral-600 w-16" />

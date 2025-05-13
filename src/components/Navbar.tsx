@@ -74,8 +74,11 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const alwaysDark = ["/industries", "/contact"].includes(pathname);
-  const isDarkBg = scrolled || alwaysDark;
+  const dynamicPages = ["/", "/services", "/about"];
+  const isDynamicPage = dynamicPages.includes(pathname);
+
+  // if it’s one of those three, dark only after scroll; otherwise always dark
+  const isDarkBg = isDynamicPage ? scrolled : true;
 
   const linkBase = isDarkBg
     ? "text-neutral-800 hover:text-[#16333A] focus:outline-none"

@@ -34,7 +34,7 @@ const TrustItem: React.FC<TrustItemProps> = ({ title, text }) => (
 );
 
 const Trust: React.FC = () => (
-  <section className="bg-[#07171E] px-0 md:px-12 lg:px-32 py-12">
+  <section className="bg-[#07171E] px-4 md:px-12 lg:px-32 py-12">
     <div className="mx-auto flex  py-20 md:py-16 rounded-2xl flex-col items-center text-center text-white gap-8">
       <h2 className="text-3xl  tracking-tighter max-w-[24ch] md:text-4xl font-gambetta lg:text-5xl text-center md:text-start leading-tight">
         Why Clients Trust STOC

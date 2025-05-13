@@ -52,7 +52,7 @@ const ValuePillar: React.FC<ValuePillarProps> = ({ title, text, Icon }) => (
 
 const Mission: React.FC = () => (
   <section className="px-6 md:px-12 lg:px-[5vw] py-24 md:py-32">
-    <div className="flex flex-col md:flex-row gap-[5vw]">
+    <div className="flex flex-col items-center md:flex-row gap-[5vw]">
       {/* Left Column */}
       <div className="flex-1 flex flex-col items-start">
         <div className="flex items-center mb-6 gap-4">
