@@ -85,7 +85,7 @@ const OverviewBento = () => {
               </Link>
             </div>
             <Link className="block md:hidden" href="/contact">
-              <PrimaryButton>Subscribe</PrimaryButton>
+              <PrimaryButton onClick={handleSubmit}>Subscribe</PrimaryButton>
             </Link>
           </form>
         </div>
