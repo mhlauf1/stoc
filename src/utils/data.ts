@@ -64,7 +64,7 @@ export const industryData: IndustryProps[] = [
         id: 0,
         title: "Business Services",
         Icon: Briefcase,
-        src: "/green-inspo.png",
+        src: "/stoc-office.png",
         tags: ["Performance improvement", "Value creation", "Financial analysis", "Revenue optimization"],
         badge: "Business & Professional Services",
         desc1: "The business services industry is experiencing rapid growth and disruption, and the fight for talent and differentiation is highly competitive. To truly stand out, businesses must embrace change and embark on frequent initiatives to best serve their clients’ evolving needs.",
@@ -100,7 +100,7 @@ export const industryData: IndustryProps[] = [
     {
         id: 3,
         title: "Hospitality & Entertainment",
-        src: "/cfo-1.jpeg",
+        src: "/rt-1.jpeg",
         Icon: Music,
         tags: ["Mergers & acquisitions", "Debt restructuring", "Customer acquisition & retention"],
         supportText: "Guiding hospitality and entertainment brands through growth, financing, and digital evolution",
@@ -111,7 +111,7 @@ export const industryData: IndustryProps[] = [
     {
         id: 4,
         title: "Manufacturing & Distribution",
-        src: "/rt-1.jpeg",
+        src: "/stoc-notebook.png",
         Icon: Box,
         supportText: "Driving operational success across global manufacturing and distribution networks",
         tags: ["Supply chain optimization", "Operational strategy", "Global market insights"],
@@ -135,7 +135,7 @@ export const industryData: IndustryProps[] = [
     {
         id: 6,
         title: "Technology, Media, & Telecommunications",
-        src: "/ges-1.jpeg",
+        src: "/tas-1.jpeg",
         Icon: Tv2,
         tags: ["Consumer behavior insights", "Operational efficiency", "E-commerce strategy"],
         supportText: "Empowering retailers to thrive through digital transformation and operational excellence",

@@ -1,7 +1,9 @@
+import Image from "next/image";
+
 export default function Hero() {
   return (
-    <section className="relative h-[95vh] flex flex-col bg-white">
-      <div className="px-4  flex flex-col md:flex-row mt-[25vh] items-start w-full md:px-12 flex-1 lg:px-32">
+    <section className="relative md:h-[95vh] flex flex-col bg-white">
+      <div className="px-4 gap-8 md:pb-0 pb-8 pt-[15vh] md:pt-0 flex flex-col md:flex-row items-center w-full md:px-12 flex-1 lg:px-32">
         <div className="flex flex-col flex-1">
           <h1 className="text-5xl text-start tracking-tighter md:max-w-[20ch] md:text-6xl font-gambetta lg:text-7xl leading-tight text-[#07171E]">
             Industry expertise that <br />
@@ -15,9 +17,17 @@ export default function Hero() {
             new opportunities.
           </p>
         </div>
-        <div className="flex flex-1">image</div>
+        <div className="flex justify-end flex-1">
+          <Image
+            src="/industry-nodes.png"
+            height={500}
+            className="rounded-xl"
+            width={600}
+            alt="STOC Industries"
+          />
+        </div>
       </div>
-      <div className="flex flex-wrap md:px-12 justify-center lg:px-32 px-4 items-center mb-12 gap-4">
+      <div className="md:flex hidden flex-wrap md:px-12 justify-center lg:px-32 px-4 items-center mb-12 gap-4">
         <p className="text-sm md:text-base text-neutral-500 tracking-wide">
           Business Services
         </p>

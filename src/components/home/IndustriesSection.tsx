@@ -66,7 +66,7 @@ const IndustriesSection: React.FC = () => (
             advisory.
           </h2>
         </div>
-        <p className="text-gray-600  md:max-w-[64ch] text-lg leading-8">
+        <p className="text-gray-600  md:max-w-[64ch] text-lg text-center md:text-start leading-8">
           Our unique backgrounds and experiences in public accounting,
           investment banking, private equity, and consulting provides clients
           with a breadth of industry-specific knowledge and expertise.
