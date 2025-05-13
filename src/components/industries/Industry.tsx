@@ -9,7 +9,6 @@ const Industry: React.FC<IndustryProps> = ({
   desc1,
   desc2,
   supportText,
-  reverse,
 }) => {
   return (
     <div

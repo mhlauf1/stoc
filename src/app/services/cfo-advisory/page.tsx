@@ -1,5 +1,4 @@
 import React from "react";
-import Image from "next/image";
 import CTA from "@/components/CTA";
 import SubpageHero from "@/components/SubpageHero";
 
