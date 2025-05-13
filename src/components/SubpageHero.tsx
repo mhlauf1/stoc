@@ -4,13 +4,15 @@ import Image from "next/image";
 const SubpageHero = ({
   title,
   sub1,
-  sub2,
   src,
+  bullets,
+  sub2,
 }: {
   title: string;
   sub1: string;
-  sub2: string;
   src: string;
+  bullets?: string[];
+  sub2?: string;
 }) => {
   return (
     <main>
@@ -21,12 +23,21 @@ const SubpageHero = ({
               {title}
             </h1>
             <div className="flex-col gap-4 w-full h-auto flex flex-1">
-              <p className="text-start text-md md:text-lg leading-8 md:max-w-[64ch] text-neutral-600">
+              <p className="text-start text-md md:text-lg leading-8 md:max-w-[74ch] text-neutral-600">
                 {sub1}
               </p>
-              <p className="text-start text-md md:text-lg leading-8 md:max-w-[64ch] text-neutral-600">
-                {sub2}
-              </p>
+              {bullets && (
+                <ul className="text-start list-disc text-md  leading-8 md:max-w-[64ch] text-neutral-600">
+                  {bullets.map((bullet) => (
+                    <li>{bullet}</li>
+                  ))}
+                </ul>
+              )}
+              {sub2 ? (
+                <p className="text-start text-md md:text-lg leading-8 md:max-w-[74ch] text-neutral-600">
+                  {sub2}
+                </p>
+              ) : null}
             </div>
           </div>
           <div className="flex justify-end flex-1">

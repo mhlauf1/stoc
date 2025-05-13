@@ -7,7 +7,12 @@ export default function Hero() {
   return (
     <section className="relative h-screen  flex">
       <div className="absolute top-0 left-0 right-0 bottom-0">
-        <Image className="-z-1" fill src="/hero-stoc.png" alt="STOC hero" />
+        <Image
+          className="-z-1 object-cover"
+          fill
+          src="/hero-stoc.png"
+          alt="STOC hero"
+        />
       </div>
       <div className="flex z-10 flex-col gap-6 w-full px-6 md:px-12 lg:px-32 items-center justify-center">
         <NewsLetterBadge />
