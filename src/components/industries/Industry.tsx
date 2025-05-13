@@ -44,7 +44,7 @@ const Industry: React.FC<IndustryProps> = ({
           </div>
           {/* pills container positioned bottom-left */}
           <div className=" flex flex-row gap-2">
-            {tags.map((item) => (
+            {tags!.map((item) => (
               <div className="bg-white py-2 px-4 rounded-full" key={item}>
                 <p className="text-neutral-500 text-sm">{item}</p>
               </div>
