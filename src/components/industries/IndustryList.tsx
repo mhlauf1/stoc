@@ -24,6 +24,7 @@ const IndustryList = () => {
         <div className="flex items-start flex-col gap-12">
           {industryData.map((item, idx) => (
             <Industry
+              Icon={item.Icon}
               key={item.id}
               src={item.src}
               supportText={item.supportText}
