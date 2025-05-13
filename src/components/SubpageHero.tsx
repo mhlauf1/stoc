@@ -29,7 +29,7 @@ const SubpageHero = ({
               {bullets && (
                 <ul className="text-start list-disc text-md  leading-8 md:max-w-[64ch] text-neutral-600">
                   {bullets.map((bullet) => (
-                    <li>{bullet}</li>
+                    <li key={bullet}>{bullet}</li>
                   ))}
                 </ul>
               )}
