@@ -10,6 +10,7 @@ const OverviewBento = () => {
     e.preventDefault();
     // TODO: integrate with your newsletter provider
     console.log("Subscribe with:", email);
+    setEmail(email);
   };
   return (
     <section className="bg-white  px-4 md:px-12 lg:px-32 py-24">

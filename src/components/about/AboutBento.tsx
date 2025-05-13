@@ -66,8 +66,8 @@ const AboutBento = () => {
                 Case Studies
               </h2>
               <p className="leading-7 md:leading-8 text-md md:text-lg text-neutral-600 mt-4 mb-10">
-                Discover how we've helped clients achieve success through real
-                examples.
+                Discover how we&apos;ve helped clients achieve success through
+                real examples.
               </p>
             </div>
             <Link href="/about/case-studies">

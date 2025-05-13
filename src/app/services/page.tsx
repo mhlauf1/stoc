@@ -1,5 +1,4 @@
 import Hero from "@/components/services/Hero";
-import ServicesSection from "@/components/services/ServicesSection";
 import CTA from "@/components/CTA";
 import Services from "@/components/home/Services";
 export default function Home() {
