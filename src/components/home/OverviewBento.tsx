@@ -31,7 +31,7 @@ const OverviewBento = () => {
               <PrimaryButton>Explore Services</PrimaryButton>
             </Link>
           </div>
-          <div className="flex flex-col  justify-between flex-1 bg-[#F7F7F7] px-12 py-16 rounded-md items-start">
+          <div className="flex flex-col justify-between flex-1 bg-[#F7F7F7] px-12 py-16 rounded-md items-start">
             <div>
               <h2 className="text-3xl  tracking-tighter max-w-[24ch] md:text-4xl font-gambetta lg:text-5xl text-start leading-tight">
                 Industries We Serve

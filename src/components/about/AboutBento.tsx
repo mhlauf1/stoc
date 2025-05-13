@@ -10,7 +10,7 @@ const AboutBento = () => {
         {/* First row: Company & Team */}
         <div className="flex flex-col md:flex-row gap-4">
           {/* Company Teaser */}
-          <div className="flex-1 bg-[#F7F7F7] px-12 py-16 rounded-md flex flex-col justify-between">
+          <div className="flex-1 bg-[#F7F7F7] px-12 py-16 rounded-md items-start flex flex-col justify-between">
             <div>
               <h2 className="text-3xl tracking-tighter max-w-[24ch] md:text-4xl font-gambetta leading-tight">
                 Company
@@ -26,7 +26,7 @@ const AboutBento = () => {
           </div>
 
           {/* Team Teaser */}
-          <div className="flex-1 bg-[#F7F7F7] px-12 py-16 rounded-md flex flex-col justify-between">
+          <div className="flex-1 bg-[#F7F7F7] px-12 py-16 rounded-md flex flex-col items-start justify-between">
             <div>
               <h2 className="text-3xl tracking-tighter max-w-[24ch] md:text-4xl font-gambetta leading-tight">
                 Team
@@ -45,7 +45,7 @@ const AboutBento = () => {
         {/* Second row: Locations, Case Studies & Careers */}
         <div className="flex flex-col md:flex-row gap-4">
           {/* Locations Teaser */}
-          <div className="flex-1 bg-[#F7F7F7] px-12 py-16 rounded-md flex flex-col justify-between">
+          <div className="flex-1 bg-[#F7F7F7] px-12 py-16 rounded-md flex flex-col items-start justify-between">
             <div>
               <h2 className="text-3xl tracking-tighter max-w-[24ch] md:text-4xl font-gambetta leading-tight">
                 Locations
@@ -60,7 +60,7 @@ const AboutBento = () => {
           </div>
 
           {/* Case Studies Teaser */}
-          <div className="flex-1 bg-[#F7F7F7] px-12 py-16 rounded-md flex flex-col justify-between">
+          <div className="flex-1 bg-[#F7F7F7] px-12 py-16 rounded-md flex flex-col items-start justify-between">
             <div>
               <h2 className="text-3xl tracking-tighter max-w-[24ch] md:text-4xl font-gambetta leading-tight">
                 Case Studies
@@ -76,7 +76,7 @@ const AboutBento = () => {
           </div>
 
           {/* Careers Teaser */}
-          <div className="flex-1 bg-[#F7F7F7] px-12 py-16 rounded-md flex flex-col justify-between">
+          <div className="flex-1 bg-[#F7F7F7] px-12 py-16 rounded-md flex flex-col items-start justify-between">
             <div>
               <h2 className="text-3xl tracking-tighter max-w-[24ch] md:text-4xl font-gambetta leading-tight">
                 Careers

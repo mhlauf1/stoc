@@ -1,45 +1,50 @@
-import { ArrowUpRight } from "lucide-react";
-import Link from "next/link";
-
 export default function Hero() {
   return (
-    <section className="relative h-[95vh] bg-white flex">
-      <div className="px-6 justify-center flex flex-col items-start w-full md:px-12 h-full lg:px-32">
-        <div className="flex items-start gap-6 flex-col">
-          <Link className="z-10" href="/about">
-            <button className="bg-black/90 tracking-wide cursor-pointer gap-2 flex text-sm border  border-white/20 hover:border-white/60 duration-200 hover:text-white hover:shadow-xs text-neutral-200 px-4 py-1.5 rounded-full">
-              Sign up for the stoc newsletter.{" "}
-              <span className="text-white font-semibold flex flex-row gap-1 items-start">
-                Sign up now <ArrowUpRight size={16} strokeWidth={"2"} />
-              </span>
-            </button>
-          </Link>
+    <section className="relative h-[95vh] flex flex-col bg-white">
+      <div className="px-4  flex flex-col md:flex-row mt-[25vh] items-start w-full md:px-12 flex-1 lg:px-32">
+        <div className="flex flex-col flex-1">
           <h1 className="text-5xl text-start tracking-tighter md:max-w-[20ch] md:text-6xl font-gambetta lg:text-7xl leading-tight text-[#07171E]">
             Industry expertise that <br />
             <span className="italic font-gambetta">
               drives transaction success
             </span>
           </h1>
-          <p className="text-start text-lg md:text-xl md:max-w-[42ch] text-neutral-600">
+          <p className="text-start text-lg md:text-xl md:max-w-[60ch] leading-8 mt-4 text-neutral-600">
             We combine deep sector expertise with a proven transformation
             playbook—helping you navigate complexity, mitigate risk, and seize
             new opportunities.
           </p>
-
-          <div className="flex absolute bottom-8 items-center mb-6 gap-12">
-            <p className="text-sm md:text-base text-neutral-500 tracking-wide">
-              Due Diligence
-            </p>
-            <div className="h-[4px] w-[4px] rounded-full bg-neutral-400"></div>
-            <p className="text-sm md:text-base text-neutral-500 tracking-wide">
-              M&A Advisory
-            </p>
-            <div className="h-[4px] w-[4px] rounded-full bg-neutral-400"></div>
-            <p className="text-sm md:text-base text-neutral-500 tracking-wide">
-              CFO Advisory
-            </p>
-          </div>
         </div>
+        <div className="flex flex-1">image</div>
+      </div>
+      <div className="flex flex-wrap md:px-12 justify-center lg:px-32 px-4 items-center mb-12 gap-4">
+        <p className="text-sm md:text-base text-neutral-500 tracking-wide">
+          Business Services
+        </p>
+        <div className="h-[4px] w-[4px] rounded-full bg-neutral-400"></div>
+        <p className="text-sm md:text-base text-neutral-500 tracking-wide">
+          Cannabis
+        </p>
+        <div className="h-[4px] w-[4px] rounded-full bg-neutral-400"></div>
+        <p className="text-sm md:text-base text-neutral-500 tracking-wide">
+          Healthcare
+        </p>
+        <div className="h-[4px] w-[4px] rounded-full bg-neutral-400"></div>
+        <p className="text-sm md:text-base text-neutral-500 tracking-wide">
+          Hospitality & Entertainment
+        </p>
+        <div className="h-[4px] w-[4px] rounded-full bg-neutral-400"></div>
+        <p className="text-sm md:text-base text-neutral-500 tracking-wide">
+          Manufacturing & Distribution
+        </p>
+        <div className="h-[4px] w-[4px] rounded-full bg-neutral-400"></div>
+        <p className="text-sm md:text-base text-neutral-500 tracking-wide">
+          Retail & Consumer Products
+        </p>
+        <div className="h-[4px] w-[4px] rounded-full bg-neutral-400"></div>
+        <p className="text-sm md:text-base text-neutral-500 tracking-wide">
+          Technology, Media, & Telecommunications
+        </p>
       </div>
     </section>
   );

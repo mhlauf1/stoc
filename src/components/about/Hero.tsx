@@ -14,11 +14,11 @@ export default function Hero() {
         />
       </div>
       <div className="flex z-10 flex-col w-full px-6 md:px-12 lg:px-32 items-start pb-24 pt-24 md:pt-64">
-        <Link className="z-10" href="/about">
+        <Link className="z-10" href="/about/team">
           <button className="bg-white/10 tracking-wide cursor-pointer flex text-sm border mb-6 gap-2 border-white/20 hover:border-white/60 duration-200 hover:text-white hover:shadow-xs text-neutral-200 px-4 py-1.5 rounded-full">
-            Sign up for the stoc newsletter.{" "}
+            Trusted Advising.{" "}
             <span className="text-white font-semibold flex flex-row gap-1 items-start">
-              Sign up now <ArrowUpRight size={16} strokeWidth={"2"} />
+              Meet the Team <ArrowUpRight size={16} strokeWidth={"2"} />
             </span>
           </button>
         </Link>
