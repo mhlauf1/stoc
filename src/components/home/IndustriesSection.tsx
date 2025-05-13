@@ -1,0 +1,80 @@
+import React from "react";
+import { industryData } from "@/utils/data";
+import { IndustryProps } from "@/utils/types";
+import { PrimaryButton } from "../Button";
+import Link from "next/link";
+import Image from "next/image";
+
+const IndustryCard: React.FC<IndustryProps> = ({
+  Icon,
+  title,
+  src,
+  supportText,
+  href,
+}) => (
+  <div className="flex bg-white flex-col relative rounded-2xl border border-neutral-100">
+    <div className="h-[250px] w-full relative">
+      <Image
+        src={src!}
+        alt={title}
+        fill
+        className="rounded-t-2xl object-cover"
+      />
+    </div>
+    <div className="flex  flex-col items-start pt-8 pb-12 px-8 gap-2">
+      <div className="bg-[#16333A] p-2 rounded-lg">
+        <Icon className="h-6 w-6 text-white" />
+      </div>
+      <h3 className="text-2xl md:text-3xl mt-2 tracking-tighter text-center md:text-start font-gambetta">
+        {title}
+      </h3>
+      <p className="text-gray-600 w-[100%] leading-7">{supportText}</p>
+      <Link className="mt-2" href={href!}>
+        <PrimaryButton>Learn more</PrimaryButton>
+      </Link>
+    </div>
+
+    <div className="absolute bottom-0 left-0 right-0 h-[10px] rounded-b-2xl bg-black/10 overflow-hidden"></div>
+  </div>
+);
+
+const IndustryGrid: React.FC = () => (
+  <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+    {industryData.map((svc) => (
+      <IndustryCard key={svc.id} {...svc} />
+    ))}
+  </div>
+);
+
+const IndustriesSection: React.FC = () => (
+  <section className="bg-[#F7F7F7] py-24 md:py-28">
+    <div className="flex flex-col  px-4 sm:px-12 md:px-32">
+      <div className="flex flex-col md:flex-row justify-between mb-12 md:mb-16 items-center md:items-end gap-4">
+        <div className="flex md:mb-0 mb-8 flex-col gap-4">
+          <div className="flex flex-row md:justify-start justify-center gap-4 items-center">
+            <div className="h-[1px] bg-neutral-300 w-[60px]" />
+            <span
+              style={{ letterSpacing: "3px" }}
+              className="uppercase text-gray-600 text-xs font-mono"
+            >
+              Industries we serve
+            </span>
+            <div className="h-[1px] bg-neutral-300 w-[60px]" />
+          </div>
+          <h2 className="text-3xl text-center md:text-start tracking-tighter md:max-w-[24ch] md:text-4xl font-gambetta lg:text-5xl leading-tight">
+            Driving sector-specific growth and resilience through expert
+            advisory.
+          </h2>
+        </div>
+        <p className="text-gray-600  md:max-w-[64ch] text-lg leading-8">
+          Our unique backgrounds and experiences in public accounting,
+          investment banking, private equity, and consulting provides clients
+          with a breadth of industry-specific knowledge and expertise.
+        </p>
+      </div>
+      <IndustryGrid />
+    </div>
+  </section>
+);
+
+export default IndustriesSection;

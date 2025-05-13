@@ -1,23 +1,15 @@
 import Hero from "@/components/home/Hero";
-import IntroServices from "@/components/home/IntroServices";
-import Services from "@/components/home/Services";
-import Industries from "@/components/home/Industries";
 import Trust from "@/components/home/Trust";
 import AboutUs from "@/components/home/AboutUs";
-import CTA from "@/components/CTA";
-import NewsletterCtaSection from "@/components/NewsletterCtaSection";
+import OverviewBento from "@/components/home/OverviewBento";
 
 export default function Home() {
   return (
     <main>
       <Hero />
-      <IntroServices />
-      <Services />
-      <NewsletterCtaSection />
-      <Industries />
-      <Trust />
       <AboutUs />
-      <CTA />
+      <Trust />
+      <OverviewBento />
     </main>
   );
 }

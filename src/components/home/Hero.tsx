@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { PrimaryButton, WhiteButton } from "../Button";
+import { WhiteButton } from "../Button";
 import NewsLetterBadge from "../NewsletterBadge";
 import Link from "next/link";
 
@@ -25,9 +25,6 @@ export default function Hero() {
         <div className="flex flex-col md:flex-row md:justify-center items-center md:w-auto w-full gap-4 md:gap-6">
           <Link className="md:w-auto w-full" href="/services">
             <WhiteButton>Explore Services</WhiteButton>
-          </Link>
-          <Link className="md:w-auto w-full" href="/contact">
-            <PrimaryButton>Talk to an Advisor </PrimaryButton>
           </Link>
         </div>
       </div>

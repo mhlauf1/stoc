@@ -1,10 +1,11 @@
 import Hero from "@/components/industries/Hero";
-import IndustryList from "@/components/industries/IndustryList";
+import IndustriesSection from "@/components/home/IndustriesSection";
+
 export default function Industries() {
   return (
     <main>
       <Hero />
-      <IndustryList />
+      <IndustriesSection />
     </main>
   );
 }

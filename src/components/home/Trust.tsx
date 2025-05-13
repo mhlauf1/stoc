@@ -34,25 +34,10 @@ const TrustItem: React.FC<TrustItemProps> = ({ title, text }) => (
 );
 
 const Trust: React.FC = () => (
-  <section className="bg-[#07171E] px-0 md:px-12 lg:px-32 py-6 md:py-24">
-    <div className="mx-auto flex px-4 sm:px-8 md:px-28  md:border-dashed md:border border-white/10 py-20 md:py-32  rounded-2xl flex-col items-center text-center text-white gap-8">
-      <div className="flex items-center justify-center gap-4">
-        <div className="h-[1px] bg-neutral-300 w-[60px]" />
-        <span
-          style={{ letterSpacing: "3px" }}
-          className="uppercase text-gray-200 text-xs"
-        >
-          Built on trust, every engagement.
-        </span>
-        <div className="h-[1px] bg-neutral-300 w-[60px]" />
-      </div>
-      <h2 className=" text-3xl md:text-4xl max-w-4xl lg:text-6xl tracking-tight leading-tight">
-        <span className=" italic font-gambetta">
-          Deep expertise, tailored guidance,{" "}
-        </span>
-        <span className="text-white/90 tracking-tighter font-gambetta">
-          and a proven process— delivering results you can rely on.
-        </span>
+  <section className="bg-[#07171E] px-0 md:px-12 lg:px-32 py-12">
+    <div className="mx-auto flex  py-20 md:py-16 rounded-2xl flex-col items-center text-center text-white gap-8">
+      <h2 className="text-3xl  tracking-tighter max-w-[24ch] md:text-4xl font-gambetta lg:text-5xl text-center md:text-start leading-tight">
+        Why Clients Trust STOC
       </h2>
       <div className="grid mt-8 w-full grid-cols-1 gap-16 md:gap-24 md:grid-cols-3">
         {trustData.map(({ id, title, text }) => (

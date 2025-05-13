@@ -7,19 +7,22 @@ export type ServiceProps = {
     description?: string;
     longDesc?: string
     image?: string;
+    href?: string;
 };
 
 
 export type IndustryProps = {
     id: number;
     title: string;
-    src: string;
-    tags: string[];
-    badge: string;
-    desc1: string;
+    src?: string;
+    tags?: string[];
+    Icon: LucideIcon;
+    badge?: string;
+    desc1?: string;
     desc2?: string;
     supportText?: string;
     reverse?: boolean;
+    href?: string;
 }
 
 export type TeamMemberProps = {

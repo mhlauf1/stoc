@@ -1,6 +1,8 @@
 "use client";
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import { PrimaryButton } from "../Button";
+import Link from "next/link";
 
 export default function IntroServices() {
   const [offsetY, setOffsetY] = useState(0);
@@ -47,11 +49,17 @@ export default function IntroServices() {
             </span>
             <div className="h-[1px] bg-neutral-300 w-[60px]" />
           </div>
-          <p className="text-2xl  sm:text-3xl tracking-tighter lg:max-w-[42ch] md:text-4xl font-gambetta text-neutral-900 leading-normal md:leading-relaxed">
-            STOC partners with middle-market businesses and private equity
-            sponsors to unlock value at every stage—accelerating growth and
-            delivering lasting impact.
+          <h2 className="text-2xl  sm:text-3xl tracking-tighter lg:max-w-[42ch] md:text-4xl font-gambetta text-neutral-900 leading-normal md:leading-relaxed">
+            Unlocking Value at Every Stage
+          </h2>
+          <p className="leading-7 md:leading-8 text-center max-w-[56ch] mb-8 text-md md:text-lg text-neutral-600 md:mt-4">
+            STOC Advisory partners with middle-market businesses and private
+            equity sponsors to accelerate growth, mitigate risk, and deliver
+            lasting impact.
           </p>
+          <Link href="/about" className="w-full md:w-auto">
+            <PrimaryButton>Learn More About Us</PrimaryButton>
+          </Link>
         </div>
 
         {/* Right Image */}

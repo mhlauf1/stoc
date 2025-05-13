@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="relative h-screen  flex">
+    <section className="relative h-[95vh]  flex">
       <div className="absolute top-0 left-0 right-0 bottom-0">
         <Image
           className="-z-1"
@@ -32,11 +32,6 @@ export default function Hero() {
           support in due diligence, negotiation, and integration to ensure your
           transactions deliver measurable value.
         </p>
-        <div className="flex flex-col items-start text-white  ">
-          <button className=" z-1 flex flex-row gap-4 items-center font-medium bg-white text-green-950  px-8 py-4 rounded-full text-lg hover:bg-neutral-200 cursor-pointer transition">
-            Talk to an Advisor <ArrowUpRight size={28} strokeWidth={"2"} />
-          </button>
-        </div>
       </div>
     </section>
   );

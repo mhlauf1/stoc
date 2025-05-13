@@ -1,40 +1,47 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa";
 
 export default function Footer() {
   return (
     <footer className="bg-[#07171E] px-6 md:px-12 lg:px-32 py-16">
-      <div className="mx-auto grid gap-10 grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
+      <div
+        className="grid grid-cols-1 md:grid-cols-5 gap-y-10 
+                      md:gap-x-12"
+      >
         {/* Logo & Tagline */}
-        <div className="flex flex-col items-start justify-between gap-4">
+        <div className="flex flex-col justify-between gap-6">
           <Link href="/">
             <Image
               src="/stoc-logo-main.png"
-              width={200}
-              height={100}
-              alt="STOC"
+              width={180}
+              height={60}
+              alt="STOC Advisory"
               className="filter brightness-0 invert"
             />
           </Link>
-          <p className="text-neutral-300 leading-6 max-w-xs text-left">
-            Strategic advisors guiding businesses through complex transactions.
+          <p className="text-neutral-300 leading-6">
+            STOC Advisory is not a CPA firm.
           </p>
         </div>
 
         {/* Services */}
-        <div className="flex flex-col items-start gap-3">
-          <h4 className="text-white font-medium">Services</h4>
-          <ul className="space-y-2">
+        <div className="flex flex-col gap-4">
+          <h4 className="text-neutral-400 uppercase text-xs tracking-wide">
+            Services
+          </h4>
+          <ul className="space-y-3">
             {[
-              "Transaction Advisory",
-              "Corporate Development",
               "CFO Advisory",
+              "Corporate Development Support",
+              "Growth Enablement Services",
+              "Transaction Advisory Services",
             ].map((service) => (
               <li key={service}>
                 <Link
                   href="/services"
-                  className="text-neutral-300 hover:text-white transition"
+                  className="text-neutral-300 hover:text-white transition-colors duration-200 pb-1 border-b border-transparent hover:border-neutral-600"
                 >
                   {service}
                 </Link>
@@ -44,19 +51,20 @@ export default function Footer() {
         </div>
 
         {/* Company */}
-        <div className="flex flex-col items-start gap-3">
-          <h4 className="text-white font-medium">Company</h4>
-          <ul className="space-y-2">
+        <div className="flex flex-col gap-4">
+          <h4 className="text-neutral-400 uppercase text-xs tracking-wide">
+            Company
+          </h4>
+          <ul className="space-y-3">
             {[
               { label: "About Us", href: "/about" },
-              { label: "Services", href: "/services" },
               { label: "Industries", href: "/industries" },
               { label: "Contact", href: "/contact" },
             ].map(({ label, href }) => (
               <li key={label}>
                 <Link
                   href={href}
-                  className="text-neutral-300 hover:text-white transition"
+                  className="text-neutral-300 hover:text-white transition-colors duration-200 pb-1 border-b border-transparent hover:border-neutral-600"
                 >
                   {label}
                 </Link>
@@ -66,18 +74,36 @@ export default function Footer() {
         </div>
 
         {/* Locations */}
-        <div className="flex flex-col items-start gap-3">
-          <h4 className="text-white font-medium">Locations</h4>
-          <ul className="space-y-2 text-neutral-300">
-            {["Baltimore, MD", "Edina, MN"].map((loc) => (
+        <div className="flex flex-col gap-4">
+          <h4 className="text-neutral-400 uppercase text-xs tracking-wide">
+            Locations
+          </h4>
+          <ul className="space-y-3 text-neutral-300">
+            {["Baltimore, MD", "Minneapolis, MN"].map((loc) => (
               <li
                 key={loc}
-                className="hover:text-white transition cursor-default"
+                className="cursor-pointer hover:text-white transition-colors duration-200"
               >
                 {loc}
               </li>
             ))}
           </ul>
+        </div>
+
+        {/* Social */}
+        <div className="flex flex-col gap-4">
+          <h4 className="text-neutral-400 uppercase text-xs tracking-wide">
+            Follow Us
+          </h4>
+          <div className="flex space-x-4 text-neutral-300">
+            {[FaFacebook, FaLinkedin, FaTwitter].map((Icon, i) => (
+              <Icon
+                key={i}
+                size={28}
+                className="hover:text-white transition-colors duration-200 cursor-pointer"
+              />
+            ))}
+          </div>
         </div>
       </div>
     </footer>

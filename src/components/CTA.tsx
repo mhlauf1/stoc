@@ -4,8 +4,8 @@ import Link from "next/link";
 
 const CTA: React.FC = () => {
   return (
-    <section className="bg-white px-0 md:px-12 lg:px-32 md:py-28">
-      <div className="mx-auto md:max-w-7xl bg-[#232323] md:rounded-2xl px-4 sm:px-12 md:px-20 py-16 md:py-24 flex flex-col items-center text-center gap-8">
+    <section className="bg-white px-0 md:px-12 lg:px-32 md:pb-24">
+      <div className="bg-[#232323] md:rounded-2xl py-16 md:py-24 flex flex-col items-center text-center gap-8">
         {/* Tagline */}
         <div className="flex items-center gap-4">
           <div className="h-px bg-neutral-600 w-16" />
@@ -20,13 +20,14 @@ const CTA: React.FC = () => {
 
         {/* Headline */}
         <h2 className="text-white text-3xl md:text-4xl lg:text-6xl font-gambetta tracking-tighter max-w-[16ch] leading-tight">
-          Ready to move your{" "}
-          <span className="italic font-gambetta">business forward?</span>
+          Stay Ahead with <br />
+          <span className="italic font-gambetta">STOC Insights</span>
         </h2>
 
         {/* Subtext */}
-        <p className="text-neutral-300 text-lg">
-          Partner with STOC to unlock growth and mitigate risk.
+        <p className="text-neutral-200 text-lg">
+          Monthly strategies, market intelligence, and deal best
+          practices—delivered straight to your inbox.{" "}
         </p>
 
         {/* Email form */}
@@ -34,15 +35,15 @@ const CTA: React.FC = () => {
           <div className="inline-flex w-full bg-white max-w-lg rounded-full overflow-hidden border-2 p-1 border-white">
             <input
               type="email"
-              placeholder="Enter your email address"
+              placeholder="Your business email"
               className="flex-1 px-6 py-3 focus:outline-none"
             />
             <Link className="md:block hidden" href="/contact">
-              <PrimaryButton>Submit</PrimaryButton>
+              <PrimaryButton>Subscribe</PrimaryButton>
             </Link>
           </div>
           <Link className="block md:hidden" href="/contact">
-            <PrimaryButton>Submit</PrimaryButton>
+            <PrimaryButton>Subscribe</PrimaryButton>
           </Link>
         </form>
       </div>
