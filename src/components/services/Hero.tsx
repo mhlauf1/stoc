@@ -7,11 +7,11 @@ export default function Hero() {
       {/* Text Column */}
       <div className="flex-1 flex flex-col justify-center pt-[15vh] md:pt-0 px-4 md:px-12 lg:px-32 py-12 md:py-0">
         <div>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-gambetta tracking-tight text-white md:max-w-[20ch]">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-gambetta tracking-tight leading-none text-white md:max-w-[20ch]">
             Turning complex transactions into{" "}
             <span className="italic font-gambetta">opportunity.</span>
           </h1>
-          <p className="mt-6 text-lg md:text-xl text-white md:max-w-[42ch]">
+          <p className="mt-10 text-lg md:text-xl text-white md:max-w-[42ch]">
             From deep‐dive due diligence to seamless integration, we ensure
             every deal captures maximum value.
           </p>
@@ -55,7 +55,7 @@ export default function Hero() {
           src="/handshake.jpg"
           alt="STOC Industries"
           fill
-          className="object-cover object-center rounded-xl"
+          className="object-cover object-center"
         />
       </div>
     </section>
