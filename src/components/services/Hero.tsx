@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <section className="relative md:h-[95vh] h-auto bg-[#07171E] flex">
-      <div className="pl-6 justify-start gap-8 md:pb-0 pb-8 pt-[15vh] md:pt-0 flex flex-col md:flex-row items-center w-full md:pl-12 h-full lg:pl-32">
+      <div className="px-6 justify-start gap-8 md:pb-0 pb-8 pt-[15vh] md:pt-0 flex flex-col md:flex-row items-center w-full md:px-12 h-full lg:px-32">
         <div className="flex items-start gap-6 flex-1 flex-col">
           <h1 className="text-4xl sm:text-5xl text-start tracking-tighter md:max-w-[20ch] md:text-6xl font-gambetta lg:text-7xl leading-tight text-white">
             Turning complexity transactions into{" "}
@@ -16,7 +16,7 @@ export default function Hero() {
         </div>
         <div className="flex md:justify-end items-start flex-1">
           <Image
-            src="/drew-mike.png"
+            src="/handshake.jpg"
             height={500}
             className="rounded-xl"
             width={600}

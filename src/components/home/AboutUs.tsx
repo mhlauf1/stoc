@@ -5,7 +5,7 @@ import Link from "next/link";
 
 const AboutUs = () => {
   return (
-    <section className="bg-[#F7F7F7]  px-4 md:px-12 lg:px-32 py-24 md:py-32">
+    <section className="bg-[#F7F7F7]  px-4 md:px-12 lg:px-28 py-20 md:py-28">
       <div className="flex flex-col items-center md:flex-row gap-12">
         <div className="flex flex-col gap-8 flex-1 items-center md:items-start">
           <div className="flex items-center md:mb-4 justify-center gap-4">
@@ -36,7 +36,7 @@ const AboutUs = () => {
         </div>
         <div className="flex justify-end flex-1">
           <Image
-            src="/about-close.jpg"
+            src="/drew-mike.png"
             className="h-[620px] object-cover rounded-xl"
             alt="Meet the STOC Team"
             height={620}

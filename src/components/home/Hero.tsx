@@ -14,20 +14,20 @@ export default function Hero() {
           alt="STOC hero"
         />
       </div>
-      <div className="flex z-10 flex-col gap-6 w-full px-6 md:px-12 lg:px-32 items-center justify-center">
+      <div className="flex z-10 flex-col gap-4 w-full px-4 md:px-12 lg:px-28 items-center justify-center">
         <NewsLetterBadge />
 
-        <h1 className="text-4xl sm:text-5xl text-center tracking-tighter max-w-[20ch] md:text-6xl font-gambetta lg:text-7xl leading-tight text-white">
+        <h1 className="text-4xl sm:text-5xl text-center tracking-tighter md:max-w-[20ch] md:text-6xl font-gambetta lg:text-7xl leading-tight text-white">
           Where Strategic Transactions{" "}
           <span className="font-gambetta italic">
             Meet Exceptional Advising
           </span>
         </h1>
-        <p className="text-md sm:text-lg text-center md:text-xl w-full md:max-w-lg text-white">
+        <p className="text-md sm:text-lg text-center md:text-xl w-full md:max-w-lg text-white/90">
           Guiding you through every stage of the acquisition lifecycle with
           precision, insight, and proven expertise.{" "}
         </p>
-        <div className="flex flex-col md:flex-row md:justify-center items-center md:w-auto w-full gap-4 md:gap-6">
+        <div className="flex flex-col md:flex-row md:justify-center items-center md:w-auto w-full gap-4 mt-6 md:gap-6">
           <Link className="md:w-auto w-full" href="/services">
             <WhiteButton>Explore Services</WhiteButton>
           </Link>
