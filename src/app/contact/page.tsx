@@ -2,7 +2,6 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
 import { Mail, Phone, MapPin } from "lucide-react";
 // import ReCAPTCHA from "react-google-recaptcha";
 import { PrimaryButton } from "@/components/Button";
@@ -103,7 +102,7 @@ export default function ContactPage() {
       {/* Form */}
       {success && (
         <div className="bg-green-100 text-green-800 p-4 rounded-lg mb-6">
-          Thanks for reaching out! We’ll get back to you shortly.
+          Thanks for reaching out! We&apos;ll get back to you shortly.
         </div>
       )}
       <form onSubmit={handleSubmit} className="space-y-6">
