@@ -1,4 +1,4 @@
-import { ServiceProps, IndustryProps, TeamMemberProps } from "@/utils/types";
+import { ServiceProps, IndustryProps, TeamMemberProps, ValueProps, ServicesPageProps } from "@/utils/types";
 import {
     TrendingUp,
     Handshake,
@@ -12,7 +12,8 @@ import {
     ShoppingCart,
     Tv2
 } from "lucide-react";
-
+import TASNode from "@/components/services/nodes/TASNode";
+import CDSNode from "@/components/services/nodes/CDSNode";
 
 export const servicesData: ServiceProps[] = [
     {
@@ -57,6 +58,86 @@ export const servicesData: ServiceProps[] = [
         href: "/services/cfo-advisory"
     },
 ];
+
+export const valuesData: ValueProps[] = [
+    {
+        id: 0,
+        title: "Integrity",
+        Icon: TrendingUp,
+        description:
+            "Upholding the highest ethical standards.",
+    },
+    {
+        id: 1,
+        title: "Collaboration",
+        Icon: TrendingUp,
+        description:
+            "Partnering closely with management teams.",
+    },
+    {
+        id: 2,
+        title: "Excellence",
+        Icon: TrendingUp,
+        description:
+            "Delivering rigorous, data-driven analysis.",
+    },
+    {
+        id: 3,
+        title: "Innovation",
+        Icon: TrendingUp,
+        description:
+            "Adapting to evolving market dynamics.",
+    },
+]
+
+export const coreServicesData: ValueProps[] = [
+    {
+        id: 0,
+        title: "Financial Reporting",
+        Icon: TrendingUp,
+        description:
+            "Accurate, timely financial statements you can trust.",
+    },
+    {
+        id: 1,
+        title: "Budgeting & Forecasting",
+        Icon: TrendingUp,
+        description:
+            "Structured budgets and dynamic forecasts for clarity.",
+    },
+    {
+        id: 2,
+        title: "FP&A & Analytics",
+        Icon: TrendingUp,
+        description:
+            "Data-driven planning and forecasting to guide decisions.",
+    },
+]
+
+export const tasData: ValueProps[] = [
+    {
+        id: 0,
+        title: "Risk Mitigation",
+        Icon: TrendingUp,
+        description:
+            "Identify and manage deal risks before they materialize.",
+    },
+    {
+        id: 1,
+        title: "Financial & Operational",
+        Icon: TrendingUp,
+        description:
+            "Deep-dive analyses of financial statements, contracts, and processes.",
+    },
+    {
+        id: 2,
+        title: "Value Maximization",
+        Icon: TrendingUp,
+        description:
+            "Actionable insights to enhance deal structure and post-close performance.",
+    },
+]
+
 
 
 export const industryData: IndustryProps[] = [
@@ -213,5 +294,50 @@ export const teamMeberData: TeamMemberProps[] = [
         name: "Lucius Burch",
         image: "/Lucius_Burch.jpg",
         location: "Minneapolis, MN"
+    },
+]
+
+
+
+export const servicesPageData: ServicesPageProps[] = [
+    {
+        id: 0,
+        title: "Guiding Your Critical Transactions",
+        src: "/tas-services.jpeg",
+        badge: "Transaction Advisory Services",
+        desc: "Expert support through every stage of M&A, divestitures, and capital raises.",
+        href: "/services/transaction-advisory-services",
+        Component: TASNode,
+    },
+
+    {
+        id: 1,
+        title: "Building Your Corporate Growth Engine",
+        src: "/cds-services.png",
+        badge: "Corporate Development Support",
+        desc: "Strategic frameworks to evaluate, plan, and execute expansion initiatives.",
+        href: "/services/corporate-development-support",
+        Component: CDSNode,
+
+    },
+    {
+        id: 2,
+        title: "Scaling for Sustainable Success",
+        src: "/saqib_live.png",
+        badge: "Growth Enablement Services",
+        desc: "Targeted strategies and tools to drive revenue growth and operational efficiency.",
+        href: "/services/growth-enablement-services",
+        Component: TASNode,
+
+    },
+    {
+        id: 3,
+        title: "Interim CFO Solutions for Growth & Performance",
+        src: "/cfo-services.jpeg",
+        badge: "CFO Advisory",
+        desc: "Deep finance leadership to optimize operations and maximize value.",
+        href: "/services/cfo-advisory",
+        Component: TASNode,
+
     },
 ]

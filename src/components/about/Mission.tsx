@@ -52,7 +52,7 @@ const ValuePillar: React.FC<ValuePillarProps> = ({ title, text, Icon }) => (
 
 const Mission: React.FC = () => (
   <section className="px-6 md:px-12 lg:px-[5vw] py-24 md:py-32">
-    <div className="flex flex-col items-center md:flex-row gap-[5vw]">
+    <div className="flex flex-col pb-32 items-center md:flex-row gap-[5vw]">
       {/* Left Column */}
       <div className="flex-1 flex flex-col items-start">
         <div className="flex items-center mb-6 gap-4">
@@ -61,13 +61,14 @@ const Mission: React.FC = () => (
             style={{ letterSpacing: "3px" }}
             className="uppercase text-gray-600 text-xs font-mono"
           >
-            Our Mission
+            Our Company
           </span>
           <div className="h-[1px] bg-neutral-300 w-[60px]" />
         </div>
-        <h2 className="text-3xl md:text-4xl lg:text-5xl font-gambetta tracking-tighter leading-tight max-w-[24ch]">
-          What Drives Us
-        </h2>
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-gambetta tracking-tighter leading-tight max-w-[24ch]">
+          Partnering with clients through every stage of the acquisition
+          lifecycle
+        </h1>
         <p className="mt-4 text-lg text-neutral-600 md:w-[80%] leading-8">
           At STOC, we empower businesses to navigate change and unlock growth
           through expert guidance in accounting, finance, and operations.
@@ -102,6 +103,13 @@ const Mission: React.FC = () => (
           className="rounded-2xl w-[35vw] min-w-[450px] object-cover"
         />
       </div>
+    </div>
+    <div className="flex justify-between flex-col md:flex-row ">
+      <div className="flex flex-1 flex-col">
+        <span>Stoc Advisory</span>
+        <h2></h2>
+      </div>
+      <div className="flex flex-1">side 2</div>
     </div>
   </section>
 );

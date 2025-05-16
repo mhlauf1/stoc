@@ -36,7 +36,7 @@ const AboutUs = () => {
         </div>
         <div className="flex justify-end flex-1">
           <Image
-            src="/drew-mike.png"
+            src="/about-close.jpg"
             className="h-[620px] object-cover rounded-xl"
             alt="Meet the STOC Team"
             height={620}

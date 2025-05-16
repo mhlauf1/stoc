@@ -1,4 +1,5 @@
 import type { LucideIcon } from "lucide-react";
+import type { ComponentType } from "react";
 
 export type ServiceProps = {
     id: number;
@@ -10,6 +11,12 @@ export type ServiceProps = {
     href?: string;
 };
 
+export type ValueProps = {
+    id: number;
+    title: string;
+    Icon: LucideIcon;
+    description?: string;
+};
 
 export type IndustryProps = {
     id: number;
@@ -30,4 +37,15 @@ export type TeamMemberProps = {
     name: string;
     image: string;
     location: string;
+}
+
+export type ServicesPageProps = {
+    id: number;
+    title: string;
+    src: string;
+    badge: string;
+    desc: string;
+    reverse?: boolean;
+    href: string;
+    Component?: ComponentType;
 }

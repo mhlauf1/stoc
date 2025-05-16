@@ -1,14 +1,20 @@
 import React from "react";
 import CTA from "@/components/CTA";
-import Mission from "@/components/about/Mission";
+import Hero from "@/components/about/company/Hero";
+import Intro from "@/components/about/company/Intro";
+import Values from "@/components/about/company/Values";
+import Approach from "@/components/about/company/Approach";
 
-const ComapnyPage = () => {
+const page = () => {
   return (
     <main>
-      <Mission />
+      <Hero />
+      <Intro />
+      <Values />
+      <Approach />
       <CTA />
     </main>
   );
 };
 
-export default ComapnyPage;
+export default page;

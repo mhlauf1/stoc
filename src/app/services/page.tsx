@@ -1,11 +1,12 @@
 import Hero from "@/components/services/Hero";
 import CTA from "@/components/CTA";
-import Services from "@/components/home/Services";
+import ServicesList from "@/components/services/ServicesList";
+
 export default function Home() {
   return (
     <main>
       <Hero />
-      <Services />
+      <ServicesList />
       <CTA />
     </main>
   );
