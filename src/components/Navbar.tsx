@@ -101,7 +101,7 @@ export default function Navbar() {
         isDarkBg ? "bg-white border-b border-neutral-200" : "bg-transparent"
       }`}
     >
-      <div className="flex items-center justify-between px-8 md:px-12 lg:px-16">
+      <div className="flex items-center justify-between px-4 sm:px-12 md:px-16 lg:px-28">
         {/* Logo */}
         <Link href="/">
           <Image

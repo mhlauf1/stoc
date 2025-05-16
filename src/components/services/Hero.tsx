@@ -1,45 +1,62 @@
 import Image from "next/image";
+import React from "react";
 
 export default function Hero() {
   return (
-    <section className="relative md:h-[95vh] h-auto bg-[#07171E] flex">
-      <div className="px-6 justify-start gap-8 md:pb-0 pb-8 pt-[15vh] md:pt-0 flex flex-col md:flex-row items-center w-full md:px-12 h-full lg:px-32">
-        <div className="flex items-start gap-6 flex-1 flex-col">
-          <h1 className="text-4xl sm:text-5xl text-start tracking-tighter md:max-w-[20ch] md:text-6xl font-gambetta lg:text-7xl leading-tight text-white">
-            Turning complexity transactions into{" "}
+    <section className="relative flex flex-col md:flex-row bg-[#07171E] h-auto md:h-[95vh]">
+      {/* Text Column */}
+      <div className="flex-1 flex flex-col justify-center pt-[15vh] md:pt-0 px-4 md:px-12 lg:px-32 py-12 md:py-0">
+        <div>
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-gambetta tracking-tight text-white md:max-w-[20ch]">
+            Turning complex transactions into{" "}
             <span className="italic font-gambetta">opportunity.</span>
           </h1>
-          <p className="text-start text-lg md:text-xl md:max-w-[42ch] text-white">
-            From deep-dive due diligence to seamless integration, we ensure
+          <p className="mt-6 text-lg md:text-xl text-white md:max-w-[42ch]">
+            From deep‐dive due diligence to seamless integration, we ensure
             every deal captures maximum value.
           </p>
         </div>
-        <div className="flex md:justify-end items-start flex-1">
+
+        {/* Mobile-only image, inside the text padding */}
+        <div className="relative w-full h-64 mt-16 md:hidden">
           <Image
             src="/handshake.jpg"
-            height={500}
-            className="rounded-xl"
-            width={600}
             alt="STOC Industries"
+            fill
+            className="object-cover object-center rounded-xl"
           />
         </div>
-        <div className="md:flex hidden absolute bottom-8 items-center mb-6 gap-4">
-          <p className="text-sm md:text-base text-neutral-300 tracking-wide">
-            Transaction Advisory Services
-          </p>
-          <div className="h-[4px] w-[4px] rounded-full bg-neutral-400"></div>
-          <p className="text-sm md:text-base text-neutral-300 tracking-wide">
-            Corporate Development Support
-          </p>
-          <div className="h-[4px] w-[4px] rounded-full bg-neutral-400"></div>
-          <p className="text-sm md:text-base text-neutral-300 tracking-wide">
-            Growth Enablement Services
-          </p>
-          <div className="h-[4px] w-[4px] rounded-full bg-neutral-400"></div>
-          <p className="text-sm md:text-base text-neutral-300 tracking-wide">
-            CFO Advisory
-          </p>
+
+        <div
+          className="
+        hidden md:flex flex-col mt-8
+        items-start gap-4
+      "
+        >
+          {[
+            "Transaction Advisory Services",
+            "Corporate Development Support",
+            "Growth Enablement Services",
+            "CFO Advisory",
+          ].map((label) => (
+            <span
+              key={label}
+              className="text-sm text-neutral-300 tracking-wide"
+            >
+              {label}
+            </span>
+          ))}
         </div>
+      </div>
+
+      {/* Desktop-only Image Column */}
+      <div className="flex-1 relative hidden md:block">
+        <Image
+          src="/handshake.jpg"
+          alt="STOC Industries"
+          fill
+          className="object-cover object-center rounded-xl"
+        />
       </div>
     </section>
   );
