@@ -13,7 +13,7 @@ const inter = Inter_Tight({
 export const metadata: Metadata = {
   title: "STOC Advisory",
   description:
-    "Maximize shareholder value through strategic M&A, balance sheet restructuring, debt & equity evaluation, and private capital raising with STOC’s Corporate Advisory team.",
+    "Maximize shareholder value through strategic M&amp;A, balance sheet restructuring, debt &amp; equity evaluation, and private capital raising with STOC’s Corporate Advisory team.",
 };
 
 const gambetta = localFont({
