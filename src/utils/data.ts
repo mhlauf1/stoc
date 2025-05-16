@@ -233,68 +233,76 @@ export const teamMeberData: TeamMemberProps[] = [
         id: 0,
         name: "Andrew Swihart",
         image: "/Andrew_Swihart.jpg",
-        location: "Dallas, TX"
+        location: "Dallas, TX",
+        title: "Co-Founder | Managing Partner"
     },
     {
         id: 1,
+        name: "Michael O’Heir",
+        image: "/Michael_OHeir1.jpg",
+        location: "Baltimore, MD",
+        title: "Co-Founder | Managing Partner"
+    },
+
+    {
+        id: 2,
+        name: "Gunnar Waldt",
+        image: "/Gunnar_Waldt.jpg",
+        location: "Baltimore, MD",
+        title: "VP Business Development"
+
+    },
+    {
+        id: 3,
+        name: "Lucius Burch",
+        image: "/Lucius_Burch.jpg",
+        location: "Nashville, TN",
+        title: "VP Business Development"
+    },
+    {
+        id: 4,
         name: "Anne Federico",
         image: "/Anne_Federico.jpg",
         location: "Baltimore, MD"
     },
     {
-        id: 2,
-        name: "Gunnar Waldt",
-        image: "/Gunnar_Waldt.jpg",
-        location: "Baltimore, MD"
-    },
-    {
-        id: 3,
+        id: 5,
         name: "Matt Hottman",
         image: "/Matt_Hottman.jpg",
         location: "Baltimore, MD"
     },
+
     {
-        id: 4,
-        name: "Michael O’Heir",
-        image: "/Michael_OHeir1.jpg",
-        location: "Baltimore, MD"
-    },
-    {
-        id: 5,
+        id: 6,
         name: "Sam Luetgers",
         image: "/Sam_Luetgers.jpg",
         location: "Tampa Bay, FL"
     },
     {
-        id: 6,
+        id: 7,
         name: "Saqib Saddiqui",
         image: "/Saqib_Saddiqui.jpg",
         location: "New York, NY"
     },
     {
-        id: 7,
+        id: 8,
         name: "Sean Egan",
         image: "/Sean_Egan.jpg",
         location: "Minneapolis, MN"
     },
     {
-        id: 8,
-        name: "Unknown Name",
-        image: "/Unknown_name.jpg",
-        location: "Minneapolis, MN"
-    },
-    {
         id: 9,
-        name: "Thomson Thamsir",
-        image: "/Thomson_Thamsir.JPG",
+        name: "Ryan Earp",
+        image: "/ryan_earp.jpg",
         location: "Minneapolis, MN"
     },
     {
         id: 10,
-        name: "Lucius Burch",
-        image: "/Lucius_Burch.jpg",
+        name: "Thomson Thamsir",
+        image: "/Thomson_Thamsir.JPG",
         location: "Minneapolis, MN"
     },
+
 ]
 
 

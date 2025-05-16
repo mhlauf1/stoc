@@ -37,6 +37,7 @@ export type TeamMemberProps = {
     name: string;
     image: string;
     location: string;
+    title?: string;
 }
 
 export type ServicesPageProps = {

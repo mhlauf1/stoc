@@ -3,15 +3,24 @@ import { teamMeberData } from "@/utils/data";
 import type { TeamMemberProps } from "@/utils/types";
 import Image from "next/image";
 
-const TeamMember = ({ id, name, image, location }: TeamMemberProps) => (
+const TeamMember = ({ id, name, image, location, title }: TeamMemberProps) => (
   <div key={id} className="flex flex-col items-start">
     <div className="relative w-full max-h-[700px] h-[700px] flex-1 aspect-square">
       <Image fill src={image} alt={name} className="rounded-lg object-cover" />
     </div>
-    <h3 className="mt-4 text-xl md:text-2xl lg:text-3xl font-gambetta tracking-tighter ">
-      {name}
-    </h3>
-    <p className="text-sm tracking-wide text-neutral-500">{location}</p>
+    <div className=" py-4 w-full  bg-white">
+      <p className="text-sm  tracking-wide text-neutral-500">{location}</p>
+      <h3 className="text-xl mt-1 md:text-2xl lg:text-3xl font-gambetta tracking-tight">
+        {name}
+      </h3>
+      {title ? (
+        <p className="text-md md:text-lg font-gambetta tracking-tight text-neutral-700">
+          {title}
+        </p>
+      ) : (
+        ""
+      )}
+    </div>
   </div>
 );
 
@@ -29,6 +38,7 @@ const TeamMembers = () => {
               name={item.name}
               location={item.location}
               image={item.image}
+              title={item.title}
             />
           </div>
         ))}

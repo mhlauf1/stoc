@@ -5,7 +5,7 @@ import React from "react";
 
 export default function Hero() {
   return (
-    <section className="relative flex flex-col pb-8 md:flex-row md:h-[85vh]">
+    <section className="relative flex flex-col pb-8 md:flex-row md:h-[95vh]">
       {/* Background */}
       <Image
         src="/dark-green-bg.png"

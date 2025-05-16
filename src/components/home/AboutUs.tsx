@@ -25,7 +25,7 @@ const AboutUs = () => {
               at Every Stage
             </span>
           </h2>
-          <p className="leading-7 md:leading-8 text-md md:text-lg text-neutral-600 text-center md:text-start md:mt-4">
+          <p className="leading-7 md:max-w-[64ch] md:leading-8 text-md md:text-lg text-neutral-600 text-center md:text-start md:mt-4">
             STOC Advisory partners with middle-market businesses and private
             equity sponsors to accelerate growth, mitigate risk, and deliver
             lasting impact.
