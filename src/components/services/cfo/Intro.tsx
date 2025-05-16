@@ -40,7 +40,7 @@ const Intro: React.FC = () => {
             </p>
             <div className="flex flex-col gap-4 mt-8">
               {bullets.map((item) => (
-                <div className="flex flex-row items-center gap-3">
+                <div key={item.id} className="flex flex-row items-center gap-3">
                   <div className="h-[1px] w-[15px] rounded bg-neutral-600"></div>
                   <span className="leading-7 md:leading-8 text-start md:max-w-[64ch] text-lg md:text-2xl text-neutral-500">
                     {item.title}
