@@ -42,7 +42,7 @@ const OverviewBento = () => {
               </p>
             </div>
 
-            <Link href="/services">
+            <Link href="/industries">
               <PrimaryButton>Explore Industries</PrimaryButton>
             </Link>
           </div>

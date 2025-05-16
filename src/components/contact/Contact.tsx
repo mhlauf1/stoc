@@ -25,7 +25,7 @@ const Contact: React.FC = () => {
         required
         value={name}
         onChange={(e) => setName(e.target.value)}
-        className="w-full bg-white text-neutral-900 placeholder-gray-500 font-gambetta px-6 py-4 rounded-full focus:outline-none focus:ring-2 focus:ring-[#16333A]"
+        className="w-full border bg-white text-neutral-900 placeholder-gray-500 font-gambetta px-6 py-4 rounded-full focus:outline-none focus:ring-2 focus:ring-[#16333A]"
       />
 
       <input
@@ -34,7 +34,7 @@ const Contact: React.FC = () => {
         required
         value={email}
         onChange={(e) => setEmail(e.target.value)}
-        className="w-full bg-white text-neutral-900 placeholder-gray-500 font-gambetta px-6 py-4 rounded-full focus:outline-none focus:ring-2 focus:ring-[#16333A]"
+        className="w-full border bg-white text-neutral-900 placeholder-gray-500 font-gambetta px-6 py-4 rounded-full focus:outline-none focus:ring-2 focus:ring-[#16333A]"
       />
 
       <textarea
@@ -42,7 +42,7 @@ const Contact: React.FC = () => {
         required
         value={message}
         onChange={(e) => setMessage(e.target.value)}
-        className="w-full bg-white text-neutral-900 placeholder-gray-500 font-gambetta px-6 py-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#16333A] h-40 resize-none"
+        className="w-full border bg-white text-neutral-900 placeholder-gray-500 font-gambetta px-6 py-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#16333A] h-40 resize-none"
       />
 
       <button
