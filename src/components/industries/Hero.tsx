@@ -5,7 +5,7 @@ export default function Hero() {
     <section className="relative md:h-[95vh] flex flex-col bg-white">
       <div className="px-4 gap-8 md:pb-0 pb-8 pt-[15vh] md:pt-0 flex flex-col md:flex-row items-center w-full md:px-12 flex-1 lg:px-32">
         <div className="flex flex-col flex-1">
-          <h1 className="text-5xl text-start tracking-tighter md:max-w-[20ch] md:text-6xl font-gambetta lg:text-7xl leading-tight text-[#07171E]">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-gambetta tracking-tight leading-none  md:max-w-[20ch]">
             Industry expertise that <br />
             <span className="italic font-gambetta">
               drives transaction success

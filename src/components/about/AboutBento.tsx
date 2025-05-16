@@ -5,12 +5,12 @@ import { PrimaryButton } from "../Button";
 
 const AboutBento = () => {
   return (
-    <section className="bg-white px-4 md:px-12 lg:px-32 py-24">
+    <section className="bg-white px-4 md:px-12 lg:px-32 py-12 md:py-24">
       <div className="flex flex-col w-full gap-4">
         {/* First row: Company & Team */}
         <div className="flex flex-col md:flex-row gap-4">
           {/* Company Teaser */}
-          <div className="flex-1 border border-black/10 px-12 py-16 rounded-md items-start flex flex-col justify-between">
+          <div className="flex-1 border border-black/10 px-5 md:px-12 py-10 md:py-16 rounded-md items-start flex flex-col justify-between">
             <div>
               <h2 className="text-3xl tracking-tighter max-w-[24ch] md:text-4xl font-gambetta leading-tight">
                 Company
@@ -26,12 +26,12 @@ const AboutBento = () => {
           </div>
 
           {/* Team Teaser */}
-          <div className="flex-1 border border-black/10 px-12 py-16 rounded-md flex flex-col items-start justify-between">
+          <div className="flex-1 border border-black/10 px-5 md:px-12 py-10 md:py-16 rounded-md flex flex-col items-start justify-between">
             <div>
               <h2 className="text-3xl tracking-tighter max-w-[24ch] md:text-4xl font-gambetta leading-tight">
                 Team
               </h2>
-              <p className="leading-7 md:leading-8 text-md md:text-lg text-neutral-600 mt-4 mb-10">
+              <p className="leading-7 md:leading-8 text-md md:text-lg text-neutral-600 mt-2 md:mt-4 mb-6 md:mb-10">
                 Meet the experts driving our success and learn what makes our
                 team unique.
               </p>
@@ -45,12 +45,12 @@ const AboutBento = () => {
         {/* Second row: Locations, Case Studies & Careers */}
         <div className="flex flex-col md:flex-row gap-4">
           {/* Locations Teaser */}
-          <div className="flex-1 border border-black/10 px-12 py-16 rounded-md flex flex-col items-start justify-between">
+          <div className="flex-1 border border-black/10 px-5 md:px-12 py-10 md:py-16 rounded-md flex flex-col items-start justify-between">
             <div>
               <h2 className="text-3xl tracking-tighter max-w-[24ch] md:text-4xl font-gambetta leading-tight">
                 Locations
               </h2>
-              <p className="leading-7 md:leading-8 text-md md:text-lg text-neutral-600 mt-4 mb-10">
+              <p className="leading-7 md:leading-8 text-md md:text-lg text-neutral-600 mt-2 md:mt-4 mb-6 md:mb-10">
                 Explore our global presence and find an office near you.
               </p>
             </div>
@@ -60,12 +60,12 @@ const AboutBento = () => {
           </div>
 
           {/* Case Studies Teaser */}
-          <div className="flex-1 border border-black/10 px-12 py-16 rounded-md flex flex-col items-start justify-between">
+          <div className="flex-1 border border-black/10 px-5 md:px-12 py-10 md:py-16 rounded-md flex flex-col items-start justify-between">
             <div>
               <h2 className="text-3xl tracking-tighter max-w-[24ch] md:text-4xl font-gambetta leading-tight">
                 Case Studies
               </h2>
-              <p className="leading-7 md:leading-8 text-md md:text-lg text-neutral-600 mt-4 mb-10">
+              <p className="leading-7 md:leading-8 text-md md:text-lg text-neutral-600 mt-2 md:mt-4 mb-6 md:mb-10">
                 Discover how we&apos;ve helped clients achieve success through
                 real examples.
               </p>
@@ -76,12 +76,12 @@ const AboutBento = () => {
           </div>
 
           {/* Careers Teaser */}
-          <div className="flex-1 border border-black/10 px-12 py-16 rounded-md flex flex-col items-start justify-between">
+          <div className="flex-1 border border-black/10 px-5 md:px-12 py-10 md:py-16 rounded-md flex flex-col items-start justify-between">
             <div>
               <h2 className="text-3xl tracking-tighter max-w-[24ch] md:text-4xl font-gambetta leading-tight">
                 Careers
               </h2>
-              <p className="leading-7 md:leading-8 text-md md:text-lg text-neutral-600 mt-4 mb-10">
+              <p className="leading-7 md:leading-8 text-md md:text-lg text-neutral-600 mt-2 md:mt-4 mb-6 md:mb-10">
                 Join our team and help shape the future of strategic advisory.
               </p>
             </div>

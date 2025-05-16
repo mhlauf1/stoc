@@ -12,8 +12,8 @@ const IndustryCard: React.FC<IndustryProps> = ({
   supportText,
   href,
 }) => (
-  <div className="flex bg-white flex-col relative rounded-2xl border border-neutral-100">
-    <div className="h-[250px] w-full relative">
+  <div className="flex relative bg-white flex-col  rounded-2xl border border-neutral-100">
+    <div className="h-[200px] md:h-[250px] w-full relative">
       <Image
         src={src!}
         alt={title}
@@ -21,9 +21,9 @@ const IndustryCard: React.FC<IndustryProps> = ({
         className="rounded-t-2xl object-cover"
       />
     </div>
-    <div className="flex  flex-col items-start pt-8 pb-12 px-8 gap-2">
-      <div className="bg-[#16333A] p-2 rounded-lg">
-        <Icon className="h-6 w-6 text-white" />
+    <div className="flex flex-col items-start pt-5 md:pt-6 pb-10 md:pb-12 px-5 md:px-8 gap-2">
+      <div className="bg-white absolute top-3 right-3 p-3 rounded-lg">
+        <Icon className="h-6 w-6 text-[#16333A]" />
       </div>
       <h3 className="text-2xl md:text-3xl mt-2 tracking-tighter text-center md:text-start font-gambetta">
         {title}
@@ -47,10 +47,10 @@ const IndustryGrid: React.FC = () => (
 );
 
 const IndustriesSection: React.FC = () => (
-  <section className="bg-[#F7F7F7] py-24 md:py-28">
+  <section className="bg-[#F7F7F7] py-16 md:py-28">
     <div className="flex flex-col  px-4 sm:px-12 md:px-32">
-      <div className="flex flex-col md:flex-row justify-between mb-12 md:mb-16 items-center md:items-end gap-4">
-        <div className="flex md:mb-0 mb-8 flex-col gap-4">
+      <div className="flex flex-col md:flex-row justify-between mb-8 md:mb-16 items-center md:items-end gap-2 md:gap-4">
+        <div className="flex md:mb-0 mb-4 flex-col gap-4">
           <div className="flex flex-row md:justify-start justify-center gap-4 items-center">
             <div className="h-[1px] bg-neutral-300 w-[60px]" />
             <span
