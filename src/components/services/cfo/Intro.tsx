@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import type { LucideIcon } from "lucide-react";
 
 type Bullet = {
   id: number;
@@ -25,26 +24,6 @@ const bullets: Bullet[] = [
     title: "Cybersecurity & data privacy",
   },
 ];
-
-interface ValuePillarProps {
-  title: string;
-  text: string;
-  Icon: LucideIcon;
-}
-
-const ValuePillar: React.FC<ValuePillarProps> = ({ title, text, Icon }) => (
-  <div className="flex flex-row  gap-4  items-start justify-start">
-    {/* <Icon className="size-5 text-[#16333A]" /> */}
-    <div className="space-y-1 w-full">
-      <h3 className="text-2xl md:text-3xl text-start font-gambetta italic">
-        {title}
-      </h3>
-      <p className="text-neutral-600 text-start mt-2 max-w-[48ch] leading-relaxed">
-        {text}
-      </p>
-    </div>
-  </div>
-);
 
 const Intro: React.FC = () => {
   return (

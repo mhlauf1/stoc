@@ -1,5 +1,4 @@
 import React from "react";
-import type { LucideIcon } from "lucide-react";
 
 const Intro: React.FC = () => (
   <section className="px-6 bg-linear-to-r from-[#F7F7F7] to-[#ebebeb] md:px-12 lg:px-32 py-12 md:py-20">

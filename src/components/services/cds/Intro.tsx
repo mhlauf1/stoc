@@ -1,49 +1,4 @@
 import React from "react";
-import type { LucideIcon } from "lucide-react";
-
-type Bullet = {
-  id: number;
-  title: string;
-};
-
-const bullets: Bullet[] = [
-  {
-    id: 0,
-    title: "Strategic Guidance",
-  },
-  {
-    id: 1,
-    title: "Flexible Engagement",
-  },
-  {
-    id: 2,
-    title: "Operational Excellence",
-  },
-  {
-    id: 2,
-    title: "Investor Confidence",
-  },
-];
-
-interface ValuePillarProps {
-  title: string;
-  text: string;
-  Icon: LucideIcon;
-}
-
-const ValuePillar: React.FC<ValuePillarProps> = ({ title, text, Icon }) => (
-  <div className="flex flex-row  gap-4  items-start justify-start">
-    {/* <Icon className="size-5 text-[#16333A]" /> */}
-    <div className="space-y-1 w-full">
-      <h3 className="text-2xl md:text-3xl text-start font-gambetta italic">
-        {title}
-      </h3>
-      <p className="text-neutral-600 text-start mt-2 max-w-[48ch] leading-relaxed">
-        {text}
-      </p>
-    </div>
-  </div>
-);
 
 const Intro: React.FC = () => (
   <section className="px-6 bg-linear-to-r from-[#F7F7F7] to-[#ebebeb] md:px-12 lg:px-32 py-12 mb-12 md:mb-24 md:py-20">
