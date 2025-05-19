@@ -2,6 +2,7 @@
 import React, { useState, FormEvent } from "react";
 import { PrimaryButton } from "../Button";
 import Link from "next/link";
+import { Settings, Globe } from "lucide-react";
 
 const OverviewBento = () => {
   const [email, setEmail] = useState<string>("");
@@ -12,16 +13,21 @@ const OverviewBento = () => {
     console.log("Subscribe with:", email);
     setEmail(email);
   };
+
   return (
     <section className="bg-white  px-4 md:px-12 lg:px-28 py-12 md:py-24">
       <div className="flex flex-1 w-full flex-col gap-4">
         <div className="flex md:flex-row flex-col gap-4">
-          <div className="flex flex-col flex-1 bg-[#F7F7F7] px-6 md:px-12 py-8 md:py-12 rounded-md justify-center items-start">
+          <div className="flex flex-col relative flex-1 bg-[#F7F7F7] px-6 md:px-12 py-8 md:py-12 rounded-md justify-center items-start">
+            <div className="bg-black absolute top-4 right-4 p-2 mb-3 rounded-md">
+              <Settings className=" size-5 text-white" />
+            </div>
+
             <div>
               <h2 className="text-3xl  tracking-tighter md:max-w-[24ch] md:text-4xl font-gambetta lg:text-5xl text-start leading-tight">
                 Our Core Services
               </h2>
-              <p className="leading-7 md:leading-8 text-md md:text-lg text-neutral-600 text-start mt-4 mb-8 md:mb-10">
+              <p className="leading-7 md:leading-8 text-md md:text-lg text-neutral-600 text-start mt-2 mb-6 ">
                 Explore our specialized services designed to guide your business
                 through complex transactions.
               </p>
@@ -31,12 +37,15 @@ const OverviewBento = () => {
               <PrimaryButton>Explore Services</PrimaryButton>
             </Link>
           </div>
-          <div className="flex flex-col justify-center flex-1 bg-[#F7F7F7] px-6 md:px-12 py-8 md:py-8 rounded-md items-start">
+          <div className="flex flex-col relative justify-center flex-1 bg-[#F7F7F7] px-6 md:px-12 py-8 md:py-8 rounded-md items-start">
+            <div className="bg-black absolute top-4 right-4 p-2 mb-3 rounded-md">
+              <Globe className=" size-5 text-white" />
+            </div>
             <div>
               <h2 className="text-3xl  tracking-tighter max-w-[24ch] md:text-4xl font-gambetta lg:text-5xl text-start leading-tight">
                 Industries We Serve
               </h2>
-              <p className="leading-7 md:leading-8 text-md md:text-lg text-neutral-600 text-start mt-4 mb-10">
+              <p className="leading-7 md:leading-8 text-md md:text-lg text-neutral-600 text-start mt-2 mb-6">
                 Driving sector‑specific growth and resilience through expert
                 advisory.
               </p>

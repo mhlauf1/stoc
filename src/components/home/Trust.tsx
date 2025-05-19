@@ -32,7 +32,7 @@ const TrustItem: React.FC<TrustItemProps> = ({ title, text, Icon }) => (
   <div className="relative flex flex-col rounded-xl border px-8 bg-white/10 py-16 border-dashed border-white/20">
     {/* Icon in top-right */}
     <div className="bg-white/90 p-2 absolute top-4 right-4 rounded-md">
-      <Icon className=" w-6 h-6 text-black/70" />
+      <Icon className=" size-5 text-black/70" />
     </div>
     <h3 className="text-2xl font-gambetta md:text-3xl tracking-tighter">
       {title}
