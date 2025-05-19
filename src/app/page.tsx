@@ -1,13 +1,14 @@
 import Hero from "@/components/home/Hero";
 import Trust from "@/components/home/Trust";
 import AboutUs from "@/components/home/AboutUs";
+import IntroServices from "@/components/home/IntroServices";
 import OverviewBento from "@/components/home/OverviewBento";
 
 export default function Home() {
   return (
     <main>
       <Hero />
-      <AboutUs />
+      <IntroServices />
       <Trust />
       <OverviewBento />
     </main>

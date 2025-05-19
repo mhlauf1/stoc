@@ -16,7 +16,7 @@ const OverviewBento = () => {
     <section className="bg-white  px-4 md:px-12 lg:px-28 py-12 md:py-24">
       <div className="flex flex-1 w-full flex-col gap-4">
         <div className="flex md:flex-row flex-col gap-4">
-          <div className="flex flex-col flex-1 bg-[#F7F7F7] px-6 md:px-12 py-8 md:py-16 rounded-md justify-between items-start">
+          <div className="flex flex-col flex-1 bg-[#F7F7F7] px-6 md:px-12 py-8 md:py-12 rounded-md justify-center items-start">
             <div>
               <h2 className="text-3xl  tracking-tighter md:max-w-[24ch] md:text-4xl font-gambetta lg:text-5xl text-start leading-tight">
                 Our Core Services
@@ -31,7 +31,7 @@ const OverviewBento = () => {
               <PrimaryButton>Explore Services</PrimaryButton>
             </Link>
           </div>
-          <div className="flex flex-col justify-between flex-1 bg-[#F7F7F7] px-6 md:px-12 py-8 md:py-16 rounded-md items-start">
+          <div className="flex flex-col justify-center flex-1 bg-[#F7F7F7] px-6 md:px-12 py-8 md:py-8 rounded-md items-start">
             <div>
               <h2 className="text-3xl  tracking-tighter max-w-[24ch] md:text-4xl font-gambetta lg:text-5xl text-start leading-tight">
                 Industries We Serve

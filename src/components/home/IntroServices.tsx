@@ -20,7 +20,7 @@ export default function IntroServices() {
   const driftFactor = 0.02;
 
   return (
-    <section className="relative py-24 md:px-0 sm:px-8 px-4 md:py-36 bg-white overflow-hidden">
+    <section className="relative py-24 md:px-0 sm:px-8 px-4 md:py-42 bg-white overflow-hidden">
       <div className="flex  items-center justify-center relative">
         {/* Left Image */}
         <div
@@ -49,10 +49,10 @@ export default function IntroServices() {
             </span>
             <div className="h-[1px] bg-neutral-300 w-[60px]" />
           </div>
-          <h2 className="text-2xl  sm:text-3xl tracking-tighter lg:max-w-[42ch] md:text-4xl font-gambetta text-neutral-900 leading-normal md:leading-relaxed">
+          <h2 className="text-2xl  sm:text-3xl tracking-tighter lg:max-w-[42ch] md:text-4xl lg:text-5xl font-gambetta text-neutral-900 leading-normal md:leading-relaxed">
             Unlocking Value at Every Stage
           </h2>
-          <p className="leading-7 md:leading-8 text-center max-w-[56ch] mb-8 text-md md:text-lg text-neutral-600 md:mt-4">
+          <p className="leading-7 md:leading-8 text-center max-w-[56ch] mb-8 text-md md:text-lg text-neutral-600 md:mt-2">
             STOC Advisory partners with middle-market businesses and private
             equity sponsors to accelerate growth, mitigate risk, and deliver
             lasting impact.
@@ -69,7 +69,7 @@ export default function IntroServices() {
         >
           <div className="relative w-[15vw] h-[300px]">
             <Image
-              src="/services-2.png"
+              src="/drew-mike.png"
               alt="Right"
               fill
               className="rounded-l-lg object-cover shadow-lg"

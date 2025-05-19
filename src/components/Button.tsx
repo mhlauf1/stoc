@@ -15,7 +15,7 @@ export const PrimaryButton: React.FC<ButtonProps> = ({
       border border-white/20
       bg-[#07171E] text-white
       font-medium
-      px-8 md:px-12 py-3 rounded-full text-md md:text-lg
+      px-8 md:px-12 py-4 rounded-full text-md md:text-lg
       hover:bg-neutral-700
       cursor-pointer transition
       text-center
@@ -33,7 +33,7 @@ export const WhiteButton: React.FC<ButtonProps> = ({ children, ...props }) => (
       
       bg-white text-[#07171E]
       font-medium
-      px-8 md:px-12 py-3 rounded-full text-md md:text-lg
+      px-8 md:px-12 py-4 rounded-full text-md md:text-lg
       hover:bg-neutral-100
       cursor-pointer transition
       text-center
@@ -52,7 +52,7 @@ export const GhostButton: React.FC<ButtonProps> = ({ children, ...props }) => (
         border border-white/50
          text-white
         font-medium
-        px-8 md:px-12 py-3 rounded-full text-md md:text-lg
+        px-8 md:px-12 py-4 rounded-full text-md md:text-lg
         hover:bg-white/10
         cursor-pointer transition
       text-center
@@ -75,7 +75,7 @@ export const PrimaryButtonBlue: React.FC<ButtonProps> = ({
         border border-white/20
         bg-[#16203a] text-white
         font-medium
-        px-6 md:px-8 py-3 rounded-full text-md md:text-lg
+        px-6 md:px-8 py-4 rounded-full text-md md:text-lg
         hover:bg-[#36415d]
         cursor-pointer transition
       text-center
