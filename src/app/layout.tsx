@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Inter_Tight } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import localFont from "next/font/local";
 import Footer from "@/components/Footer";
 
-const inter = Inter_Tight({
+const inter = Inter({
   subsets: ["latin"],
   display: "swap",
 });

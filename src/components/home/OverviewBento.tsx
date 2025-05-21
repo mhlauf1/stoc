@@ -1,106 +1,63 @@
+// app/OverviewBento.tsx
 "use client";
-import React, { useState, FormEvent } from "react";
-import { PrimaryButton } from "../Button";
-import Link from "next/link";
-import { Settings, Globe } from "lucide-react";
+import React from "react";
+import { Settings, Globe, User2, MailCheck } from "lucide-react";
+import OverviewCard, { OverviewCardProps } from "./OverviewCard";
 
-const OverviewBento = () => {
-  const [email, setEmail] = useState<string>("");
+const cards: OverviewCardProps[] = [
+  {
+    Icon: Settings,
+    title: "Our Services",
+    description:
+      "Specialized services that guide your business through complex transactions.",
+    href: "/services",
+    cta: "Explore Services",
+  },
+  {
+    Icon: Globe,
+    title: "Industries We Serve",
+    description:
+      "Driving sector-specific growth and resilience through expert advisory.",
+    href: "/industries",
+    cta: "Explore Industries",
+  },
+  {
+    Icon: User2,
+    title: "Meet the team",
+    description: "Explore the team members across the US that make power STOC.",
+    href: "/industries",
+    cta: "View team",
+  },
+  {
+    Icon: MailCheck,
+    title: "Newsletter",
+    description: "Sign up for the STOC newsletter, monthly reports for you.",
+    href: "/industries",
+    cta: "Sign Up",
+  },
+];
 
-  const handleSubmit = (e: FormEvent) => {
-    e.preventDefault();
-    // TODO: integrate with your newsletter provider
-    console.log("Subscribe with:", email);
-    setEmail(email);
-  };
-
+export default function OverviewBento() {
   return (
-    <section className="bg-white  px-4 md:px-12 lg:px-28 py-12 md:py-24">
-      <div className="flex flex-1 w-full flex-col gap-4">
-        <div className="flex md:flex-row flex-col gap-4">
-          <div className="flex flex-col relative flex-1 bg-[#F7F7F7] px-6 md:px-12 py-8 md:py-12 rounded-md justify-center items-start">
-            <div className="bg-black absolute top-4 right-4 p-2 mb-3 rounded-md">
-              <Settings className=" size-5 text-white" />
-            </div>
-
-            <div>
-              <h2 className="text-3xl  tracking-tighter md:max-w-[24ch] md:text-4xl font-gambetta lg:text-5xl text-start leading-tight">
-                Our Core Services
-              </h2>
-              <p className="leading-7 md:leading-8 text-md md:text-lg text-neutral-600 text-start mt-2 mb-6 ">
-                Explore our specialized services designed to guide your business
-                through complex transactions.
-              </p>
-            </div>
-
-            <Link href="/services">
-              <PrimaryButton>Explore Services</PrimaryButton>
-            </Link>
-          </div>
-          <div className="flex flex-col relative justify-center flex-1 bg-[#F7F7F7] px-6 md:px-12 py-8 md:py-8 rounded-md items-start">
-            <div className="bg-black absolute top-4 right-4 p-2 mb-3 rounded-md">
-              <Globe className=" size-5 text-white" />
-            </div>
-            <div>
-              <h2 className="text-3xl  tracking-tighter max-w-[24ch] md:text-4xl font-gambetta lg:text-5xl text-start leading-tight">
-                Industries We Serve
-              </h2>
-              <p className="leading-7 md:leading-8 text-md md:text-lg text-neutral-600 text-start mt-2 mb-6">
-                Driving sector‑specific growth and resilience through expert
-                advisory.
-              </p>
-            </div>
-
-            <Link href="/industries">
-              <PrimaryButton>Explore Industries</PrimaryButton>
-            </Link>
-          </div>
+    <section className="bg-[#fafafa] border-t border-neutral-200 px-4 md:px-12 lg:px-28 py-12 md:py-16">
+      <div className="flex flex-col items-start gap-4">
+        <div className="flex items-center justify-center gap-4">
+          <div className="h-px bg-neutral-300 w-8" />
+          <span className="uppercase text-gray-500 text-sm  tracking-widest">
+            How we can help
+          </span>
+          <div className="h-px bg-neutral-300 w-8" />
         </div>
-        <div className="flex flex-col flex-1 bg-[#232323] rounded-2xl px-4 sm:px-12 md:px-20 py-12 md:py-24  items-center text-center gap-8">
-          {/* Tagline */}
-          <div className="flex items-center gap-4">
-            <div className="h-px bg-neutral-600 w-16" />
-            <span
-              style={{ letterSpacing: "3px" }}
-              className="uppercase text-gray-200 text-xs font-mono"
-            >
-              Grow With STOC
-            </span>
-            <div className="h-px bg-neutral-600 w-16" />
-          </div>
+        <h2 className="text-3xl tracking-tighter md:max-w-[24ch] md:text-4xl font-gambetta lg:text-5xl leading-tight">
+          Explore our Core Network
+        </h2>
 
-          {/* Headline */}
-          <h2 className="text-white text-3xl md:text-4xl lg:text-6xl font-gambetta tracking-tighter max-w-[16ch] leading-tight">
-            Stay Ahead with <br />
-            <span className="italic font-gambetta">STOC Insights</span>
-          </h2>
-
-          {/* Subtext */}
-          <p className="text-neutral-200 text-md md:text-lg">
-            Monthly strategies, market intelligence, and deal best
-            practices—delivered straight to your inbox.{" "}
-          </p>
-
-          {/* Email form */}
-          <form className="w-full flex flex-col md:flex-row gap-4 mt-4 justify-center">
-            <div className="inline-flex w-full bg-white max-w-lg rounded-full overflow-hidden border-2 p-1 border-white">
-              <input
-                type="email"
-                placeholder="Your business email"
-                className="flex-1 px-6 py-3 focus:outline-none"
-              />
-              <Link className="md:block hidden" href="/contact">
-                <PrimaryButton>Subscribe</PrimaryButton>
-              </Link>
-            </div>
-            <Link className="block md:hidden" href="/contact">
-              <PrimaryButton onClick={handleSubmit}>Subscribe</PrimaryButton>
-            </Link>
-          </form>
+        <div className="grid my-8 grid-cols-1  md:grid-cols-2 w-full  gap-4">
+          {cards.map((card, i) => (
+            <OverviewCard key={i} {...card} />
+          ))}
         </div>
       </div>
     </section>
   );
-};
-
-export default OverviewBento;
+}

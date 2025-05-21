@@ -12,20 +12,15 @@ const IndustryCard: React.FC<IndustryProps> = ({
   supportText,
   href,
 }) => (
-  <div className="flex relative bg-white flex-col  rounded-2xl border border-neutral-100">
+  <div className="flex relative bg-white flex-col  rounded-lg border border-neutral-100">
     <div className="h-[200px] md:h-[250px] w-full relative">
-      <Image
-        src={src!}
-        alt={title}
-        fill
-        className="rounded-t-2xl object-cover"
-      />
+      <Image src={src!} alt={title} fill className="rounded-lg object-cover" />
     </div>
     <div className="flex flex-col items-start pt-5 md:pt-6 pb-10 md:pb-12 px-5 md:px-8 gap-2">
       <div className="bg-white absolute top-3 right-3 p-3 rounded-lg">
         <Icon className="h-6 w-6 text-[#16333A]" />
       </div>
-      <h3 className="text-2xl md:text-3xl mt-2 tracking-tighter text-center md:text-start font-gambetta">
+      <h3 className="text-lg md:text-3xl mt-2 tracking-tighter text-center md:text-start font-gambetta">
         {title}
       </h3>
       <p className="text-gray-600 w-[100%] leading-7">{supportText}</p>

@@ -1,7 +1,7 @@
 import React from "react";
 
 const Mission: React.FC = () => (
-  <section className="px-6 bg-[#F7F7F7] md:px-12 lg:px-[5vw] py-16 md:py-24">
+  <section className="px-6 bg-[#F7F7F7] md:px-12 lg:px-[5vw] py-16 md:py-16">
     <div className="flex flex-col pt-[8vh] items-center gap-[5vw]">
       <div className="flex-1 flex flex-col items-center">
         <div className="flex items-center mb-6 gap-4">

@@ -13,13 +13,9 @@ const TeamMember = ({ id, name, image, location, title }: TeamMemberProps) => (
       <h3 className="text-xl mt-1 md:text-2xl lg:text-3xl font-gambetta tracking-tight">
         {name}
       </h3>
-      {title ? (
-        <p className="text-md md:text-lg font-gambetta tracking-tight text-neutral-700">
-          {title}
-        </p>
-      ) : (
-        ""
-      )}
+      <p className="text-md md:text-lg font-gambetta tracking-tight text-neutral-700">
+        {title}
+      </p>
     </div>
   </div>
 );

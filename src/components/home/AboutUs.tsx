@@ -25,7 +25,7 @@ const AboutUs = () => {
               at Every Stage
             </span>
           </h2>
-          <p className="leading-7 md:max-w-[64ch] md:leading-8 text-md md:text-lg text-neutral-600 text-center md:text-start md:mt-4">
+          <p className="leading-7 md:max-w-[64ch] md:leading-8 text-lg md:text-xl text-neutral-700 text-center md:text-start md:mt-4">
             STOC Advisory partners with middle-market businesses and private
             equity sponsors to accelerate growth, mitigate risk, and deliver
             lasting impact.
@@ -36,10 +36,10 @@ const AboutUs = () => {
         </div>
         <div className="flex justify-end flex-1">
           <Image
-            src="/drew-mike.png"
-            className="h-[620px] object-cover rounded-xl"
+            src="/services-1.png"
+            className="h-[420px] object-cover rounded-xl"
             alt="Meet the STOC Team"
-            height={620}
+            height={420}
             width={660}
           />
         </div>

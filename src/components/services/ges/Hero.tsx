@@ -1,30 +1,31 @@
 import React from "react";
+import Image from "next/image";
+import NewsletterForm from "@/components/NewsletterForm";
 
 const Hero: React.FC = () => (
-  <section className="px-6 bg-white md:px-12 lg:px-[5vw] py-16 md:py-24">
-    <div className="flex flex-col pt-[8vh] items-center gap-[5vw]">
-      <div className="flex-1 flex flex-col items-center">
-        <div className="flex items-center mb-6 gap-4">
-          <div className="h-[1px] bg-neutral-300 w-[60px]" />
-          <span
-            style={{ letterSpacing: "3px" }}
-            className="uppercase text-gray-600 text-xs font-mono"
-          >
-            Strategic Growth Services
-          </span>
-          <div className="h-[1px] bg-neutral-300 w-[60px]" />
-        </div>
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-gambetta tracking-tighter leading-tight text-center max-w-[26ch]">
-          Growth Enablement Services
+  <section className="h-[85vh] md:h-[95vh] relative flex flex-col md:flex-row gap-4 pt-36 md:pt-0 bg-[#bacaec] items-center px-6 md:px-24">
+    <div className="flex  flex-col items-start  md:pt-0 flex-1">
+      <div>
+        <h1 className="text-[#041E40] text-4xl md:text-5xl lg:text-6xl font-gambetta md:max-w-[20ch] leading-tight tracking-tighter">
+          Scaling Portfolio Companies with Confidence
         </h1>
-        <p className="leading-7 md:leading-8 text-center md:max-w-[68ch] text-md md:text-lg text-neutral-600 mt-8 ">
-          The business services industry is experiencing rapid growth and
-          disruption, and the fight for talent and differentiation is highly
-          competitive. To truly stand out, businesses must embrace change and
-          embark on frequent initiatives to best serve their clients&apos;
-          evolving needs.
+        <p className="text-[#041E40] text-lg md:text-xl mt-4 md:max-w-[52ch] leading-relaxed">
+          Hands-on enablement, AI-driven workflows, and real-time KPI tracking
+          to accelerate post-acquisition growth.
         </p>
       </div>
+      <NewsletterForm />
+    </div>
+    <div className="relative w-full mb-8 md:mb-0 md:w-1/2 h-[45vh] md:h-[65vh]">
+      <Image
+        src="/ges-main.jpg"
+        alt="Transaction Advisory background"
+        fill
+        className="object-cover object-center rounded-lg"
+        quality={100}
+        priority
+        sizes="(min-width: 768px) 50vw, 100vw"
+      />
     </div>
   </section>
 );

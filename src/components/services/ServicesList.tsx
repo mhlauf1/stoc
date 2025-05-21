@@ -1,29 +1,48 @@
 "use client";
 import { servicesPageData } from "@/utils/data";
 import ServicesItem from "./ServicesItem";
+import Image from "next/image";
 
 const IndustryList = () => (
-  <section className="bg-[#F7F7F7] mb-16 py-16 md:py-28 px-4 sm:px-12 md:px-20">
-    <div className="md:max-w-[80vw] mx-auto flex flex-col">
-      {/* header */}
-      <div className="flex items-center mb-8 justify-center gap-4">
-        <div className="h-px bg-neutral-300 w-12" />
-        <span className="uppercase text-gray-600 text-xs font-mono tracking-widest">
-          What We Do
-        </span>
-        <div className="h-px bg-neutral-300 w-12" />
+  <section className="bg-[#F7F7F7] md:mb-12 py-16 md:py-20 px-4 sm:px-12 md:px-28">
+    <div className="flex flex-col md:flex-row gap-8">
+      <div className="flex flex-col flex-1 items-center md:items-start ">
+        <div className="flex items-center mb-2 justify-center gap-4">
+          <div className="h-px bg-neutral-300 w-12" />
+          <span className="uppercase text-gray-600 text-xs font-mono tracking-widest">
+            What We Do
+          </span>
+          <div className="h-px bg-neutral-300 w-12" />
+        </div>
+        <h3 className="text-2xl md:text-4xl text-center md:text-start md:max-w-[18ch] mt-2 font-gambetta tracking-tighter leading-snug">
+          Turning Strategic Vision into Measurable Outcomes
+        </h3>
+        <p className="text-neutral-600 text-center md:text-start  md:max-w-[58ch] mt-3 mb-5 text-lg md:text-xl">
+          Our seasoned advisors provide data-driven insights and hands-on
+          support to guide decisions and optimize performance.
+        </p>
+        <p className="text-neutral-600 text-start md:text-center  font-medium md:max-w-[58ch] mt-1 text-md md:text-lg">
+          Key Services:
+        </p>
+        <div className="grid  pt-4 w-full grid-cols-1  gap-4">
+          {servicesPageData.map((item, idx) => (
+            <ServicesItem key={item.id} {...item} />
+          ))}
+        </div>
       </div>
-      <h3 className="text-2xl md:text-4xl text-center max-w-[42ch] mx-auto font-gambetta tracking-tighter leading-snug">
-        Our seasoned advisors deliver data-driven insights and hands-on support—
-        guiding decisions, optimizing performance, and turning strategic vision
-        into measurable outcomes.
-      </h3>
 
       {/* items */}
-      <div className="mt-16 space-y-12 md:space-y-20">
-        {servicesPageData.map((item, idx) => (
-          <ServicesItem key={item.id} {...item} reverse={idx % 2 === 1} />
-        ))}
+      <div className="flex relative flex-1">
+        <Image
+          src="/services-list.jpeg"
+          className="object-cover rounded-lg"
+          fill
+          alt="Services"
+        />
+        <div
+          className="absolute inset-0 rounded-lg bg-blue-300 opacity-30 mix-blend-multiply"
+          aria-hidden="true"
+        />
       </div>
     </div>
   </section>

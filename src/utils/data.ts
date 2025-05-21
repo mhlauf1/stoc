@@ -117,7 +117,7 @@ export const coreServicesData: ValueProps[] = [
 export const tasData: ValueProps[] = [
     {
         id: 0,
-        title: "Risk Mitigation",
+        title: "Target Screening & Valuation",
         Icon: TrendingUp,
         description:
             "Identify and manage deal risks before they materialize.",
@@ -263,44 +263,51 @@ export const teamMeberData: TeamMemberProps[] = [
         id: 4,
         name: "Anne Federico",
         image: "/Anne_Federico.jpg",
-        location: "Baltimore, MD"
+        location: "Baltimore, MD",
+        title: "Manager | TAS"
     },
     {
         id: 5,
         name: "Matt Hottman",
         image: "/Matt_Hottman.jpg",
-        location: "Baltimore, MD"
+        location: "Baltimore, MD",
+        title: "Manager | TAS"
     },
 
     {
         id: 6,
         name: "Sam Luetgers",
         image: "/Sam_Luetgers.jpg",
-        location: "Tampa Bay, FL"
+        location: "Tampa, FL",
+        title: "Manager | TAS"
     },
     {
         id: 7,
         name: "Saqib Saddiqui",
         image: "/Saqib_Saddiqui.jpg",
-        location: "New York, NY"
+        location: "New York, NY",
+        title: "Senior Associate | TAS"
     },
     {
         id: 8,
         name: "Sean Egan",
         image: "/Sean_Egan.jpg",
-        location: "Minneapolis, MN"
+        location: "Minneapolis, MN",
+        title: "Manager | TAS"
     },
     {
         id: 9,
         name: "Ryan Earp",
         image: "/ryan_earp.jpg",
-        location: "Minneapolis, MN"
+        location: "Minneapolis, MN",
+        title: "Senior Associate | TAS"
     },
     {
         id: 10,
         name: "Thomson Thamsir",
         image: "/Thomson_Thamsir.JPG",
-        location: "Minneapolis, MN"
+        location: "Minneapolis, MN",
+        title: "Senior Associate | TAS"
     },
 
 ]

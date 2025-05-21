@@ -4,13 +4,13 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
+import { ChevronDown } from "lucide-react";
 
 const NAV_ITEMS = [
   {
     label: "Services",
     href: "/services",
     children: [
-      { label: "CFO Advisory", href: "/services/cfo-advisory" },
       {
         label: "Corporate Development Support (CDS)",
         href: "/services/corporate-development-support",
@@ -23,6 +23,7 @@ const NAV_ITEMS = [
         label: "Transaction Advisory Services (TAS)",
         href: "/services/transaction-advisory-services",
       },
+      { label: "CFO Advisory", href: "/services/cfo-advisory" },
     ],
   },
   {
@@ -57,7 +58,6 @@ const NAV_ITEMS = [
       { label: "Company", href: "/about/company" },
       { label: "Team", href: "/about/team" },
       { label: "Locations", href: "/about/locations" },
-      { label: "Case Studies", href: "/about/case-studies" },
       { label: "Careers", href: "/about/careers" },
     ],
   },
@@ -74,7 +74,14 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const dynamicPages = ["/", "/services", "/about"];
+  const dynamicPages = [
+    "/",
+    "/services",
+    "/about",
+    "/services/corporate-development-support",
+    "/services/growth-enablement-services",
+    "/home-video",
+  ];
   const isDynamicPage = dynamicPages.includes(pathname);
 
   // if it’s one of those three, dark only after scroll; otherwise always dark
@@ -97,13 +104,14 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-50 py-2 transition-all duration-300 ${
-        isDarkBg ? "bg-white border-b border-neutral-200" : "bg-transparent"
+      className={`fixed top-0 w-full z-50 py-3 transition-all duration-300 ${
+        isDarkBg ? "bg-white" : "bg-transparent"
       }`}
     >
-      <div className="flex items-center justify-between px-4 sm:px-12 md:px-16 lg:px-28">
+      <div className="flex items-center justify-between px-4 sm:px-12 md:px-12">
         {/* Logo */}
-        <Link href="/">
+        {/* <div className="flex flex-row items-center gap-16"> */}
+        <Link href="/home-video">
           <Image
             src="/stoc-logo-main.png"
             width={200}
@@ -119,12 +127,15 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-8">
           {NAV_ITEMS.map((item) => (
             <div key={item.href} className="relative group">
-              <Link
-                href={item.href}
-                className={`${linkBase} px-2 py-1 transition-colors`}
+              <div
+                className={`flex flex-row items-center ${linkBase} px-2 py-1 gap-1 transition-colors`}
               >
-                {item.label}
-              </Link>
+                <Link href={item.href} className={``}>
+                  {item.label}
+                </Link>
+                <ChevronDown size={20} />
+              </div>
+
               {item.children?.length > 0 && (
                 <div
                   className={`absolute top-full left-0  hidden group-hover:block rounded-md shadow-lg ${dropdownBg} min-w-[12rem]`}
@@ -145,7 +156,6 @@ export default function Navbar() {
               )}
             </div>
           ))}
-
           <Link
             href="/contact"
             className={`px-6 py-2 rounded-full transition-colors duration-200 ${contactBtn}`}
@@ -153,6 +163,7 @@ export default function Navbar() {
             Contact
           </Link>
         </div>
+        {/* </div> */}
 
         {/* Mobile Toggle */}
         <button

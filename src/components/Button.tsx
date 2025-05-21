@@ -11,13 +11,11 @@ export const PrimaryButton: React.FC<ButtonProps> = ({
   <button
     {...props}
     className="
-      
-      border border-white/20
-      bg-[#07171E] text-white
-      font-medium
-      px-8 md:px-12 py-4 rounded-full text-md md:text-lg
-      hover:bg-neutral-700
-      cursor-pointer transition
+      bg-[#18598b] text-white
+      font-semibold
+      px-8 md:px-10 py-4 rounded-full text-md
+      hover:bg-[#59809f]
+      cursor-pointer duration-300
       text-center
       w-full
     "
@@ -32,8 +30,8 @@ export const WhiteButton: React.FC<ButtonProps> = ({ children, ...props }) => (
     className="
       
       bg-white text-[#07171E]
-      font-medium
-      px-8 md:px-12 py-4 rounded-full text-md md:text-lg
+    font-semibold  tracking-wide
+      px-8 md:px-10 py-4 rounded-full text-md
       hover:bg-neutral-100
       cursor-pointer transition
       text-center
@@ -49,10 +47,10 @@ export const GhostButton: React.FC<ButtonProps> = ({ children, ...props }) => (
     {...props}
     className="
         
-        border border-white/50
-         text-white
-        font-medium
-        px-8 md:px-12 py-4 rounded-full text-md md:text-lg
+        border border-black/30
+         text-neutral-800
+    font-medium
+      px-8 md:px-10 py-4 rounded-full text-md
         hover:bg-white/10
         cursor-pointer transition
       text-center

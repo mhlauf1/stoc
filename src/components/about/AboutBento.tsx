@@ -1,94 +1,81 @@
 "use client";
-import React from "react";
+import React, { FC } from "react";
 import Link from "next/link";
 import { PrimaryButton } from "../Button";
 
-const AboutBento = () => {
+interface TeaserCardProps {
+  title: string;
+  description: string;
+  href: string;
+  buttonText: string;
+}
+
+const TeaserCard: FC<TeaserCardProps> = ({
+  title,
+  description,
+  href,
+  buttonText,
+}) => (
+  <div className="flex-1 border bg-[#F7F7F7] items-start border-neutral-200 rounded-md flex flex-col justify-between px-5 md:px-12 py-6 md:py-8">
+    <div>
+      <h2 className="text-3xl md:text-4xl font-gambetta tracking-tighter leading-tight max-w-[24ch]">
+        {title}
+      </h2>
+      <p className="mt-2 mb-6 text-neutral-600 leading-7 md:leading-8 text-md md:text-lg">
+        {description}
+      </p>
+    </div>
+    <Link href={href}>
+      <PrimaryButton>{buttonText}</PrimaryButton>
+    </Link>
+  </div>
+);
+
+const AboutBento: FC = () => {
+  const cards: TeaserCardProps[] = [
+    {
+      title: "Company",
+      description:
+        "Learn about our mission, values, and the story behind STOC Advisory.",
+      href: "/about/company",
+      buttonText: "Learn More",
+    },
+    {
+      title: "Team",
+      description:
+        "Meet the experts driving our success and learn what makes our team unique.",
+      href: "/about/team",
+      buttonText: "Meet the Team",
+    },
+    {
+      title: "Locations",
+      description: "Explore our global presence and find an office near you.",
+      href: "/about/locations",
+      buttonText: "View Locations",
+    },
+    {
+      title: "Careers",
+      description:
+        "Join our team and help shape the future of strategic advisory.",
+      href: "/about/careers",
+      buttonText: "Explore Careers",
+    },
+  ];
+
   return (
     <section className="bg-white px-4 md:px-12 lg:px-28 py-12 md:py-24">
-      <div className="flex flex-col w-full gap-4">
-        {/* First row: Company & Team */}
-        <div className="flex  flex-col md:flex-row gap-4">
-          {/* Company Teaser */}
-          <div className="flex-1 border border-black/10 px-5 md:px-12 py-10 md:py-16 rounded-md items-start flex flex-col justify-between">
-            <div>
-              <h2 className="text-3xl tracking-tighter max-w-[24ch] md:text-4xl font-gambetta leading-tight">
-                Company
-              </h2>
-              <p className="leading-7 md:leading-8 text-md md:text-lg text-neutral-600 mt-4 mb-10">
-                Learn about our mission, values, and the story behind STOC
-                Advisory.
-              </p>
-            </div>
-            <Link href="/about/company">
-              <PrimaryButton>Learn More</PrimaryButton>
-            </Link>
-          </div>
-
-          {/* Team Teaser */}
-          <div className="flex-1 border border-black/10 px-5 md:px-12 py-10 md:py-16 rounded-md flex flex-col items-start justify-between">
-            <div>
-              <h2 className="text-3xl tracking-tighter max-w-[24ch] md:text-4xl font-gambetta leading-tight">
-                Team
-              </h2>
-              <p className="leading-7 md:leading-8 text-md md:text-lg text-neutral-600 mt-2 md:mt-4 mb-6 md:mb-10">
-                Meet the experts driving our success and learn what makes our
-                team unique.
-              </p>
-            </div>
-            <Link href="/about/team">
-              <PrimaryButton>Meet the Team</PrimaryButton>
-            </Link>
-          </div>
+      <div className="flex flex-col  w-full gap-4">
+        {/* First row */}
+        <div className="flex flex-col  md:flex-row gap-4">
+          {cards.slice(0, 2).map((c) => (
+            <TeaserCard key={c.title} {...c} />
+          ))}
         </div>
-
-        {/* Second row: Locations, Case Studies & Careers */}
-        <div className="flex flex-col md:flex-row gap-4">
-          {/* Locations Teaser */}
-          <div className="flex-1 bg-[#232323] border border-black/10 px-5 md:px-12 py-10 md:py-16 rounded-md flex flex-col items-start justify-between">
-            <div>
-              <h2 className="text-3xl tracking-tighter text-white max-w-[24ch] md:text-4xl font-gambetta leading-tight">
-                Locations
-              </h2>
-              <p className="leading-7 md:leading-8 text-md md:text-lg text-neutral-200 mt-2 md:mt-4 mb-6 md:mb-10">
-                Explore our global presence and find an office near you.
-              </p>
-            </div>
-            <Link href="/about/locations">
-              <PrimaryButton>View Locations</PrimaryButton>
-            </Link>
-          </div>
-
-          {/* Case Studies Teaser */}
-          <div className="flex-1 bg-[#232323] border border-black/10 px-5 md:px-12 py-10 md:py-16 rounded-md flex flex-col items-start justify-between">
-            <div>
-              <h2 className="text-3xl text-white tracking-tighter max-w-[24ch] md:text-4xl font-gambetta leading-tight">
-                Case Studies
-              </h2>
-              <p className="leading-7 md:leading-8 text-md md:text-lg text-neutral-200 mt-2 md:mt-4 mb-6 md:mb-10">
-                Discover how we&apos;ve helped clients achieve success through
-                real examples.
-              </p>
-            </div>
-            <Link href="/about/case-studies">
-              <PrimaryButton>See Case Studies</PrimaryButton>
-            </Link>
-          </div>
-
-          {/* Careers Teaser */}
-          <div className="flex-1 bg-[#232323] border border-black/10 px-5 md:px-12 py-10 md:py-16 rounded-md flex flex-col items-start justify-between">
-            <div>
-              <h2 className="text-3xl tracking-tighter text-white max-w-[24ch] md:text-4xl font-gambetta leading-tight">
-                Careers
-              </h2>
-              <p className="leading-7 md:leading-8 text-md md:text-lg text-neutral-200 mt-2 md:mt-4 mb-6 md:mb-10">
-                Join our team and help shape the future of strategic advisory.
-              </p>
-            </div>
-            <Link href="/about/careers">
-              <PrimaryButton>Explore Careers</PrimaryButton>
-            </Link>
-          </div>
+        {/* Second row */}
+        <div className="flex flex-col  md:flex-row gap-4">
+          {cards.slice(2).map((c) => (
+            <TeaserCard key={c.title} {...c} />
+          ))}
         </div>
       </div>
     </section>

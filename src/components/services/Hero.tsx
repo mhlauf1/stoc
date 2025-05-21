@@ -1,63 +1,37 @@
-import Image from "next/image";
 import React from "react";
+import Image from "next/image";
+import NewsletterForm from "../NewsletterForm";
 
-export default function Hero() {
-  return (
-    <section className="relative flex flex-col md:flex-row bg-[#07171E] h-auto md:h-[95vh]">
-      {/* Text Column */}
-      <div className="flex-1 flex flex-col justify-center pt-[15vh] md:pt-0 px-4 md:px-12 lg:px-32 py-12 md:py-0">
-        <div>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-gambetta tracking-tight leading-none text-white md:max-w-[20ch]">
-            Turning complex transactions into{" "}
-            <span className="italic font-gambetta">opportunity.</span>
-          </h1>
-          <p className="mt-10 text-lg md:text-xl text-white md:max-w-[42ch]">
-            From deep‐dive due diligence to seamless integration, we ensure
-            every deal captures maximum value.
-          </p>
-        </div>
-
-        {/* Mobile-only image, inside the text padding */}
-        <div className="relative w-full h-64 mt-16 md:hidden">
-          <Image
-            src="/handshake.jpg"
-            alt="STOC Industries"
-            fill
-            className="object-cover object-center rounded-xl"
-          />
-        </div>
-
-        <div
-          className="
-        hidden md:flex flex-col mt-8
-        items-start gap-4
-      "
-        >
-          {[
-            "Transaction Advisory Services",
-            "Corporate Development Support",
-            "Growth Enablement Services",
-            "CFO Advisory",
-          ].map((label) => (
-            <span
-              key={label}
-              className="text-sm text-neutral-300 tracking-wide"
-            >
-              {label}
-            </span>
-          ))}
-        </div>
+const Hero: React.FC = () => (
+  <section className="h-[85vh] md:h-[95vh] relative flex flex-col md:flex-row gap-4 pt-36 md:pt-0 bg-[#07273d] items-center px-6 md:px-24">
+    <div className="flex  flex-col items-start h-full justify-center flex-1">
+      <div>
+        <h1 className="text-[#d7ebf5] text-4xl md:text-5xl lg:text-6xl font-gambetta md:max-w-[20ch] leading-tight tracking-tighter">
+          Scaling Portfolio Companies with Confidence
+        </h1>
+        <p className="text-[#d7ebf5] text-lg md:text-xl mt-4 md:max-w-[52ch] leading-relaxed">
+          Hands-on enablement, AI-driven workflows, and real-time KPI tracking
+          to accelerate post-acquisition growth.
+        </p>
       </div>
+      <NewsletterForm />
+    </div>
+    <div className="relative w-full mb-8 md:mb-0 md:w-1/2 h-[40vh] md:h-[65vh]">
+      <Image
+        src="/blue-home-hero.jpeg"
+        alt="Transaction Advisory background"
+        fill
+        className="object-cover object-right rounded-lg"
+        quality={100}
+        priority
+        sizes="(min-width: 768px) 50vw, 100vw"
+      />
+      <div
+        className="absolute inset-0 rounded-lg bg-blue-300 opacity-30 mix-blend-multiply"
+        aria-hidden="true"
+      />
+    </div>
+  </section>
+);
 
-      {/* Desktop-only Image Column */}
-      <div className="flex-1 relative hidden md:block">
-        <Image
-          src="/handshake.jpg"
-          alt="STOC Industries"
-          fill
-          className="object-cover object-center"
-        />
-      </div>
-    </section>
-  );
-}
+export default Hero;
