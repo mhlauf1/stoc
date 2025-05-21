@@ -5,19 +5,6 @@ import {
   ChartBarIcon,
 } from "@heroicons/react/24/solid";
 
-interface StepItemProps {
-  title: string;
-}
-
-const StepItem: React.FC<StepItemProps> = ({ title }) => (
-  <div className="flex flex-row px-4 md:px-12 items-center  gap-3">
-    <div className="size-1 bg-neutral-400 rounded-full"></div>
-    <h3 className="text-lg font-gambetta tracking-tight text-neutral-800 md:text-3xl font-medium">
-      {title}
-    </h3>
-  </div>
-);
-
 const Intro: React.FC = () => (
   <section className="px-6 bg-linear-to-r from-[#F7F7F7] to-[#ebebeb] w-full md:px-12 lg:px-24 py-12  md:py-20">
     <div className="flex flex-col md:flex-row justify-between gap-8 md:gap-12">

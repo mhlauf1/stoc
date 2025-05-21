@@ -6,6 +6,8 @@ import {
   Puzzle,
   ChartSplineIcon,
 } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
+
 const data = [
   {
     id: 0,
@@ -34,7 +36,7 @@ const data = [
   },
 ];
 
-const Deliverable = ({ Icon, text }: { Icon: any; text: string }) => (
+const Deliverable = ({ Icon, text }: { Icon: LucideIcon; text: string }) => (
   <div
     className="
       group

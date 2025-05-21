@@ -25,7 +25,7 @@ const IndustryList = () => (
           Key Services:
         </p>
         <div className="grid  pt-4 w-full grid-cols-1  gap-4">
-          {servicesPageData.map((item, idx) => (
+          {servicesPageData.map((item) => (
             <ServicesItem key={item.id} {...item} />
           ))}
         </div>
