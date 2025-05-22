@@ -36,7 +36,7 @@ interface StepItemProps {
   Icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
 }
 
-const StepItem: React.FC<StepItemProps> = ({ title, text, Icon }) => (
+const StepItem: React.FC<StepItemProps> = ({ title, text }) => (
   <div className="flex flex-col px-4 md:px-12 items-start  gap-1 md:gap-3">
     <div className="flex flex-row items-end gap-1">
       <h3 className="text-xl text-neutral-800 md:text-2xl font-medium">

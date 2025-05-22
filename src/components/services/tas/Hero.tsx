@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import NewsletterForm from "@/components/NewsletterForm";
 
 const Hero: React.FC = () => (
   <section className="h-[85vh] relative flex flex-col md:flex-row gap-4  pt-36 md:pt-12 bg-[#F7F7F7] items-center px-4 md:px-[5%]">

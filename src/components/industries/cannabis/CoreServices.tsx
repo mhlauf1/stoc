@@ -49,7 +49,7 @@ const cards: OverviewCardProps[] = [
   },
 ];
 
-const ServiceCard: React.FC<ValueProps> = ({ Icon, title, description }) => (
+const ServiceCard: React.FC<ValueProps> = ({ Icon, title }) => (
   <div
     className="
       group
