@@ -29,7 +29,7 @@ interface TrustItemProps {
 }
 
 const TrustItem: React.FC<TrustItemProps> = ({ title, text, Icon }) => (
-  <div className="relative flex flex-col items-start rounded-md  px-8 ">
+  <div className="relative flex flex-col items-start rounded-md px-1 md:px-8 ">
     {/* Icon in top-right */}
     <div className="bg-[#F7F7F7] p-4 mb-6 rounded-lg">
       <Icon className=" size-5 text-[#18598b]" />
@@ -37,7 +37,7 @@ const TrustItem: React.FC<TrustItemProps> = ({ title, text, Icon }) => (
     <h3 className="text-2xl font-gambetta md:text-3xl tracking-tighter">
       {title}
     </h3>
-    <p className="text-white/80 mt-3 text-start md:text-lg w-[90%] leading-relaxed">
+    <p className="text-white/80 mt-3 text-start md:text-lg md:w-[90%] leading-relaxed">
       {text}
     </p>
   </div>

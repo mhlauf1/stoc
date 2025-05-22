@@ -29,7 +29,7 @@ const OverviewCard: React.FC<OverviewCardProps> = ({
           <h3 className="text-3xl  md:text-4xl font-gambetta text-gray-900 leading-tight tracking-tighter">
             {title}
           </h3>
-          <Link href={href}>
+          <Link className="hidden md:flex" href={href}>
             <PrimaryButton>Learn More</PrimaryButton>
           </Link>
         </div>
@@ -37,6 +37,9 @@ const OverviewCard: React.FC<OverviewCardProps> = ({
         <p className="text-neutral-500  mt-3 leading-7  text-md md:text-lg">
           {description}
         </p>
+        <Link className="md:hidden mt-3 w-full flex" href={href}>
+          <PrimaryButton>Learn More</PrimaryButton>
+        </Link>
       </div>
     </div>
   </div>
