@@ -3,7 +3,7 @@ import { PrimaryButtonBlue } from "@/components/Button";
 import Link from "next/link";
 const NewsletterForm = () => {
   return (
-    <div className="bg-[#F7F7F7] border border-neutral-200 px-8 py-6 rounded-lg md:max-w-md w-full md:mt-16 hidden md:flex flex-col items-start ">
+    <div className="bg-[#F7F7F7] border border-neutral-200 px-12 py-6 rounded-lg md:max-w-md w-full md:mt-16 hidden md:flex flex-col items-start ">
       <p className="text-neutral-700  tracking-wide">
         Stay in touch. Sign up for the Stoc Newsletter below.
       </p>

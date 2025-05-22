@@ -7,10 +7,8 @@ const ServiceCard: React.FC<ValueProps> = ({ Icon, title, description }) => (
     className="
       group
       flex flex-col relative items-start p-8
-      bg-[#16333A] text-white
+      bg-[#041E40] text-white
       rounded-2xl border border-[#16333A]
-      transition-colors duration-300 ease-out
-      hover:bg-[#2D474D]
     "
   >
     <div className="flex justify-end items-end w-full">
@@ -35,7 +33,7 @@ const ServicesGrid: React.FC = () => (
 );
 
 const Values: React.FC = () => (
-  <section className="flex flex-col px-4 sm:px-12 md:px-32 pb-16 md:pb-28">
+  <section className="flex flex-col bg-[#F7F7F7] pt-16 px-4 sm:px-[5%] pb-16 md:pb-24">
     <div className="flex items-center mb-12 justify-center gap-4">
       <div className="h-[1px] bg-neutral-300 w-[60px]" />
       <span

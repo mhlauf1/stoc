@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import NewsletterForm from "../NewsletterForm";
 
 const Hero: React.FC = () => (
   <section className="h-[85vh] md:h-[95vh] relative flex flex-col md:flex-row gap-4 pt-36 md:pt-0 bg-[#041E40] items-center px-4 md:px-[5%]">
@@ -14,7 +13,6 @@ const Hero: React.FC = () => (
           to accelerate post-acquisition growth.
         </p>
       </div>
-      <NewsletterForm />
     </div>
     <div className="relative w-full mb-8 md:mb-0 md:w-1/2 h-[40vh] md:h-[65vh]">
       <Image

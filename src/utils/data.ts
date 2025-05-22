@@ -10,7 +10,11 @@ import {
     Music,
     Package as Box,
     ShoppingCart,
-    Tv2
+    Tv2,
+    Shield,
+    Users,
+    Star,
+    Zap,
 } from "lucide-react";
 import TASNode from "@/components/services/nodes/TASNode";
 import CDSNode from "@/components/services/nodes/CDSNode";
@@ -63,28 +67,28 @@ export const valuesData: ValueProps[] = [
     {
         id: 0,
         title: "Integrity",
-        Icon: TrendingUp,
+        Icon: Shield,
         description:
             "Upholding the highest ethical standards.",
     },
     {
         id: 1,
         title: "Collaboration",
-        Icon: TrendingUp,
+        Icon: Users,
         description:
             "Partnering closely with management teams.",
     },
     {
         id: 2,
         title: "Excellence",
-        Icon: TrendingUp,
+        Icon: Star,
         description:
             "Delivering rigorous, data-driven analysis.",
     },
     {
         id: 3,
         title: "Innovation",
-        Icon: TrendingUp,
+        Icon: Zap,
         description:
             "Adapting to evolving market dynamics.",
     },
@@ -145,7 +149,7 @@ export const industryData: IndustryProps[] = [
         id: 0,
         title: "Business Services",
         Icon: Briefcase,
-        src: "/stoc-office.png",
+        src: "/about-close.jpg",
         tags: ["Performance improvement", "Value creation", "Financial analysis", "Revenue optimization"],
         badge: "Business & Professional Services",
         desc1: "The business services industry is experiencing rapid growth and disruption, and the fight for talent and differentiation is highly competitive. To truly stand out, businesses must embrace change and embark on frequent initiatives to best serve their clients’ evolving needs.",
@@ -157,7 +161,7 @@ export const industryData: IndustryProps[] = [
     {
         id: 1,
         title: "Cannabis",
-        src: "/ges-1.jpeg",
+        src: "/cannabis-hero.png",
         Icon: Leaf,
         tags: ["Valuation and banking support", "Acquisition disputes", "Regulatory compliance"],
         badge: "Cannabis Industry Expertise",
@@ -169,7 +173,7 @@ export const industryData: IndustryProps[] = [
     {
         id: 2,
         title: "Healthcare",
-        src: "/saqib_live.png",
+        src: "/building-bg.jpg",
         Icon: BriefcaseMedical,
         tags: ["Operational optimization", "Regulatory compliance", "Revenue management"],
         badge: "Healthcare Industry Expertise",
@@ -181,7 +185,7 @@ export const industryData: IndustryProps[] = [
     {
         id: 3,
         title: "Hospitality & Entertainment",
-        src: "/rt-1.jpeg",
+        src: "/hospitality.png",
         Icon: Music,
         tags: ["Mergers & acquisitions", "Debt restructuring", "Customer acquisition & retention"],
         supportText: "Guiding hospitality and entertainment brands through growth, financing, and digital evolution",

@@ -1,9 +1,10 @@
 import React from "react";
+import Image from "next/image";
 
-const Mission: React.FC = () => (
-  <section className="px-6 bg-[#F7F7F7] md:px-12 lg:px-[5vw] py-16 md:py-16">
-    <div className="flex flex-col pt-[8vh] items-center gap-[5vw]">
-      <div className="flex-1 flex flex-col items-center">
+const Hero: React.FC = () => (
+  <section className="h-[85vh] relative flex flex-col md:flex-row gap-4  pt-36 md:pt-12 bg-[#F7F7F7] items-center px-4 md:px-[5%]">
+    <div className="flex  flex-col items-start md:pt-0 flex-1">
+      <div>
         <div className="flex items-center mb-6 gap-4">
           <div className="h-[1px] bg-neutral-300 w-[60px]" />
           <span
@@ -14,17 +15,28 @@ const Mission: React.FC = () => (
           </span>
           <div className="h-[1px] bg-neutral-300 w-[60px]" />
         </div>
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-gambetta tracking-tighter leading-tight text-center max-w-[26ch]">
+        <h1 className="text-[#041E40] text-4xl md:text-5xl lg:text-6xl font-gambetta md:max-w-[20ch] leading-tight tracking-tighter">
           Partnering with clients through every stage of the acquisition
           lifecycle
         </h1>
-        <p className="leading-7 md:leading-8 text-center md:max-w-[64ch] text-md md:text-lg text-neutral-600 mt-8 ">
+        <p className="text-[#041E40] text-lg md:text-xl mt-4 md:max-w-[52ch] leading-relaxed">
           STOC Advisory is a business advisory firm specializing in transaction
           advisory services, corporate development, and CFO advisory.
         </p>
       </div>
     </div>
+    <div className="relative w-full mb-8 md:mb-0 md:w-1/2 h-[40vh] md:h-[65vh]">
+      <Image
+        src="/about-main.jpg"
+        alt="Transaction Advisory background"
+        fill
+        className="object-cover object-center rounded-lg"
+        quality={100}
+        priority
+        sizes="(min-width: 768px) 50vw, 100vw"
+      />{" "}
+    </div>
   </section>
 );
 
-export default Mission;
+export default Hero;

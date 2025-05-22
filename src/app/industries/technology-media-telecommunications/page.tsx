@@ -1,11 +1,10 @@
 import CTA from "@/components/CTA";
-import SubpageHero from "@/components/SubpageHero";
-import React from "react";
+import Hero from "@/components/industries/technology-media-telecommunications/Hero";
 
 const TechnologyPage = () => {
   return (
     <main className="">
-      <SubpageHero title="Healthcare" sub1="Need info" src="/sean-sam.png" />
+      <Hero />
       <CTA />
     </main>
   );

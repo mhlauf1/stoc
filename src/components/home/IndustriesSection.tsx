@@ -6,7 +6,6 @@ import Link from "next/link";
 import Image from "next/image";
 
 const IndustryCard: React.FC<IndustryProps> = ({
-  Icon,
   title,
   src,
   supportText,
@@ -14,12 +13,14 @@ const IndustryCard: React.FC<IndustryProps> = ({
 }) => (
   <div className="flex relative bg-white flex-col  rounded-lg border border-neutral-100">
     <div className="h-[200px] md:h-[250px] w-full relative">
-      <Image src={src!} alt={title} fill className="rounded-lg object-cover" />
+      <Image
+        src={src!}
+        alt={title}
+        fill
+        className="rounded-t-lg object-cover"
+      />
     </div>
     <div className="flex flex-col items-start pt-5 md:pt-6 pb-10 md:pb-12 px-5 md:px-8 gap-2">
-      <div className="bg-white absolute top-3 right-3 p-3 rounded-lg">
-        <Icon className="h-6 w-6 text-[#16333A]" />
-      </div>
       <h3 className="text-lg md:text-3xl mt-2 tracking-tighter text-center md:text-start font-gambetta">
         {title}
       </h3>
@@ -28,8 +29,6 @@ const IndustryCard: React.FC<IndustryProps> = ({
         <PrimaryButton>Learn more</PrimaryButton>
       </Link>
     </div>
-
-    <div className="absolute bottom-0 left-0 right-0 h-[10px] rounded-b-2xl bg-black/10 overflow-hidden"></div>
   </div>
 );
 

@@ -81,6 +81,7 @@ export default function Navbar() {
     "/services/corporate-development-support",
     "/services/growth-enablement-services",
     "/home-video",
+    "/industries/hospitality-entertainment",
   ];
   const isDynamicPage = dynamicPages.includes(pathname);
 
