@@ -6,11 +6,11 @@ import type { ServicesPageProps } from "@/utils/types";
 
 const ServicesItem: React.FC<ServicesPageProps> = ({ badge, desc, href }) => {
   return (
-    <div className="flex bg-[#FCFCFC] border border-neutral-200 py-5 px-8 rounded-lg flex-col items-start">
+    <div className="flex bg-[#FCFCFC] border border-neutral-200 py-4 md:py-5 px-4 md:px-8 rounded-lg flex-col items-start">
       <h3 className="text-2xl mt-3 sm:text-3xl font-gambetta tracking-tighter text-start">
         {badge}
       </h3>
-      <p className="text-neutral-600 mt-2 mb-5 text-lg md:text-xl leading-relaxed text-start">
+      <p className="text-neutral-600 mt-2 mb-5  text-md sm:text-lg md:text-xl leading-relaxed text-start">
         {desc}
       </p>
 

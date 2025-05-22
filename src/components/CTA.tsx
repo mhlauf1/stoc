@@ -25,7 +25,7 @@ const CTA: React.FC = () => {
         </h2>
 
         {/* Subtext */}
-        <p className="text-neutral-200 text-lg">
+        <p className="text-neutral-200  text-md sm:text-lg">
           Monthly strategies, market intelligence, and deal best
           practices—delivered straight to your inbox.{" "}
         </p>

@@ -17,7 +17,7 @@ const IndustryList = () => (
         <h3 className="text-2xl md:text-4xl text-center md:text-start md:max-w-[18ch] mt-2 font-gambetta tracking-tighter leading-snug">
           Turning Strategic Vision into Measurable Outcomes
         </h3>
-        <p className="text-neutral-600 text-center md:text-start  md:max-w-[58ch] mt-3 mb-5 text-lg md:text-xl">
+        <p className="text-neutral-600 text-center md:text-start  md:max-w-[58ch] mt-3 mb-5  text-md sm:text-lg md:text-xl">
           Our seasoned advisors provide data-driven insights and hands-on
           support to guide decisions and optimize performance.
         </p>
