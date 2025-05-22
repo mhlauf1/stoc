@@ -6,15 +6,11 @@ import Link from "next/link";
 export default function HeroVideo() {
   return (
     <section className="relative h-[98vh]  flex">
-      <div
-        className="absolute z-10 inset-0 bg-neutral-600 opacity-60 mix-blend-multiply"
-        aria-hidden="true"
-      />{" "}
       <div className="absolute top-0 left-0 right-0 bottom-0">
         <Image
           className="-z-1 object-cover"
           fill
-          src="/stoc-hero-2.jpeg"
+          src="/building-1.jpg"
           alt="STOC hero"
           quality={100}
           priority

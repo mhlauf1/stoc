@@ -5,10 +5,6 @@ import Link from "next/link";
 export default function HeroVideo() {
   return (
     <section className="relative h-[98vh]  flex">
-      <div
-        className="absolute z-10 inset-0 bg-blue-600 opacity-40 mix-blend-multiply rounded-lg"
-        aria-hidden="true"
-      />{" "}
       <div className="absolute top-0 left-0 right-0 bottom-0">
         <video
           autoPlay
