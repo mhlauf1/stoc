@@ -14,11 +14,11 @@ export default function Footer() {
         <div className="flex flex-col justify-between gap-6">
           <Link href="/">
             <Image
-              src="/stoc-logo-main.png"
-              width={180}
-              height={60}
+              src="/stoc-logo.png"
+              width={250}
+              height={100}
               alt="STOC Advisory"
-              className="filter brightness-0 invert"
+              className="filter w-[250px] brightness-0 invert"
             />
           </Link>
           <p className="text-neutral-300 leading-6">
@@ -82,7 +82,7 @@ export default function Footer() {
             {["Baltimore, MD", "Minneapolis, MN"].map((loc) => (
               <li
                 key={loc}
-                className="cursor-pointer hover:text-white transition-colors duration-200"
+                className="hover:text-white transition-colors duration-200"
               >
                 {loc}
               </li>
@@ -96,13 +96,15 @@ export default function Footer() {
             Follow Us
           </h4>
           <div className="flex space-x-4 text-neutral-300">
-            {[FaFacebook, FaLinkedin, FaTwitter].map((Icon, i) => (
-              <Icon
-                key={i}
+            <Link
+              href="https://www.linkedin.com/company/stoc-advisory/"
+              target="_blank"
+            >
+              <FaLinkedin
                 size={28}
-                className="hover:text-white transition-colors duration-200 cursor-pointer"
+                className="hover:text-white cursor-pointer transition-colors duration-200"
               />
-            ))}
+            </Link>
           </div>
         </div>
       </div>

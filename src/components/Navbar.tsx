@@ -118,7 +118,7 @@ export default function Navbar() {
             width={300}
             height={100}
             alt="STOC"
-            className={`transition-all duration-300 ${
+            className={`transition-all md:w-[300px] w-[200px] duration-300 ${
               isDarkBg ? "" : "filter brightness-0 invert"
             }`}
           />
