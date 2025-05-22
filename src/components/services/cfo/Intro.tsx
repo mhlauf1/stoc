@@ -20,7 +20,7 @@ const bullets = [
 
 export default function Intro() {
   return (
-    <section className="bg-white px-6 md:px-12 lg:px-32 py-16">
+    <section className="bg-white px-4 md:px-[5%] py-16 md:py-24">
       <div className=" grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
         {/* image column */}
         <div className="relative hidden md:flex w-full h-64 md:h-[50vh]">

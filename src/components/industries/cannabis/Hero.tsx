@@ -1,34 +1,27 @@
 import React from "react";
-import Image from "next/image";
 
 const Hero: React.FC = () => (
-  <section className="h-[85vh]  relative overflow-hidden">
-    {/* Background image */}
-    <Image
-      src="/cannabis-hero.jpg"
-      fill
-      className="object-cover object-center"
-      alt="Transaction Advisory background"
-    />
-
-    {/* Dark overlay for contrast */}
-    <div className="absolute inset-0 bg-black/70" />
-
-    {/* Content */}
-    <div className="relative z-10 flex flex-col gap-4 items-start justify-end py-24 h-full px-6 md:px-12 lg:px-[5vw] text-start">
-      <h1 className="text-5xl text-start text-white tracking-tighter  md:text-6xl font-gambetta lg:text-7xl leading-tight ">
-        Cannabis
+  <section className="h-[85vh] relative flex flex-col md:flex-row items-center justify-center md:justify-start pt-0 md:pt-12 bg-[#062010] px-4 md:px-[5%] gap-4">
+    <div className="flex flex-col items-center justify-center md:pt-0 flex-1">
+      <div className="flex items-center mb-4 md:mb-2 justify-center gap-4">
+        <div className="h-[1px] bg-neutral-300 w-[30px]" />
+        <span
+          style={{ letterSpacing: "3px" }}
+          className="uppercase text-[#EFFFF3] text-sm font-mono"
+        >
+          Growing with Confidence
+        </span>
+        <div className="h-[1px] bg-neutral-300 w-[30px]" />
+      </div>
+      <h1 className="text-[#EFFFF3] text-center text-4xl md:text-5xl lg:text-6xl font-gambetta leading-tight tracking-tighter">
+        Your Partner in Cannabis Excellence
       </h1>
-      <p className="text-white/90 text-md md:text-lg leading-relaxed max-w-[68ch]">
-        The Rapid Rise of Legal Cannabis
-      </p>
-      <p className="text-white/90 text-md md:text-lg leading-relaxed max-w-[88ch]">
-        As more states legalize cannabis for medical and recreational use, an
-        entirely new ecosystem of growers, processors, distributors and
-        service-providers has emerged—bringing enormous opportunity, but also
-        significant complexity.
+      <p className="text-[#EFFFF3] text-lg md:text-xl text-center mt-4 md:max-w-[52ch] leading-relaxed">
+        Expert financial, compliance and transaction guidance for every stage of
+        your cannabis business
       </p>
     </div>
+    <div className="bg-[#EFFFF3] h-[1px] absolute bottom-8 right-[7%] left-[7%]"></div>
   </section>
 );
 

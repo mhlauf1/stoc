@@ -55,7 +55,7 @@ const StepItem: React.FC<StepItemProps> = ({ title, text, Icon }) => (
 );
 
 const Intro: React.FC = () => (
-  <section className="px-6 bg-linear-to-r from-[#F7F7F7] to-[#ebebeb] w-full md:px-12 lg:px-24 py-12  md:py-20">
+  <section className="px-4 bg-linear-to-r from-[#F7F7F7] to-[#ebebeb] w-full md:px-[5%] py-12  md:py-20">
     <div className="flex items-center md:items-start flex-col">
       <div className="flex items-center mb-4 justify-center gap-4">
         <div className="h-px bg-neutral-300 w-8" />

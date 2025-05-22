@@ -66,7 +66,7 @@ const DeliverableGrid: React.FC = () => (
 );
 
 const Deliverables: React.FC = () => (
-  <section className="flex flex-col gap-4 md:gap-6 px-4 sm:px-12 md:px-24 py-12 md:py-20">
+  <section className="flex flex-col gap-4 md:gap-6 px-4 md:px-[5%] py-12 md:py-20">
     <h2 className="text-neutral-800 text-3xl md:text-fxl lg:text-5xl  font-gambetta text-center md:text-start  leading-tight tracking-tighter">
       Core Deliverables
     </h2>

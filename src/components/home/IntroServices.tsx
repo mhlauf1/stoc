@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function IntroServices() {
   return (
-    <section className="relative py-16 md:pr-20 sm:px-8 px-4 md:px-0 md:py-16 bg-white">
+    <section className="relative py-16 md:pr-[5%] px-4 md:px-0 md:py-16 bg-white">
       <div className="flex flex-col-reverse md:gap-16 md:flex-row md:justify-between">
         {" "}
         <div className="relative w-full h-[50vh] flex flex-1">

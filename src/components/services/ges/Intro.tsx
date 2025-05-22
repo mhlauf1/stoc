@@ -6,7 +6,7 @@ import {
 } from "@heroicons/react/24/solid";
 
 const Intro: React.FC = () => (
-  <section className="px-6 bg-linear-to-r from-[#F7F7F7] to-[#ebebeb] w-full md:px-12 lg:px-24 py-12  md:py-20">
+  <section className="px-4 bg-linear-to-r from-[#F7F7F7] to-[#ebebeb] w-full  md:px-[5%] py-12  md:py-20">
     <div className="flex flex-col md:flex-row justify-between gap-8 md:gap-12">
       <div className="flex flex-col items-start flex-1 gap-2 md:gap-4">
         <div className="flex items-center mb-3 justify-center gap-4">

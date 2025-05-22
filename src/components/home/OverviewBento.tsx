@@ -39,7 +39,7 @@ const cards: OverviewCardProps[] = [
 
 export default function OverviewBento() {
   return (
-    <section className="bg-[#fafafa] border-t border-neutral-200 px-4 md:px-12 lg:px-28 py-12 md:py-16">
+    <section className="bg-[#fafafa] border-t border-neutral-200 px-4 md:px-[5%] py-12 md:py-16">
       <div className="flex flex-col items-start gap-4">
         <div className="flex items-center justify-center gap-4">
           <div className="h-px bg-neutral-300 w-8" />

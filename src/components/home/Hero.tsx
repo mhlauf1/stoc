@@ -16,7 +16,7 @@ export default function HeroVideo() {
           priority
         />
       </div>
-      <div className="flex z-10 flex-col gap-4 pt-[30vh] pb-10 w-full px-4 md:px-12 lg:px-20 items-start justify-between">
+      <div className="flex z-10 flex-col gap-4 pt-[30vh] pb-10 w-full px-4 md:px-[5%] items-start justify-between">
         <div>
           <NewsLetterBadge />
 

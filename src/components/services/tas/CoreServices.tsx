@@ -42,8 +42,8 @@ const ServiceCard: React.FC<ValueProps> = ({ Icon, title, description }) => (
     className="
       group
       flex flex-col relative items-start p-6 md:p-8
-      bg-[#07273d] text-white
-      rounded-2xl border border-[#16333A]
+      bg-[#041E40] text-white
+      rounded-xl
       transition-colors duration-300 ease-out
       hover:bg-[#344b5a]
     "
@@ -70,7 +70,7 @@ const ServicesGrid: React.FC = () => (
 );
 
 const CoreServices: React.FC = () => (
-  <section className="flex flex-col md:flex-row  gap-8 md:gap-16 pt-12 md:pt-24 px-4 sm:px-12 md:px-32 pb-16 md:pb-28">
+  <section className="flex flex-col md:flex-row  gap-8 md:gap-16 pt-12 md:pt-24 px-4 md:px-[5%] pb-16 md:pb-28">
     <div className="flex flex-1 items-start flex-col">
       <h2 className="text-3xl tracking-tighter text-start  md:text-4xl font-gambetta leading-normal">
         Structured Support at Every Stage

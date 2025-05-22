@@ -4,7 +4,7 @@ import ServicesItem from "./ServicesItem";
 import Image from "next/image";
 
 const IndustryList = () => (
-  <section className="bg-[#F7F7F7] md:mb-12 py-16 md:py-20 px-4 sm:px-12 md:px-28">
+  <section className="bg-[#F7F7F7] md:mb-12 py-16 md:py-20 px-4 md:px-[5%]">
     <div className="flex flex-col md:flex-row gap-8">
       <div className="flex flex-col flex-1 items-center md:items-start ">
         <div className="flex items-center mb-2 justify-center gap-4">

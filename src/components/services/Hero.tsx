@@ -3,8 +3,8 @@ import Image from "next/image";
 import NewsletterForm from "../NewsletterForm";
 
 const Hero: React.FC = () => (
-  <section className="h-[85vh] md:h-[95vh] relative flex flex-col md:flex-row gap-4 pt-36 md:pt-0 bg-[#07273d] items-center px-6 md:px-24">
-    <div className="flex  flex-col items-start h-full justify-center flex-1">
+  <section className="h-[85vh] md:h-[95vh] relative flex flex-col md:flex-row gap-4 pt-36 md:pt-0 bg-[#041E40] items-center px-4 md:px-[5%]">
+    <div className="flex mt-8 flex-col items-start h-full justify-center flex-1">
       <div>
         <h1 className="text-[#d7ebf5] text-4xl md:text-5xl lg:text-6xl font-gambetta md:max-w-[20ch] leading-tight tracking-tighter">
           Scaling Portfolio Companies with Confidence

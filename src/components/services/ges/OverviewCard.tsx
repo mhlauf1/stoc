@@ -13,7 +13,7 @@ const OverviewCard: React.FC<OverviewCardProps> = ({
   title,
   description,
 }) => (
-  <div className="w-full bg-[#07273d] py-6 px-8 flex-1 border border-neutral-200 rounded-xl flex flex-col">
+  <div className="w-full bg-[#041E40] py-6 px-8 flex-1 border border-neutral-200 rounded-xl flex flex-col">
     <div className="flex flex-row w-full items-start gap-4 flex-1">
       <div className="flex flex-col items-start w-full border-neutral-300">
         <p className="text-white"></p>
