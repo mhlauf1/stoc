@@ -114,8 +114,8 @@ export default function Navbar() {
         {/* <div className="flex flex-row items-center gap-16"> */}
         <Link href="/">
           <Image
-            src="/stoc-logo-main.png"
-            width={200}
+            src="/stoc-logo.png"
+            width={300}
             height={100}
             alt="STOC"
             className={`transition-all duration-300 ${
