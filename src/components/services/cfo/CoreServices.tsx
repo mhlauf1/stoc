@@ -69,14 +69,14 @@ const ServicesGrid: React.FC = () => (
 const CoreServices: React.FC = () => (
   <section className="flex flex-col  px-4 md:px-[5%] pb-16 md:pb-28">
     <div className="flex items-center mb-12 justify-center gap-4">
-      <div className="h-[1px] bg-neutral-300 w-[60px]" />
+      <div className="h-[1px] bg-neutral-300 w-[50px]" />
       <span
         style={{ letterSpacing: "3px" }}
         className="uppercase text-gray-600 text-xs font-mono"
       >
         CFO Advisory Services
       </span>
-      <div className="h-[1px] bg-neutral-300 w-[60px]" />
+      <div className="h-[1px] bg-neutral-300 w-[50px]" />
     </div>
     <ServicesGrid />
   </section>
