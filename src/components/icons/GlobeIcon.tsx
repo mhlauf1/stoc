@@ -1,17 +1,17 @@
-// components/icons/GlobeIcon.tsx
 import React, { useEffect, useRef } from "react";
 import Lottie, { LottieRefCurrentProps } from "lottie-react";
 import type { AnimationItem } from "lottie-web";
 
-// 1) Import your JSON — TS will now know its structure
-import rawGlobeData from "../../../public/globe.json";
+/**
+ * Grab the prop types directly from the Lottie component,
+ * so we never re-declare “animationData” as `any`.
+ */
+type LottieComponentProps = React.ComponentProps<typeof Lottie>;
 
-// 2) Capture its type
-export type GlobeAnimationData = typeof rawGlobeData;
-
-export interface GlobeLottieProps {
+export interface LottieIconProps {
+  /** start spinning on hover-in; finish current loop & stop on hover-out */
   play: boolean;
-  data: GlobeAnimationData;
+  data: LottieComponentProps["animationData"];
   width?: string;
   height?: string;
 }
@@ -21,21 +21,21 @@ export function LottieIcon({
   data,
   width = "36px",
   height = "36px",
-}: GlobeLottieProps) {
-  // 3) extend the LottieRef type so animationItem is known
+}: LottieIconProps) {
   const lottieRef = useRef<
     (LottieRefCurrentProps & { animationItem?: AnimationItem }) | null
   >(null);
 
   useEffect(() => {
-    const animItem = lottieRef.current?.animationItem;
-    if (!animItem) return;
+    const anim = lottieRef.current?.animationItem;
+    if (!anim) return;
 
     if (play) {
-      animItem.loop = true;
-      animItem.play();
+      anim.loop = true;
+      anim.play();
     } else {
-      animItem.loop = false; // will finish current loop then stop
+      // disable looping so it stops smoothly after this cycle
+      anim.loop = false;
     }
   }, [play]);
 

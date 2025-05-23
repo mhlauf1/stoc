@@ -1,12 +1,16 @@
-// app/OverviewBento.tsx
+// src/app/OverviewBento.tsx
 "use client";
 import React from "react";
 import OverviewCard, { OverviewCardProps } from "./OverviewCard";
-import globeData from "../../../public/globe.json";
-import layersData from "../../../public/layers.json";
-import teamData from "../../../public/team-icon.json";
-import letterData from "../../../public/letter.json";
 
+// adjust these relative paths if your JSON lives elsewhere:
+import globeData from "../../../public/globe-bold.json";
+import layersData from "../../../public/layers-bold.json";
+import teamData from "../../../public/photo-bold.json";
+import letterData from "../../../public/letter-bold.json";
+
+// The `OverviewCardProps.animatedData` field is already
+// typed as LottieProps["animationData"], so any of these JSONs works.
 const cards: OverviewCardProps[] = [
   {
     animatedData: layersData,
@@ -26,16 +30,16 @@ const cards: OverviewCardProps[] = [
   },
   {
     animatedData: teamData,
-    title: "Meet the team",
-    description: "Explore the team members across the US that make power STOC.",
-    href: "/industries",
-    cta: "View team",
+    title: "Meet the Team",
+    description: "Explore the experts across the US driving STOC success.",
+    href: "/team",
+    cta: "Meet the Team",
   },
   {
     animatedData: letterData,
     title: "Newsletter",
-    description: "Sign up for the STOC newsletter, monthly reports for you.",
-    href: "/industries",
+    description: "Get monthly insights straight to your inbox.",
+    href: "/newsletter",
     cta: "Sign Up",
   },
 ];
@@ -43,7 +47,7 @@ const cards: OverviewCardProps[] = [
 export default function OverviewBento() {
   return (
     <section className="bg-[#fafafa] border-t border-neutral-200 px-4 md:px-[5%] py-12 md:py-16">
-      <div className="flex flex-col items-center md:items-start gap-2 md:gap-4">
+      <div className="flex flex-col items-center md:items-start gap-4">
         <div className="flex items-center justify-center gap-4">
           <div className="h-px bg-neutral-300 w-[30px]" />
           <span
@@ -54,13 +58,14 @@ export default function OverviewBento() {
           </span>
           <div className="h-px bg-neutral-300 w-[30px]" />
         </div>
-        <h2 className="text-3xl tracking-tighter md:max-w-[24ch] md:text-4xl font-gambetta lg:text-5xl leading-tight">
+
+        <h2 className="text-3xl md:text-4xl lg:text-5xl tracking-tighter font-gambetta leading-tight">
           Explore our Core Network
         </h2>
 
-        <div className="grid mt-2 grid-cols-1  md:grid-cols-2 w-full  gap-4">
-          {cards.map((card, i) => (
-            <OverviewCard key={i} {...card} />
+        <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
+          {cards.map((card, idx) => (
+            <OverviewCard key={idx} {...card} />
           ))}
         </div>
       </div>

@@ -1,5 +1,4 @@
 import React from "react";
-import { PrimaryButton } from "./Button";
 import Link from "next/link";
 
 const CTA: React.FC = () => {
@@ -39,11 +38,35 @@ const CTA: React.FC = () => {
               className="flex-1 px-6 py-3 focus:outline-none"
             />
             <Link className="md:block hidden" href="/contact">
-              <PrimaryButton>Subscribe</PrimaryButton>
+              <button
+                className="   
+         bg-[#18598b]  text-white
+      font-medium
+      px-8 md:px-10 py-4 rounded-full text-md
+      hover:bg-[#59809f]
+      cursor-pointer duration-300
+      tracking-tight
+      text-center
+      w-full"
+              >
+                Subscribe
+              </button>
             </Link>
           </div>
           <Link className="block md:hidden" href="/contact">
-            <PrimaryButton>Subscribe</PrimaryButton>
+            <button
+              className="   
+          bg-[#18598b]  text-white
+      font-medium
+      px-8 md:px-10 py-4 rounded-full text-md
+      hover:bg-[#59809f]
+      cursor-pointer duration-300
+      tracking-tight
+      text-center
+      w-full"
+            >
+              Subscribe
+            </button>
           </Link>
         </form>
       </div>

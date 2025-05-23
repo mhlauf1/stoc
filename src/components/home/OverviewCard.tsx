@@ -1,21 +1,26 @@
-// components/home/OverviewCard.tsx
+// src/components/OverviewCard.tsx
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
 import { PrimaryButton } from "../Button";
-import { LottieIcon, GlobeAnimationData } from "../icons/GlobeIcon";
+import { LottieIcon } from "../icons/GlobeIcon";
+import type { LottieIconProps } from "../icons/GlobeIcon";
 
+/**
+ * cards[].animatedData must match LottieIconProps["data"].
+ */
 export interface OverviewCardProps {
   title: string;
   description: string;
   href: string;
   cta?: string;
-  animatedData: GlobeAnimationData;
+  animatedData: LottieIconProps["data"];
 }
 
 const OverviewCard: React.FC<OverviewCardProps> = ({
   title,
   description,
+  cta,
   href,
   animatedData,
 }) => {
@@ -23,33 +28,30 @@ const OverviewCard: React.FC<OverviewCardProps> = ({
 
   return (
     <div
-      className="w-full bg-linear-to-r from-white via-neutral-50 to-white px-5 py-4 md:px-8 md:py-8 flex-1 relative border border-neutral-200 rounded-md flex flex-col"
+      className="w-full bg-white items-start px-5 py-4 md:px-8 md:py-8 flex-1 relative border border-neutral-200 rounded-md flex flex-col"
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      <div className="flex flex-row w-full items-start gap-4 flex-1">
-        <div className="flex flex-col items-start w-full border-neutral-300">
-          <div className="md:absolute mb-2 md:mb-0 top-4 right-4">
-            <div className="p-3 md:p-4 border border-neutral-200 rounded-lg">
-              <LottieIcon play={hovered} data={animatedData} />
-            </div>
-          </div>
-
-          <div className="flex flex-row mt-3 justify-between items-center w-full">
-            <h3 className="text-3xl md:text-4xl font-gambetta text-gray-900 leading-tight tracking-tighter">
-              {title}
-            </h3>
-          </div>
-
-          <p className="text-neutral-600 tracking-tight mt-2 md:mt-4 text-md md:text-lg">
-            {description}
-          </p>
-
-          <Link className="mt-4 md:mt-5 w-full md:w-auto flex" href={href}>
-            <PrimaryButton>Learn More</PrimaryButton>
-          </Link>
-        </div>
+      <div className="md:absolute top-4 right-4 p-3 md:p-4 border border-neutral-200 rounded-lg">
+        <LottieIcon
+          play={hovered}
+          data={animatedData}
+          width="36px"
+          height="36px"
+        />
       </div>
+
+      <h3 className="mt-12 text-3xl md:text-4xl font-gambetta text-gray-900 leading-tight tracking-tighter">
+        {title}
+      </h3>
+
+      <p className="text-neutral-600 tracking-tight mt-2 md:mt-4 text-md md:text-lg">
+        {description}
+      </p>
+
+      <Link className="mt-4 md:mt-5 w-full md:w-auto" href={href}>
+        <PrimaryButton>{cta ?? "Learn More"}</PrimaryButton>
+      </Link>
     </div>
   );
 };
