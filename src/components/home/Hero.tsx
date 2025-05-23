@@ -15,8 +15,9 @@ export default function HeroVideo() {
           quality={100}
           priority
         />
+        <div className="bg-black/20 absolute top-0 left-0 right-0 bottom-0"></div>
       </div>
-      <div className="flex z-10 flex-col gap-4 pt-[30vh] pb-10 w-full px-4 md:px-[5%] items-start justify-between">
+      <div className="flex z-10 flex-col gap-4 pt-[30vh] pb-16 w-full px-4 md:px-[5%] items-start justify-between">
         <div>
           <NewsLetterBadge />
 
@@ -28,7 +29,7 @@ export default function HeroVideo() {
           </h1>
         </div>
         <div className="flex flex-col gap-4 items-start">
-          <p className="text-lg text-start md:text-xl w-full md:max-w-[40ch] mb-4  text-white">
+          <p className="text-lg text-start tracking-tight md:text-xl w-full md:max-w-[40ch] mb-4  text-white">
             Guiding you through every stage of the acquisition lifecycle with
             precision, insight, and proven expertise.{" "}
           </p>

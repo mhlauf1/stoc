@@ -92,7 +92,7 @@ export default function Navbar() {
     ? "text-neutral-800 hover:text-[#16333A] focus:outline-none"
     : "text-white hover:text-white/75 focus:outline-none";
   const contactBtn = isDarkBg
-    ? "border border-[#16333A] text-[#16333A] hover:bg-[#16333A] hover:text-white focus:outline-none"
+    ? "border border-[#16333A]/50 text-[#16333A] hover:bg-[#18598b] hover:text-white focus:outline-none"
     : "border border-white/30 text-white hover:bg-white/20 focus:outline-none";
   const barColor = isDarkBg ? "bg-neutral-800" : "bg-white";
 
@@ -109,16 +109,16 @@ export default function Navbar() {
         isDarkBg ? "bg-white" : "bg-transparent"
       }`}
     >
-      <div className="flex items-center justify-between px-4 sm:px-12 md:px-12">
+      <div className="flex items-center justify-between px-4 md:px-[5%]">
         {/* Logo */}
         {/* <div className="flex flex-row items-center gap-16"> */}
         <Link href="/">
           <Image
-            src="/stoc-logo.png"
-            width={300}
-            height={100}
+            src="/stoc-main-logo-cropped.png"
+            width={200}
+            height={40}
             alt="STOC"
-            className={`transition-all md:w-[300px] w-[200px] duration-300 ${
+            className={`transition-all md:w-[150px] w-[130px] duration-300 ${
               isDarkBg ? "" : "filter brightness-0 invert"
             }`}
           />
@@ -129,7 +129,7 @@ export default function Navbar() {
           {NAV_ITEMS.map((item) => (
             <div key={item.href} className="relative group">
               <div
-                className={`flex flex-row items-center ${linkBase} px-2 py-1 gap-1 transition-colors`}
+                className={`flex tracking-tight flex-row items-center ${linkBase} px-2 py-1 gap-1 transition-colors`}
               >
                 <Link href={item.href} className={``}>
                   {item.label}
@@ -146,7 +146,7 @@ export default function Navbar() {
                       <li key={child.href}>
                         <Link
                           href={child.href}
-                          className={`block px-4 py-2 text-sm transition-colors ${childLinkStyle}`}
+                          className={`block tracking-tight px-4  py-2 text-sm transition-colors ${childLinkStyle}`}
                         >
                           {child.label}
                         </Link>

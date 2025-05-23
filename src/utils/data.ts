@@ -247,31 +247,23 @@ export const teamMeberData: TeamMemberProps[] = [
         location: "Baltimore, MD",
         title: "Co-Founder | Managing Partner"
     },
-
     {
         id: 2,
-        name: "Gunnar Waldt",
-        image: "/Gunnar_Waldt.jpg",
+        name: "Griffin Ashkin",
+        image: "/Griffin-ashkin.jpg",
         location: "Baltimore, MD",
-        title: "VP Business Development"
+        title: "Director | GES"
 
     },
     {
         id: 3,
-        name: "Lucius Burch",
-        image: "/Lucius_Burch.jpg",
-        location: "Nashville, TN",
-        title: "VP Business Development"
-    },
-    {
-        id: 4,
         name: "Anne Federico",
         image: "/Anne_Federico.jpg",
         location: "Baltimore, MD",
         title: "Manager | TAS"
     },
     {
-        id: 5,
+        id: 4,
         name: "Matt Hottman",
         image: "/Matt_Hottman.jpg",
         location: "Baltimore, MD",
@@ -279,39 +271,54 @@ export const teamMeberData: TeamMemberProps[] = [
     },
 
     {
-        id: 6,
+        id: 5,
         name: "Sam Luetgers",
         image: "/Sam_Luetgers.jpg",
         location: "Tampa, FL",
         title: "Manager | TAS"
     },
     {
-        id: 7,
+        id: 6,
         name: "Saqib Saddiqui",
         image: "/Saqib_Saddiqui.jpg",
         location: "New York, NY",
         title: "Senior Associate | TAS"
     },
     {
-        id: 8,
+        id: 7,
         name: "Sean Egan",
         image: "/Sean_Egan.jpg",
         location: "Minneapolis, MN",
         title: "Manager | TAS"
     },
     {
-        id: 9,
+        id: 8,
         name: "Ryan Earp",
         image: "/ryan_earp.jpg",
         location: "Minneapolis, MN",
         title: "Senior Associate | TAS"
     },
     {
-        id: 10,
+        id: 9,
         name: "Thomson Thamsir",
         image: "/Thomson_Thamsir.JPG",
         location: "Minneapolis, MN",
         title: "Senior Associate | TAS"
+    },
+    {
+        id: 10,
+        name: "Gunnar Waldt",
+        image: "/Gunnar_Waldt.jpg",
+        location: "Baltimore, MD",
+        title: "VP Business Development"
+
+    },
+    {
+        id: 11,
+        name: "Lucius Burch",
+        image: "/Lucius_Burch.jpg",
+        location: "Nashville, TN",
+        title: "VP Business Development"
     },
 
 ]

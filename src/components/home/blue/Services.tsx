@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import { ServiceProps } from "@/utils/types";
 import { servicesData } from "@/utils/data";
-import { PrimaryButtonBlue } from "@/components/Button";
+import { PrimaryButton } from "@/components/Button";
 
 const ServiceCard: React.FC<ServiceProps> = ({ Icon, title, description }) => (
   <div
@@ -45,7 +45,7 @@ const ServicesGrid: React.FC = () => (
         vision into measurable outcomes.
       </p>
       <Link href="/services">
-        <PrimaryButtonBlue>Explore Services</PrimaryButtonBlue>
+        <PrimaryButton>Explore Services</PrimaryButton>
       </Link>
     </div>
   </div>

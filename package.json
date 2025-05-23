@@ -11,7 +11,9 @@
   "dependencies": {
     "@headlessui/react": "^2.2.3",
     "@heroicons/react": "^2.2.0",
+    "@lordicon/react": "^1.11.0",
     "framer-motion": "^12.9.4",
+    "lottie-react": "^2.4.1",
     "lucide-react": "^0.507.0",
     "motion": "^12.12.1",
     "next": "15.3.0",

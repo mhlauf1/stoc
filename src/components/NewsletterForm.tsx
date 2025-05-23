@@ -1,5 +1,5 @@
 import React from "react";
-import { PrimaryButtonBlue } from "@/components/Button";
+import { PrimaryButton } from "@/components/Button";
 import Link from "next/link";
 const NewsletterForm = () => {
   return (
@@ -13,7 +13,7 @@ const NewsletterForm = () => {
         className="flex-1 px-3 w-full mt-4 py-2 border border-black/10 bg-white rounded-md text-neutral-900 focus:outline-none"
       />
       <Link className="mt-4" href="/">
-        <PrimaryButtonBlue>Submit</PrimaryButtonBlue>
+        <PrimaryButton>Submit</PrimaryButton>
       </Link>
     </div>
   );

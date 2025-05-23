@@ -8,14 +8,14 @@ const CTA: React.FC = () => {
       <div className="bg-[#041E40] md:rounded-2xl px-4 py-16 md:py-24 flex flex-col items-center text-center gap-8">
         {/* Tagline */}
         <div className="flex items-center gap-4">
-          <div className="h-px bg-neutral-600 w-16" />
+          <div className="h-px bg-neutral-600 w-[30px]" />
           <span
             style={{ letterSpacing: "3px" }}
-            className="uppercase text-gray-200 text-xs font-mono"
+            className="uppercase text-gray-200 text-xs"
           >
             Grow With STOC
           </span>
-          <div className="h-px bg-neutral-600 w-16" />
+          <div className="h-px bg-neutral-600 w-[30px]" />
         </div>
 
         {/* Headline */}
@@ -25,7 +25,7 @@ const CTA: React.FC = () => {
         </h2>
 
         {/* Subtext */}
-        <p className="text-neutral-200  text-md sm:text-lg">
+        <p className="text-neutral-200 tracking-tight text-md sm:text-lg">
           Monthly strategies, market intelligence, and deal best
           practices—delivered straight to your inbox.{" "}
         </p>
