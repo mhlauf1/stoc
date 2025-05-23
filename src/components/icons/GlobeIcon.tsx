@@ -3,9 +3,15 @@ import React, { useEffect, useRef } from "react";
 import Lottie, { LottieRefCurrentProps } from "lottie-react";
 import type { AnimationItem } from "lottie-web";
 
+// 1) Import your JSON — TS will now know its structure
+import rawGlobeData from "../../../public/globe.json";
+
+// 2) Capture its type
+export type GlobeAnimationData = typeof rawGlobeData;
+
 export interface GlobeLottieProps {
   play: boolean; // true = spin now, false = finish current spin then stop
-  data: any;
+  data: GlobeAnimationData; // ← typed as exactly the shape of your JSON
   width?: string;
   height?: string;
 }
@@ -19,16 +25,13 @@ export function LottieIcon({
   const lottieRef = useRef<LottieRefCurrentProps>(null);
 
   useEffect(() => {
-    // grab the raw lottie-web instance
     const animItem = (lottieRef.current as any)?.animationItem as AnimationItem;
     if (!animItem) return;
 
     if (play) {
-      // on hover-in: re-enable looping & play
       animItem.loop = true;
       animItem.play();
     } else {
-      // on hover-out: disable looping so it stops after the current cycle
       animItem.loop = false;
     }
   }, [play]);
@@ -36,9 +39,9 @@ export function LottieIcon({
   return (
     <Lottie
       lottieRef={lottieRef}
-      animationData={data}
-      autoplay={false} // we control play/stop manually
-      loop // initial loop behavior (will get overridden)
+      animationData={data} // now fully typed
+      autoplay={false}
+      loop
       style={{ width, height }}
     />
   );
