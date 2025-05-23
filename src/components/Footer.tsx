@@ -14,11 +14,11 @@ export default function Footer() {
         <div className="flex flex-col justify-between gap-6">
           <Link href="/">
             <Image
-              src="/stoc-logo.png"
+              src="/stoc-main-logo-cropped.png"
               width={250}
               height={100}
               alt="STOC Advisory"
-              className="filter w-[250px] brightness-0 invert"
+              className="filter w-[150px] brightness-0 invert"
             />
           </Link>
           <p className="text-neutral-300 leading-6">
