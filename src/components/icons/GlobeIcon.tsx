@@ -2,7 +2,6 @@
 import React, { useEffect, useRef } from "react";
 import Lottie, { LottieRefCurrentProps } from "lottie-react";
 import type { AnimationItem } from "lottie-web";
-import globeData from "../../../public/globe.json";
 
 export interface GlobeLottieProps {
   play: boolean; // true = spin now, false = finish current spin then stop
@@ -14,8 +13,8 @@ export interface GlobeLottieProps {
 export function LottieIcon({
   play,
   data,
-  width = "42px",
-  height = "42px",
+  width = "36px",
+  height = "36px",
 }: GlobeLottieProps) {
   const lottieRef = useRef<LottieRefCurrentProps>(null);
 

@@ -1,7 +1,6 @@
 // app/OverviewBento.tsx
 "use client";
 import React from "react";
-import { Settings, Globe, User2, MailCheck } from "lucide-react";
 import OverviewCard, { OverviewCardProps } from "./OverviewCard";
 import globeData from "../../../public/globe.json";
 import layersData from "../../../public/layers.json";

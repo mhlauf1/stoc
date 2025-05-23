@@ -2,7 +2,6 @@
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
-import { LucideIcon } from "lucide-react";
 import { PrimaryButton } from "../Button";
 import { LottieIcon } from "../icons/GlobeIcon";
 
