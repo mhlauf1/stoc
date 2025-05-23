@@ -45,7 +45,7 @@ const OverviewCard: React.FC<OverviewCardProps> = ({
         {title}
       </h3>
 
-      <p className="text-neutral-600 tracking-tight mt-2 md:mt-4 text-md md:text-lg">
+      <p className="text-neutral-600 tracking-tight mt-2 text-md md:text-lg">
         {description}
       </p>
 
