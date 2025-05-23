@@ -10,8 +10,8 @@ import rawGlobeData from "../../../public/globe.json";
 export type GlobeAnimationData = typeof rawGlobeData;
 
 export interface GlobeLottieProps {
-  play: boolean; // true = spin now, false = finish current spin then stop
-  data: GlobeAnimationData; // ← typed as exactly the shape of your JSON
+  play: boolean;
+  data: GlobeAnimationData;
   width?: string;
   height?: string;
 }
@@ -22,24 +22,27 @@ export function LottieIcon({
   width = "36px",
   height = "36px",
 }: GlobeLottieProps) {
-  const lottieRef = useRef<LottieRefCurrentProps>(null);
+  // 3) extend the LottieRef type so animationItem is known
+  const lottieRef = useRef<
+    (LottieRefCurrentProps & { animationItem?: AnimationItem }) | null
+  >(null);
 
   useEffect(() => {
-    const animItem = (lottieRef.current as any)?.animationItem as AnimationItem;
+    const animItem = lottieRef.current?.animationItem;
     if (!animItem) return;
 
     if (play) {
       animItem.loop = true;
       animItem.play();
     } else {
-      animItem.loop = false;
+      animItem.loop = false; // will finish current loop then stop
     }
   }, [play]);
 
   return (
     <Lottie
       lottieRef={lottieRef}
-      animationData={data} // now fully typed
+      animationData={data}
       autoplay={false}
       loop
       style={{ width, height }}

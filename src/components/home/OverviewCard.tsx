@@ -1,16 +1,16 @@
-// components/OverviewCard.tsx
+// components/home/OverviewCard.tsx
 "use client";
 import React, { useState } from "react";
 import Link from "next/link";
 import { PrimaryButton } from "../Button";
-import { LottieIcon } from "../icons/GlobeIcon";
+import { LottieIcon, GlobeAnimationData } from "../icons/GlobeIcon";
 
 export interface OverviewCardProps {
   title: string;
   description: string;
   href: string;
   cta?: string;
-  animatedData: any;
+  animatedData: GlobeAnimationData;
 }
 
 const OverviewCard: React.FC<OverviewCardProps> = ({
@@ -27,11 +27,10 @@ const OverviewCard: React.FC<OverviewCardProps> = ({
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
-      <div className="flex flex-row w-full  items-start gap-4 flex-1">
+      <div className="flex flex-row w-full items-start gap-4 flex-1">
         <div className="flex flex-col items-start w-full border-neutral-300">
           <div className="md:absolute mb-2 md:mb-0 top-4 right-4">
-            <div className="p-3 md:p-4 border border-neutral-200  rounded-lg">
-              {/* only plays when hovered === true */}
+            <div className="p-3 md:p-4 border border-neutral-200 rounded-lg">
               <LottieIcon play={hovered} data={animatedData} />
             </div>
           </div>
