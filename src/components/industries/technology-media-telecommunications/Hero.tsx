@@ -8,7 +8,7 @@ const Hero: React.FC = () => (
         <h1 className="text-[#041E40] text-4xl md:text-5xl lg:text-6xl font-gambetta md:max-w-[20ch] leading-tight tracking-tighter">
           Powering the Digital Future Through Connectivity, Content & Innovation
         </h1>
-        <p className="text-[#041E40] text-lg md:text-xl mt-4 md:max-w-[52ch] leading-relaxed">
+        <p className="text-[#041E40] text-lg md:text-xl mt-4 md:max-w-[52ch] tracking-tight">
           In a world defined by accelerating digital transformation, Technology,
           Media & Telecommunications (TMT) companies sit at the heart of every
           breakthrough.

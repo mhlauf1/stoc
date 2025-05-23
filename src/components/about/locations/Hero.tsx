@@ -24,11 +24,14 @@ const Hero = () => {
         <div className="flex-1 flex flex-col">
           {/* Section marker */}
           <div className="flex items-center mb-4 justify-center md:justify-start gap-4">
-            <div className="h-[1px] bg-neutral-300 w-[60px]" />
-            <span className="uppercase text-gray-600 text-xs font-mono tracking-widest">
+            <div className="h-[1px] bg-neutral-300 w-[30px]" />
+            <span
+              style={{ letterSpacing: "2px" }}
+              className="uppercase text-neutral-600 text-xs"
+            >
               Find Us
             </span>
-            <div className="h-[1px] bg-neutral-300 w-[60px]" />
+            <div className="h-[1px] bg-neutral-300 w-[30px]" />
           </div>
 
           {/* Main heading */}
@@ -37,7 +40,7 @@ const Hero = () => {
           </h2>
 
           {/* Intro copy */}
-          <p className="mt-6 text-lg md:text-x text-center md:text-startl text-neutral-600 leading-7 md:leading-8 max-w-prose">
+          <p className="mt-2 text-lg md:text-x text-center md:text-start text-neutral-600 tracking-tight max-w-prose">
             STOC Advisory maintains a strong presence in both Baltimore and
             Minneapolis to serve our East Coast and Midwest clients efficiently.
             Each office houses a dedicated team of financial experts ready to
@@ -51,7 +54,7 @@ const Hero = () => {
             {locations.map(({ city, address, phone, hours }) => (
               <div
                 key={city}
-                className="bg-white p-6 md:p-8 rounded-md shadow-sm"
+                className="bg-white tracking-tight p-6 md:p-8 rounded-md shadow-sm"
               >
                 <h4 className="text-neutral-800 text-3xl md:text-4xl tracking-tighter font-gambetta">
                   {city}

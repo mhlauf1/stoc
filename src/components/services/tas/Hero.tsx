@@ -8,7 +8,7 @@ const Hero: React.FC = () => (
         <h1 className="text-[#041E40] text-4xl md:text-5xl lg:text-6xl font-gambetta md:max-w-[20ch] leading-tight tracking-tighter">
           Mitigate Risk & Maximize Deal Value
         </h1>
-        <p className="text-[#041E40] text-lg md:text-xl mt-4 md:max-w-[52ch] leading-relaxed">
+        <p className="text-[#041E40] text-lg md:text-xl mt-4 md:max-w-[52ch] tracking-tight">
           Whether buying, building, or exiting an investment, every transaction
           poses risk. Our integrated due diligence approach helps you safeguard
           returns and capture upside.

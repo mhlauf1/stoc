@@ -6,7 +6,7 @@ const Intro: React.FC = () => (
         <h2 className="text-neutral-800 capitalize text-center text-3xl md:text-4xl lg:text-5xl md:max-w-[28ch] font-gambetta  leading-tight tracking-tighter">
           Our Retail Practice
         </h2>
-        <p className="text-neutral-600 text-lg md:text-xl  md:max-w-[64ch] text-center leading-relaxed">
+        <p className="text-neutral-600 text-lg md:text-xl  md:max-w-[64ch] text-center tracking-tight">
           With deep sector expertise and a track record across department
           stores, specialty retailers, convenience chains, food & beverage
           outlets, hypermarkets, warehouse clubs, and pure-play e-tailers, we

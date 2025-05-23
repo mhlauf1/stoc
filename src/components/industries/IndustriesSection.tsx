@@ -21,11 +21,11 @@ const IndustryCard: React.FC<IndustryProps> = ({
       />
     </div>
     <div className="flex flex-col items-start pt-5 md:pt-6 pb-10 md:pb-12 px-5 md:px-8 gap-2">
-      <h3 className="text-lg md:text-3xl mt-2 tracking-tighter text-center md:text-start font-gambetta">
+      <h3 className="text-3xl lg:text-4xl mt-2 tracking-tighter text-center md:text-start font-gambetta">
         {title}
       </h3>
-      <p className="text-gray-600 w-[100%] leading-7">{supportText}</p>
-      <Link className="mt-2" href={href!}>
+      <p className="text-gray-600  tracking-tight">{supportText}</p>
+      <Link className="mt-2 w-full md:w-auto" href={href!}>
         <PrimaryButton>Learn more</PrimaryButton>
       </Link>
     </div>
@@ -46,21 +46,21 @@ const IndustriesSection: React.FC = () => (
       <div className="flex flex-col md:flex-row justify-between mb-8 md:mb-16 items-center md:items-end gap-2 md:gap-4">
         <div className="flex md:mb-0 mb-4 flex-col gap-4">
           <div className="flex flex-row md:justify-start justify-center gap-4 items-center">
-            <div className="h-[1px] bg-neutral-300 w-[60px]" />
+            <div className="h-[1px] bg-neutral-300 w-[30px]" />
             <span
               style={{ letterSpacing: "3px" }}
-              className="uppercase text-gray-600 text-xs font-mono"
+              className="uppercase text-gray-600 text-xs"
             >
               Industries we serve
             </span>
-            <div className="h-[1px] bg-neutral-300 w-[60px]" />
+            <div className="h-[1px] bg-neutral-300 w-[30px]" />
           </div>
           <h2 className="text-3xl text-center md:text-start tracking-tighter md:max-w-[24ch] md:text-4xl font-gambetta lg:text-5xl leading-tight">
             Driving sector-specific growth and resilience through expert
             advisory.
           </h2>
         </div>
-        <p className="text-gray-600  md:max-w-[64ch] text-lg text-center md:text-start leading-8">
+        <p className="text-gray-600  md:max-w-[64ch] text-lg text-center md:text-start tracking-tight">
           Our unique backgrounds and experiences in public accounting,
           investment banking, private equity, and consulting provides clients
           with a breadth of industry-specific knowledge and expertise.

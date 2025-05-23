@@ -51,10 +51,12 @@ interface StepItemProps {
 const StepItem: React.FC<StepItemProps> = ({ title, text }) => (
   <div className="flex flex-col px-4 md:px-12 items-start  gap-1 md:gap-3">
     <div className="flex flex-col md:flex-row items-start md:items-end md:gap-1">
-      <h3 className="text-lg text-neutral-800 md:text-2xl font-medium">
+      <h3 className="text-lg tracking-tight text-neutral-800 md:text-2xl font-medium">
         {title}
       </h3>
-      <p className="text-neutral-600 text-md md:text-lg">{text}</p>
+      <p className="text-neutral-600 tracking-tight text-md md:text-lg">
+        {text}
+      </p>
     </div>
   </div>
 );
@@ -63,17 +65,20 @@ const Intro: React.FC = () => (
   <section className="px-4 bg-white  w-full md:px-[5%] py-12  md:py-20">
     <div className="flex items-center md:items-start flex-col">
       <div className="flex items-center mb-4 justify-center gap-4">
-        <div className="h-px bg-neutral-300 w-8" />
-        <span className="uppercase text-gray-600 text-xs font-mono tracking-widest">
+        <div className="h-px bg-neutral-300 w-[30px]" />
+        <span
+          style={{ letterSpacing: "2px" }}
+          className="uppercase text-gray-600 text-xs"
+        >
           Our Industry Expertise
         </span>
-        <div className="h-px bg-neutral-300 w-8" />
+        <div className="h-px bg-neutral-300 w-[30px]" />
       </div>
       <h2 className="text-neutral-800 text-3xl md:text-4xl px-2 md:px-0 lg:text-5xl  font-gambetta text-center md:text-start leading-tight tracking-tighter">
         Global Manufacturing & Distribution Expertise
       </h2>
       <div className="flex flex-col gap-4 mt-2">
-        <p className="leading-7 md:leading-8  md:max-w-[84ch] text-md md:text-lg text-center md:text-start text-neutral-500">
+        <p className="tracking-tight  md:max-w-[84ch] text-md md:text-lg text-center md:text-start text-neutral-500">
           Combining deep sector knowledge with hands-on global experience, we
           partner with C-suite and operations teams to tackle today&apos;s
           challenges and build tomorrow&apos;s success.

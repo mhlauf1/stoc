@@ -35,11 +35,14 @@ export default function OverviewBento() {
     <section className="bg-[#fafafa] border-t border-neutral-200 px-4 md:px-[5%] py-12 md:py-16">
       <div className="flex flex-col items-start gap-4">
         <div className="flex items-center justify-center gap-4">
-          <div className="h-px bg-neutral-300 w-8" />
-          <span className="uppercase text-gray-500 text-sm  tracking-widest">
+          <div className="h-px bg-neutral-300 w-[30px]" />
+          <span
+            style={{ letterSpacing: "2px" }}
+            className="uppercase text-gray-500 text-xs"
+          >
             Grow With STOC
           </span>
-          <div className="h-px bg-neutral-300 w-8" />
+          <div className="h-px bg-neutral-300 w-[30px]" />
         </div>
         <h2 className="text-3xl tracking-tighter md:max-w-[24ch] md:text-4xl font-gambetta lg:text-5xl leading-tight">
           Our Growth Roadmap

@@ -8,7 +8,7 @@ const Hero: React.FC = () => (
         <h1 className="text-[#d7ebf5] text-4xl md:text-5xl lg:text-6xl font-gambetta md:max-w-[21ch] leading-tight tracking-tighter">
           Future-Proofing Hospitality & Entertainmen
         </h1>
-        <p className="text-[#d7ebf5] text-lg md:text-xl mt-4 md:max-w-[52ch] leading-relaxed">
+        <p className="text-[#d7ebf5] text-lg md:text-xl mt-4 md:max-w-[52ch] tracking-tight">
           Financial, strategic and operational guidance to help hotels, resorts
           and leisure brands thrive in a post-COVID, volatile market.
         </p>

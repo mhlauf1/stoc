@@ -8,7 +8,7 @@ const Hero: React.FC = () => (
         <h1 className="text-[#d7ebf5] text-4xl md:text-5xl lg:text-6xl font-gambetta md:max-w-[21ch] leading-tight tracking-tighter">
           Shaping the Future of Healthcare
         </h1>
-        <p className="text-[#d7ebf5] text-lg md:text-xl mt-4 md:max-w-[52ch] leading-relaxed">
+        <p className="text-[#d7ebf5] text-lg md:text-xl mt-4 md:max-w-[52ch] tracking-tight">
           Strategic financial, operational and transaction solutions that
           empower providers, payors and suppliers to deliver better care—and
           stronger margins.

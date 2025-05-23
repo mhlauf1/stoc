@@ -48,19 +48,17 @@ const ServiceCard = ({
   <div
     className="
       group
-      flex flex-col relative items-start justify-center p-6 md:p-8
+      flex flex-col relative items-start justify-center p-6 md:p-12
       bg-[#041E40] text-white
       rounded-xl
       transition-colors duration-300 ease-out
       hover:bg-[#344b5a]
     "
   >
-    <h3 className="text-2xl sm:text-3xl md:text-4xl  tracking-tight md:tracking-tighter font-gambetta mb-2 md:mb-4">
+    <h3 className="text-2xl sm:text-3xl md:text-4xl  tracking-tight md:tracking-tighter font-gambetta mb-2 md:mb-3">
       {title}
     </h3>
-    <p className="flex-1 md:text-lg text-base leading-7 md:leading-8">
-      {description}
-    </p>
+    <p className="flex-1 md:text-lg text-base tracking-tight">{description}</p>
   </div>
 );
 
@@ -75,14 +73,14 @@ const ServicesGrid: React.FC = () => (
 const CoreServices: React.FC = () => (
   <section className="flex flex-col justify-center pt-8 md:pt-12  px-4 md:px-[5%] pb-16 md:pb-28">
     <div className="flex items-center mb-12 justify-center gap-4">
-      <div className="h-[1px] bg-neutral-300 w-[60px]" />
+      <div className="h-[1px] bg-neutral-300 w-[30px]" />
       <span
-        style={{ letterSpacing: "3px" }}
-        className="uppercase text-gray-600 text-xs font-mono"
+        style={{ letterSpacing: "2px" }}
+        className="uppercase text-neutral-600 text-xs "
       >
         Core Capabilities
       </span>
-      <div className="h-[1px] bg-neutral-300 w-[60px]" />
+      <div className="h-[1px] bg-neutral-300 w-[30px]" />
     </div>
     <ServicesGrid />
   </section>

@@ -6,8 +6,8 @@ const Hero: React.FC = () => (
       <div className="flex items-center mb-4 md:mb-2 justify-center gap-4">
         <div className="h-[1px] bg-neutral-300 w-[30px]" />
         <span
-          style={{ letterSpacing: "3px" }}
-          className="uppercase text-[#EFFFF3] text-sm font-mono"
+          style={{ letterSpacing: "2px" }}
+          className="uppercase text-[#EFFFF3] text-xs"
         >
           Growing with Confidence
         </span>
@@ -16,7 +16,7 @@ const Hero: React.FC = () => (
       <h1 className="text-[#EFFFF3] text-center text-4xl md:text-5xl lg:text-6xl font-gambetta leading-tight tracking-tighter">
         Your Partner in Cannabis Excellence
       </h1>
-      <p className="text-[#EFFFF3] text-lg md:text-xl text-center mt-4 md:max-w-[52ch] leading-relaxed">
+      <p className="text-[#EFFFF3] text-lg md:text-xl text-center mt-4 md:max-w-[42ch] tracking-tight">
         Expert financial, compliance and transaction guidance for every stage of
         your cannabis business
       </p>

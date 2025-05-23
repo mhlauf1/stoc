@@ -8,7 +8,7 @@ const Hero: React.FC = () => (
         <h1 className="text-[#bacaec] text-4xl md:text-5xl lg:text-6xl font-gambetta md:max-w-[20ch] leading-tight tracking-tighter">
           Accelerate M&A Growth Without Adding Headcount
         </h1>
-        <p className="text-[#bacaec] text-lg md:text-xl mt-4 md:max-w-[52ch] leading-relaxed">
+        <p className="text-[#bacaec] text-lg md:text-xl mt-4 md:max-w-[52ch] tracking-tight leading-relaxed">
           We plug directly into your deal team—sourcing, diligence, integration
           and reporting—so you can close more deals, faster.
         </p>

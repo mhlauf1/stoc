@@ -6,19 +6,19 @@ const Hero: React.FC = () => (
     <div className="flex  flex-col items-start md:pt-0 flex-1">
       <div>
         <div className="flex items-center mb-6 gap-4">
-          <div className="h-[1px] bg-neutral-300 w-[60px]" />
+          <div className="h-[1px] bg-neutral-300 w-[30px]" />
           <span
             style={{ letterSpacing: "3px" }}
-            className="uppercase text-gray-600 text-xs font-mono"
+            className="uppercase text-neutral-500 text-xs"
           >
             Industries
           </span>
-          <div className="h-[1px] bg-neutral-300 w-[60px]" />
+          <div className="h-[1px] bg-neutral-300 w-[30px]" />
         </div>
         <h1 className="text-[#041E40] text-4xl md:text-5xl lg:text-6xl font-gambetta md:max-w-[20ch] leading-tight tracking-tighter">
           Industry expertise that drives transaction success
         </h1>
-        <p className="text-[#041E40] text-lg md:text-xl mt-4 md:max-w-[52ch] leading-relaxed">
+        <p className="text-[#041E40] text-lg md:text-xl mt-4 md:max-w-[52ch] tight-tight">
           We combine deep sector expertise with a proven transformation
           playbook—helping you navigate complexity, mitigate risk, and seize new
           opportunities.

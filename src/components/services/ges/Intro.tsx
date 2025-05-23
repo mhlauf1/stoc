@@ -10,11 +10,14 @@ const Intro: React.FC = () => (
     <div className="flex flex-col md:flex-row justify-between gap-8 md:gap-12">
       <div className="flex flex-col items-start flex-1 gap-2 md:gap-4">
         <div className="flex items-center mb-3 justify-center gap-4">
-          <div className="h-px bg-neutral-300 w-8" />
-          <span className="uppercase text-gray-600 text-xs font-mono tracking-widest">
+          <div className="h-px bg-neutral-300 w-[30px]" />
+          <span
+            style={{ letterSpacing: "2px" }}
+            className="uppercase text-gray-600 text-xs"
+          >
             The GES Edge
           </span>
-          <div className="h-px bg-neutral-300 w-8" />
+          <div className="h-px bg-neutral-300 w-[30px]" />
         </div>
         <h2 className="text-neutral-800 capitalize text-3xl md:text-4xl lg:text-5xl md:max-w-[28ch] font-gambetta text-start leading-tight tracking-tighter">
           When processes are missing, data is scattered, and responsibilities

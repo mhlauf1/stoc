@@ -8,7 +8,7 @@ const Hero: React.FC = () => (
         <h1 className="text-[#d7ebf5] text-4xl md:text-5xl lg:text-6xl font-gambetta md:max-w-[20ch] leading-tight tracking-tighter">
           Scaling Portfolio Companies with Confidence
         </h1>
-        <p className="text-[#d7ebf5] text-lg md:text-xl mt-4 md:max-w-[52ch] leading-relaxed">
+        <p className="text-[#d7ebf5] text-lg tracking-tight md:text-xl mt-4 md:max-w-[52ch]">
           Hands-on enablement, AI-driven workflows, and real-time KPI tracking
           to accelerate post-acquisition growth.
         </p>

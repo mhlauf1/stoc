@@ -8,20 +8,23 @@ const IndustryList = () => (
     <div className="flex flex-col md:flex-row gap-8">
       <div className="flex flex-col flex-1 items-center md:items-start ">
         <div className="flex items-center mb-2 justify-center gap-4">
-          <div className="h-px bg-neutral-300 w-12" />
-          <span className="uppercase text-gray-600 text-xs font-mono tracking-widest">
+          <div className="h-px bg-neutral-300 w-[30px]" />
+          <span
+            style={{ letterSpacing: "2px" }}
+            className="uppercase text-neutral-600 text-xs"
+          >
             What We Do
           </span>
-          <div className="h-px bg-neutral-300 w-12" />
+          <div className="h-px bg-neutral-300 w-[30px]" />
         </div>
-        <h3 className="text-2xl md:text-4xl text-center md:text-start md:max-w-[18ch] mt-2 font-gambetta tracking-tighter leading-snug">
+        <h3 className="text-3xl md:text-4xl  lg:text-5xl  text-center md:text-start md:max-w-[18ch] mt-2 font-gambetta tracking-tighter leading-snug">
           Turning Strategic Vision into Measurable Outcomes
         </h3>
-        <p className="text-neutral-600 text-center md:text-start  md:max-w-[58ch] mt-3 mb-5  text-md sm:text-lg md:text-xl">
+        <p className="text-neutral-600 text-center md:text-start tracking-tight  md:max-w-[58ch] mt-3 mb-5  text-md sm:text-lg md:text-xl">
           Our seasoned advisors provide data-driven insights and hands-on
           support to guide decisions and optimize performance.
         </p>
-        <p className="text-neutral-600 text-start md:text-center  font-medium md:max-w-[58ch] mt-1 text-md md:text-lg">
+        <p className="text-neutral-600 text-start md:text-center  tracking-tight font-medium md:max-w-[58ch] mt-1 text-md md:text-lg">
           Key Services:
         </p>
         <div className="grid  pt-4 w-full grid-cols-1  gap-4">

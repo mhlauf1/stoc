@@ -8,7 +8,7 @@ const Hero: React.FC = () => (
         <h1 className="text-[#041E40] text-4xl md:text-5xl lg:text-6xl font-gambetta md:max-w-[21ch] leading-tight tracking-tighter">
           Turn Market Complexity into Competitive Advantage
         </h1>
-        <p className="text-[#041E40] text-lg md:text-xl mt-4 md:max-w-[68ch] leading-relaxed">
+        <p className="text-[#041E40] text-lg md:text-xl mt-4 md:max-w-[68ch] tracking-tight">
           The dynamic global marketplace presents both challenges and
           opportunities for today&apos;s manufacturers and distributors. From
           globalization and supply-chain transformation to rising production

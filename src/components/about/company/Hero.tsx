@@ -6,20 +6,20 @@ const Hero: React.FC = () => (
     <div className="flex  flex-col items-start md:pt-0 flex-1">
       <div>
         <div className="flex items-center mb-6 gap-4">
-          <div className="h-[1px] bg-neutral-300 w-[60px]" />
+          <div className="h-[1px] bg-neutral-300 w-[30px]" />
           <span
-            style={{ letterSpacing: "3px" }}
-            className="uppercase text-gray-600 text-xs font-mono"
+            style={{ letterSpacing: "2px" }}
+            className="uppercase text-neutral-600 text-xs"
           >
             Our Company
           </span>
-          <div className="h-[1px] bg-neutral-300 w-[60px]" />
+          <div className="h-[1px] bg-neutral-300 w-[30px]" />
         </div>
         <h1 className="text-[#041E40] text-4xl md:text-5xl lg:text-6xl font-gambetta md:max-w-[20ch] leading-tight tracking-tighter">
           Partnering with clients through every stage of the acquisition
           lifecycle
         </h1>
-        <p className="text-[#041E40] text-lg md:text-xl mt-4 md:max-w-[52ch] leading-relaxed">
+        <p className="text-[#041E40] text-lg md:text-xl mt-4 md:max-w-[52ch] tracking-tight">
           STOC Advisory is a business advisory firm specializing in transaction
           advisory services, corporate development, and CFO advisory.
         </p>

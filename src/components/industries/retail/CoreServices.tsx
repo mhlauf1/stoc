@@ -51,7 +51,9 @@ const ServiceCard: React.FC<ValueProps> = ({ Icon, title, description }) => (
     <h3 className="text-3xl md:text-4xl  tracking-tighter font-gambetta mb-4">
       {title}
     </h3>
-    <p className="flex-1 text-lg leading-8 mb-8">{description}</p>
+    <p className="flex-1 text-md md:text-lg tracking-tight mb-8">
+      {description}
+    </p>
   </div>
 );
 
@@ -70,7 +72,7 @@ const CoreServices: React.FC = () => (
         Why Partner with Us?
       </h2>
       <div className="flex flex-col gap-4 mt-4">
-        <p className="leading-7 md:leading-8 text-start md:max-w-[64ch] text-md md:text-lg text-neutral-600">
+        <p className="tracking-tight text-start md:max-w-[64ch] text-md md:text-lg text-neutral-600">
           E-commerce has surged, blurring the lines between digital and
           brick-and-mortar, and challenging retailers to reimagine every
           touchpoint.

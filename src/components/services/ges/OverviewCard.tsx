@@ -23,7 +23,7 @@ const OverviewCard: React.FC<OverviewCardProps> = ({
           </h3>
         </div>
 
-        <p className="text-neutral-100 mt-2 md:mt-3  leading-7  text-md md:text-lg">
+        <p className="text-neutral-100 mt-2 md:mt-3  leading-7 tracking-tight text-md md:text-lg">
           {description}
         </p>
       </div>

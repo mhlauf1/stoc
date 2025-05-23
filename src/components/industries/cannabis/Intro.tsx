@@ -9,7 +9,7 @@ const Intro: React.FC = () => {
           <h2 className="text-3xl tracking-tighter text-center md:text-start max-w-[20ch] md:max-w-none md:text-4xl font-gambetta leading-normal">
             Rooted in Compliance, Growing Your Future
           </h2>
-          <p className="leading-7 md:leading-8 mt-2 text-center md:text-start md:max-w-[84ch]  text-lg md:text-xl  text-neutral-600">
+          <p className="tracking-tight mt-2 text-center md:text-start md:max-w-[84ch]  text-lg md:text-xl  text-neutral-600">
             Drawing on deep experience across cultivation, processing,
             distribution and ancillary sectors, STOC Advisory combines niche
             regulatory know-how with rigorous financial and operational
@@ -18,7 +18,7 @@ const Intro: React.FC = () => {
             growth in this fast-evolving market.
           </p>
           <div className="flex flex-col mt-8">
-            <p className="leading-7 md:leading-8 text-start md:max-w-[84ch] font-gambetta tracking-tighter text-xl md:text-2xl  text-neutral-800">
+            <p className="tracking-tight text-start md:max-w-[84ch] font-gambetta  text-xl md:text-2xl  text-neutral-800">
               Core Services:
             </p>
             <CoreServices />

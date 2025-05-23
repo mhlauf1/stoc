@@ -8,7 +8,7 @@ const Hero: React.FC = () => (
         <h1 className="text-[#041E40] text-4xl md:text-5xl lg:text-6xl font-gambetta md:max-w-[21ch] leading-tight tracking-tighter">
           Empowering Business Services to Drive Profitable Growth
         </h1>
-        <p className="text-[#041E40] text-lg md:text-xl mt-4 md:max-w-[52ch] leading-relaxed">
+        <p className="text-[#041E40] text-lg md:text-xl mt-4 md:max-w-[52ch] tight-tracking">
           In a rapidly evolving services landscape, STOC Advisory delivers deep
           financial, operational and M&A expertise—so you can outpace
           competitors, optimize performance and unlock lasting value.

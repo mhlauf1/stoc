@@ -12,7 +12,7 @@ const IndustryList = () => {
               Delivered with Precision
             </span>
           </h2>
-          <p className="leading-7 w-full md:max-w-[84ch] text-lg text-neutral-800">
+          <p className="tracking-tight w-full md:max-w-[84ch] text-lg text-neutral-800">
             STOC is a business advisory firm specializing in accounting,
             finance, and operations. We partner with our clients to successfully
             prepare and execute all aspects of changes experienced across the

@@ -8,7 +8,7 @@ const Hero: React.FC = () => (
         <h1 className="text-[#041E40] text-4xl md:text-5xl lg:text-6xl font-gambetta md:max-w-[20ch] leading-tight tracking-tighter">
           Fractional CFO & Financial Strategy
         </h1>
-        <p className="text-[#041E40] text-lg md:text-xl mt-4 md:max-w-[52ch] leading-relaxed">
+        <p className="text-[#041E40] tracking-tight text-lg md:text-xl mt-4 md:max-w-[52ch]">
           Interim accounting and finance leadership to accelerate growth,
           optimize performance, and maximize value.
         </p>

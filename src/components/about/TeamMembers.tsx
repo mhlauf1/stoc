@@ -9,7 +9,7 @@ const TeamMember = ({ id, name, image, location, title }: TeamMemberProps) => (
       <Image fill src={image} alt={name} className="rounded-lg object-cover" />
     </div>
     <div className=" py-4 w-full  bg-white">
-      <p className="text-sm  tracking-wide text-neutral-500">{location}</p>
+      <p className="text-sm  tracking-tight text-neutral-500">{location}</p>
       <h3 className="text-xl mt-1 md:text-2xl lg:text-3xl font-gambetta tracking-tight">
         {name}
       </h3>

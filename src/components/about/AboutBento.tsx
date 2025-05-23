@@ -21,7 +21,7 @@ const TeaserCard: FC<TeaserCardProps> = ({
       <h2 className="text-3xl md:text-4xl font-gambetta tracking-tighter leading-tight max-w-[24ch]">
         {title}
       </h2>
-      <p className="mt-2 mb-6 text-neutral-600 leading-7 md:leading-8 text-md md:text-lg">
+      <p className="mt-2 mb-6 text-neutral-600 tracking-tight text-md md:text-lg">
         {description}
       </p>
     </div>

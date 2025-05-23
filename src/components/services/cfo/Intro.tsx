@@ -36,12 +36,9 @@ export default function Intro() {
         {/* text column */}
         <div className="space-y-6">
           <h2 className="text-3xl md:text-4xl font-gambetta tracking-tight text-gray-900 max-w-prose">
-            Navigating a Complex Regulatory & Financial Landscape
-          </h2>
-          <p className="text-base md:text-lg text-neutral-600 leading-relaxed max-w-prose">
             From seed-to-sale, cannabis operators face a unique mix of
             pressures. Key issues include:
-          </p>
+          </h2>
 
           <ul className="bg-[#F7F7F7] rounded-xl p-8 space-y-4">
             {bullets.map(({ id, title, Icon }) => (
