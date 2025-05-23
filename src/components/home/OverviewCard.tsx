@@ -41,7 +41,7 @@ const OverviewCard: React.FC<OverviewCardProps> = ({
         />
       </div>
 
-      <h3 className="mt-12 text-3xl md:text-4xl font-gambetta text-gray-900 leading-tight tracking-tighter">
+      <h3 className="mt-4 md:mt-0 text-3xl md:text-4xl font-gambetta text-gray-900 leading-tight tracking-tighter">
         {title}
       </h3>
 
