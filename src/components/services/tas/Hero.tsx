@@ -21,8 +21,6 @@ const Hero: React.FC = () => (
         alt="Transaction Advisory background"
         fill
         className="object-cover object-center rounded-lg"
-        quality={100}
-        priority
         sizes="(min-width: 768px) 50vw, 100vw"
       />{" "}
       <div
