@@ -12,7 +12,7 @@ export default function NewsLetterBadge() {
     <Link
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className="z-10"
+      className="z-10 w-auto"
       href="/contact"
     >
       <button className="bg-white/10  items-center cursor-pointer flex text-sm md:text-base border  gap-2 border-white/20 hover:border-white/60 duration-200 hover:text-white hover:shadow-xs text-neutral-50 px-4 py-1.5 rounded-full">
