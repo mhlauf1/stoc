@@ -22,8 +22,8 @@ export default function Footer() {
             />
           </Link>
           <p className="text-neutral-300 text-sm leading-6">
-            ©2025 STOC Advisory, LLC | STOC Advisory is not a CPA firm | Privacy
-            Policy
+            ©2025 STOC Advisory, LLC | STOC Advisory is not a CPA firm <br /> |
+            <a> Privacy Policy</a>
           </p>
         </div>
         {/* Company */}
