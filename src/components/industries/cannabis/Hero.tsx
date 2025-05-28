@@ -5,16 +5,6 @@ const Hero: React.FC = () => (
   <section className="md:h-[95vh]  relative flex flex-col md:flex-row gap-4 pt-[10vh] md:pt-12  bg-[#062010] items-center px-4 md:px-[5%]">
     <div className="flex mt-8 flex-col items-start md:pt-0 flex-1">
       <div>
-        <div className="flex items-center mb-4 md:mb-2 justify-start gap-4">
-          <div className="h-[1px] bg-neutral-300 w-[30px]" />
-          <span
-            style={{ letterSpacing: "2px" }}
-            className="uppercase text-[#EFFFF3] text-xs"
-          >
-            Growing with Confidence
-          </span>
-          <div className="h-[1px] bg-neutral-300 w-[30px]" />
-        </div>
         <h1 className="text-[#EFFFF3] text-4xl md:text-5xl lg:text-6xl font-gambetta md:max-w-[20ch] leading-tight tracking-tighter">
           Your Partner in Cannabis Excellence
         </h1>

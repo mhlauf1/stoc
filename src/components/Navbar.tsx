@@ -91,7 +91,6 @@ export default function Navbar() {
     "/home-video",
     "/industries/hospitality-entertainment",
     "/industries/cannabis",
-    "/industries/business-services",
     "/industries/healthcare",
     "/industries/retail-consumer-products",
   ];
