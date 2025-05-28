@@ -1,22 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import {
-  DocumentChartBarIcon,
-  ScaleIcon,
-  BanknotesIcon,
-  ShieldCheckIcon,
-} from "@heroicons/react/24/solid";
-
-const bullets = [
-  { id: 0, title: "Accounting & audit readiness", Icon: DocumentChartBarIcon },
-  { id: 1, title: "Acquisition disputes", Icon: ScaleIcon },
-  {
-    id: 2,
-    title: "Banking restrictions & payment rail integration",
-    Icon: BanknotesIcon,
-  },
-  { id: 3, title: "Cybersecurity & data privacy", Icon: ShieldCheckIcon },
-];
 
 export default function Intro() {
   return (

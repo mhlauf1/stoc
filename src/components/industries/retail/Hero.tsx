@@ -9,7 +9,7 @@ const Hero: React.FC = () => (
           Harnessing Technology-Driven Change for a Sustainable Future
         </h1>
         <p className="text-[#041E40] text-lg md:text-xl mt-4 md:max-w-[52ch] tracking-tight">
-          The retail landscape is undergoing a seismic shift—fueled by
+          The retail landscape is undergoing a seismic shift fueled by
           technology-enabled trends, evolving consumer behaviors, and
           pandemic-induced demand for omnichannel experiences.
         </p>
