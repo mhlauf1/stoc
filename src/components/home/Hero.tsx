@@ -18,7 +18,7 @@ export default function HeroVideo() {
         <div className="bg-black/20 absolute top-0 left-0 right-0 bottom-0"></div>
       </div>
       <div className="flex z-10 flex-col gap-4 pt-[30vh] pb-16 w-full px-4 md:px-[5%] items-start justify-between">
-        <div className="flex items-start flex-col">
+        <div className="">
           <NewsLetterBadge />
 
           <h1 className="text-4xl sm:text-5xl text-start tracking-tighter md:max-w-[20ch] md:text-6xl mt-4 font-gambetta lg:text-7xl leading-tight text-white">
