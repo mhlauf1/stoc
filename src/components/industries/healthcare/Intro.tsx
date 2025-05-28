@@ -4,7 +4,7 @@ const Intro: React.FC = () => {
   return (
     <section className="px-4 mb-12 bg-linear-to-r from-[#F7F7F7] to-[#ebebeb] lg:px-[5%] py-12 md:py-16">
       <div className="flex justify-between items-start gap-16 flex-col md:flex-row ">
-        <div className="flex flex-1 items-start  py-16 rounded-2xl flex-col">
+        <div className="flex flex-1 items-start py-8 md:py-16 rounded-2xl flex-col">
           <h2 className="text-3xl tracking-tighter text-start  max-w-[20ch] md:max-w-none md:text-4xl font-gambetta leading-normal">
             Industry Challenges
           </h2>

@@ -2,8 +2,8 @@ import React from "react";
 import Image from "next/image";
 
 const Hero: React.FC = () => (
-  <section className="h-[85vh] relative flex flex-col md:flex-row gap-4 pt-36 md:pt-12  bg-[#041E40] items-center px-4 md:px-[5%]">
-    <div className="flex  flex-col items-start md:pt-0 flex-1">
+  <section className="md:h-[95vh] relative flex flex-col md:flex-row gap-4 pt-[10vh] md:pt-0 bg-[#041E40] items-center px-4 md:px-[5%]">
+    <div className="flex mt-8 flex-col items-start md:pt-0 flex-1">
       <div>
         <h1 className="text-[#d7ebf5] text-4xl md:text-5xl lg:text-6xl font-gambetta md:max-w-[21ch] leading-tight tracking-tighter">
           Shaping the Future of Healthcare
@@ -15,7 +15,7 @@ const Hero: React.FC = () => (
         </p>
       </div>
     </div>
-    <div className="relative w-full mb-8 md:mb-0 md:w-[40vw] h-[45vh] md:h-[65vh]">
+    <div className="relative w-full mb-12 md:mb-0 md:w-[40vw] h-[40vh] md:h-[65vh]">
       <Image
         src="/healthcare-main.png"
         alt="Transaction Advisory background"

@@ -2,8 +2,8 @@ import React from "react";
 import Image from "next/image";
 
 const Hero: React.FC = () => (
-  <section className="h-[85vh] relative flex flex-col md:flex-row gap-4  pt-36 md:pt-12 bg-white items-center px-4 md:px-[5%]">
-    <div className="flex  flex-col items-start md:pt-0 flex-1">
+  <section className="md:h-[95vh] relative flex flex-col md:flex-row gap-4  pt-[10vh] md:pt-12 bg-white items-center px-4 md:px-[5%]">
+    <div className="flex mt-8 flex-col items-start md:pt-0 flex-1">
       <div>
         <div className="flex items-center mb-6 gap-4">
           <div className="h-[1px] bg-neutral-300 w-[30px]" />
@@ -25,7 +25,7 @@ const Hero: React.FC = () => (
         </p>
       </div>
     </div>
-    <div className="relative w-full mb-8 md:mb-0 md:w-1/2 h-[40vh] md:h-[65vh]">
+    <div className="relative w-full mb-12 md:mb-0 md:w-1/2 h-[40vh] md:h-[65vh]">
       <Image
         src="/service-hero.jpeg"
         alt="Transaction Advisory background"
