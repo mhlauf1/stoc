@@ -25,7 +25,7 @@ const cards: OverviewCardProps[] = [
   {
     id: 2,
     Icon: ShieldCheck,
-    title: "Anti-Money-Laundering Program Design & Banking Solutionsg",
+    title: "Anti-Money-Laundering Program Design & Banking Solutions",
   },
   {
     id: 3,

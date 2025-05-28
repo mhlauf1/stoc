@@ -68,6 +68,14 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
+  // Lock body scroll when menu is open
+  useEffect(() => {
+    document.body.style.overflow = isOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
+
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 50);
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -191,7 +199,6 @@ export default function Navbar() {
           </div>
         </button>
       </div>
-
       {/* Mobile Drawer */}
       <AnimatePresence>
         {isOpen && (
@@ -200,16 +207,16 @@ export default function Navbar() {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: "100%" }}
             transition={{ duration: 0.25, ease: "easeInOut" }}
-            className="fixed inset-y-0 right-0 w-full max-w-sm bg-black/80 backdrop-blur-sm p-8 md:hidden"
+            className="fixed inset-0 w-full h-full bg-black/80 backdrop-blur-sm p-8 md:hidden overflow-y-auto"
           >
             <button
               className="absolute top-6 right-6 text-white focus:outline-none"
               onClick={() => setIsOpen(false)}
               aria-label="Close menu"
             >
-              {/* Replace with your preferred close icon */}
               <span className="text-2xl">×</span>
             </button>
+
             <div className="mt-16 flex flex-col gap-6">
               {NAV_ITEMS.map((item) => (
                 <div key={item.href} className="flex flex-col">
@@ -236,6 +243,7 @@ export default function Navbar() {
                   )}
                 </div>
               ))}
+
               <Link
                 href="/contact"
                 onClick={() => setIsOpen(false)}

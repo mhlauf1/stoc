@@ -35,21 +35,11 @@ export default function Intro() {
 
         {/* text column */}
         <div className="space-y-6">
-          <h2 className="text-3xl md:text-4xl font-gambetta tracking-tight text-gray-900 max-w-prose">
-            From seed-to-sale, cannabis operators face a unique mix of
-            pressures. Key issues include:
+          <h2 className="text-3xl md:text-4xl font-gambetta tracking-tight leading-[1.3] text-gray-900 max-w-prose">
+            We advise our clients through an array of services to elevate
+            financial strategy, accelerate sustainable growth, optimize
+            financial performance, and maximize value.
           </h2>
-
-          <ul className="bg-[#F7F7F7] rounded-xl p-8 space-y-4">
-            {bullets.map(({ id, title, Icon }) => (
-              <li key={id} className="flex items-center space-x-3">
-                <Icon className="h-6 w-6 text-neutral-600 flex-shrink-0" />
-                <span className="text-xl font-gambetta tracking-tighter md:text-2xl text-neutral-700">
-                  {title}
-                </span>
-              </li>
-            ))}
-          </ul>
         </div>
         <div className="relative md:hidden flex w-full h-64 md:h-[50vh]">
           <Image
