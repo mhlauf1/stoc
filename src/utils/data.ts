@@ -257,39 +257,38 @@ export const teamMeberData: TeamMemberProps[] = [
     },
     {
         id: 3,
-        name: "Anne Federico",
-        image: "/Anne_Federico.jpg",
-        location: "Baltimore, MD",
-        title: "Manager | TAS"
-    },
-    {
-        id: 4,
-        name: "Matt Hottman",
-        image: "/Matt_Hottman.jpg",
-        location: "Baltimore, MD",
-        title: "Manager | TAS"
-    },
-
-    {
-        id: 5,
         name: "Sam Luetgers",
         image: "/Sam_Luetgers.jpg",
         location: "Tampa, FL",
         title: "Manager | TAS"
     },
     {
-        id: 6,
-        name: "Saqib Saddiqui",
-        image: "/Saqib_Saddiqui.jpg",
-        location: "New York, NY",
-        title: "Senior Associate | TAS"
+        id: 4,
+        name: "Anne Federico",
+        image: "/Anne_Federico.jpg",
+        location: "Baltimore, MD",
+        title: "Manager | TAS"
     },
     {
-        id: 7,
+        id: 5,
         name: "Sean Egan",
         image: "/Sean_Egan.jpg",
         location: "Minneapolis, MN",
         title: "Manager | TAS"
+    },
+    {
+        id: 6,
+        name: "Matt Hottman",
+        image: "/Matt_Hottman.jpg",
+        location: "Baltimore, MD",
+        title: "Manager | TAS"
+    },
+    {
+        id: 7,
+        name: "Saqib Saddiqui",
+        image: "/Saqib_Saddiqui.jpg",
+        location: "New York, NY",
+        title: "Senior Associate | TAS"
     },
     {
         id: 8,
@@ -307,6 +306,13 @@ export const teamMeberData: TeamMemberProps[] = [
     },
     {
         id: 10,
+        name: "John Gliniecki",
+        image: "/JohnGliniecki_Headshot.jpg",
+        location: "Minneapolis, MN",
+        title: "Senior Associate | TAS"
+    },
+    {
+        id: 11,
         name: "Gunnar Waldt",
         image: "/Gunnar_Waldt.jpg",
         location: "Baltimore, MD",
@@ -314,7 +320,7 @@ export const teamMeberData: TeamMemberProps[] = [
 
     },
     {
-        id: 11,
+        id: 12,
         name: "Lucius Burch",
         image: "/Lucius_Burch.jpg",
         location: "Nashville, TN",

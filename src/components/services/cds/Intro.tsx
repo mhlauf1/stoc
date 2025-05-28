@@ -68,7 +68,7 @@ const Intro: React.FC = () => (
         <div className="h-px bg-neutral-300 w-[30px]" />
       </div>
       <h2 className="text-neutral-800 text-3xl md:text-4xl px-2 md:px-0 lg:text-5xl md:max-w-[20ch] font-gambetta text-center md:text-start leading-tight tracking-tighter">
-        Hands-On M&A Support—From Start to Finish
+        Hands-On M&A Support From Start to Finish
       </h2>
       <div className="flex flex-col gap-4 mt-2">
         <p className="tracking-tight md:max-w-[60ch] text-md md:text-lg text-center md:text-start text-neutral-500">

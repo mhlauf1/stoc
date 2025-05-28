@@ -24,7 +24,7 @@ const cards: OverviewCardProps[] = [
     animatedData: globeData,
     title: "Industries We Serve",
     description:
-      "Driving sector-specific growth and resilience through expert advisory.",
+      "Driving sector specific growth and resilience through expert advisory.",
     href: "/industries",
     cta: "Explore Industries",
   },

@@ -9,7 +9,7 @@ const Hero: React.FC = () => (
           Scaling Portfolio Companies with Confidence
         </h1>
         <p className="text-[#041E40] tracking-tight text-lg md:text-xl mt-4 md:max-w-[52ch]">
-          Hands-on enablement, AI-driven workflows, and real-time KPI tracking
+          Hands-on enablement, AI driven workflows, and real-time KPI tracking
           to accelerate post-acquisition growth.
         </p>
       </div>

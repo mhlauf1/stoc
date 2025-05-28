@@ -15,7 +15,7 @@ const cards: OverviewCardProps[] = [
     id: 0,
     Icon: Search,
     title: "Target Screening & Valuation",
-    description: "Identify high-potential opportunities and model outcomes.",
+    description: "Identify high potential opportunities and model outcomes.",
   },
   {
     id: 1,
@@ -80,7 +80,7 @@ const CoreServices: React.FC = () => (
       <div className="flex flex-col gap-4 mt-4">
         <p className="tracking-tight text-start text-md md:text-lg text-neutral-600">
           From initial target screening to final exit planning, we layer in
-          rigorous analysis and industry expertise—so you minimize surprises and
+          rigorous analysis and industry expertise so you minimize surprises and
           unlock hidden value.
         </p>
       </div>

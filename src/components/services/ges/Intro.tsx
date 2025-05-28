@@ -44,7 +44,7 @@ const Intro: React.FC = () => (
                   <BoltIcon className="h-6 w-6 text-neutral-600" />
                 </div>
                 <h3 className="text-lg sm:text-xl md:text-2xl tracking-tighter text-neutral-600 font-gambetta">
-                  Leverage AI-driven workflows to eliminate manual tasks.
+                  Leverage AI driven workflows to eliminate manual tasks.
                 </h3>
               </li>
               <li className="flex gap-2 items-start md:items-center">

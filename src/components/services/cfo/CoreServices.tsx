@@ -42,7 +42,7 @@ const ServiceCard: React.FC<ValueProps> = ({ Icon, title, description }) => (
       bg-[#041E40] text-white
       rounded-2xl 
       transition-colors duration-300 ease-out
-      hover:bg-[#2D474D]
+      hover:bg-[#2d384d]
     "
   >
     <div className="flex justify-end items-end w-full">

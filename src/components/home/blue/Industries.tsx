@@ -52,7 +52,7 @@ const IndustryGrid: React.FC = () => (
       <p className="text-gray-600 text-lg leading-8">
         Our unique backgrounds and experiences in public accounting, investment
         banking, private equity, and consulting provides clients with a breadth
-        of industry-specific knowledge and expertise.
+        of industry specific knowledge and expertise.
       </p>
     </div>
   </div>
@@ -74,7 +74,7 @@ const Industries: React.FC = () => (
             <div className="h-[1px] bg-neutral-300 w-[60px]" />
           </div>
           <h2 className="text-3xl  tracking-tighter max-w-[24ch] md:text-4xl font-gambetta lg:text-5xl leading-tight">
-            Driving sector-specific growth and resilience through expert
+            Driving sector specific growth and resilience through expert
             advisory.
           </h2>
         </div>

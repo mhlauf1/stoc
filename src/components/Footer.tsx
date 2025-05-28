@@ -16,42 +16,18 @@ export default function Footer() {
             <Image
               src="/stoc-main-logo-cropped.png"
               width={250}
-              height={100}
+              height={200}
               alt="STOC Advisory"
-              className="filter w-[150px] brightness-0 invert"
+              className="filter w-[175px] md:w-[250px] brightness-0 invert"
             />
           </Link>
-          <p className="text-neutral-300 leading-6">
-            STOC Advisory is not a CPA firm.
+          <p className="text-neutral-300 text-sm leading-6">
+            ©2025 STOC Advisory, LLC | STOC Advisory is not a CPA firm | Privacy
+            Policy
           </p>
         </div>
-
-        {/* Services */}
-        <div className="flex flex-col gap-4">
-          <h4 className="text-neutral-400 uppercase text-xs tracking-wide">
-            Services
-          </h4>
-          <ul className="space-y-3">
-            {[
-              "CFO Advisory",
-              "Corporate Development Support",
-              "Growth Enablement Services",
-              "Transaction Advisory Services",
-            ].map((service) => (
-              <li key={service}>
-                <Link
-                  href="/services"
-                  className="text-neutral-300 hover:text-white transition-colors duration-200 pb-1 border-b border-transparent hover:border-neutral-600"
-                >
-                  {service}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-
         {/* Company */}
-        <div className="flex flex-col gap-4">
+        <div className="flex md:ml-10 flex-col gap-4">
           <h4 className="text-neutral-400 uppercase text-xs tracking-wide">
             Company
           </h4>
@@ -67,6 +43,30 @@ export default function Footer() {
                   className="text-neutral-300 hover:text-white transition-colors duration-200 pb-1 border-b border-transparent hover:border-neutral-600"
                 >
                   {label}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        {/* Services */}
+        <div className="flex flex-col gap-4">
+          <h4 className="text-neutral-400 uppercase text-xs tracking-wide">
+            Services
+          </h4>
+          <ul className="space-y-3">
+            {[
+              "Corporate Development Support",
+              "Growth Enablement Services",
+              "Transaction Advisory Services",
+              "CFO Advisory",
+            ].map((service) => (
+              <li key={service}>
+                <Link
+                  href="/services"
+                  className="text-neutral-300 hover:text-white transition-colors duration-200 pb-1 border-b border-transparent hover:border-neutral-600"
+                >
+                  {service}
                 </Link>
               </li>
             ))}

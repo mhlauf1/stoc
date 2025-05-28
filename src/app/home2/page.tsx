@@ -89,7 +89,7 @@ export default function Home() {
           Industries We Serve
         </h2>
         <p className="text-gray-600 mb-6">
-          Driving sector‑specific growth and resilience through expert advisory.
+          Driving sector specific growth and resilience through expert advisory.
         </p>
         <Link
           className="inline-block bg-black text-white px-6 py-3 rounded-full font-medium"

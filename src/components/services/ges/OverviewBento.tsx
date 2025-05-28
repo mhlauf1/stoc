@@ -26,7 +26,8 @@ const cards: OverviewCardProps[] = [
   {
     number: "4",
     title: "Measure & Iterate",
-    description: "Track KPIs in real time—then refine for ever-faster results.",
+    description:
+      "Track KPIs in real time, then refine for ever faster results.",
   },
 ];
 

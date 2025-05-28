@@ -20,8 +20,8 @@ const IndustryCard: React.FC<IndustryProps> = ({
         className="rounded-t-lg object-cover"
       />
     </div>
-    <div className="flex flex-col items-start pt-5 md:pt-6 pb-10 md:pb-12 px-5 md:px-8 gap-2">
-      <h3 className="text-3xl lg:text-4xl mt-2 tracking-tighter text-center md:text-start font-gambetta">
+    <div className="flex flex-col items-start justify-between pt-5 md:pt-6  mb-6 px-5 md:px-8 gap-2">
+      <h3 className="text-3xl lg:text-3xl mt-2 tracking-tighter text-center md:text-start font-gambetta">
         {title}
       </h3>
       <p className="text-gray-600  tracking-tight">{supportText}</p>
@@ -56,14 +56,14 @@ const IndustriesSection: React.FC = () => (
             <div className="h-[1px] bg-neutral-300 w-[30px]" />
           </div>
           <h2 className="text-3xl text-center md:text-start tracking-tighter md:max-w-[24ch] md:text-4xl font-gambetta lg:text-5xl leading-tight">
-            Driving sector-specific growth and resilience through expert
+            Driving sector specific growth and resilience through expert
             advisory.
           </h2>
         </div>
         <p className="text-gray-600  md:max-w-[64ch] text-lg text-center md:text-start tracking-tight">
           Our unique backgrounds and experiences in public accounting,
           investment banking, private equity, and consulting provides clients
-          with a breadth of industry-specific knowledge and expertise.
+          with a breadth of industry specific knowledge and expertise.
         </p>
       </div>
       <IndustryGrid />

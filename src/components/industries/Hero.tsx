@@ -20,8 +20,8 @@ const Hero: React.FC = () => (
         </h1>
         <p className="text-[#041E40] text-lg md:text-xl mt-4 md:max-w-[52ch] tight-tight">
           We combine deep sector expertise with a proven transformation
-          playbook—helping you navigate complexity, mitigate risk, and seize new
-          opportunities.
+          playbook, helping you navigate complexity, mitigate risk, and seize
+          new opportunities.
         </p>
       </div>
     </div>
