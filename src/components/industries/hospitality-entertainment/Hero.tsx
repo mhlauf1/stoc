@@ -16,12 +16,10 @@ const Hero: React.FC = () => (
     </div>
     <div className="relative w-full mb-12 md:mb-0 md:w-[40vw] h-[45vh] md:h-[65vh]">
       <Image
-        src="/hospitality.png"
+        src="/hospitality.jpg"
         alt="Transaction Advisory background"
         fill
         className="object-cover object-center rounded-lg"
-        quality={100}
-        priority
         sizes="(min-width: 768px) 50vw, 100vw"
       />{" "}
     </div>

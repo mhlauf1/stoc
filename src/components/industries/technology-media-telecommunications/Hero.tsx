@@ -17,7 +17,7 @@ const Hero: React.FC = () => (
     </div>
     <div className="relative w-full mb-12 md:mb-0 md:w-1/2 h-[45vh] md:h-[65vh]">
       <Image
-        src="/cannabis-hero.png"
+        src="/medi.jpg"
         alt="Transaction Advisory background"
         fill
         className="object-cover object-center rounded-lg"
