@@ -60,7 +60,7 @@ const IndustriesSection: React.FC = () => (
     <div className="flex flex-col px-4 sm:px-12 md:px-32">
       <div className="flex flex-col md:flex-row justify-between mb-8 md:mb-16 items-center md:items-end gap-2 md:gap-4">
         <div className="flex md:mb-0 mb-4 flex-col gap-4">
-          <div className="flex flex-row md:justify-start justify-center gap-4 items-center">
+          <div className="flex flex-rowjustify-start gap-4 items-center">
             <div className="h-[1px] bg-neutral-300 w-[30px]" />
             <span
               style={{ letterSpacing: "3px" }}
@@ -70,12 +70,12 @@ const IndustriesSection: React.FC = () => (
             </span>
             <div className="h-[1px] bg-neutral-300 w-[30px]" />
           </div>
-          <h2 className="text-2xl md:text-3xl lg:text-4xl text-center md:text-start tracking-tight md:max-w-[24ch] font-gambetta leading-tight">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl text-start tracking-tight md:max-w-[24ch] font-gambetta leading-tight">
             Driving sector specific growth and resilience through expert
             advisory.
           </h2>
         </div>
-        <p className="text-gray-600 md:max-w-[64ch] text-lg text-center md:text-start tracking-tight">
+        <p className="text-gray-600 md:max-w-[64ch] md:text-lg text-start tracking-tight">
           Our unique backgrounds and experiences in public accounting,
           investment banking, private equity, and consulting provides clients
           with a breadth of industry specific knowledge and expertise.

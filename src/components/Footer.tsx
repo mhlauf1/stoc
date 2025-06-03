@@ -15,7 +15,7 @@ export default function Footer() {
               width={250}
               height={200}
               alt="STOC Advisory"
-              className="filter w-[175px] brightness-0 invert"
+              className="filter w-[125px] md:w-[175px] brightness-0 invert"
             />
           </Link>
         </div>
@@ -116,7 +116,7 @@ export default function Footer() {
         <p className="text-neutral-300 text-start md:text-center uppercase text-xs tracking-wide">
           STOC Advisory is not a CPA firm
         </p>
-        <p className="text-neutral-300 mt-2 md:mt-4 text-start md:text-center text-xs md:text-sm leading-6">
+        <p className="text-neutral-300 mt-2 text-start md:text-center text-xs md:text-sm leading-6">
           ©2025 STOC Advisory, LLC.{" "}
           <span className="text-neutral-300  text-xs md:text-sm  text-center md:text-left">
             Designed and developed by{" "}

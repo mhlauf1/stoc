@@ -26,7 +26,7 @@ const Hero: React.FC = () => {
           whileInView="visible"
           variants={textVariants}
           custom={0}
-          viewport={{ once: true, amount: 0.15 }}
+          viewport={{ once: true, amount: 0.1 }}
           className="flex items-center mb-4 justify-center md:justify-start gap-4"
         >
           <div className="h-[1px] bg-neutral-300 w-[30px]" />
@@ -45,7 +45,7 @@ const Hero: React.FC = () => {
           whileInView="visible"
           variants={textVariants}
           custom={1}
-          viewport={{ once: true, amount: 0.15 }}
+          viewport={{ once: true, amount: 0.1 }}
           className="text-neutral-800 text-3xl text-center md:text-4xl lg:text-5xl font-gambetta leading-tight tracking-tight"
         >
           Join Our Team
@@ -57,7 +57,7 @@ const Hero: React.FC = () => {
           whileInView="visible"
           variants={textVariants}
           custom={2}
-          viewport={{ once: true, amount: 0.15 }}
+          viewport={{ once: true, amount: 0.1 }}
           className="mt-2 text-md md:text-lg text-center text-neutral-600 tracking-tight max-w-4xl"
         >
           At STOC Advisory, we help private equity and high-growth companies
@@ -72,7 +72,7 @@ const Hero: React.FC = () => {
           whileInView="visible"
           variants={textVariants}
           custom={3}
-          viewport={{ once: true, amount: 0.15 }}
+          viewport={{ once: true, amount: 0.1 }}
           className="mt-4 text-md md:text-lg text-center text-neutral-600 tracking-tight max-w-4xl"
         >
           We&apos;re growing fast and we&apos;re always looking for smart,
@@ -84,7 +84,7 @@ const Hero: React.FC = () => {
           whileInView="visible"
           variants={textVariants}
           custom={4}
-          viewport={{ once: true, amount: 0.15 }}
+          viewport={{ once: true, amount: 0.1 }}
           className="pt-8 mt-8 border-t border-neutral-300 w-full max-w-4xl"
         >
           <h3 className="text-neutral-800 text-xl text-center md:text-2xl font-gambetta leading-tight tracking-tight">

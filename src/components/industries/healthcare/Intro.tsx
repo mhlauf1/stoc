@@ -25,7 +25,7 @@ const Intro: React.FC = () => {
             initial={{ width: 0 }}
             whileInView={{ width: "100%" }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            viewport={{ once: true, amount: 0.15 }}
+            viewport={{ once: true, amount: 0.1 }}
             className="h-[1px] bg-neutral-300 mb-4"
           />
 

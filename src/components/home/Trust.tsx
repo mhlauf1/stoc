@@ -56,7 +56,7 @@ const Trust: React.FC = () => (
         initial={{ width: 0 }}
         whileInView={{ width: "100%" }}
         transition={{ duration: 1.2, ease: "easeOut" }}
-        viewport={{ once: true, amount: 0.15 }}
+        viewport={{ once: true, amount: 0.1 }}
         className="w-full h-[1px] mt-2 bg-neutral-500"
       />
 
@@ -71,7 +71,7 @@ const Trust: React.FC = () => (
               ease: "easeOut",
               delay: id * 0.2,
             }}
-            viewport={{ once: true, amount: 0.15 }}
+            viewport={{ once: true, amount: 0.1 }}
           >
             <TrustItem title={title} text={text} Icon={Icon} />
           </motion.div>

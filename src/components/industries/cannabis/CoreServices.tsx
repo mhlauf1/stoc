@@ -86,7 +86,7 @@ const CoreServices: React.FC = () => (
           ease: "easeOut",
           delay: idx * 0.1,
         }}
-        viewport={{ once: true, amount: 0.15 }}
+        viewport={{ once: true, amount: 0.1 }}
       >
         <ServiceCard Icon={svc.Icon} title={svc.title} />
       </motion.div>

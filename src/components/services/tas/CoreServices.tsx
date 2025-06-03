@@ -82,7 +82,7 @@ const ServicesGrid: React.FC = () => (
           ease: "easeOut",
           delay: idx * 0.05,
         }}
-        viewport={{ once: true, amount: 0.15 }}
+        viewport={{ once: true, amount: 0.1 }}
       >
         <ServiceCard {...svc} />
       </motion.div>
@@ -142,7 +142,7 @@ const CoreServices: React.FC = () => (
             duration: 0.5,
             ease: "easeOut",
           }}
-          viewport={{ once: true, amount: 0.15 }}
+          viewport={{ once: true, amount: 0.1 }}
           className="w-full mt-4 md:w-auto"
         >
           <Link href="/contact">

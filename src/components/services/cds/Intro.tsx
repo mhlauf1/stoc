@@ -90,7 +90,7 @@ const Intro: React.FC = () => (
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut", delay: id * 0.1 }}
-            viewport={{ once: true, amount: 0.15 }}
+            viewport={{ once: true, amount: 0.1 }}
           >
             <StepItem title={title} text={text} number={number} />
           </motion.div>
@@ -104,7 +104,7 @@ const Intro: React.FC = () => (
             ease: "easeOut",
             delay: stepData.length * 0.1,
           }}
-          viewport={{ once: true, amount: 0.15 }}
+          viewport={{ once: true, amount: 0.1 }}
           className="tracking-tight px-4 md:px-12 md:max-w-[84ch] text-md md:text-lg mt-2 text-start text-neutral-600"
         >
           Let&apos;s build your acquisition pipeline. Reach out to schedule a

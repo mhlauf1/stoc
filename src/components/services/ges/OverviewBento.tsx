@@ -84,7 +84,7 @@ export default function OverviewBento() {
                 ease: "easeOut",
                 delay: idx * 0.05,
               }}
-              viewport={{ once: true, amount: 0.15 }}
+              viewport={{ once: true, amount: 0.1 }}
             >
               <OverviewCard {...card} />
             </motion.div>

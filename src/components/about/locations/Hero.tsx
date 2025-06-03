@@ -71,7 +71,7 @@ const Hero: React.FC = () => {
             whileInView="visible"
             variants={textVariants}
             custom={0}
-            viewport={{ once: true, amount: 0.15 }}
+            viewport={{ once: true, amount: 0.1 }}
             className="flex items-center mb-4 justify-start gap-4"
           >
             <div className="h-[1px] bg-neutral-300 w-[30px]" />
@@ -90,7 +90,7 @@ const Hero: React.FC = () => {
             whileInView="visible"
             variants={textVariants}
             custom={1}
-            viewport={{ once: true, amount: 0.15 }}
+            viewport={{ once: true, amount: 0.1 }}
             className="text-neutral-800 text-3xl text-start md:text-4xl lg:text-5xl font-gambetta leading-tight tracking-tight"
           >
             Our Locations
@@ -102,7 +102,7 @@ const Hero: React.FC = () => {
             whileInView="visible"
             variants={textVariants}
             custom={2}
-            viewport={{ once: true, amount: 0.15 }}
+            viewport={{ once: true, amount: 0.1 }}
             className="mt-4 text-lg md:text-xl text-start text-neutral-600 tracking-tight max-w-prose"
           >
             STOC Advisory maintains a strong presence in both Baltimore and
@@ -116,7 +116,7 @@ const Hero: React.FC = () => {
             whileInView="visible"
             variants={textVariants}
             custom={3}
-            viewport={{ once: true, amount: 0.15 }}
+            viewport={{ once: true, amount: 0.1 }}
             className="mt-8 text-neutral-700 text-xl md:text-2xl tracking-tight font-gambetta"
           >
             We are located at:
@@ -131,7 +131,7 @@ const Hero: React.FC = () => {
                 whileInView="visible"
                 variants={cardVariants}
                 custom={idx}
-                viewport={{ once: true, amount: 0.15 }}
+                viewport={{ once: true, amount: 0.1 }}
                 className="bg-white tracking-tight p-6 md:p-8 rounded-md shadow-sm"
               >
                 <h4 className="text-neutral-800 text-2xl md:text-3xl tracking-tight font-gambetta">
@@ -158,7 +158,7 @@ const Hero: React.FC = () => {
           initial="hidden"
           whileInView="visible"
           variants={imageVariants}
-          viewport={{ once: true, amount: 0.15 }}
+          viewport={{ once: true, amount: 0.1 }}
           className="flex-1 flex items-center justify-center rounded-md bg-[#041E40] p-4"
         >
           <div className="relative w-full h-64 sm:h-80 md:w-[85%] md:h-[75%]">
