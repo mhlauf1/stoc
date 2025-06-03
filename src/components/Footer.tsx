@@ -112,11 +112,11 @@ export default function Footer() {
         </div>
       </div>
       <div className="w-full mt-10 h-[1px] bg-neutral-500 my-6"></div>
-      <div className="text justify-center items-center flex-col">
-        <p className="text-neutral-400 text-center uppercase text-xs tracking-wide">
+      <div className="md:justify-center items-start md:items-center flex-col">
+        <p className="text-neutral-300 text-start md:text-center uppercase text-xs tracking-wide">
           STOC Advisory is not a CPA firm
         </p>
-        <p className="text-neutral-400 mt-4 text-start md:text-center text-sm leading-6">
+        <p className="text-neutral-300 mt-2 md:mt-4 text-start md:text-center text-xs md:text-sm leading-6">
           ©2025 STOC Advisory, LLC.{" "}
           <span className="text-neutral-300  text-xs md:text-sm  text-center md:text-left">
             Designed and developed by{" "}
