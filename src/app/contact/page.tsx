@@ -174,11 +174,11 @@ export default function ContactPage() {
               {submitting ? "Submitting…" : "Submit"}
             </PrimaryButton>
           </form>
-          <div className="flex mt-8 items-center  text-neutral-600 gap-2">
+          <div className="flex mt-8 items-center md:justify-start justify-center w-full text-neutral-600 gap-2">
             <Mail size={20} className="size-4 md:size-5" />
             <a
               href="mailto:Inquiry@STOCAdvisory.com"
-              className="hover:underline   tracking-tight"
+              className="hover:underline  tracking-tight"
             >
               Inquiry@STOCAdvisory.com
             </a>
