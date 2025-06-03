@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import { Search, FileSearch, GitMerge } from "lucide-react";
 
 interface Step {
   id: number;
