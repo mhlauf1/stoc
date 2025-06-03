@@ -5,12 +5,12 @@ import { motion } from "framer-motion";
 import { ValueProps } from "@/utils/types";
 import { valuesData } from "@/utils/data";
 
-const ServiceCard: React.FC<ValueProps> = ({ Icon, title, description }) => (
+const ServiceCard: React.FC<ValueProps> = ({ title, description }) => (
   <div
     className="
       group
       flex flex-col relative items-start p-8
-      bg-[#041E40] text-white
+      bg-[#041E40] text-white h-full
       rounded-2xl border border-[#16333A]
     "
   >

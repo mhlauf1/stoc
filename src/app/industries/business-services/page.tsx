@@ -1,4 +1,3 @@
-import CTA from "@/components/CTA";
 import React from "react";
 import Hero from "@/components/industries/business-services/Hero";
 import Intro from "@/components/industries/business-services/Intro";
@@ -10,7 +9,6 @@ const BusinessServicesPage = () => {
       <Hero />
       <Intro />
       <CoreServices />
-      <CTA />
     </main>
   );
 };

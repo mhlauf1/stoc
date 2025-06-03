@@ -47,13 +47,15 @@ const locations = [
     city: "Baltimore, MD",
     address: "600 Baltimore Ave. Suite 205 Towson, MD 21204",
     phone: "(410) 812-6927",
-    hours: "Mon–Fri: 9 AM – 5 PM",
   },
   {
     city: "Minneapolis, MN",
     address: "7400 Metro Blvd. Suite 450 Edina, MN 55439",
     phone: "(218) 244-8082",
-    hours: "Mon–Fri: 8 AM – 4 PM",
+  },
+  {
+    city: "Nashville, TN",
+    address: "6200 Tennessee 100 Suite 302, Nashville, TN 37205",
   },
 ];
 
@@ -122,7 +124,7 @@ const Hero: React.FC = () => {
 
           {/* Info grid */}
           <div className="mt-4 grid grid-cols-1 gap-6">
-            {locations.map(({ city, address, phone, hours }, idx) => (
+            {locations.map(({ city, address, phone }, idx) => (
               <motion.div
                 key={city}
                 initial="hidden"
@@ -132,21 +134,20 @@ const Hero: React.FC = () => {
                 viewport={{ once: true, amount: 0.15 }}
                 className="bg-white tracking-tight p-6 md:p-8 rounded-md shadow-sm"
               >
-                <h4 className="text-neutral-800 text-2xl md:text-4xl tracking-tight font-gambetta">
+                <h4 className="text-neutral-800 text-2xl md:text-3xl tracking-tight font-gambetta">
                   {city}
                 </h4>
                 <p className="text-lg leading-7 text-neutral-600 mt-2">
                   {address}
                 </p>
-                <p className="text-lg leading-7 text-neutral-600 mt-2">
-                  Phone:{" "}
-                  <a href={`tel:${phone}`} className="hover:text-black">
-                    {phone}
-                  </a>
-                </p>
-                <p className="text-lg leading-7 text-neutral-600 mt-2">
-                  Hours: {hours}
-                </p>
+                {phone && (
+                  <p className="text-lg leading-7 text-neutral-600 mt-2">
+                    Phone:{" "}
+                    <a href={`tel:${phone}`} className="hover:text-black">
+                      {phone}
+                    </a>
+                  </p>
+                )}
               </motion.div>
             ))}
           </div>
@@ -162,7 +163,7 @@ const Hero: React.FC = () => {
         >
           <div className="relative w-full h-64 sm:h-80 md:w-[85%] md:h-[75%]">
             <Image
-              src="/stoc-map.png"
+              src="/full-map.png"
               fill
               alt="STOC map"
               className="object-contain"

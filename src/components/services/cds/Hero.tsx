@@ -37,7 +37,7 @@ const Hero: React.FC = () => (
           initial="hidden"
           animate="visible"
           variants={textVariants}
-          className="text-[#bacaec] text-3xl md:text-5xl lg:text-6xl font-gambetta  leading-tight tracking-tight"
+          className="text-[#bacaec] text-3xl md:text-5xl lg:text-6xl font-gambetta md:max-w-[22ch] leading-tight tracking-tight"
         >
           Corporate Development Support
         </motion.h1>
