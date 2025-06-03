@@ -47,13 +47,13 @@ const Deliverable = ({ Icon, text }: { Icon: LucideIcon; text: string }) => (
       hover:bg-[#FCFCFC]
     "
   >
-    <div className="flex justify-start items-end w-full">
-      <Icon className="size-5 mb-4 md:size-6 text-[#041E40]" />
-    </div>
+    <div className="flex flex-row gap-3 md:gap-4 items-start">
+      <Icon className="size-5 mt-1 md:size-6 text-[#041E40]" />
 
-    <h3 className="text-2xl lg:text-3xl tracking-tight font-gambetta mb-4">
-      {text}
-    </h3>
+      <h3 className="text-2xl lg:text-3xl tracking-tight font-gambetta ">
+        {text}
+      </h3>
+    </div>
   </div>
 );
 
@@ -67,7 +67,7 @@ const DeliverableGrid: React.FC = () => (
 
 const Deliverables: React.FC = () => (
   <section className="flex flex-col gap-4 md:gap-6 px-4 md:px-[5%] py-12 md:py-20">
-    <h2 className="text-neutral-800 text-3xl md:text-fxl lg:text-5xl  font-gambetta text-center md:text-start  leading-tight tracking-tighter">
+    <h2 className="text-neutral-800 text-2xl md:text-3xl lg:text-4xl font-gambetta text-center md:text-start  leading-tight tracking-tighter">
       Core Deliverables
     </h2>
     <div className="h-[1px] w-full bg-neutral-200 my-1"></div>

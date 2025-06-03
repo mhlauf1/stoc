@@ -38,22 +38,21 @@ const ServiceCard: React.FC<ValueProps> = ({ Icon, title, description }) => (
   <div
     className="
       group
-      flex flex-col relative items-start p-8
+      flex flex-col relative items-start px-8 py-12
       bg-[#041E40] text-white
       rounded-2xl 
       transition-colors duration-300 ease-out
       hover:bg-[#2D474D]
     "
   >
-    <div className="flex justify-end items-end w-full">
-      <div className="border flex border-white/20 bg-white p-2 mb-5 rounded-lg group-hover:border-white">
-        <Icon className="h-6 w-6 text-[#041E40]" />
-      </div>
+    <div className="flex mb-4 flex-row gap-3 md:gap-4 items-center">
+      <Icon className="size-5 md:size-6 text-white" />
+
+      <h3 className="text-2xl md:text-3xl  tracking-tight font-gambetta ">
+        {title}
+      </h3>
     </div>
 
-    <h3 className="text-3xl md:text-4xl tracking-tighter font-gambetta mb-4">
-      {title}
-    </h3>
     <p className="flex-1 text-md tracking-tight md:text-lg">{description}</p>
   </div>
 );
@@ -78,10 +77,10 @@ const CoreServices: React.FC = () => (
       </span>
       <div className="h-[1px] bg-neutral-300 w-[30px]" />
     </div>
-    <h2 className="text-neutral-800 text-3xl md:text-4xl px-2 md:px-0 lg:text-5xl  font-gambetta text-center md:text-start leading-tight tracking-tighter">
+    <h2 className="text-neutral-800 text-2xl md:text-3xl lg:text-4xl px-2 md:px-0 font-gambetta text-center md:text-start leading-tight tracking-tight">
       Driving Services Growth
     </h2>
-    <p className="tracking-tight mt-2 mb-8 max-w-[36ch] text-md md:text-lg text-center text-neutral-600">
+    <p className="tracking-tight mt-2 mb-8 text-md md:text-lg text-center text-neutral-600">
       Combining industry insight, operational excellence & full-cycle deal
       support.
     </p>

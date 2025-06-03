@@ -35,7 +35,7 @@ const Hero = () => {
           </div>
 
           {/* Main heading */}
-          <h2 className="text-neutral-800 text-3xl text-start md:text-4xl lg:text-5xl font-gambetta leading-tight tracking-tighter">
+          <h2 className="text-neutral-800 text-3xl text-start md:text-4xl lg:text-5xl font-gambetta leading-tight tracking-tight">
             Our Locations
           </h2>
 
@@ -56,7 +56,7 @@ const Hero = () => {
                 key={city}
                 className="bg-white tracking-tight p-6 md:p-8 rounded-md shadow-sm"
               >
-                <h4 className="text-neutral-800 text-3xl md:text-4xl tracking-tighter font-gambetta">
+                <h4 className="text-neutral-800 text-2xl md:text-4xl tracking-tight font-gambetta">
                   {city}
                 </h4>
                 <p className="text-lg leading-7 text-neutral-600 mt-2">

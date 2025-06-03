@@ -18,7 +18,7 @@ const TeaserCard: FC<TeaserCardProps> = ({
 }) => (
   <div className="flex-1 border bg-[#F7F7F7] items-start border-neutral-200 rounded-md flex flex-col justify-between px-5 md:px-12 py-6 md:py-8">
     <div>
-      <h2 className="text-3xl md:text-4xl font-gambetta tracking-tighter leading-tight max-w-[24ch]">
+      <h2 className="text-2xl md:text-3xl lg:text-4xl  font-gambetta tracking-tight leading-tight max-w-[24ch]">
         {title}
       </h2>
       <p className="mt-2 mb-6 text-neutral-600 tracking-tight text-md md:text-lg">

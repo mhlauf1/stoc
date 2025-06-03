@@ -19,7 +19,7 @@ const Intro: React.FC = () => (
           </span>
           <div className="h-px bg-neutral-300 w-[30px]" />
         </div>
-        <h2 className="text-neutral-800 capitalize text-3xl md:text-4xl lg:text-5xl md:max-w-[28ch] font-gambetta text-start leading-tight tracking-tighter">
+        <h2 className="text-neutral-800 capitalize text-2xl md:text-3xl lg:text-4xl md:max-w-[32ch] font-gambetta text-start leading-tight tracking-tight">
           When processes are missing, data is scattered, and responsibilities
           aren&apos;t clear, early-stage growth stalls.
         </h2>

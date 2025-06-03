@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Hero: React.FC = () => (
   <section className="md:h-[95vh]  relative flex flex-col md:flex-row gap-4  pt-[10vh] md:pt-12 bg-[#F7F7F7] items-center px-4 md:px-[5%]">
-    <div className="flex mt-8 flex-col items-start md:pt-0 flex-1">
+    <div className="flex mt-8 mb-2 md:mb-0 flex-col items-start md:pt-0 flex-1">
       <div>
         <div className="flex items-center mb-6 gap-4">
           <div className="h-[1px] bg-neutral-300 w-[30px]" />
@@ -15,7 +15,7 @@ const Hero: React.FC = () => (
           </span>
           <div className="h-[1px] bg-neutral-300 w-[30px]" />
         </div>
-        <h1 className="text-[#041E40] text-4xl md:text-5xl lg:text-6xl font-gambetta md:max-w-[20ch] leading-tight tracking-tighter">
+        <h1 className="text-[#041E40] text-3xl md:text-5xl lg:text-6xl font-gambetta md:max-w-[20ch] leading-tight tracking-tight">
           Partnering with clients through every stage of the acquisition
           lifecycle
         </h1>

@@ -26,7 +26,7 @@ const CTA: React.FC = () => {
         {/* Subtext */}
         <p className="text-neutral-200 tracking-tight md:max-w-xl text-md sm:text-lg">
           Subscribe to receive newsletters on strategies, market intelligence,
-          and best practices directly to your inbox.ox.
+          and best practices directly to your inbox.
         </p>
 
         {/* Email form */}

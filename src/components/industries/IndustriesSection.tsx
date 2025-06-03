@@ -21,7 +21,7 @@ const IndustryCard: React.FC<IndustryProps> = ({
       />
     </div>
     <div className="flex flex-col items-start justify-between pt-5 md:pt-6  mb-6 px-5 md:px-8 gap-2">
-      <h3 className="text-3xl lg:text-3xl mt-2 tracking-tighter text-start font-gambetta">
+      <h3 className="text-2xl md:text-3xl lg:text-4xl mt-2 tracking-tight text-start font-gambetta">
         {title}
       </h3>
       <p className="text-gray-600  tracking-tight">{supportText}</p>
@@ -55,7 +55,7 @@ const IndustriesSection: React.FC = () => (
             </span>
             <div className="h-[1px] bg-neutral-300 w-[30px]" />
           </div>
-          <h2 className="text-3xl text-center md:text-start tracking-tighter md:max-w-[24ch] md:text-4xl font-gambetta lg:text-5xl leading-tight">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl text-center md:text-start tracking-tight md:max-w-[24ch] font-gambetta  leading-tight">
             Driving sector specific growth and resilience through expert
             advisory.
           </h2>

@@ -5,7 +5,7 @@ const Intro: React.FC = () => {
     <section className="px-4 mb-12 bg-linear-to-r from-[#F7F7F7] to-[#ebebeb] lg:px-[5%] py-12 md:py-16">
       <div className="flex justify-between items-start gap-16 flex-col md:flex-row ">
         <div className="flex flex-1 items-start py-8 md:py-16 rounded-2xl flex-col">
-          <h2 className="text-3xl tracking-tighter text-start  max-w-[20ch] md:max-w-none md:text-4xl font-gambetta leading-normal">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl  tracking-tight text-start  max-w-[20ch] md:max-w-none font-gambetta leading-normal">
             Industry Challenges
           </h2>
           <p className=" mb-6 tracking-tight mt-2 text-start  md:max-w-[84ch]  text-lg md:text-xl  text-neutral-600">
@@ -18,7 +18,7 @@ const Intro: React.FC = () => {
             plans—risk falling behind.
           </p>
           <div className="h-[1px] w-full my-4 bg-neutral-300"></div>
-          <h2 className="text-3xl tracking-tighter text-start mt-6 max-w-[20ch] md:max-w-none md:text-4xl font-gambetta leading-normal">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl  tracking-tight text-start mt-6 max-w-[20ch] md:max-w-none font-gambetta leading-normal">
             Our Partnership Approach
           </h2>
           <p className="tracking-tight mt-2 text-start  md:max-w-[84ch]  text-lg md:text-xl  text-neutral-600">

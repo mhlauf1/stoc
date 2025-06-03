@@ -79,7 +79,7 @@ const ServicesGrid: React.FC = () => (
 const CoreServices: React.FC = () => (
   <section className="flex flex-col md:flex-row  gap-8 md:gap-16 pt-12 md:pt-24 px-4 md:px-[5%] pb-16 md:pb-28">
     <div className="flex flex-1 items-start flex-col">
-      <h2 className="text-4xl tracking-tighter text-start   md:text-5xl font-gambetta ">
+      <h2 className="text-2xl md:text-3xl lg:text-4xl tracking-tight text-start font-gambetta ">
         Structured Support at Every Phase
       </h2>
       <div className="flex mb-8 flex-col gap-4 mt-4">

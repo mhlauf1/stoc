@@ -47,7 +47,7 @@ export default function ContactPage() {
   return (
     <main className="max-w-5xl pt-[15vh] md:pt-[10vh]  mx-auto px-6 md:px-12 lg:px-32 py-16 md:py-24">
       {/* Heading */}
-      <h1 className="text-4xl md:text-5xl font-gambetta tracking-tighter mb-4">
+      <h1 className="text-3xl md:text-5xl font-gambetta tracking-tighter mb-4">
         Contact Us
       </h1>
       <p className="text-neutral-600 mb-8">

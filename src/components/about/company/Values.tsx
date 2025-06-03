@@ -11,18 +11,15 @@ const ServiceCard: React.FC<ValueProps> = ({ Icon, title, description }) => (
       rounded-2xl border border-[#16333A]
     "
   >
-    <div className="flex justify-end items-end w-full">
-      <div className="border flex border-white/20 bg-white p-2 mb-5 rounded-lg group-hover:border-white">
-        <Icon className="h-6 w-6 text-[#16333A]" />
-      </div>
+    <div className="flex flex-row  mb-4 items-center gap-2 md:gap-4">
+      <Icon className="size-5 md:size-6 text-white" />
+
+      <h3 className="text-2xl md:text-3xl lg:text-4xl  max-w-[15ch] tracking-tight font-gambetta">
+        {title}
+      </h3>
     </div>
 
-    <h3 className="text-3xl md:text-4xl max-w-[15ch] tracking-tighter font-gambetta mb-4">
-      {title}
-    </h3>
-    <p className="flex-1 text-md md:text-lg tracking-tight mb-8">
-      {description}
-    </p>
+    <p className="flex-1 text-md md:text-lg tracking-tight">{description}</p>
   </div>
 );
 

@@ -45,7 +45,7 @@ export default function OverviewBento() {
           </span>
           <div className="h-px bg-neutral-300 w-[30px]" />
         </div>
-        <h2 className="text-3xl tracking-tighter md:max-w-[24ch] md:text-4xl font-gambetta lg:text-5xl leading-tight">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl tracking-tight md:max-w-[24ch] font-gambetta leading-tight">
           Our Growth Roadmap
         </h2>
 

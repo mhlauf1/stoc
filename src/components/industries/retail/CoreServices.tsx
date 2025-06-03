@@ -48,7 +48,7 @@ const ServiceCard: React.FC<ValueProps> = ({ Icon, title, description }) => (
       </div>
     </div>
 
-    <h3 className="text-3xl md:text-4xl  tracking-tighter font-gambetta mb-4">
+    <h3 className="text-2xl md:text-3xl lg:text-4xl   tracking-tight font-gambetta mb-4">
       {title}
     </h3>
     <p className="flex-1 text-md md:text-lg tracking-tight mb-8">
@@ -68,7 +68,7 @@ const ServicesGrid: React.FC = () => (
 const CoreServices: React.FC = () => (
   <section className="flex flex-col md:flex-row  gap-8 md:gap-16 pt-12 md:pt-24 px-4 md:px-[5%] pb-16 md:pb-28">
     <div className="flex flex-1 items-start flex-col">
-      <h2 className="text-3xl tracking-tighter text-start  md:text-4xl font-gambetta leading-normal">
+      <h2 className="text-2xl md:text-3xl lg:text-4xl  tracking-tight text-start font-gambetta leading-normal">
         Why Partner with Us?
       </h2>
       <div className="flex flex-col gap-4 mt-4">

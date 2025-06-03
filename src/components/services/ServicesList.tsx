@@ -17,7 +17,7 @@ const IndustryList = () => (
           </span>
           <div className="h-px bg-neutral-300 w-[30px]" />
         </div>
-        <h3 className="text-3xl md:text-4xl  lg:text-5xl  text-center md:text-start md:max-w-[20ch] mt-2 font-gambetta tracking-tighter leading-snug">
+        <h3 className="text-2xl md:text-3xl lg:text-4xl  text-center md:text-start md:max-w-[20ch] mt-2 font-gambetta tracking-tighter leading-snug">
           Transforming Strategic Vision into Tangible Results
         </h3>
         <p className="text-neutral-600 text-center md:text-start tracking-tight  md:max-w-[58ch] mt-3 mb-5  text-md sm:text-lg md:text-xl">

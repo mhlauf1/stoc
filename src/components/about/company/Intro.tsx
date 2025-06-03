@@ -35,7 +35,7 @@ const ValuePillar: React.FC<ValuePillarProps> = ({ title, text }) => (
   <div className="flex flex-row  gap-4  items-start justify-start">
     {/* <Icon className="size-5 text-[#16333A]" /> */}
     <div className="space-y-1 w-full">
-      <h3 className="text-3xl md:text-4xl text-start font-gambetta italic">
+      <h3 className="text-2xl md:text-3xl lg:text-4xl  text-start font-gambetta italic">
         {title}
       </h3>
       <p className="text-neutral-600 text-start mt-2 max-w-[42ch] text-lg tracking-tight">
@@ -49,12 +49,12 @@ const Intro: React.FC = () => (
   <section className="px-4 bg-white md:px-[5%] py-16 md:py-24">
     <div className="flex justify-between items-center gap-16 flex-col md:flex-row ">
       <div className="flex flex-1 items-start flex-col md:flex-row">
-        <h2 className="text-3xl tracking-tighter md:max-w-[36ch] text-start md:text-4xl font-gambetta leading-normal">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl  tracking-tight md:max-w-[36ch] text-start font-gambetta leading-normal">
           STOC Advisory partners with middle-market businesses and private
           equity sponsors to accelerate growth, mitigate risk, and deliver
           lasting impact.
         </h2>
-        <div className="flex flex-col  w-full items-center  gap-10">
+        <div className="flex flex-col md:mt-0 mt-12  w-full items-center  gap-10">
           {values.map((v) => (
             <div key={v.id}>
               <ValuePillar

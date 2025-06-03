@@ -62,7 +62,7 @@ const Intro: React.FC = () => (
         </span>
         <div className="h-px bg-neutral-300 w-[30px]" />
       </div>
-      <h2 className="text-neutral-800 text-3xl md:text-4xl px-2 md:px-0 lg:text-5xl max-w-[20ch] md:max-w-none font-gambetta text-center md:text-start leading-tight tracking-tighter">
+      <h2 className="text-neutral-800 text-2xl md:text-3xl lg:text-4xl px-2 md:px-0 max-w-[20ch] md:max-w-none font-gambetta text-center md:text-start leading-tight tracking-tight">
         Meeting the Moment in Business Services
       </h2>
       <div className="flex flex-col gap-4 mt-2">

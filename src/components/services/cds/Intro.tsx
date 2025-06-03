@@ -61,7 +61,7 @@ const Intro: React.FC = () => (
         </span>
         <div className="h-px bg-neutral-300 w-[30px]" />
       </div>
-      <h2 className="text-neutral-800 text-3xl md:text-4xl  lg:text-5xl max-w-[20ch] font-gambetta text-start leading-tight tracking-tighter">
+      <h2 className="text-neutral-800 text-2xl md:text-3xl lg:text-4xl md:max-w-[20ch] font-gambetta text-start leading-tight tracking-tighter">
         Hands-On M&A Support From Start to Finish
       </h2>
       <div className="flex flex-col gap-4 mt-4">

@@ -3,9 +3,9 @@ import Image from "next/image";
 
 const Hero: React.FC = () => (
   <section className="md:h-[95vh]  relative flex flex-col md:flex-row gap-4 pt-[10vh] md:pt-12  bg-[#062010] items-center px-4 md:px-[5%]">
-    <div className="flex mt-8 flex-col items-start md:pt-0 flex-1">
+    <div className="flex mt-8 mb-2 md:mb-0 flex-col items-start md:pt-0 flex-1">
       <div>
-        <h1 className="text-[#EFFFF3] text-4xl md:text-5xl lg:text-6xl font-gambetta md:max-w-[20ch] leading-tight tracking-tighter">
+        <h1 className="text-[#EFFFF3] text-3xl md:text-5xl lg:text-6xl font-gambetta md:max-w-[20ch] leading-tight tracking-tighter">
           Your Partner in Cannabis Excellence
         </h1>
         <p className="text-[#EFFFF3] tracking-tight text-lg md:text-xl mt-4 md:max-w-[52ch]">
