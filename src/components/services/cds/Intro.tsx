@@ -6,7 +6,7 @@ interface Step {
   id: number;
   title: string;
   text: string;
-  Icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  number: string;
 }
 
 const stepData: Step[] = [
@@ -14,34 +14,33 @@ const stepData: Step[] = [
     id: 0,
     title: "Lead Identification & Research",
     text: "Define investment criteria, conduct market research, and use proprietary tools to identify strategic targets.",
-    Icon: Search,
+    number: "1",
   },
   {
     id: 1,
     title: "Outreach & Engagement",
     text: "Craft custom messaging, initiate email/text/call outreach, and nurture leads with CRM-integrated workflows.",
-    Icon: FileSearch,
+    number: "2",
   },
   {
     id: 2,
     title: "Pipeline Management & NDA",
     text: "Execution Track KPIs, coordinate preliminary deal conversations, and secure NDAs for qualified opportunities.",
-    Icon: GitMerge,
+    number: "3",
   },
 ];
 
 interface StepItemProps {
   title: string;
   text: string;
-  Icon: React.ComponentType<React.SVGProps<SVGSVGElement>>;
+  number: string;
 }
 
-const StepItem: React.FC<StepItemProps> = ({ title, text, Icon }) => (
+const StepItem: React.FC<StepItemProps> = ({ title, text, number }) => (
   <div className="flex flex-col px-4 md:px-12 items-start  gap-1 md:gap-3">
     <div className="flex flex-row items-center gap-2">
-      <Icon className="size-5" />
       <h3 className="text-lg tracking-tight text-neutral-800 md:text-xl font-medium">
-        {title}
+        {number}. {title}
       </h3>
     </div>
     <p className="text-neutral-600 tracking-tight">{text}</p>
@@ -81,8 +80,8 @@ const Intro: React.FC = () => (
         <h3 className="text-neutral-800 px-4 md:px-12 text-2xl lg:text-3xl  font-gambetta  leading-tight tracking-tighter">
           Our 3-Step Process
         </h3>
-        {stepData.map(({ id, title, text, Icon }) => (
-          <StepItem key={id} title={title} text={text} Icon={Icon} />
+        {stepData.map(({ id, title, text, number }) => (
+          <StepItem key={id} title={title} text={text} number={number} />
         ))}
         <p className="tracking-tight px-4 md:px-12  md:max-w-[84ch] text-md md:text-lg mt-2 text-center md:text-start text-neutral-600">
           Let&apos;s build your acquisition pipeline. Reach out to schedule a

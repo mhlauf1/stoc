@@ -1,9 +1,4 @@
 import React from "react";
-import {
-  CheckCircleIcon,
-  BoltIcon,
-  ChartBarIcon,
-} from "@heroicons/react/24/solid";
 
 const Intro: React.FC = () => (
   <section className="px-4 bg-linear-to-r from-[#F7F7F7] to-[#ebebeb] w-full  md:px-[5%] py-12  md:py-20">
@@ -32,27 +27,19 @@ const Intro: React.FC = () => (
             </h3>
             <ul className="space-y-5">
               <li className="flex gap-2 items-start md:items-center">
-                <div className="mt-1 md:mt-0">
-                  <CheckCircleIcon className="h-6 w-6 text-neutral-600" />
-                </div>
                 <h3 className="text-lg sm:text-xl md:text-2xl tracking-tighter text-neutral-600 font-gambetta">
-                  Embed with your management team for hands-on execution.
+                  1. Embed with your management team for hands-on execution.
                 </h3>
               </li>
               <li className="flex gap-2 items-start md:items-center">
-                <div className="mt-1 md:mt-0">
-                  <BoltIcon className="h-6 w-6 text-neutral-600" />
-                </div>
                 <h3 className="text-lg sm:text-xl md:text-2xl tracking-tighter text-neutral-600 font-gambetta">
-                  Leverage AI driven workflows to eliminate manual tasks.
+                  2. Leverage AI driven workflows to eliminate manual tasks.
                 </h3>
               </li>
               <li className="flex gap-2 items-start md:items-center">
-                <div className="mt-1 md:mt-0">
-                  <ChartBarIcon className="h-6 w-6 text-neutral-600" />
-                </div>
                 <h3 className="text-lg sm:text-xl md:text-2xl tracking-tighter text-neutral-600 font-gambetta">
-                  Visualize performance with real-time, interactive dashboards.
+                  3. Visualize performance with real-time, interactive
+                  dashboards.
                 </h3>
               </li>
             </ul>
