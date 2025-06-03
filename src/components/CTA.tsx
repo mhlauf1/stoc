@@ -3,8 +3,8 @@ import Link from "next/link";
 
 const CTA: React.FC = () => {
   return (
-    <section className="bg-white px-0 md:px-[5%] md:pb-24">
-      <div className="bg-[#041E40] md:rounded-2xl px-4 py-16 md:py-24 flex flex-col items-center text-center gap-8">
+    <section className="bg-white px-4 md:px-[5%] my-12 md:my-0 md:pb-24">
+      <div className="bg-[#041E40] rounded-2xl px-4 py-16 md:py-24 flex flex-col items-center text-center gap-8">
         {/* Tagline */}
         <div className="flex items-center gap-4">
           <div className="h-px bg-neutral-600 w-[30px]" />

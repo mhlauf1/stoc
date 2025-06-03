@@ -69,7 +69,7 @@ const ServiceCard: React.FC<ValueProps> = ({ title }) => (
 );
 
 const ServicesGrid: React.FC = () => (
-  <div className="grid gap-6 grid-cols-1 md:grid-cols-2">
+  <div className="grid gap-4 md:gap-6 grid-cols-1 md:grid-cols-2">
     {cards.map((svc) => (
       <ServiceCard key={svc.id} {...svc} />
     ))}
@@ -92,7 +92,7 @@ const CoreServices: React.FC = () => (
       <ServicesGrid />
     </div>
     <div className="flex  w-full flex-1">
-      <div className="bg-[#041E40] w-full md:rounded-2xl px-[5%] py-16 md:py-24 flex flex-col items-center justify-center gap-4">
+      <div className="bg-[#041E40] w-full rounded-2xl px-[5%] py-16 md:py-24 flex flex-col items-center justify-center gap-4">
         {/* Tagline */}
         <div className="flex items-center gap-4">
           <div className="h-px bg-neutral-600 w-[30px]" />
@@ -106,7 +106,7 @@ const CoreServices: React.FC = () => (
         </div>
 
         {/* Headline */}
-        <h2 className="text-white text-3xl md:text-4xl lg:text-5xl font-gambetta tracking-tighter md:max-w-[24ch] text-start md:text-center leading-tight">
+        <h2 className="text-white text-3xl md:text-4xl lg:text-5xl font-gambetta tracking-tighter md:max-w-[24ch] text-center leading-tight">
           Need due diligence that drives{" "}
           <span className="italic font-gambetta">
             confident investment decisions?
@@ -114,7 +114,7 @@ const CoreServices: React.FC = () => (
         </h2>
 
         {/* Subtext */}
-        <p className="text-neutral-200 tracking-tight md:max-w-xl text-md text-start md:text-center  sm:text-lg">
+        <p className="text-neutral-200 tracking-tight md:max-w-xl text-md text-center  sm:text-lg">
           Schedule a conversation with our Transaction Advisory team today.
         </p>
 
