@@ -17,7 +17,7 @@ const Hero = () => {
         </div>
 
         {/* Main heading */}
-        <h2 className="text-neutral-800 text-3xl text-center md:text-4xl lg:text-5xl font-gambetta leading-tight tracking-tighter">
+        <h2 className="text-neutral-800 text-3xl text-center md:text-4xl lg:text-5xl font-gambetta leading-tight tracking-tight">
           Join Our Team
         </h2>
 

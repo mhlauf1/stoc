@@ -19,7 +19,7 @@ const SubpageHero = ({
       <section className="relative h-[95vh] bg-white flex">
         <div className="px-6  flex flex-col md:flex-row  items-center w-full md:px-12 h-full lg:px-32">
           <div className="flex items-start gap-6 flex-1 flex-col">
-            <h1 className="text-5xl text-start tracking-tighter md:max-w-[20ch] md:text-6xl font-gambetta lg:text-7xl leading-tight ">
+            <h1 className="text-5xl text-start tracking-tight md:max-w-[20ch] md:text-6xl font-gambetta lg:text-7xl leading-tight ">
               {title}
             </h1>
             <div className="flex-col gap-4 w-full h-auto flex flex-1">

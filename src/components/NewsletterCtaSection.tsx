@@ -25,7 +25,7 @@ export default function NewsletterCtaSection() {
           </span>
           <div className="h-[1px] bg-neutral-300 w-[60px]" />
         </div>
-        <h2 className="text-3xl md:text-4xl lg:text-6xl tracking-tighter text-white font-gambetta  leading-tight mb-6">
+        <h2 className="text-3xl md:text-4xl lg:text-6xl tracking-tight text-white font-gambetta  leading-tight mb-6">
           Get exclusive market insights
           <br />
           <span className="text-whitetext-3xl md:text-4xl lg:text-6xl italic tracking-tight  font-gambetta block">

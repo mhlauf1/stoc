@@ -15,7 +15,7 @@ const Hero: React.FC = () => (
             </span>
           </button>
         </Link>
-        <h1 className="text-[#d7ebf5] mt-6 text-3xl md:text-5xl lg:text-6xl font-gambetta md:max-w-[20ch] leading-tight tracking-tighter">
+        <h1 className="text-[#d7ebf5] mt-6 text-3xl md:text-5xl lg:text-6xl font-gambetta md:max-w-[20ch] leading-tight tracking-tight">
           Built on Expertise. <br /> Defined by Trust.
         </h1>
         <p className="text-[#d7ebf5] text-lg md:text-xl mt-4 md:max-w-[52ch] tracking-tight">

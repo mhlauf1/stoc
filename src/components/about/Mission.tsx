@@ -65,7 +65,7 @@ const Mission: React.FC = () => (
           </span>
           <div className="h-[1px] bg-neutral-300 w-[60px]" />
         </div>
-        <h1 className="text-4xl md:text-5xl lg:text-6xl font-gambetta tracking-tighter leading-tight max-w-[24ch]">
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-gambetta tracking-tight leading-tight max-w-[24ch]">
           Partnering with clients through every stage of the acquisition
           lifecycle
         </h1>

@@ -18,7 +18,7 @@ const CTA: React.FC = () => {
         </div>
 
         {/* Headline */}
-        <h2 className="text-white text-3xl md:text-4xl lg:text-6xl font-gambetta tracking-tighter max-w-[16ch] leading-tight">
+        <h2 className="text-white text-3xl md:text-4xl lg:text-6xl font-gambetta tracking-tight max-w-[16ch] leading-tight">
           Stay Informed with <br />
           <span className="italic font-gambetta">STOC Insights</span>
         </h2>
