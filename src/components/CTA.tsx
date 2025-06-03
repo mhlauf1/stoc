@@ -19,14 +19,14 @@ const CTA: React.FC = () => {
 
         {/* Headline */}
         <h2 className="text-white text-3xl md:text-4xl lg:text-6xl font-gambetta tracking-tighter max-w-[16ch] leading-tight">
-          Stay Ahead with <br />
+          Stay Informed with <br />
           <span className="italic font-gambetta">STOC Insights</span>
         </h2>
 
         {/* Subtext */}
         <p className="text-neutral-200 tracking-tight md:max-w-xl text-md sm:text-lg">
-          Monthly strategies, market intelligence, and deal best practices
-          delivered straight to your inbox.
+          Subscribe to receive newsletters on strategies, market intelligence,
+          and best practices directly to your inbox.ox.
         </p>
 
         {/* Email form */}

@@ -29,14 +29,14 @@ interface TrustItemProps {
 }
 
 const TrustItem: React.FC<TrustItemProps> = ({ title, text, Icon }) => (
-  <div className="relative flex flex-col items-start rounded-md px-1 md:px-8 ">
+  <div className="relative flex flex-col items-start rounded-md px-1">
     {/* Icon in top-right */}
-    <div className="bg-[#F7F7F7] p-4 mb-4 md:mb-6 rounded-lg">
-      <Icon className=" size-5 text-[#18598b]" />
+    <div className="flex flex-row items-center gap-3 md:gap-4">
+      <Icon className="size-5 text-white" />
+
+      <h3 className="text-3xl font-gambetta  tracking-tighter">{title}</h3>
     </div>
-    <h3 className="text-3xl font-gambetta md:text-4xl tracking-tighter">
-      {title}
-    </h3>
+
     <p className="text-white/90 tracking-tight mt-2 md:mt-3 text-start md:text-lg leading-relaxed">
       {text}
     </p>
@@ -49,7 +49,7 @@ const Trust: React.FC = () => (
         Why Clients Trust STOC
       </h2>
       <div className="w-full h-[1px] mt-2 bg-neutral-500"></div>
-      <div className="grid mt-8 md:mt-12 w-full  grid-cols-1 gap-16 md:gap-6 md:grid-cols-3">
+      <div className="grid mt-8 md:mt-12 w-full  grid-cols-1 gap-16 md:gap-4 md:grid-cols-3">
         {trustData.map(({ id, title, text, Icon }) => (
           <TrustItem key={id} title={title} text={text} Icon={Icon} />
         ))}

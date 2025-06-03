@@ -9,7 +9,7 @@ const Hero: React.FC = () => (
           <div className="h-[1px] bg-neutral-300 w-[30px]" />
           <span
             style={{ letterSpacing: "3px" }}
-            className="uppercase text-neutral-500 text-xs"
+            className="uppercase text-neutral-600 text-xs"
           >
             Industries
           </span>

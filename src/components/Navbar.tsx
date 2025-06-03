@@ -126,7 +126,7 @@ export default function Navbar() {
         <Link href="/">
           <Image
             src="/stoc-main-logo-cropped.png"
-            width={200}
+            width={150}
             height={40}
             alt="STOC"
             className={`transition-all md:w-[150px] w-[130px] duration-300 ${

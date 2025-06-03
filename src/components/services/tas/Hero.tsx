@@ -5,13 +5,14 @@ const Hero: React.FC = () => (
   <section className="md:h-[95vh] relative flex flex-col md:flex-row gap-4  pt-[10vh] md:pt-12 bg-[#F7F7F7] items-center px-4 md:px-[5%]">
     <div className="flex mt-8 flex-col items-start md:pt-0 flex-1">
       <div>
-        <h1 className="text-[#041E40] text-4xl md:text-5xl lg:text-6xl font-gambetta md:max-w-[20ch] leading-tight tracking-tighter">
-          Mitigate Risk & Maximize Deal Value
+        <h1 className="text-[#041E40] text-4xl md:text-5xl lg:text-6xl font-gambetta md:max-w-[19ch] leading-tight tracking-tighter">
+          Trusted Advisors. Rigorous Diligence. Smarter Deals. Cost-Effective
+          Execution.
         </h1>
         <p className="text-[#041E40] text-lg md:text-xl mt-4 md:max-w-[52ch] tracking-tight">
-          Whether buying, building, or exiting an investment, every transaction
-          poses risk. Our integrated due diligence approach helps you safeguard
-          returns and capture upside.
+          From pre-LOI diligence through post-close accounting and integration
+          support, we provide clear, data-driven insights that empower buyers
+          and sellers to make confident, value-focused investment decisions.
         </p>
       </div>
     </div>

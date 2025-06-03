@@ -5,12 +5,12 @@ const Hero: React.FC = () => (
   <section className=" md:h-[95vh] relative flex flex-col md:flex-row gap-4 pt-[10vh] md:pt-0 bg-[#041E40] items-center px-4 md:px-[5%]">
     <div className="flex mt-8 flex-col items-start h-full justify-center flex-1">
       <div>
-        <h1 className="text-[#d7ebf5] text-4xl md:text-5xl lg:text-6xl font-gambetta md:max-w-[20ch] leading-tight tracking-tighter">
-          Scaling Portfolio Companies with Confidence
+        <h1 className="text-[#d7ebf5] text-4xl md:text-5xl lg:text-6xl font-gambetta md:max-w-[22ch] leading-tight tracking-tighter">
+          Empowering Portfolio Companies for Scalable Growth
         </h1>
         <p className="text-[#d7ebf5] text-lg tracking-tight md:text-xl mt-4 md:max-w-[52ch]">
-          Hands-on enablement, AI driven workflows, and real-time KPI tracking
-          to accelerate post-acquisition growth.
+          Leveraging hands-on enablement, AI-driven workflows, and real-time KPI
+          tracking to accelerate post-acquisition performance.
         </p>
       </div>
     </div>

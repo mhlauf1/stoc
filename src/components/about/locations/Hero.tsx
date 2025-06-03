@@ -4,13 +4,13 @@ import Image from "next/image";
 const locations = [
   {
     city: "Baltimore, MD",
-    address: "600 Baltimore Ave. Suite 209 Towson, MD 21204",
+    address: "600 Baltimore Ave. Suite 205 Towson, MD 21204",
     phone: "(410) 812-6927",
     hours: "Mon–Fri: 9 AM – 5 PM",
   },
   {
     city: "Minneapolis, MN",
-    address: "7400 Metro Blvd. Suite 450 Minneapolis, MN 55439",
+    address: "7400 Metro Blvd. Suite 450 Edina, MN 55439",
     phone: "(218) 244-8082",
     hours: "Mon–Fri: 8 AM – 4 PM",
   },

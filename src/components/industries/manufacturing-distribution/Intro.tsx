@@ -78,7 +78,7 @@ const Intro: React.FC = () => (
         Global Manufacturing & Distribution Expertise
       </h2>
       <div className="flex flex-col gap-4 mt-2">
-        <p className="tracking-tight  md:max-w-[84ch] text-md md:text-lg text-center md:text-start text-neutral-500">
+        <p className="tracking-tight  md:max-w-[84ch] text-md md:text-lg text-center md:text-start text-neutral-600">
           Combining deep sector knowledge with hands-on global experience, we
           partner with C-suite and operations teams to tackle today&apos;s
           challenges and build tomorrow&apos;s success.

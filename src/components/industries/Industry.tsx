@@ -41,7 +41,7 @@ const Industry: React.FC<IndustryProps> = ({
           <div className=" flex flex-row gap-2">
             {tags?.map((item) => (
               <div className="bg-white py-2 px-4 rounded-full" key={item}>
-                <p className="text-neutral-500 text-sm">{item}</p>
+                <p className="text-neutral-600 text-sm">{item}</p>
               </div>
             ))}
           </div>

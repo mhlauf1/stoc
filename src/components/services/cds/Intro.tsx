@@ -1,6 +1,6 @@
 import React from "react";
 import Image from "next/image";
-import { Search, FileSearch, GitMerge, BarChart } from "lucide-react";
+import { Search, FileSearch, GitMerge } from "lucide-react";
 
 interface Step {
   id: number;
@@ -12,27 +12,21 @@ interface Step {
 const stepData: Step[] = [
   {
     id: 0,
-    title: "Target Sourcing & Qualification",
-    text: "Build and manage your CRM pipeline with prioritized acquisition targets.",
+    title: "Lead Identification & Research",
+    text: "Define investment criteria, conduct market research, and use proprietary tools to identify strategic targets.",
     Icon: Search,
   },
   {
     id: 1,
-    title: "Diligence Coordination & Analysis",
-    text: "Run data requests, model financials and keep your team on schedule.",
+    title: "Outreach & Engagement",
+    text: "Craft custom messaging, initiate email/text/call outreach, and nurture leads with CRM-integrated workflows.",
     Icon: FileSearch,
   },
   {
     id: 2,
-    title: "Integration Planning & Execution",
-    text: "Map out operational roadmaps and drive post-close milestones.",
+    title: "Pipeline Management & NDA",
+    text: "Execution Track KPIs, coordinate preliminary deal conversations, and secure NDAs for qualified opportunities.",
     Icon: GitMerge,
-  },
-  {
-    id: 3,
-    title: "Reporting & Investor Updates",
-    text: "Deliver clear board decks, investor summaries and ongoing performance tracking.",
-    Icon: BarChart,
   },
 ];
 
@@ -50,13 +44,13 @@ const StepItem: React.FC<StepItemProps> = ({ title, text, Icon }) => (
         {title}
       </h3>
     </div>
-    <p className="text-neutral-500 tracking-tight">{text}</p>
+    <p className="text-neutral-600 tracking-tight">{text}</p>
   </div>
 );
 
 const Intro: React.FC = () => (
   <section className="px-4 bg-linear-to-r from-[#F7F7F7] to-[#ebebeb] w-full md:px-[5%] py-12  md:py-20">
-    <div className="flex items-center md:items-start flex-col">
+    <div className="flex items-start flex-col">
       <div className="flex items-center mb-4 justify-center gap-4">
         <div className="h-px bg-neutral-300 w-[30px]" />
         <span
@@ -67,25 +61,33 @@ const Intro: React.FC = () => (
         </span>
         <div className="h-px bg-neutral-300 w-[30px]" />
       </div>
-      <h2 className="text-neutral-800 text-3xl md:text-4xl px-2 md:px-0 lg:text-5xl md:max-w-[20ch] font-gambetta text-center md:text-start leading-tight tracking-tighter">
+      <h2 className="text-neutral-800 text-3xl md:text-4xl  lg:text-5xl max-w-[20ch] font-gambetta text-start leading-tight tracking-tighter">
         Hands-On M&A Support From Start to Finish
       </h2>
-      <div className="flex flex-col gap-4 mt-2">
-        <p className="tracking-tight md:max-w-[60ch] text-md md:text-lg text-center md:text-start text-neutral-500">
-          Our CDS team extends your internal capacity across the entire deal
-          lifecycle. You get the structure, speed and accountability you need,
-          without hiring extra staff.
+      <div className="flex flex-col gap-4 mt-4">
+        <p className="tracking-tight md:max-w-[84ch] text-md md:text-lg text-start text-neutral-600">
+          STOC Advisory&apos;s Corporate Development Support (CDS) offering
+          helps private equity-backed and founder-led companies to accelerate
+          pipeline velocity through targeted lead generation, data-driven
+          outreach, and CRM-integrated pipeline management. We partner alongside
+          existing internal teams to build strategic pipelines that align with
+          investment criteria, engage with aligned targets, and drive measurable
+          deal outcomes.
         </p>
       </div>
     </div>
     <div className="flex flex-col  h-full mt-8 md:min-h-[65vh] md:flex-row md:gap-6 gap-2 lg:gap-8">
       <div className="flex items-start md:w-[40vw] bg-[#FCFCFC] py-10 md:py-6 rounded-xl justify-center flex-col gap-8">
         <h3 className="text-neutral-800 px-4 md:px-12 text-2xl lg:text-3xl  font-gambetta  leading-tight tracking-tighter">
-          Our 4-Step Process
+          Our 3-Step Process
         </h3>
         {stepData.map(({ id, title, text, Icon }) => (
           <StepItem key={id} title={title} text={text} Icon={Icon} />
         ))}
+        <p className="tracking-tight px-4 md:px-12  md:max-w-[84ch] text-md md:text-lg mt-2 text-center md:text-start text-neutral-600">
+          Let&apos;s build your acquisition pipeline. Reach out to schedule a
+          discovery session with our CDS team.
+        </p>
       </div>
       <div className="flex md:w-[60vw]  relative">
         <Image

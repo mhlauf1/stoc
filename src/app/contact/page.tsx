@@ -66,30 +66,30 @@ export default function ContactPage() {
               </a>
             </div>
             <div className="flex items-center gap-3">
-              <MapPin size={20} className="text-neutral-500" />
+              <MapPin size={20} className="text-neutral-600" />
               <address className="w-[80%]  not-italic">
-                606 Baltimore Ave. Suite 202, Towson, MD 21204
+                606 Baltimore Ave. Suite 205, Towson, MD 21204
               </address>
             </div>
           </div>
           <div className="flex flex-col gap-3">
             <span className="font-semibold">Minneapolis, MN Office</span>
             <div className="flex items-center gap-3">
-              <Phone size={20} className="text-neutral-500" />
+              <Phone size={20} className="text-neutral-600" />
               <a href="tel:+16142061774" className="hover:underline">
                 (218)-244-8082
               </a>
             </div>
             <div className="flex items-center gap-3">
-              <MapPin size={20} className="text-neutral-500" />
+              <MapPin size={20} className="text-neutral-600" />
               <address className="w-[80%] not-italic">
-                121 N Washington Ave Suite 334 Minneapolis, MN 55401
+                121 N Washington Ave Suite 334 Edina, MN 55401
               </address>
             </div>
           </div>
         </div>
         <div className="flex items-center gap-3">
-          <Mail size={20} className="text-neutral-500" />
+          <Mail size={20} className="text-neutral-600" />
           <a
             href="mailto:Inquiry@STOCAdvisory.com"
             className="hover:underline font-semibold"

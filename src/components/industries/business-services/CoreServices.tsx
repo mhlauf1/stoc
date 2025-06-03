@@ -81,7 +81,7 @@ const CoreServices: React.FC = () => (
     <h2 className="text-neutral-800 text-3xl md:text-4xl px-2 md:px-0 lg:text-5xl  font-gambetta text-center md:text-start leading-tight tracking-tighter">
       Driving Services Growth
     </h2>
-    <p className="tracking-tight mt-2 mb-8 max-w-[36ch] text-md md:text-lg text-center text-neutral-500">
+    <p className="tracking-tight mt-2 mb-8 max-w-[36ch] text-md md:text-lg text-center text-neutral-600">
       Combining industry insight, operational excellence & full-cycle deal
       support.
     </p>
