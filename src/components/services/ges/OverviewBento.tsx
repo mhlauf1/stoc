@@ -1,8 +1,9 @@
-// app/OverviewBento.tsx
+// src/app/OverviewBento.tsx
 "use client";
 import React from "react";
 import OverviewCard, { OverviewCardProps } from "./OverviewCard";
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const cards: OverviewCardProps[] = [
   {
@@ -49,13 +50,36 @@ export default function OverviewBento() {
           Our Growth Roadmap
         </h2>
 
-        <div className="flex flex-col md:flex-row  w-full  gap-4">
+        <div className="flex flex-col md:flex-row w-full gap-4">
           <div className="flex flex-col flex-1 gap-4">
-            {cards.map((card, i) => (
-              <OverviewCard key={i} {...card} />
+            {cards.map((card, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.5,
+                  ease: "easeOut",
+                  delay: idx * 0.05,
+                }}
+                viewport={{ once: true, amount: 0.15 }}
+              >
+                <OverviewCard {...card} />
+              </motion.div>
             ))}
           </div>
-          <div className="flex flex-1 relative">
+
+          <motion.div
+            className="flex flex-1 relative"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.5,
+              ease: "easeOut",
+              delay: 0.1,
+            }}
+            viewport={{ once: true, amount: 0.15 }}
+          >
             <Image
               className="rounded-xl object-cover"
               src="/ges-2.jpg"
@@ -66,7 +90,7 @@ export default function OverviewBento() {
               className="absolute inset-0 bg-blue-600 opacity-30 mix-blend-multiply rounded-lg"
               aria-hidden="true"
             />
-          </div>
+          </motion.div>
         </div>
       </div>
     </section>

@@ -19,7 +19,7 @@ const ServiceCard: React.FC<ValueProps> = ({ Icon, title, description }) => (
       </div>
     </div>
 
-    <h3 className="text-3xl md:text-4xl max-w-[15ch] tracking-tighter font-gambetta mb-4">
+    <h3 className="text-3xl md:text-4xl max-w-[15ch] tracking-tight font-gambetta mb-4">
       {title}
     </h3>
     <p className="flex-1 text-lg leading-8 mb-8">{description}</p>

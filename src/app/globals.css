@@ -7,3 +7,8 @@
 .font-gambetta {
   font-family: "Gambetta";
 }
+
+button,
+a {
+  cursor: "pointer";
+}

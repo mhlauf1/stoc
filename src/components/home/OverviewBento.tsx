@@ -2,6 +2,7 @@
 "use client";
 import React from "react";
 import OverviewCard, { OverviewCardProps } from "./OverviewCard";
+import { motion } from "framer-motion";
 
 // adjust these relative paths if your JSON lives elsewhere:
 import globeData from "../../../public/globe-bold.json";
@@ -9,8 +10,6 @@ import layersData from "../../../public/layers-bold.json";
 import teamData from "../../../public/photo-bold.json";
 import letterData from "../../../public/letter-bold.json";
 
-// The `OverviewCardProps.animatedData` field is already
-// typed as LottieProps["animationData"], so any of these JSONs works.
 const cards: OverviewCardProps[] = [
   {
     animatedData: layersData,
@@ -65,7 +64,15 @@ export default function OverviewBento() {
 
         <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6 w-full">
           {cards.map((card, idx) => (
-            <OverviewCard key={idx} {...card} />
+            <motion.div
+              key={idx}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              viewport={{ once: true, amount: 0.15 }}
+            >
+              <OverviewCard {...card} />
+            </motion.div>
           ))}
         </div>
       </div>

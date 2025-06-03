@@ -47,7 +47,7 @@ const ServiceCard: React.FC<ValueProps> = ({ Icon, title, description }) => (
   >
     <div className="flex flex-row  mb-4 items-center gap-3 md:gap-4">
       <Icon className="size-5 text-white" />
-      <h3 className="text-2xl md:text-3xl lg:text-4xl tracking-tighter font-gambetta">
+      <h3 className="text-2xl md:text-3xl lg:text-4xl tracking-tight font-gambetta">
         {title}
       </h3>
     </div>

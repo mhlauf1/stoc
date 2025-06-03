@@ -1,5 +1,8 @@
+// src/components/CTA.tsx
+"use client";
 import React from "react";
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 const CTA: React.FC = () => {
   return (
@@ -29,8 +32,14 @@ const CTA: React.FC = () => {
           and best practices directly to your inbox.
         </p>
 
-        {/* Email form */}
-        <form className="w-full flex flex-col md:flex-row gap-4 mt-4 justify-center">
+        {/* Animated Email form */}
+        <motion.form
+          className="w-full flex flex-col md:flex-row gap-4 mt-4 justify-center"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.15 }}
+        >
           <div className="inline-flex w-full bg-white max-w-lg rounded-full overflow-hidden border-2 p-1 border-white">
             <input
               type="email"
@@ -39,15 +48,16 @@ const CTA: React.FC = () => {
             />
             <Link className="md:block hidden" href="/contact">
               <button
-                className="   
-         bg-[#18598b]  text-white
-      font-medium
-      px-8 md:px-10 py-4 rounded-full text-md
-      hover:bg-[#59809f]
-      cursor-pointer duration-300
-      tracking-tight
-      text-center
-      w-full"
+                className="
+                  bg-[#18598b] text-white
+                  font-medium
+                  px-8 md:px-10 py-4 rounded-full text-md
+                  hover:bg-[#59809f]
+                  cursor-pointer duration-300
+                  tracking-tight
+                  text-center
+                  w-full
+                "
               >
                 Subscribe
               </button>
@@ -55,20 +65,21 @@ const CTA: React.FC = () => {
           </div>
           <Link className="block md:hidden" href="/contact">
             <button
-              className="   
-          bg-[#18598b]  text-white
-      font-medium
-      px-8 md:px-10 py-4 rounded-full text-md
-      hover:bg-[#59809f]
-      cursor-pointer duration-300
-      tracking-tight
-      text-center
-      w-full"
+              className="
+                bg-[#18598b] text-white
+                font-medium
+                px-8 md:px-10 py-4 rounded-full text-md
+                hover:bg-[#59809f]
+                cursor-pointer duration-300
+                tracking-tight
+                text-center
+                w-full
+              "
             >
               Subscribe
             </button>
           </Link>
-        </form>
+        </motion.form>
       </div>
     </section>
   );

@@ -1,7 +1,9 @@
+// src/components/CoreServices.tsx
+"use client";
 import React from "react";
-import { ValueProps } from "@/utils/types";
 import { BarChart2, Calendar, Users } from "lucide-react";
-import { LucideIcon } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
+import { motion } from "framer-motion";
 
 export interface OverviewCardProps {
   Icon: LucideIcon;
@@ -34,7 +36,11 @@ const cards: OverviewCardProps[] = [
   },
 ];
 
-const ServiceCard: React.FC<ValueProps> = ({ Icon, title, description }) => (
+const ServiceCard: React.FC<OverviewCardProps> = ({
+  Icon,
+  title,
+  description,
+}) => (
   <div
     className="
       group
@@ -46,21 +52,31 @@ const ServiceCard: React.FC<ValueProps> = ({ Icon, title, description }) => (
     "
   >
     <div className="flex mb-4 flex-row gap-3 md:gap-4 items-center">
-      <Icon className="size-5 md:size-6 text-white" />
-
-      <h3 className="text-2xl md:text-3xl  tracking-tight font-gambetta ">
+      <Icon className="h-6 w-6 md:h-8 md:w-8 text-white" />
+      <h3 className="text-2xl md:text-3xl tracking-tight font-gambetta">
         {title}
       </h3>
     </div>
-
     <p className="flex-1 text-md tracking-tight md:text-lg">{description}</p>
   </div>
 );
 
 const ServicesGrid: React.FC = () => (
   <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-    {cards.map((svc) => (
-      <ServiceCard key={svc.id} {...svc} />
+    {cards.map((svc, idx) => (
+      <motion.div
+        key={svc.id}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{
+          duration: 0.5,
+          ease: "easeOut",
+          delay: idx * 0.05,
+        }}
+        viewport={{ once: true, amount: 0.1 }}
+      >
+        <ServiceCard {...svc} />
+      </motion.div>
     ))}
   </div>
 );
@@ -71,7 +87,7 @@ const CoreServices: React.FC = () => (
       <div className="h-[1px] bg-neutral-300 w-[30px]" />
       <span
         style={{ letterSpacing: "2px" }}
-        className="uppercase text-neutral-600 text-xs "
+        className="uppercase text-neutral-600 text-xs"
       >
         Our Three Pillars of Expertise
       </span>

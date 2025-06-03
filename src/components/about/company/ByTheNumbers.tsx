@@ -36,7 +36,7 @@ const Numbers = ({ heading, sub, Icon }: NumberDataProps) => (
       <Icon className="size-6 text-white" />
     </div>
     <div className="flex flex-col gap-2">
-      <h3 className="text-2xl md:text-3xl font-gambetta tracking-tighter">
+      <h3 className="text-2xl md:text-3xl font-gambetta tracking-tight">
         {heading}
       </h3>
       <p className="text-neutral-600 text-start  font-medium max-w-[48ch] leading-relaxed">
@@ -50,7 +50,7 @@ const ByTheNumbers = () => {
   return (
     <section className="px-6 bg-white md:px-12 lg:px-[5vw] py-16">
       <div className="flex flex-col justify-center items-center">
-        <h2 className="text-3xl tracking-tighter  md:text-4xl lg:text-5xl font-gambetta leading-normal">
+        <h2 className="text-3xl tracking-tight  md:text-4xl lg:text-5xl font-gambetta leading-normal">
           At a Glance
         </h2>
         <div className="flex items-start  w-full rounded-xl gap-4 flex-col">

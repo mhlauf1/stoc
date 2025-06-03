@@ -6,7 +6,7 @@ const IndustryList = () => {
     <div className="bg-[#F7F7F7] py-20 md:py-36 px-8 sm:px-12 md:px-20">
       <div className="max-w-[80vw] mx-auto flex flex-col">
         <div className="flex flex-col items-start gap-6">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-gambetta leading-tight tracking-tighter">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-gambetta leading-tight tracking-tight">
             Tailored Industry Solutions <br />
             <span className="italic font-gambetta">
               Delivered with Precision

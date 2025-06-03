@@ -1,7 +1,9 @@
+// src/components/CoreServices.tsx
+"use client";
 import React from "react";
-import { ValueProps } from "@/utils/types";
 import { Layers, Leaf, BarChart2 } from "lucide-react";
-import { LucideIcon } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
+import { motion } from "framer-motion";
 
 export interface OverviewCardProps {
   Icon: LucideIcon;
@@ -31,7 +33,11 @@ export const cards: OverviewCardProps[] = [
   },
 ];
 
-const ServiceCard: React.FC<ValueProps> = ({ Icon, title, description }) => (
+const ServiceCard: React.FC<{
+  Icon: LucideIcon;
+  title: string;
+  description: string;
+}> = ({ Icon, title, description }) => (
   <div
     className="
       group
@@ -48,7 +54,7 @@ const ServiceCard: React.FC<ValueProps> = ({ Icon, title, description }) => (
       </div>
     </div>
 
-    <h3 className="text-2xl md:text-3xl lg:text-4xl   tracking-tight font-gambetta mb-4">
+    <h3 className="text-2xl md:text-3xl lg:text-4xl tracking-tight font-gambetta mb-4">
       {title}
     </h3>
     <p className="flex-1 text-md md:text-lg tracking-tight mb-8">
@@ -59,16 +65,28 @@ const ServiceCard: React.FC<ValueProps> = ({ Icon, title, description }) => (
 
 const ServicesGrid: React.FC = () => (
   <div className="grid gap-6 flex-1 grid-cols-1">
-    {cards.map((svc) => (
-      <ServiceCard key={svc.id} {...svc} />
+    {cards.map((svc, idx) => (
+      <motion.div
+        key={svc.id}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: "easeOut", delay: idx * 0.05 }}
+        viewport={{ once: true, amount: 0.1 }}
+      >
+        <ServiceCard
+          Icon={svc.Icon}
+          title={svc.title}
+          description={svc.description}
+        />
+      </motion.div>
     ))}
   </div>
 );
 
 const CoreServices: React.FC = () => (
-  <section className="flex flex-col md:flex-row  gap-8 md:gap-16 pt-12 md:pt-24 px-4 md:px-[5%] pb-16 md:pb-28">
+  <section className="flex flex-col md:flex-row gap-8 md:gap-16 pt-12 md:pt-24 px-4 md:px-[5%] pb-16 md:pb-28">
     <div className="flex flex-1 items-start flex-col">
-      <h2 className="text-2xl md:text-3xl lg:text-4xl  tracking-tight text-start font-gambetta leading-normal">
+      <h2 className="text-2xl md:text-3xl lg:text-4xl tracking-tight text-start font-gambetta leading-normal">
         Why Partner with Us?
       </h2>
       <div className="flex flex-col gap-4 mt-4">

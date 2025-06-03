@@ -69,7 +69,7 @@ const DeliverableGrid: React.FC = () => (
 
 const Deliverables: React.FC = () => (
   <section className="flex flex-col gap-6 px-4 sm:px-12 md:px-24 py-12 md:py-20">
-    <h2 className="text-neutral-800 text-2xl md:text-3xl lg:text-5xl  font-gambetta  leading-tight tracking-tighter">
+    <h2 className="text-neutral-800 text-2xl md:text-3xl lg:text-5xl  font-gambetta  leading-tight tracking-tight">
       Core Deliverables
     </h2>
     <DeliverableGrid />

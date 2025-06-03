@@ -47,7 +47,7 @@ export default function IntroServices() {
             </span>
             <div className="h-[1px] bg-neutral-300 w-[60px]" />
           </div>
-          <p className="text-3xl tracking-tighter max-w-[42ch] md:text-4xl font-gambetta text-neutral-900 leading-relaxed">
+          <p className="text-3xl tracking-tight max-w-[42ch] md:text-4xl font-gambetta text-neutral-900 leading-relaxed">
             STOC Advisory partners with middle-market businesses and private
             equity sponsors to unlock value at every stage—accelerating growth
             and delivering lasting impact.

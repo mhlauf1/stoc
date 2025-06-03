@@ -1,7 +1,9 @@
+// src/components/CoreServices.tsx
+"use client";
 import React from "react";
-import { ValueProps } from "@/utils/types";
 import { Map, PieChart, Percent } from "lucide-react";
-import { LucideIcon } from "lucide-react";
+import type { LucideIcon } from "lucide-react";
+import { motion } from "framer-motion";
 
 export interface OverviewCardProps {
   Icon: LucideIcon;
@@ -20,7 +22,7 @@ const cards: OverviewCardProps[] = [
   {
     id: 2,
     Icon: PieChart,
-    title: "Capital & Investment Advisory	",
+    title: "Capital & Investment Advisory",
     description:
       "ROI analysis for plant expansions, automation, and digital upgrades",
   },
@@ -33,13 +35,17 @@ const cards: OverviewCardProps[] = [
   },
 ];
 
-const ServiceCard: React.FC<ValueProps> = ({ Icon, title, description }) => (
+const ServiceCard: React.FC<OverviewCardProps> = ({
+  Icon,
+  title,
+  description,
+}) => (
   <div
     className="
       group
       flex flex-col relative items-start p-8
       bg-[#041E40] text-white
-      rounded-2xl 
+      rounded-2xl h-full
       transition-colors duration-300 ease-out
       hover:bg-[#2D474D]
     "
@@ -49,8 +55,7 @@ const ServiceCard: React.FC<ValueProps> = ({ Icon, title, description }) => (
         <Icon className="h-6 w-6 text-[#041E40]" />
       </div>
     </div>
-
-    <h3 className="text-2xl md:text-3xl lg:text-4xl  tracking-tight font-gambetta mb-4">
+    <h3 className="text-2xl md:text-3xl lg:text-4xl tracking-tight font-gambetta mb-4">
       {title}
     </h3>
     <p className="flex-1 text-md md:text-lg tracking-tight">{description}</p>
@@ -59,8 +64,16 @@ const ServiceCard: React.FC<ValueProps> = ({ Icon, title, description }) => (
 
 const ServicesGrid: React.FC = () => (
   <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-    {cards.map((svc) => (
-      <ServiceCard key={svc.id} {...svc} />
+    {cards.map((svc, idx) => (
+      <motion.div
+        key={svc.id}
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5, ease: "easeOut", delay: idx * 0.05 }}
+        viewport={{ once: true, amount: 0.1 }}
+      >
+        <ServiceCard {...svc} />
+      </motion.div>
     ))}
   </div>
 );

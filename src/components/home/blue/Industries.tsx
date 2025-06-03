@@ -36,7 +36,7 @@ const IndustryCard: React.FC<Industry> = ({ Icon, title }) => (
     <div className="border border-white/20 p-2 mb-8 rounded-lg">
       <Icon className="h-6 w-6 text-white" />
     </div>
-    <h3 className="text-3xl tracking-tighter font-gambetta mb-4">{title}</h3>
+    <h3 className="text-3xl tracking-tight font-gambetta mb-4">{title}</h3>
     <div className="absolute bottom-0 left-0 right-0 h-[10px] rounded-b-2xl bg-white/20 overflow-hidden"></div>
   </div>
 );
@@ -73,7 +73,7 @@ const Industries: React.FC = () => (
             </span>
             <div className="h-[1px] bg-neutral-300 w-[60px]" />
           </div>
-          <h2 className="text-3xl  tracking-tighter max-w-[24ch] md:text-4xl font-gambetta lg:text-5xl leading-tight">
+          <h2 className="text-3xl  tracking-tight max-w-[24ch] md:text-4xl font-gambetta lg:text-5xl leading-tight">
             Driving sector specific growth and resilience through expert
             advisory.
           </h2>

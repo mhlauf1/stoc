@@ -22,22 +22,22 @@ const Intro: React.FC = () => (
       <div className="flex flex-col flex-1 gap-4">
         <div>
           <div className="bg-white  rounded-xl px-6 md:px-8 py-8 md:py-12">
-            <h3 className="text-xl md:text-2xl lg:text-3xl font-gambetta tracking-tighter text-gray-900 mb-6">
+            <h3 className="text-xl md:text-2xl lg:text-3xl font-gambetta tracking-tight text-gray-900 mb-6">
               Our approach
             </h3>
             <ul className="space-y-5">
               <li className="flex gap-2 items-start md:items-center">
-                <h3 className="text-lg sm:text-xl md:text-2xl tracking-tighter text-neutral-600 font-gambetta">
+                <h3 className="text-lg sm:text-xl md:text-2xl tracking-tight text-neutral-600 font-gambetta">
                   1. Embed with your management team for hands-on execution.
                 </h3>
               </li>
               <li className="flex gap-2 items-start md:items-center">
-                <h3 className="text-lg sm:text-xl md:text-2xl tracking-tighter text-neutral-600 font-gambetta">
+                <h3 className="text-lg sm:text-xl md:text-2xl tracking-tight text-neutral-600 font-gambetta">
                   2. Leverage AI driven workflows to eliminate manual tasks.
                 </h3>
               </li>
               <li className="flex gap-2 items-start md:items-center">
-                <h3 className="text-lg sm:text-xl md:text-2xl tracking-tighter text-neutral-600 font-gambetta">
+                <h3 className="text-lg sm:text-xl md:text-2xl tracking-tight text-neutral-600 font-gambetta">
                   3. Visualize performance with real-time, interactive
                   dashboards.
                 </h3>

@@ -17,7 +17,7 @@ const AboutUs = () => {
             </span>
             <div className="h-[1px] bg-neutral-300 w-[60px]" />
           </div>
-          <h2 className="text-3xl  tracking-tighter max-w-[24ch] md:text-4xl font-gambetta lg:text-5xl leading-tight">
+          <h2 className="text-3xl  tracking-tight max-w-[24ch] md:text-4xl font-gambetta lg:text-5xl leading-tight">
             Tailored Expertise <br />
             <span className="font-gambetta italic">Across Key Industries</span>
           </h2>

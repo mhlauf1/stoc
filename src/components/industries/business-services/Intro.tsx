@@ -78,7 +78,7 @@ const Intro: React.FC = () => (
     </div>
     <div className="flex flex-col  h-full mt-8  md:flex-row md:gap-6 gap-2 lg:gap-8">
       <div className="flex items-start md:w-[40vw] bg-[#FCFCFC] py-10 md:py-12 rounded-xl justify-center flex-col gap-6">
-        <h3 className="text-neutral-800 px-4 md:px-12 text-2xl lg:text-3xl  font-gambetta  leading-tight tracking-tighter">
+        <h3 className="text-neutral-800 px-4 md:px-12 text-2xl lg:text-3xl  font-gambetta  leading-tight tracking-tight">
           At a Glance
         </h3>
         {stepData.map(({ id, title, text, Icon }) => (

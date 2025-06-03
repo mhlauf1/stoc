@@ -12,7 +12,7 @@ const Service = React.forwardRef<HTMLDivElement, ServiceProps>(
         <Icon />
       </div>
 
-      <h3 className="text-2xl md:text-3xl font-gambetta tracking-tighter mb-4">
+      <h3 className="text-2xl md:text-3xl font-gambetta tracking-tight mb-4">
         {title}
       </h3>
       <p className="text-neutral-600 leading-8 text-lg">{description}</p>

@@ -21,7 +21,7 @@ const Industry: React.FC<IndustryProps> = ({
           <span className="text-sm tracking-wide md:text-md text-emerald-900">
             {badge}
           </span>
-          <h3 className="text-2xl md:text-4xl font-gambetta tracking-tighter">
+          <h3 className="text-2xl md:text-4xl font-gambetta tracking-tight">
             {title}
           </h3>
           <p className="text-neutral-600 leading-7 mb-4">{desc1}</p>

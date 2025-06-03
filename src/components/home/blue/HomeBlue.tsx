@@ -24,7 +24,7 @@ export default function Hero() {
           </button>
         </Link>
 
-        <h1 className="text-5xl tracking-tighter max-w-[20ch] md:text-6xl font-gambetta lg:text-7xl leading-tight text-white">
+        <h1 className="text-5xl tracking-tight max-w-[20ch] md:text-6xl font-gambetta lg:text-7xl leading-tight text-white">
           Where Strategic Transactions{" "}
           <span className="font-gambetta italic">
             Meet Exceptional Advising

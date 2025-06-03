@@ -26,7 +26,7 @@ const ServiceCard: React.FC<ServiceProps> = ({
       </div>
     </div>
 
-    <h3 className="text-3xl  md:text-4xl tracking-tighter font-gambetta mb-4">
+    <h3 className="text-3xl  md:text-4xl tracking-tight font-gambetta mb-4">
       {title}
     </h3>
     <p className="flex-1 w-full md:max-w-[48ch] text-lg leading-8 mb-8">

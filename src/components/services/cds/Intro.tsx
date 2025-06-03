@@ -1,4 +1,8 @@
+// src/components/Intro.tsx
+"use client";
 import React from "react";
+import { motion } from "framer-motion";
+import { servicesPageData } from "@/utils/data";
 import Image from "next/image";
 
 interface Step {
@@ -36,9 +40,9 @@ interface StepItemProps {
 }
 
 const StepItem: React.FC<StepItemProps> = ({ title, text, number }) => (
-  <div className="flex flex-col px-4 md:px-12 items-start  gap-1 md:gap-3">
+  <div className="flex flex-col px-4 md:px-12 items-start gap-1 md:gap-3">
     <div className="flex flex-row items-center gap-2">
-      <h3 className="text-lg tracking-tight text-neutral-800 md:text-xl font-medium">
+      <h3 className="text-xl tracking-tight text-neutral-800 md:text-2xl font-gambetta">
         {number}. {title}
       </h3>
     </div>
@@ -47,7 +51,7 @@ const StepItem: React.FC<StepItemProps> = ({ title, text, number }) => (
 );
 
 const Intro: React.FC = () => (
-  <section className="px-4 bg-linear-to-r from-[#F7F7F7] to-[#ebebeb] w-full md:px-[5%] py-12  md:py-20">
+  <section className="px-4 bg-linear-to-r from-[#F7F7F7] to-[#ebebeb] w-full md:px-[5%] py-12 md:py-20">
     <div className="flex items-start flex-col">
       <div className="flex items-center mb-4 justify-center gap-4">
         <div className="h-px bg-neutral-300 w-[30px]" />
@@ -59,7 +63,7 @@ const Intro: React.FC = () => (
         </span>
         <div className="h-px bg-neutral-300 w-[30px]" />
       </div>
-      <h2 className="text-neutral-800 text-2xl md:text-3xl lg:text-4xl md:max-w-[20ch] font-gambetta text-start leading-tight tracking-tighter">
+      <h2 className="text-neutral-800 text-2xl md:text-3xl lg:text-4xl md:max-w-[20ch] font-gambetta text-start leading-tight tracking-tight">
         Hands-On M&A Support From Start to Finish
       </h2>
       <div className="flex flex-col gap-4 mt-4">
@@ -74,23 +78,45 @@ const Intro: React.FC = () => (
         </p>
       </div>
     </div>
-    <div className="flex flex-col  h-full mt-8 md:min-h-[65vh] md:flex-row md:gap-6 gap-2 lg:gap-8">
+
+    <div className="flex flex-col h-full mt-8 md:min-h-[65vh] md:flex-row md:gap-6 gap-2 lg:gap-8">
       <div className="flex items-start md:w-[40vw] bg-[#FCFCFC] py-10 md:py-6 rounded-xl justify-center flex-col gap-8">
-        <h3 className="text-neutral-800 px-4 md:px-12 text-2xl lg:text-3xl  font-gambetta  leading-tight tracking-tighter">
+        <h3 className="text-neutral-800 px-4 md:px-12 text-2xl lg:text-3xl font-gambetta leading-tight tracking-tight">
           Our 3-Step Process
         </h3>
+
         {stepData.map(({ id, title, text, number }) => (
-          <StepItem key={id} title={title} text={text} number={number} />
+          <motion.div
+            key={id}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: id * 0.1 }}
+            viewport={{ once: true, amount: 0.15 }}
+          >
+            <StepItem title={title} text={text} number={number} />
+          </motion.div>
         ))}
-        <p className="tracking-tight px-4 md:px-12  md:max-w-[84ch] text-md md:text-lg mt-2 text-center md:text-start text-neutral-600">
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.6,
+            ease: "easeOut",
+            delay: stepData.length * 0.1,
+          }}
+          viewport={{ once: true, amount: 0.15 }}
+          className="tracking-tight px-4 md:px-12 md:max-w-[84ch] text-md md:text-lg mt-2 text-center md:text-start text-neutral-600"
+        >
           Let&apos;s build your acquisition pipeline. Reach out to schedule a
           discovery session with our CDS team.
-        </p>
+        </motion.p>
       </div>
-      <div className="flex md:w-[60vw]  relative">
+
+      <div className="flex md:w-[60vw] relative">
         <Image
           src="/cds-intro.jpg"
-          className="object-cover hidden md:flex  rounded-xl"
+          className="object-cover hidden md:flex rounded-xl"
           alt="About STOC"
           fill
         />

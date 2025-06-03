@@ -28,7 +28,7 @@ export default function HeroVideo() {
         <div>
           <NewsLetterBadge />
 
-          <h1 className="text-4xl sm:text-5xl text-start tracking-tighter md:max-w-[20ch] md:text-6xl mt-4 font-gambetta lg:text-7xl leading-tight text-white">
+          <h1 className="text-4xl sm:text-5xl text-start tracking-tight md:max-w-[32ch] md:text-6xl mt-4 font-gambetta lg:text-7xl leading-tight text-white">
             Where Strategic Transactions{" "}
             <span className="font-gambetta italic">
               Meet Exceptional Advising
