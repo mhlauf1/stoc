@@ -6,7 +6,7 @@ import type { TeamMemberProps } from "@/utils/types";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-const TeamMember = ({ id, name, image, location, title }: TeamMemberProps) => (
+const TeamMember = ({ name, image, location, title }: TeamMemberProps) => (
   <div className="flex flex-col items-start">
     <div className="relative w-full max-h-[700px] h-[700px] flex-1 aspect-square">
       <Image fill src={image} alt={name} className="rounded-lg object-cover" />
@@ -30,7 +30,7 @@ const TeamMembers: React.FC = () => {
         Meet the team
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-8 md:gap-y-12 md:grid-cols-3">
-        {teamMeberData.map((item, idx) => (
+        {teamMeberData.map((item) => (
           <motion.div
             key={item.id}
             initial={{ opacity: 0, y: 20 }}

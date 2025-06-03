@@ -2,7 +2,6 @@
 "use client";
 import React from "react";
 import { motion } from "framer-motion";
-import { servicesPageData } from "@/utils/data";
 import Image from "next/image";
 
 interface Step {
