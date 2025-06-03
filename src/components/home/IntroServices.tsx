@@ -29,7 +29,7 @@ export default function IntroServices() {
             <div className="h-[1px] bg-neutral-300 w-[30px]" />
           </div>
 
-          <h2 className="text-3xl mt-2 md:mt-0 tracking-tighter lg:max-w-[42ch] md:text-4xl lg:text-5xl font-gambetta text-neutral-900 leading-normal md:leading-relaxed">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl mt-2 md:mt-0 tracking-tight lg:max-w-[42ch] font-gambetta text-neutral-900 leading-normal md:leading-relaxed">
             Unlocking Value at Every Stage
           </h2>
           <p className="md:max-w-[58ch] tracking-tight mt-4 text-center md:text-start mb-8 text-md sm:text-lg md:text-xl text-neutral-600 md:mt-2">

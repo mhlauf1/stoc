@@ -25,7 +25,7 @@ const TeaserCard: FC<TeaserCardProps> = ({
         {description}
       </p>
     </div>
-    <Link href={href}>
+    <Link className="w-full md:w-auto" href={href}>
       <PrimaryButton>{buttonText}</PrimaryButton>
     </Link>
   </div>

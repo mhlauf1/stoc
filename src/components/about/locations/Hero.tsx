@@ -23,7 +23,7 @@ const Hero = () => {
         {/* LEFT COLUMN */}
         <div className="flex-1 flex flex-col">
           {/* Section marker */}
-          <div className="flex items-center mb-4 justify-center md:justify-start gap-4">
+          <div className="flex items-center mb-4 justify-start gap-4">
             <div className="h-[1px] bg-neutral-300 w-[30px]" />
             <span
               style={{ letterSpacing: "2px" }}
@@ -35,18 +35,18 @@ const Hero = () => {
           </div>
 
           {/* Main heading */}
-          <h2 className="text-neutral-800 text-3xl text-center md:text-start md:text-4xl lg:text-5xl font-gambetta leading-tight tracking-tighter">
+          <h2 className="text-neutral-800 text-3xl text-start md:text-4xl lg:text-5xl font-gambetta leading-tight tracking-tighter">
             Our Locations
           </h2>
 
           {/* Intro copy */}
-          <p className="mt-2 text-lg md:text-x text-center md:text-start text-neutral-600 tracking-tight max-w-prose">
+          <p className="mt-4 text-lg md:text-x text-start text-neutral-600 tracking-tight max-w-prose">
             STOC Advisory maintains a strong presence in both Baltimore and
             Minneapolis to serve our East Coast and Midwest clients efficiently.
             Each office houses a dedicated team of financial experts ready to
             partner with you on your next big move.
           </p>
-          <span className="mt-6 text-neutral-700  text-xl md:text-2xl tracking-tighter font-gambetta">
+          <span className="mt-8 text-neutral-700  text-xl md:text-2xl tracking-tighter font-gambetta">
             We are located at:
           </span>
           {/* Info grid */}

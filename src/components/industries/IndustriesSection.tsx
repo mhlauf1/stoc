@@ -21,7 +21,7 @@ const IndustryCard: React.FC<IndustryProps> = ({
       />
     </div>
     <div className="flex flex-col items-start justify-between pt-5 md:pt-6  mb-6 px-5 md:px-8 gap-2">
-      <h3 className="text-3xl lg:text-3xl mt-2 tracking-tighter text-center md:text-start font-gambetta">
+      <h3 className="text-3xl lg:text-3xl mt-2 tracking-tighter text-start font-gambetta">
         {title}
       </h3>
       <p className="text-gray-600  tracking-tight">{supportText}</p>

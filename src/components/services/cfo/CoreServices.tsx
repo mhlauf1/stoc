@@ -38,22 +38,20 @@ const ServiceCard: React.FC<ValueProps> = ({ Icon, title, description }) => (
   <div
     className="
       group
-      flex flex-col relative items-start p-8
+      flex flex-col relative items-start px-8 py-12
       bg-[#041E40] text-white
       rounded-2xl 
       transition-colors duration-300 ease-out
       hover:bg-[#2d384d]
     "
   >
-    <div className="flex justify-end items-end w-full">
-      <div className="border flex border-white/20 bg-white p-2 mb-5 rounded-lg group-hover:border-white">
-        <Icon className="h-6 w-6 text-[#041E40]" />
-      </div>
+    <div className="flex flex-row  mb-4 items-center gap-3 md:gap-4">
+      <Icon className="size-5 text-white" />
+      <h3 className="text-2xl md:text-3xl lg:text-4xl tracking-tighter font-gambetta">
+        {title}
+      </h3>
     </div>
 
-    <h3 className="text-3xl md:text-4xl tracking-tighter font-gambetta mb-4">
-      {title}
-    </h3>
     <p className="flex-1 md:text-lg tracking-tight text-md">{description}</p>
   </div>
 );

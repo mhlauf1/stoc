@@ -18,7 +18,7 @@ export default function Intro() {
 
         {/* text column */}
         <div className="space-y-6">
-          <h2 className="text-3xl md:text-4xl font-gambetta tracking-tight leading-[1.3] text-gray-900 max-w-prose">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-gambetta tracking-tight leading-[1.3] text-gray-900 max-w-prose">
             We advise our clients through an array of services to elevate
             financial strategy, accelerate sustainable growth, optimize
             financial performance, and maximize value.

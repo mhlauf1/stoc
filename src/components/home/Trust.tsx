@@ -34,7 +34,9 @@ const TrustItem: React.FC<TrustItemProps> = ({ title, text, Icon }) => (
     <div className="flex flex-row items-center gap-3 md:gap-4">
       <Icon className="size-5 text-white" />
 
-      <h3 className="text-3xl font-gambetta  tracking-tighter">{title}</h3>
+      <h3 className="text-2xl md:text-3xl  font-gambetta  tracking-tighter">
+        {title}
+      </h3>
     </div>
 
     <p className="text-white/90 tracking-tight mt-2 md:mt-3 text-start md:text-lg leading-relaxed">
@@ -45,7 +47,7 @@ const TrustItem: React.FC<TrustItemProps> = ({ title, text, Icon }) => (
 const Trust: React.FC = () => (
   <section className="bg-[#041E40] px-4 md:px-[5%] md:mb-16 py-20 md:py-24">
     <div className="mx-auto flex rounded-2xl flex-col items-center md:items-start  text-white gap-4">
-      <h2 className="text-3xl tracking-tighter text-start max-w-[24ch] md:text-4xl font-gambetta lg:text-5xl leading-tight">
+      <h2 className="text-2xl md:text-3xl lg:text-4xl tracking-tight text-start max-w-[24ch]  font-gambetta  leading-tight">
         Why Clients Trust STOC
       </h2>
       <div className="w-full h-[1px] mt-2 bg-neutral-500"></div>

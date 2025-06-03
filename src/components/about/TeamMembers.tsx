@@ -26,7 +26,7 @@ const TeamMembers = () => {
       <h2 className="text-3xl md:text-4xl lg:text-5xl font-gambetta tracking-tighter leading-tight max-w-[24ch]">
         Meet the team
       </h2>
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-12 md:grid-cols-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-8 md:gap-y-12 md:grid-cols-3">
         {teamMeberData.map((item) => (
           <div key={item.id}>
             <TeamMember
