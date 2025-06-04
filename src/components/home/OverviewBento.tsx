@@ -31,14 +31,14 @@ const cards: OverviewCardProps[] = [
     animatedData: teamData,
     title: "Meet the Team",
     description: "Explore the experts across the US driving STOC success.",
-    href: "/team",
+    href: "/about/team",
     cta: "Meet the Team",
   },
   {
     animatedData: letterData,
     title: "Newsletter",
     description: "Get monthly insights straight to your inbox.",
-    href: "/newsletter",
+    href: "#newsletter",
     cta: "Sign Up",
   },
 ];
