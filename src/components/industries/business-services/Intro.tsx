@@ -37,14 +37,10 @@ interface StepItemProps {
 }
 
 const StepItem: React.FC<StepItemProps> = ({ title, text }) => (
-  <div className="flex flex-col px-4 md:px-12 items-start  gap-1 md:gap-3">
-    <div className="flex flex-row items-end gap-1">
-      <h3 className="text-xl text-neutral-800 md:text-2xl font-medium">
-        {title}
-      </h3>
-      <p className="text-neutral-600 tracking-tight text-md md:text-lg">
-        {text}
-      </p>
+  <div className="flex flex-col px-0 md:px-12 items-start  gap-1 md:gap-3">
+    <div className="flex flex-row md:items-end gap-1">
+      <h3 className="text-neutral-800 md:text-2xl font-medium">{title}</h3>
+      <p className="text-neutral-600 tracking-tight ">{text}</p>
     </div>
   </div>
 );
@@ -77,8 +73,8 @@ const Intro: React.FC = () => (
       </div>
     </div>
     <div className="flex flex-col  h-full mt-8  md:flex-row md:gap-6 gap-2 lg:gap-8">
-      <div className="flex items-start md:w-[40vw] bg-[#FCFCFC] py-10 md:py-12 rounded-xl justify-center flex-col gap-4 md:gap-6">
-        <h3 className="text-neutral-800 px-4 md:px-12 text-xl lg:text-3xl  font-gambetta  leading-tight tracking-tight">
+      <div className="flex items-start md:w-[40vw] md:bg-[#FCFCFC] py-10 md:py-12 rounded-xl justify-center flex-col gap-4 md:gap-6">
+        <h3 className="text-neutral-800 px-0 md:px-12 text-xl lg:text-3xl  font-gambetta  leading-tight tracking-tight">
           At a Glance
         </h3>
         {stepData.map(({ id, title, text, Icon }) => (

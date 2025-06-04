@@ -87,7 +87,7 @@ const CoreServices: React.FC = () => (
       <div className="h-[1px] bg-neutral-300 w-[30px]" />
       <span
         style={{ letterSpacing: "2px" }}
-        className="uppercase text-neutral-600 text-xs"
+        className="uppercase text-center text-neutral-600 text-xs"
       >
         Our Three Pillars of Expertise
       </span>

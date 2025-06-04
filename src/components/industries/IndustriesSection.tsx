@@ -59,7 +59,7 @@ const IndustriesSection: React.FC = () => (
   <section className="bg-[#F7F7F7] py-16 md:py-28">
     <div className="flex flex-col px-4 sm:px-12 md:px-32">
       <div className="flex flex-col md:flex-row justify-between mb-8 md:mb-16 items-center md:items-end gap-2 md:gap-4">
-        <div className="flex md:mb-0 mb-4 flex-col gap-4">
+        <div className="flex md:mb-0 mb-4 flex-col gap-3 md:gap-4">
           <div className="flex flex-rowjustify-start gap-4 items-center">
             <div className="h-[1px] bg-neutral-300 w-[30px]" />
             <span

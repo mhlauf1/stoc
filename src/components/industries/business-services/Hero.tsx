@@ -46,7 +46,7 @@ const Hero: React.FC = () => (
           initial="hidden"
           animate="visible"
           variants={textVariants}
-          className="text-[#041E40] text-lg md:text-xl mt-4 md:max-w-[52ch] tight-tracking"
+          className="text-[#041E40] text-lg md:text-xl mt-4 md:max-w-[52ch] "
         >
           In a rapidly evolving services landscape, STOC Advisory delivers deep
           financial, operational and M&A expertise so you can outpace
