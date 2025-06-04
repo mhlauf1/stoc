@@ -45,7 +45,7 @@ const ServiceCard: React.FC<{
       bg-[#041E40] text-white
       rounded-xl
       transition-colors duration-300 ease-out
-      hover:bg-[#344b5a]
+      hover:bg-[#343e5a]
     "
   >
     <div className="flex justify-end items-end w-full">
