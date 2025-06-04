@@ -4,6 +4,10 @@
   font-family: "Inter";
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .font-gambetta {
   font-family: "Gambetta";
 }
