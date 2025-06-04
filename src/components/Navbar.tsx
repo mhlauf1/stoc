@@ -87,12 +87,10 @@ export default function Navbar() {
     "/services",
     "/about",
     "/services/corporate-development-support",
-    "/services/growth-enablement-services",
     "/home-video",
     "/industries/hospitality-entertainment",
     "/industries/cannabis",
     "/industries/healthcare",
-    "/industries/retail-consumer-products",
   ];
   const isDynamicPage = dynamicPages.includes(pathname);
 
