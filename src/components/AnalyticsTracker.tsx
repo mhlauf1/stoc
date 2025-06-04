@@ -21,7 +21,7 @@ export default function AnalyticsTracker({
   useEffect(() => {
     const formattedTimestamp = moment().format("YYYY-MM-DD HH:mm:ss");
 
-    track("visit_with_headers", {
+    track("User Info", {
       ip,
       userAgent,
       referrer,
