@@ -3,6 +3,7 @@
 
 import { useEffect } from "react";
 import { track } from "@vercel/analytics";
+import moment from "moment";
 
 interface TrackerProps {
   ip: string;
@@ -18,14 +19,14 @@ export default function AnalyticsTracker({
   language,
 }: TrackerProps) {
   useEffect(() => {
-    // Fire a custom event named "visit_with_headers" with your payload
-    track("User info", {
+    const formattedTimestamp = moment().format("YYYY-MM-DD HH:mm:ss");
+
+    track("visit_with_headers", {
       ip,
       userAgent,
       referrer,
       language,
-      // timestamp is optional, but you can add it if you like:
-      timestamp: Date.now(),
+      timestamp: formattedTimestamp,
     });
   }, [ip, userAgent, referrer, language]);
 
