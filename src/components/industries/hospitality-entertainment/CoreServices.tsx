@@ -64,10 +64,10 @@ const ServiceCard: React.FC<OverviewCardProps> = ({
       </div>
     </div>
 
-    <h3 className="text-2xl md:text-3xl lg:text-4xl tracking-tight font-gambetta mb-4">
+    <h3 className="text-xl md:text-3xl lg:text-4xl tracking-tight font-gambetta mb-4">
       {title}
     </h3>
-    <p className="flex-1 text-md md:text-lg tracking-tight mb-8">
+    <p className="flex-1 text-md md:text-lg text-neutral-100 tracking-tight mb-8">
       {description}
     </p>
   </div>

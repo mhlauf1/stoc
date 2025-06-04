@@ -68,7 +68,7 @@ const ServiceCard: React.FC<{ Icon: LucideIcon; title: string }> = ({
         <Icon className="h-6 w-6 text-[#041E40]" />
       </div>
     </div>
-    <h3 className="text-2xl md:text-3xl tracking-tight text-center font-gambetta">
+    <h3 className="text-xl md:text-3xl tracking-tight text-center font-gambetta">
       {title}
     </h3>
   </div>

@@ -58,10 +58,12 @@ const ServiceCard = ({
       hover:bg-[#344b5a]
     "
   >
-    <h3 className="text-2xl sm:text-3xl md:text-4xl tracking-tight md:tracking-tight font-gambetta mb-2 md:mb-3">
+    <h3 className="text-xl sm:text-3xl md:text-4xl tracking-tight md:tracking-tight font-gambetta mb-2 md:mb-3">
       {title}
     </h3>
-    <p className="flex-1 md:text-lg text-base tracking-tight">{description}</p>
+    <p className="flex-1 md:text-lg text-neutral-100 tracking-tight">
+      {description}
+    </p>
   </div>
 );
 
