@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import localFont from "next/font/local";
 import Footer from "@/components/Footer";
+import { Analytics } from "@vercel/analytics/next";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -41,6 +42,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
