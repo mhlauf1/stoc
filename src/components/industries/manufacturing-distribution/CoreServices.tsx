@@ -47,7 +47,7 @@ const ServiceCard: React.FC<OverviewCardProps> = ({
       bg-[#041E40] text-white
       rounded-2xl h-full
       transition-colors duration-300 ease-out
-      hover:bg-[#2D474D]
+      hover:bg-[#2d384d]
     "
   >
     <div className="flex justify-end items-end w-full">

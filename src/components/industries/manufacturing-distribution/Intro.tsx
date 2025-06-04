@@ -74,10 +74,10 @@ const Intro: React.FC = () => (
         </span>
         <div className="h-px bg-neutral-300 w-[30px]" />
       </div>
-      <h2 className="text-neutral-800 text-2xl md:text-3xl lg:text-4xl  px-2 md:px-0 font-gambetta text-center md:text-start leading-tight tracking-tight">
+      <h2 className="text-neutral-800 text-2xl md:text-3xl lg:text-4xl max-w-[20ch] md:max-w-none  px-2 md:px-0 font-gambetta text-center md:text-start leading-tight tracking-tight">
         Global Manufacturing & Distribution Expertise
       </h2>
-      <div className="flex flex-col gap-4 mt-2">
+      <div className="flex flex-col gap-4 mt-4">
         <p className="tracking-tight  md:max-w-[84ch] text-md md:text-lg text-center md:text-start text-neutral-600">
           Combining deep sector knowledge with hands-on global experience, we
           partner with C-suite and operations teams to tackle today&apos;s

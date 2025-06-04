@@ -65,7 +65,7 @@ const Intro: React.FC = () => (
       <h2 className="text-neutral-800 text-2xl md:text-3xl lg:text-4xl px-2 md:px-0 max-w-[20ch] md:max-w-none font-gambetta text-center md:text-start leading-tight tracking-tight">
         Meeting the Moment in Business Services
       </h2>
-      <div className="flex flex-col gap-4 mt-2">
+      <div className="flex flex-col gap-4 mt-4">
         <p className="tracking-tight  md:max-w-[84ch] text-md md:text-lg text-center md:text-start text-neutral-600">
           The business services sector is undergoing relentless change—new
           entrants, talent wars and shifting client demands mean that
@@ -77,8 +77,8 @@ const Intro: React.FC = () => (
       </div>
     </div>
     <div className="flex flex-col  h-full mt-8  md:flex-row md:gap-6 gap-2 lg:gap-8">
-      <div className="flex items-start md:w-[40vw] bg-[#FCFCFC] py-10 md:py-12 rounded-xl justify-center flex-col gap-6">
-        <h3 className="text-neutral-800 px-4 md:px-12 text-2xl lg:text-3xl  font-gambetta  leading-tight tracking-tight">
+      <div className="flex items-start md:w-[40vw] bg-[#FCFCFC] py-10 md:py-12 rounded-xl justify-center flex-col gap-4 md:gap-6">
+        <h3 className="text-neutral-800 px-4 md:px-12 text-xl lg:text-3xl  font-gambetta  leading-tight tracking-tight">
           At a Glance
         </h3>
         {stepData.map(({ id, title, text, Icon }) => (

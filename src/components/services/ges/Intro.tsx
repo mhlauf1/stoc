@@ -3,7 +3,7 @@ import React from "react";
 const Intro: React.FC = () => (
   <section className="px-4 bg-linear-to-r from-[#F7F7F7] to-[#ebebeb] w-full  md:px-[5%] py-12  md:py-20">
     <div className="flex flex-col md:flex-row justify-between gap-8 md:gap-12">
-      <div className="flex flex-col items-start flex-1 gap-2 md:gap-4">
+      <div className="flex flex-col items-center md:tems-start flex-1 gap-2 md:gap-4">
         <div className="flex items-center mb-3 justify-center gap-4">
           <div className="h-px bg-neutral-300 w-[30px]" />
           <span
@@ -14,7 +14,7 @@ const Intro: React.FC = () => (
           </span>
           <div className="h-px bg-neutral-300 w-[30px]" />
         </div>
-        <h2 className="text-neutral-800 capitalize text-2xl md:text-3xl lg:text-4xl md:max-w-[32ch] font-gambetta text-start leading-tight tracking-tight">
+        <h2 className="text-neutral-800 capitalize text-2xl md:text-3xl lg:text-4xl max-w-[28ch] md:max-w-[32ch] font-gambetta text-center md:text-start md:leading-[1.3] tracking-tight">
           When processes are missing, data is scattered, and responsibilities
           aren&apos;t clear, early-stage growth stalls.
         </h2>

@@ -51,7 +51,7 @@ const StepItem: React.FC<StepItemProps> = ({ title, text, number }) => (
 
 const Intro: React.FC = () => (
   <section className="px-4 bg-linear-to-r from-[#F7F7F7] to-[#ebebeb] w-full md:px-[5%] py-12 md:py-20">
-    <div className="flex items-start flex-col">
+    <div className="flex items-center md:items-start flex-col">
       <div className="flex items-center mb-4 justify-center gap-4">
         <div className="h-px bg-neutral-300 w-[30px]" />
         <span
@@ -62,10 +62,10 @@ const Intro: React.FC = () => (
         </span>
         <div className="h-px bg-neutral-300 w-[30px]" />
       </div>
-      <h2 className="text-neutral-800 text-2xl md:text-3xl lg:text-4xl md:max-w-[20ch] font-gambetta text-start leading-tight tracking-tight">
+      <h2 className="text-neutral-800 text-2xl md:text-3xl lg:text-4xl max-w-[20ch] font-gambetta text-center md:text-start  tracking-tight">
         Hands-On M&A Support From Start to Finish
       </h2>
-      <div className="flex flex-col gap-4 mt-4">
+      <div className="flex flex-col gap-4 mt-6">
         <p className="tracking-tight md:max-w-[84ch] text-md md:text-lg text-start text-neutral-600">
           STOC Advisory&apos;s Corporate Development Support (CDS) offering
           helps private equity-backed and founder-led companies to accelerate

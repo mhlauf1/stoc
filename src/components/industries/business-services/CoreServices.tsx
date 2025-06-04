@@ -51,7 +51,7 @@ const ServiceCard: React.FC<OverviewCardProps> = ({
       hover:bg-[#2D474D]
     "
   >
-    <div className="flex mb-4 flex-row gap-3 md:gap-4 items-center">
+    <div className="flex mb-4 flex-col md:flex-row gap-3 md:gap-4 items-start md:items-center">
       <Icon className="h-6 w-6 md:h-8 md:w-8 text-white" />
       <h3 className="text-2xl md:text-3xl tracking-tight font-gambetta">
         {title}
@@ -96,7 +96,7 @@ const CoreServices: React.FC = () => (
     <h2 className="text-neutral-800 text-2xl md:text-3xl lg:text-4xl px-2 md:px-0 font-gambetta text-center md:text-start leading-tight tracking-tight">
       Driving Services Growth
     </h2>
-    <p className="tracking-tight mt-2 mb-8 text-md md:text-lg text-center text-neutral-600">
+    <p className="tracking-tight max-w-[36ch] mt-2 mb-8 text-md md:text-lg text-center text-neutral-600">
       Combining industry insight, operational excellence & full-cycle deal
       support.
     </p>
