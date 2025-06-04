@@ -121,7 +121,7 @@ export default function Footer() {
           <span className="text-neutral-300  text-xs md:text-sm  text-center md:text-left">
             Designed and developed by{" "}
             <a
-              href="https:www.lauf.co"
+              href="https://www.lauf.co/"
               target="_blank"
               className="font-semibold"
             >
