@@ -19,7 +19,7 @@ export default function AnalyticsTracker({
 }: TrackerProps) {
   useEffect(() => {
     // Fire a custom event named "visit_with_headers" with your payload
-    track("visit_with_headers", {
+    track("User info", {
       ip,
       userAgent,
       referrer,
