@@ -29,7 +29,7 @@ const imageVariants = {
 };
 
 const Hero: React.FC = () => (
-  <section className="md:h-[95vh]  relative flex flex-col md:flex-row gap-4 pt-[10vh] md:pt-12  bg-[#062010] items-center px-4 md:px-[5%]">
+  <section className="md:h-[95vh]  relative flex flex-col md:flex-row gap-4 pt-[12vh] md:pt-12  bg-[#062010] items-center px-4 md:px-[5%]">
     <div className="flex mt-8 mb-2 md:mb-0 flex-col items-start md:pt-0 flex-1">
       <div>
         <motion.h1

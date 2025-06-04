@@ -30,7 +30,7 @@ const imageVariants = {
 };
 
 const Hero: React.FC = () => (
-  <section className="md:h-[95vh] relative flex flex-col md:flex-row gap-4 pt-[10vh] md:pt-0 bg-[#041E40] items-center px-4 md:px-[5%]">
+  <section className="md:h-[95vh] relative flex flex-col md:flex-row gap-4 pt-[12vh] md:pt-0 bg-[#041E40] items-center px-4 md:px-[5%]">
     <div className="flex mt-8 flex-col mb-2 md:mb-0 items-start h-full justify-center flex-1">
       <div>
         {/* Heading with subtle left animation */}
