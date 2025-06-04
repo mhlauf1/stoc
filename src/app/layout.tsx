@@ -38,7 +38,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className}  ${gambetta.style}  antialiased`}>
+      <body className={`${inter.className}  ${gambetta.style} antialiased`}>
         <Navbar />
         {children}
         <Footer />
