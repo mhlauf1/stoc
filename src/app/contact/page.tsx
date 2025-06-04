@@ -86,13 +86,13 @@ export default function ContactPage() {
                 <span className="font-gambetta tracking-tight text-lg md:text-xl">
                   Baltimore, MD Office
                 </span>
-                <div className="flex items-center text-sm md:text-base gap-2">
+                <div className="flex md:items-center text-sm md:text-base gap-2">
                   <Phone size={20} className="size-4 md:size-5" />
                   <a href="tel:+16142061774" className="hover:underline">
                     (410)-812-6927
                   </a>
                 </div>
-                <div className="flex items-center text-sm md:text-base gap-2">
+                <div className="flex md:items-center text-sm md:text-base gap-2">
                   <MapPin size={20} className="size-4 md:size-5" />
                   <address className="not-italic">
                     606 Baltimore Ave. Suite 205, Towson, MD 21204
@@ -103,13 +103,13 @@ export default function ContactPage() {
                 <span className="font-gambetta tracking-tight text-lg md:text-xl">
                   Minneapolis, MN Office
                 </span>
-                <div className="flex items-center gap-2">
+                <div className="flex md:items-center gap-2">
                   <Phone size={20} className="size-4 md:size-5" />
                   <a href="tel:+16142061774" className="hover:underline">
                     (218)-244-8082
                   </a>
                 </div>
-                <div className="flex items-center text-sm md:text-base gap-2">
+                <div className="flex md:items-center text-sm md:text-base gap-2">
                   <MapPin size={20} className="size-4 md:size-5" />
                   <address className="not-italic">
                     121 N Washington Ave Suite 334 Edina, MN 55401
@@ -120,7 +120,7 @@ export default function ContactPage() {
                 <span className="font-gambetta tracking-tight text-lg md:text-xl">
                   Nashville, TN Office
                 </span>
-                <div className="flex items-center text-sm md:text-base gap-2">
+                <div className="flex md:items-center text-sm md:text-base gap-2">
                   <MapPin size={20} className="size-4 md:size-5" />
                   <address className="not-italic">
                     6200 Tennessee 100 Suite 302, Nashville, TN 37205
