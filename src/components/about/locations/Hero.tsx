@@ -61,8 +61,8 @@ const locations = [
 
 const Hero: React.FC = () => {
   return (
-    <section className="bg-[#F7F7F7] w-full min-h-screen mb-12 md:mb-16 flex flex-col px-4 md:px-[5%]">
-      <div className="flex flex-col md:flex-row py-[15vh] gap-8 flex-1">
+    <section className="bg-[#F7F7F7] w-full min-h-screen mb-0 md:mb-16 flex flex-col px-4 md:px-[5%]">
+      <div className="flex flex-col md:flex-row pt-[15vh] pb-[5vh] md:py-[15vh] gap-8 flex-1">
         {/* LEFT COLUMN */}
         <div className="flex-1 flex flex-col">
           {/* Section marker */}
@@ -158,7 +158,7 @@ const Hero: React.FC = () => {
           initial="hidden"
           whileInView="visible"
           variants={imageVariants}
-          viewport={{ once: true, amount: 0.1 }}
+          viewport={{ once: true, amount: 0.05 }}
           className="flex-1 flex items-center justify-center rounded-md bg-[#041E40] p-4"
         >
           <div className="relative w-full h-64 sm:h-80 md:w-[85%] md:h-[75%]">

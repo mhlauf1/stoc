@@ -23,8 +23,8 @@ const imageVariants = {
     opacity: 1,
     transition: {
       duration: 0.7,
-      ease: "easeOut",
-      delay: 0.3,
+      ease: "easeIn",
+      delay: 0.5,
     },
   },
 };
