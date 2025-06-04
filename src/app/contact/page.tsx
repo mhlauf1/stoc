@@ -62,7 +62,7 @@ export default function ContactPage() {
           className="flex flex-1 flex-col items-start"
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.1 }}
           variants={fadeUpVariant}
         >
           {/* Heading */}
@@ -78,9 +78,8 @@ export default function ContactPage() {
             className="flex flex-col gap-6  text-neutral-700"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.1 }}
             variants={fadeUpVariant}
-            transition={{ delay: 0.2 }}
           >
             <div className="flex flex-col gap-4 md:gap-8">
               <div className="flex flex-col gap-2">
@@ -137,9 +136,8 @@ export default function ContactPage() {
           className="flex flex-1 flex-col items-start"
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ once: true, amount: 0.1 }}
           variants={fadeUpVariant}
-          transition={{ delay: 0.4 }}
         >
           {/* Success message */}
           {success && (
@@ -157,9 +155,8 @@ export default function ContactPage() {
               className="flex flex-col"
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.1 }}
               variants={fadeUpVariant}
-              transition={{ delay: 0.5 }}
             >
               <label htmlFor="name" className="block text-sm font-medium mb-1">
                 Name
@@ -178,9 +175,8 @@ export default function ContactPage() {
               className="flex flex-col"
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.1 }}
               variants={fadeUpVariant}
-              transition={{ delay: 0.6 }}
             >
               <label htmlFor="email" className="block text-sm font-medium mb-1">
                 Email
@@ -199,9 +195,8 @@ export default function ContactPage() {
               className="flex flex-col"
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.1 }}
               variants={fadeUpVariant}
-              transition={{ delay: 0.7 }}
             >
               <label
                 htmlFor="message"
@@ -224,9 +219,8 @@ export default function ContactPage() {
               className="flex items-center justify-center"
               initial="hidden"
               whileInView="visible"
-              viewport={{ once: true, amount: 0.3 }}
+              viewport={{ once: true, amount: 0.1 }}
               variants={fadeUpVariant}
-              transition={{ delay: 0.8 }}
             >
               <PrimaryButton
                 type="submit"
@@ -243,9 +237,8 @@ export default function ContactPage() {
             className="flex mt-8 items-center md:justify-start justify-center w-full text-neutral-600 gap-2"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: true, amount: 0.1 }}
             variants={fadeUpVariant}
-            transition={{ delay: 0.9 }}
           >
             <Mail size={20} className="size-4 md:size-5" />
             <a
