@@ -3,7 +3,7 @@
 
 import { useState } from "react";
 import { Mail, Phone, MapPin } from "lucide-react";
-// import ReCAPTCHA from "react-google-recaptcha";
+import { motion } from "framer-motion";
 import { PrimaryButton } from "@/components/Button";
 
 export default function ContactPage() {
@@ -44,21 +44,45 @@ export default function ContactPage() {
     }
   };
 
+  // Simple fade-up variant
+  const fadeUpVariant = {
+    hidden: { opacity: 0, y: 20 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5, ease: "easeOut" },
+    },
+  };
+
   return (
-    <main className=" pt-[12vh] md:pt-[15vh]  px-6 md:px-12 lg:px-32 py-16 md:py-24">
+    <main className="pt-[12vh] md:pt-[15vh] px-6 md:px-12 lg:px-32 py-16 md:py-24">
       <div className="flex flex-col md:flex-row gap-8 md:gap-16">
-        <div className="flex flex-1 flex-col items-start">
+        {/* Left Column: Heading + Contact Details */}
+        <motion.div
+          className="flex flex-1 flex-col items-start"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={fadeUpVariant}
+        >
           {/* Heading */}
           <h1 className="text-2xl md:text-3xl font-gambetta tracking-tight mb-1">
             Contact Us
           </h1>
-          <p className="text-neutral-600  mb-8">
+          <p className="text-neutral-600 mb-4 md:mb-8">
             Fill out the form and we will be in touch soon.
           </p>
 
           {/* Contact details */}
-          <div className="flex flex-col gap-6 mb-12 text-neutral-700">
-            <div className="flex flex-col  gap-8">
+          <motion.div
+            className="flex flex-col gap-6  text-neutral-700"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={fadeUpVariant}
+            transition={{ delay: 0.2 }}
+          >
+            <div className="flex flex-col gap-4 md:gap-8">
               <div className="flex flex-col gap-2">
                 <span className="font-gambetta tracking-tight text-lg md:text-xl">
                   Baltimore, MD Office
@@ -71,12 +95,12 @@ export default function ContactPage() {
                 </div>
                 <div className="flex items-center text-sm md:text-base gap-2">
                   <MapPin size={20} className="size-4 md:size-5" />
-                  <address className=" not-italic">
+                  <address className="not-italic">
                     606 Baltimore Ave. Suite 205, Towson, MD 21204
                   </address>
                 </div>
               </div>
-              <div className="flex flex-col  text-sm md:text-base gap-2">
+              <div className="flex flex-col text-sm md:text-base gap-2">
                 <span className="font-gambetta tracking-tight text-lg md:text-xl">
                   Minneapolis, MN Office
                 </span>
@@ -86,42 +110,57 @@ export default function ContactPage() {
                     (218)-244-8082
                   </a>
                 </div>
-                <div className="flex items-center  text-sm md:text-base gap-2">
+                <div className="flex items-center text-sm md:text-base gap-2">
                   <MapPin size={20} className="size-4 md:size-5" />
                   <address className="not-italic">
                     121 N Washington Ave Suite 334 Edina, MN 55401
                   </address>
                 </div>
               </div>
-              <div className="flex flex-col  text-sm md:text-base gap-2">
+              <div className="flex flex-col text-sm md:text-base gap-2">
                 <span className="font-gambetta tracking-tight text-lg md:text-xl">
                   Nashville, TN Office
                 </span>
-                {/* <div className="flex items-center gap-2">
-                  <Phone size={20} className="" />
-                  <a href="tel:+16142061774" className="hover:underline">
-                    (410)-812-6927
-                  </a>
-                </div> */}
-                <div className="flex items-center  text-sm md:text-base gap-2">
+                <div className="flex items-center text-sm md:text-base gap-2">
                   <MapPin size={20} className="size-4 md:size-5" />
-                  <address className=" not-italic">
+                  <address className="not-italic">
                     6200 Tennessee 100 Suite 302, Nashville, TN 37205
                   </address>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-        <div className="flex flex-1 flex-col items-start">
-          {/* Form */}
+          </motion.div>
+        </motion.div>
+
+        {/* Right Column: Form */}
+        <motion.div
+          className="flex flex-1 flex-col items-start"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={fadeUpVariant}
+          transition={{ delay: 0.4 }}
+        >
+          {/* Success message */}
           {success && (
-            <div className="bg-green-100 text-green-800 p-4 rounded-lg mb-6">
+            <motion.div
+              className="bg-green-100 text-green-800 p-4 rounded-lg mb-6"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+            >
               Thanks for reaching out! We&apos;ll get back to you shortly.
-            </div>
+            </motion.div>
           )}
+
           <form onSubmit={handleSubmit} className="space-y-6 w-full">
-            <div>
+            <motion.div
+              className="flex flex-col"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={fadeUpVariant}
+              transition={{ delay: 0.5 }}
+            >
               <label htmlFor="name" className="block text-sm font-medium mb-1">
                 Name
               </label>
@@ -131,10 +170,18 @@ export default function ContactPage() {
                 required
                 value={name}
                 onChange={(e) => setName(e.target.value)}
-                className="w-full border border-neutral-300 rounded-lg px-4 py-3 "
+                className="w-full border border-neutral-300 rounded-lg px-4 py-3"
               />
-            </div>
-            <div>
+            </motion.div>
+
+            <motion.div
+              className="flex flex-col"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={fadeUpVariant}
+              transition={{ delay: 0.6 }}
+            >
               <label htmlFor="email" className="block text-sm font-medium mb-1">
                 Email
               </label>
@@ -144,10 +191,18 @@ export default function ContactPage() {
                 required
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full border border-neutral-300 rounded-lg px-4 py-3 "
+                className="w-full border border-neutral-300 rounded-lg px-4 py-3"
               />
-            </div>
-            <div>
+            </motion.div>
+
+            <motion.div
+              className="flex flex-col"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={fadeUpVariant}
+              transition={{ delay: 0.7 }}
+            >
               <label
                 htmlFor="message"
                 className="block text-sm font-medium mb-1"
@@ -160,30 +215,47 @@ export default function ContactPage() {
                 required
                 value={message}
                 onChange={(e) => setMessage(e.target.value)}
-                className="w-full border border-neutral-300 rounded-lg px-4 py-3 "
+                className="w-full border border-neutral-300 rounded-lg px-4 py-3"
                 placeholder="Type your message…"
               />
-            </div>
+            </motion.div>
 
-            {/* <ReCAPTCHA
-          sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY!}
-          onChange={(token) => setCaptchaToken(token)}
-        /> */}
-
-            <PrimaryButton type="submit" className="mt-4" disabled={submitting}>
-              {submitting ? "Submitting…" : "Submit"}
-            </PrimaryButton>
+            <motion.div
+              className="flex items-center justify-center"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+              variants={fadeUpVariant}
+              transition={{ delay: 0.8 }}
+            >
+              <PrimaryButton
+                type="submit"
+                className="mt-4"
+                disabled={submitting}
+              >
+                {submitting ? "Submitting…" : "Submit"}
+              </PrimaryButton>
+            </motion.div>
           </form>
-          <div className="flex mt-8 items-center md:justify-start justify-center w-full text-neutral-600 gap-2">
+
+          {/* Email fallback */}
+          <motion.div
+            className="flex mt-8 items-center md:justify-start justify-center w-full text-neutral-600 gap-2"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
+            variants={fadeUpVariant}
+            transition={{ delay: 0.9 }}
+          >
             <Mail size={20} className="size-4 md:size-5" />
             <a
               href="mailto:Inquiry@STOCAdvisory.com"
-              className="hover:underline  tracking-tight"
+              className="hover:underline tracking-tight"
             >
               Inquiry@STOCAdvisory.com
             </a>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
       </div>
     </main>
   );
