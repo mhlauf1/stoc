@@ -24,7 +24,7 @@ export default function IndustryList() {
           <h3 className="text-2xl md:text-3xl lg:text-4xl text-center md:text-start max-w-[20ch] mt-2 font-gambetta tracking-tight leading-snug">
             Transforming Strategic Vision into Tangible Results
           </h3>
-          <p className="text-neutral-600 text-center md:text-start tracking-tight max-w-[48ch] md:max-w-[58ch] mt-6 mb-5 text-md sm:text-lg md:text-xl">
+          <p className="text-neutral-600 text-center md:text-start tracking-tight max-w-[48ch] md:max-w-[58ch] mt-3 md:mt-6 mb-5 text-md sm:text-lg md:text-xl">
             Our experienced advisors deliver data-driven insights and practical
             support to inform decision-making and enhance performance.
           </p>
