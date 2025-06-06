@@ -58,8 +58,8 @@ const Deliverable = ({
   <div
     className="
       group
-      flex flex-col relative items-start p-6 md:p-8
-      bg-[#F7F7F7] text-[#041E40]
+      flex flex-col relative items-start py-4 px-2 md:px-4
+      text-[#041E40]
       rounded-xl h-full
       transition-colors duration-300 ease-out
       hover:bg-[#FCFCFC]
@@ -75,7 +75,7 @@ const Deliverable = ({
 );
 
 const DeliverableGrid: React.FC = () => (
-  <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+  <div className="grid  gap-4 grid-cols-1 md:grid-cols-2">
     {data.map((svc, idx) => (
       <motion.div
         key={svc.id}
@@ -95,13 +95,13 @@ const DeliverableGrid: React.FC = () => (
 );
 
 const Deliverables: React.FC = () => (
-  <section className="flex flex-col gap-4 md:gap-6 px-4 md:px-[5%] py-12 md:py-20">
-    <h2 className="text-neutral-800 text-2xl md:text-3xl lg:text-4xl font-gambetta text-start leading-tight tracking-tight">
+  <section className="flex flex-col bg-[#F7F7F7]  md:px-4 lg:px-8 py-12 gap-3 md:gap-4">
+    <h3 className="text-neutral-800 text-2xl md:text-3xl lg:text-4xl font-gambetta text-start leading-tight tracking-tight">
       Core Deliverables
-    </h2>
+    </h3>
 
     <motion.div
-      className="h-[1px] bg-neutral-200 w-full my-1"
+      className="h-[1px] mb-4 bg-neutral-200 w-full my-1"
       initial={{ width: 0 }}
       whileInView={{ width: "100%" }}
       transition={{ duration: 1, ease: "easeOut" }}

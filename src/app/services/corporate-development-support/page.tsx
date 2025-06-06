@@ -7,7 +7,6 @@ const CorporateDevelopmentPage = () => {
     <main>
       <Hero />
       <Intro />
-      <Deliverables />
     </main>
   );
 };

@@ -59,7 +59,7 @@ const Hero: React.FC = () => (
       className="relative w-full mb-12 md:mb-0 md:w-1/2 h-[45vh] md:h-[65vh]"
     >
       <Image
-        src="/ges-main.jpg"
+        src="/ges-main-2.jpg"
         alt="Transaction Advisory background"
         fill
         className="object-cover object-center rounded-lg"
