@@ -8,7 +8,7 @@ export default function Intro() {
         {/* image column */}
         <div className="relative hidden md:flex w-full h-64 md:h-[50vh]">
           <Image
-            src="/cfo-3.jpeg"
+            src="/cfo-2.jpg"
             alt="CFO Advisory"
             fill
             className="rounded-lg object-cover"
