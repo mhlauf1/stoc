@@ -2,7 +2,6 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import { motion } from "framer-motion";
 
 const CTA: React.FC = () => {
   return (
@@ -34,13 +33,7 @@ const CTA: React.FC = () => {
           </p>
 
           {/* Animated Email form */}
-          <motion.form
-            className="w-full flex flex-col md:flex-row gap-4 mt-4 justify-center"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: "easeOut" }}
-            viewport={{ once: true, amount: 0.1 }}
-          >
+          <form className="w-full flex flex-col md:flex-row gap-4 mt-4 justify-center">
             <div className="inline-flex w-full bg-white max-w-lg rounded-full overflow-hidden border-2 p-1 border-white">
               <input
                 type="email"
@@ -80,7 +73,7 @@ const CTA: React.FC = () => {
                 Subscribe
               </button>
             </Link>
-          </motion.form>
+          </form>
         </div>
       </section>
     </div>
