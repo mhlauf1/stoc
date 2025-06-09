@@ -57,11 +57,15 @@ const locations = [
     city: "Nashville, TN",
     address: "6200 Tennessee 100 Suite 302, Nashville, TN 37205",
   },
+  {
+    city: "Dallas",
+    address: "Coming Soon",
+  },
 ];
 
 const Hero: React.FC = () => {
   return (
-    <section className="bg-[#F7F7F7] w-full min-h-screen mb-0 md:mb-16 flex flex-col px-4 md:px-[5%]">
+    <section className="bg-[#F7F7F7] w-full min-h-screen flex flex-col px-4 md:px-[5%]">
       <div className="flex flex-col md:flex-row pt-[15vh] pb-[5vh] md:py-[15vh] gap-8 flex-1">
         {/* LEFT COLUMN */}
         <div className="flex-1 flex flex-col">
@@ -91,7 +95,7 @@ const Hero: React.FC = () => {
             variants={textVariants}
             custom={1}
             viewport={{ once: true, amount: 0.1 }}
-            className="text-neutral-800 text-3xl text-start md:text-4xl lg:text-5xl font-gambetta leading-tight tracking-tight"
+            className="text-neutral-800 text-3xl text-start md:text-4xl font-gambetta leading-tight tracking-tight"
           >
             Our Locations
           </motion.h2>
@@ -103,7 +107,7 @@ const Hero: React.FC = () => {
             variants={textVariants}
             custom={2}
             viewport={{ once: true, amount: 0.1 }}
-            className="mt-4 text-lg md:text-xl text-start text-neutral-600 tracking-tight max-w-prose"
+            className="mt-4 md:text-lg text-start text-neutral-600 tracking-tight md:max-w-[90%]"
           >
             STOC Advisory maintains a strong presence in both Baltimore and
             Minneapolis to serve our East Coast and Midwest clients efficiently.
@@ -117,13 +121,13 @@ const Hero: React.FC = () => {
             variants={textVariants}
             custom={3}
             viewport={{ once: true, amount: 0.1 }}
-            className="mt-8 text-neutral-700 text-xl md:text-2xl tracking-tight font-gambetta"
+            className="mt-4 md:mt-8 text-neutral-900 text-lg md:text-xl tracking-tight font-gambetta"
           >
             We are located at:
           </motion.span>
-
+          <div className="h-[1px] w-full bg-neutral-200  mt-4"></div>
           {/* Info grid */}
-          <div className="mt-4 grid grid-cols-1 gap-6">
+          <div className="mt-4  grid grid-cols-1 gap-7">
             {locations.map(({ city, address, phone }, idx) => (
               <motion.div
                 key={city}
@@ -132,16 +136,14 @@ const Hero: React.FC = () => {
                 variants={cardVariants}
                 custom={idx}
                 viewport={{ once: true, amount: 0.1 }}
-                className="bg-white tracking-tight p-6 md:p-8 rounded-md shadow-sm"
+                className=""
               >
-                <h4 className="text-neutral-800 text-2xl md:text-3xl tracking-tight font-gambetta">
+                <h4 className="text-neutral-800 text-lg md:text-xl tracking-tight font-gambetta">
                   {city}
                 </h4>
-                <p className="text-lg leading-7 text-neutral-600 mt-2">
-                  {address}
-                </p>
+                <p className=" text-neutral-600 ">{address}</p>
                 {phone && (
-                  <p className="text-lg leading-7 text-neutral-600 mt-2">
+                  <p className=" text-neutral-600">
                     Phone:{" "}
                     <a href={`tel:${phone}`} className="hover:text-black">
                       {phone}

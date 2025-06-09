@@ -4,7 +4,6 @@ import React from "react";
 import { teamMeberData } from "@/utils/data";
 import type { TeamMemberProps } from "@/utils/types";
 import Image from "next/image";
-import { motion } from "framer-motion";
 
 const TeamMember = ({ name, image, location, title }: TeamMemberProps) => (
   <div className="flex flex-col items-start">
@@ -31,13 +30,7 @@ const TeamMembers: React.FC = () => {
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-8 md:gap-y-12 md:grid-cols-3">
         {teamMeberData.map((item) => (
-          <motion.div
-            key={item.id}
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, ease: "easeIn", delay: 0.1 }}
-            viewport={{ once: true, amount: 0.05 }}
-          >
+          <div key={item.id}>
             <TeamMember
               id={item.id}
               name={item.name}
@@ -45,7 +38,7 @@ const TeamMembers: React.FC = () => {
               image={item.image}
               title={item.title}
             />
-          </motion.div>
+          </div>
         ))}
       </div>
     </section>

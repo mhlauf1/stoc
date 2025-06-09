@@ -264,7 +264,7 @@ export const teamMeberData: TeamMemberProps[] = [
     },
     {
         id: 4,
-        name: "Anne Federico",
+        name: "Anne Gill",
         image: "/Anne_Federico.jpg",
         location: "Baltimore, MD",
         title: "Manager | TAS"

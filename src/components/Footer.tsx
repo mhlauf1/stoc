@@ -81,16 +81,19 @@ export default function Footer() {
             Locations
           </h4>
           <ul className="space-y-3 text-neutral-300">
-            {["Baltimore, MD", "Minneapolis, MN", "Nashville, TN"].map(
-              (loc) => (
-                <li
-                  key={loc}
-                  className="hover:text-white transition-colors duration-200"
-                >
-                  {loc}
-                </li>
-              )
-            )}
+            {[
+              "Baltimore, MD",
+              "Minneapolis, MN",
+              "Nashville, TN",
+              "Dallas, TX",
+            ].map((loc) => (
+              <li
+                key={loc}
+                className="hover:text-white transition-colors duration-200"
+              >
+                {loc}
+              </li>
+            ))}
           </ul>
         </div>
         {/* Social */}

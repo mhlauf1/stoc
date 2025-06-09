@@ -16,10 +16,12 @@ const textVariants = {
   }),
 };
 
+const careers = false;
+
 const Hero: React.FC = () => {
   return (
-    <section className="bg-[#F7F7F7] w-full min-h-screen mb-12 md:mb-16 flex flex-col px-4 md:px-[5%]">
-      <div className="flex flex-col py-[15vh] gap-4 items-center flex-1">
+    <section className="bg-[#F7F7F7] w-full min-h-screen flex flex-col px-4 md:px-[5%]">
+      <div className="flex flex-col py-[15vh] gap-2 items-start flex-1">
         {/* Section marker */}
         <motion.div
           initial="hidden"
@@ -58,7 +60,7 @@ const Hero: React.FC = () => {
           variants={textVariants}
           custom={2}
           viewport={{ once: true, amount: 0.1 }}
-          className="mt-2 text-md md:text-lg text-center text-neutral-600 tracking-tight max-w-4xl"
+          className="mt-2 text-md md:text-lg text-start text-neutral-600 tracking-tight max-w-4xl"
         >
           At STOC Advisory, we help private equity and high-growth companies
           unlock value in transformative ways. Our team consists of highly
@@ -73,7 +75,7 @@ const Hero: React.FC = () => {
           variants={textVariants}
           custom={3}
           viewport={{ once: true, amount: 0.1 }}
-          className="mt-4 text-md md:text-lg text-center text-neutral-600 tracking-tight max-w-4xl"
+          className="mt-4 text-md md:text-lg text-start text-neutral-600 tracking-tight max-w-4xl"
         >
           We&apos;re growing fast and we&apos;re always looking for smart,
           curious, and ambitious people to grow with us.
@@ -85,12 +87,21 @@ const Hero: React.FC = () => {
           variants={textVariants}
           custom={4}
           viewport={{ once: true, amount: 0.1 }}
-          className="pt-8 mt-8 border-t border-neutral-300 w-full max-w-4xl"
+          className="pt-6 mt-6 border-t border-neutral-300 w-full max-w-4xl"
         >
-          <h3 className="text-neutral-800 text-xl text-center md:text-2xl font-gambetta leading-tight tracking-tight">
+          <h3 className="text-neutral-800 text-xl text-start md:text-2xl font-gambetta leading-tight tracking-tight">
             Current Openings
           </h3>
         </motion.div>
+        {!careers ? (
+          <div>
+            <p className="mt-2 text-md md:text-lg text-start text-neutral-600 tracking-tight max-w-4xl">
+              There are no active job openings right now.
+            </p>
+          </div>
+        ) : (
+          <div></div>
+        )}
       </div>
     </section>
   );

@@ -95,7 +95,7 @@ export default function ContactPage() {
                 <div className="flex md:items-center text-sm md:text-base gap-2">
                   <MapPin size={20} className="size-4 md:size-5" />
                   <address className="not-italic">
-                    606 Baltimore Ave. Suite 205, Towson, MD 21204
+                    600 Baltimore Ave., Suite 205, Towson, MD 21204
                   </address>
                 </div>
               </div>
