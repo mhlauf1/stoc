@@ -127,7 +127,7 @@ export default function ContactPage() {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
             >
-              Thanks for reaching out! We'll get back to you shortly.
+              Thanks for reaching out! We&apos;ll get back to you shortly.
             </motion.div>
           )}
 
