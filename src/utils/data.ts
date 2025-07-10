@@ -248,14 +248,6 @@ export const teamMeberData: TeamMemberProps[] = [
         title: "Co-Founder | Managing Partner"
     },
     {
-        id: 2,
-        name: "Griffin Ashkin",
-        image: "/Griffin-ashkin.jpg",
-        location: "Baltimore, MD",
-        title: "Director | GES"
-
-    },
-    {
         id: 3,
         name: "Sam Luetgers",
         image: "/Sam_Luetgers.jpg",
