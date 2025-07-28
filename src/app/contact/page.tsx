@@ -96,7 +96,7 @@ export default function ContactPage() {
                 <div className="flex items-center gap-2">
                   <MapPin size={20} className="size-4 md:size-5" />
                   <address className="not-italic">
-                    121 N Washington Ave Suite 334 Edina, MN 55401
+                    7400 Metro Blvd. Suite 450 Edina, MN 55439
                   </address>
                 </div>
               </div>
