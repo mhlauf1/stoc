@@ -8,10 +8,7 @@ import { Analytics } from "@vercel/analytics/next";
 import Script from "next/script";
 import React from "react";
 
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-});
+const inter = Inter({ subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
   title: "STOC Advisory",
@@ -33,33 +30,38 @@ const gambetta = localFont({
     },
   ],
 });
+
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en">
       <head>
+        {/* Google Analytics */}
         <Script
-          async
+          strategy="afterInteractive"
           src="https://www.googletagmanager.com/gtag/js?id=G-FDNSZWXM62"
-        ></Script>
-        <Script id="google-analytics">
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
           {`
-    window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-FDNSZWXM62');
-  `}
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-FDNSZWXM62');
+          `}
         </Script>
 
+        {/* Customers.ai - stays right after <head> */}
         <Script
+          id="customers-ai"
           async
+          strategy="afterInteractive"
           src="https://mm-uxrv.com/js/mm_914401e1-b4be-4e4f-8795-3341aaa9df8b-00433719.js"
-        ></Script>
+        />
       </head>
-      <body className={`${inter.className}  ${gambetta.style} antialiased`}>
+      <body className={`${inter.className} ${gambetta.style} antialiased`}>
         <Navbar />
         {children}
         <Footer />
