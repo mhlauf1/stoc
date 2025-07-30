@@ -53,6 +53,11 @@ export default function RootLayout({
   gtag('config', 'G-FDNSZWXM62');
   `}
         </Script>
+
+        <Script
+          async
+          src="https://mm-uxrv.com/js/mm_914401e1-b4be-4e4f-8795-3341aaa9df8b-00433719.js"
+        ></Script>
       </head>
       <body className={`${inter.className}  ${gambetta.style} antialiased`}>
         <Navbar />
