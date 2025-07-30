@@ -318,6 +318,13 @@ export const teamMeberData: TeamMemberProps[] = [
         location: "Nashville, TN",
         title: "VP Business Development"
     },
+    {
+        id: 13,
+        name: "Srushti Kulkarni",
+        image: "/Srushti_Kulkarni.jpg",
+        location: "Baltimore, MD",
+        title: "Marketing Manager"
+    },
 
 ]
 
