@@ -53,13 +53,11 @@ export default function RootLayout({
           `}
         </Script>
 
-        {/* Customers.ai - stays right after <head> */}
         <Script
-          id="customers-ai"
+          src="https://analytics.ahrefs.com/analytics.js"
+          data-key="MH0mfu5FjWumOUu8/TT1JQ"
           async
-          strategy="afterInteractive"
-          src="https://mm-uxrv.com/js/mm_914401e1-b4be-4e4f-8795-3341aaa9df8b-00433719.js"
-        />
+        ></Script>
       </head>
       <body className={`${inter.className} ${gambetta.style} antialiased`}>
         <Navbar />
