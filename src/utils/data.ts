@@ -330,7 +330,7 @@ export const teamMeberData: TeamMemberProps[] = [
         name: "Hung Nguyen",
         image: "/HungNguyen.jpg",
         location: "Minneapolis, MN",
-        title: "Transaction Advisory Associate"
+        title: "Transaction Advisory Associate | TAS"
     },
 
 ]
