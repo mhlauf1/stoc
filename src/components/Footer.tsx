@@ -115,23 +115,33 @@ export default function Footer() {
         </div>
       </div>
       <div className="w-full mt-10 h-[1px] bg-neutral-500 my-6"></div>
-      <div className="md:justify-center items-start md:items-center flex-col">
-        <p className="text-neutral-300 text-start md:text-center uppercase text-xs tracking-wide">
-          STOC Advisory is not a CPA firm
-        </p>
-        <p className="text-neutral-300 mt-2 text-start md:text-center text-xs md:text-sm leading-6">
-          ©2025 STOC Advisory, LLC.{" "}
-          <span className="text-neutral-300  text-xs md:text-sm  text-center md:text-left">
-            Designed and developed by{" "}
-            <a
-              href="https://www.lauf.co/"
-              target="_blank"
-              className="font-semibold"
-            >
-              Lauf.
-            </a>
-          </span>
-        </p>
+      <div className="flex flex-col md:flex-row items-center justify-between">
+        <div>
+          <p className="text-neutral-300 text-start  uppercase text-xs tracking-wide">
+            STOC Advisory is not a CPA firm
+          </p>
+          <p className="text-neutral-300 mt-2 text-start  text-xs md:text-sm leading-6">
+            ©2025 STOC Advisory, LLC.{" "}
+            <span className="text-neutral-300  text-xs md:text-sm  text-center md:text-left">
+              Designed and developed by{" "}
+              <a
+                href="https://www.lauf.co/"
+                target="_blank"
+                className="font-semibold"
+              >
+                Lauf.
+              </a>
+            </span>
+          </p>
+        </div>
+        <div className="flex flex-col items-end gap-1">
+          <a href="/privacy" className="text-neutral-300 text-start text-xs ">
+            Privacy Policy
+          </a>
+          <a href="/terms" className="text-neutral-300 text-start text-xs">
+            Terms of Service
+          </a>
+        </div>
       </div>
     </footer>
   );

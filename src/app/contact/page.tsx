@@ -8,25 +8,40 @@ import { PrimaryButton } from "@/components/Button";
 export default function ContactPage() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState(""); // NEW
   const [message, setMessage] = useState("");
   const [submitting, setSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-
     setSubmitting(true);
+
+    // If a phone is provided, treat it as consent under the displayed language.
+    const smsConsent = Boolean(phone?.trim());
+    const payload = {
+      name,
+      email,
+      phone: phone?.trim() || null,
+      message,
+      // Optional metadata you may want to persist for A2P audit trails:
+      smsConsent,
+      smsConsentAt: smsConsent ? new Date().toISOString() : null,
+      userAgent: typeof window !== "undefined" ? navigator.userAgent : null,
+    };
+
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name, email, message }),
+        body: JSON.stringify(payload),
       });
 
       if (res.ok) {
         setSuccess(true);
         setName("");
         setEmail("");
+        setPhone(""); // NEW
         setMessage("");
       } else {
         alert("Oops! Something went wrong.");
@@ -55,6 +70,8 @@ export default function ContactPage() {
         <motion.div
           className="flex flex-1 flex-col items-start"
           variants={fadeUpVariant}
+          initial="hidden"
+          animate="visible"
         >
           <h1 className="text-2xl md:text-3xl font-gambetta tracking-tight mb-1">
             Contact Us
@@ -120,6 +137,8 @@ export default function ContactPage() {
         <motion.div
           className="flex flex-1 flex-col items-start"
           variants={fadeUpVariant}
+          initial="hidden"
+          animate="visible"
         >
           {success && (
             <motion.div
@@ -158,6 +177,46 @@ export default function ContactPage() {
                 onChange={(e) => setEmail(e.target.value)}
                 className="w-full border border-neutral-300 rounded-lg px-4 py-3"
               />
+            </div>
+
+            {/* NEW: Optional Phone field + consent language */}
+            <div className="flex flex-col">
+              <label htmlFor="phone" className="block text-sm font-medium mb-1">
+                Phone{" "}
+                <span className="text-neutral-500 font-normal">(optional)</span>
+              </label>
+              <input
+                id="phone"
+                type="tel"
+                inputMode="tel"
+                placeholder="(555) 555-1234"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                className="w-full border border-neutral-300 rounded-lg px-4 py-3"
+                aria-describedby="sms-consent"
+                // Optional light pattern to reduce typos, but keep flexible:
+                pattern="^[0-9()+\-\s\.]{7,}$"
+              />
+              <p
+                id="sms-consent"
+                className="mt-2 text-xs leading-5 text-neutral-600"
+              >
+                By providing your phone number,{" "}
+                <span className="font-medium">
+                  you agree to receive automated follow-up, reminder, and
+                  promotional messages with varying frequency.
+                </span>{" "}
+                Msg &amp; data rates may apply. Reply STOP to end. Text HELP for
+                help.{" "}
+                <a href="/terms" className="underline">
+                  Terms of Service
+                </a>{" "}
+                and{" "}
+                <a href="/privacy" className="underline">
+                  Privacy Policy
+                </a>
+                .
+              </p>
             </div>
 
             <div className="flex flex-col">
