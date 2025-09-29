@@ -208,11 +208,11 @@ export default function ContactPage() {
                 </span>{" "}
                 Msg &amp; data rates may apply. Reply STOP to end. Text HELP for
                 help.{" "}
-                <a href="/terms" className="underline">
+                <a href="/terms-of-service" className="underline">
                   Terms of Service
                 </a>{" "}
                 and{" "}
-                <a href="/privacy" className="underline">
+                <a href="/privacy-policy" className="underline">
                   Privacy Policy
                 </a>
                 .

@@ -135,10 +135,16 @@ export default function Footer() {
           </p>
         </div>
         <div className="flex flex-col items-end gap-1">
-          <a href="/privacy" className="text-neutral-300 text-start text-xs ">
+          <a
+            href="/privacy-policy"
+            className="text-neutral-300 text-start text-xs "
+          >
             Privacy Policy
           </a>
-          <a href="/terms" className="text-neutral-300 text-start text-xs">
+          <a
+            href="/terms-of-service"
+            className="text-neutral-300 text-start text-xs"
+          >
             Terms of Service
           </a>
         </div>

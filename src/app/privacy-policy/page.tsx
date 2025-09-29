@@ -60,11 +60,10 @@ export default function PrivacyPage() {
       <h2>4. SMS Program & Consent (A2P 10DLC)</h2>
       <p>
         If you provide your phone number, you consent to receive automated
-        SMS/MMS messages (follow-ups, reminders, promotions). Message frequency
-        varies. Msg &amp; data rates may apply. Reply <strong>STOP</strong> to
-        opt out; reply <strong>HELP</strong> for help. Consent is not a
-        condition of purchase. Carriers are not liable for delayed or
-        undelivered messages.
+        SMS/MMS messages (follow-ups, reminders). Message frequency varies. Msg
+        &amp; data rates may apply. Reply <strong>STOP</strong> to opt out;
+        reply <strong>HELP</strong> for help. Consent is not a condition of
+        purchase. Carriers are not liable for delayed or undelivered messages.
       </p>
       <p>
         We log consent metadata (e.g., phone number, timestamp, form context,
@@ -145,6 +144,7 @@ export default function PrivacyPage() {
           and to data portability; you may lodge a complaint with your local
           supervisory authority.
         </li>
+        <li>We do not sell personal information.</li>
       </ul>
 
       <h2>9. Cookies & Analytics</h2>

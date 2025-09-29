@@ -46,10 +46,8 @@ export default function TermsPage() {
 
       <h2>4. User Submissions</h2>
       <p>
-        If you submit information (e.g., via contact forms), you represent that
-        it is accurate and you have the right to provide it. You grant us a
-        non-exclusive, worldwide, royalty-free license to use the submission to
-        operate, improve, and provide the Services.
+        Use submissions for the purpose of responding to inquiries or providing
+        the Services.
       </p>
 
       <h2>5. Prohibited Conduct</h2>
@@ -62,7 +60,8 @@ export default function TermsPage() {
       <h2>6. Third-Party Links</h2>
       <p>
         The Services may contain links to third-party sites or services. We are
-        not responsible for their content or practices.
+        not responsible for their content or practices. Links do not imply
+        endorsement.
       </p>
 
       <h2>7. Disclaimers</h2>
@@ -91,11 +90,11 @@ export default function TermsPage() {
       <h2>10. SMS Terms (A2P 10DLC)</h2>
       <p>
         By providing your phone number via our forms, you consent to receive
-        automated SMS/MMS messages, including follow-ups, reminders, and
-        promotional content, at the number provided. Message frequency may vary.
-        Message and data rates may apply. You can opt out at any time by
-        replying <strong>STOP</strong>. For help, reply <strong>HELP</strong> or
-        contact us at{" "}
+        automated SMS/MMS messages related to your inquiries or use of our
+        Services (e.g., confirmations, reminders, or follow-ups). Message
+        frequency may vary. Message and data rates may apply. You can opt out at
+        any time by replying <strong>STOP</strong>. For help, reply{" "}
+        <strong>HELP</strong> or contact us at{" "}
         <a href="mailto:inquiry@stocadvisory.com">inquiry@stocadvisory.com</a>.
         Consent is not a condition of purchase. Carriers are not liable for
         delayed or undelivered messages.
