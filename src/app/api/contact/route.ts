@@ -6,10 +6,29 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 // Basic in-memory request limiter (super simple version for bots)
 let lastRequestTimestamp = 0;
 
+// Optional: helper to pull an IP from common headers
+function getClientIp(req: Request): string | null {
+    const h = req.headers;
+    const xff = h.get("x-forwarded-for"); // "client, proxy1, proxy2"
+    if (xff) return xff.split(",")[0]!.trim();
+    return (
+        h.get("x-real-ip") ||
+        h.get("cf-connecting-ip") ||
+        h.get("true-client-ip") ||
+        null
+    );
+}
+
+type ContactPayload = {
+    name: string;
+    email: string;
+    message: string;
+    phone?: string | null;
+};
+
 export async function POST(req: Request) {
     const now = Date.now();
     if (now - lastRequestTimestamp < 3000) {
-        // block any request happening under 3 seconds apart
         return new Response(
             JSON.stringify({ success: false, error: "Rate limit exceeded" }),
             { status: 429 }
@@ -18,7 +37,8 @@ export async function POST(req: Request) {
     lastRequestTimestamp = now;
 
     try {
-        const { name, email, phone, message } = await req.json();
+        const { name, email, phone, message } =
+            (await req.json()) as ContactPayload;
 
         // Basic validation
         if (!name || !email || !message || message.length > 2000) {
@@ -36,12 +56,9 @@ export async function POST(req: Request) {
         const smsConsent = hasPhone;
         const smsConsentAt = smsConsent ? new Date().toISOString() : null;
 
-        // Light server-side metadata for auditability
+        // Server-side metadata for auditability (no explicit any, no .ip off Request)
         const userAgent = req.headers.get("user-agent") || null;
-        const ip =
-            req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
-            (req as any)?.ip ||
-            null;
+        const ip = getClientIp(req);
 
         // Build email body
         const lines = [
