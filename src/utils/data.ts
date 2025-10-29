@@ -305,32 +305,31 @@ export const teamMeberData: TeamMemberProps[] = [
     },
     {
         id: 11,
-        name: "Gunnar Waldt",
-        image: "/Gunnar_Waldt.jpg",
-        location: "Baltimore, MD",
-        title: "VP Business Development"
-
-    },
-    {
-        id: 12,
         name: "Lucius Burch",
         image: "/Lucius_Burch.jpg",
         location: "Nashville, TN",
         title: "VP Business Development"
     },
     {
-        id: 13,
+        id: 12,
         name: "Srushti Kulkarni",
         image: "/Srushti_Kulkarni.jpg",
         location: "Baltimore, MD",
         title: "Marketing Manager"
     },
     {
-        id: 15,
+        id: 13,
         name: "Hung Nguyen",
         image: "/HungNguyen.jpg",
         location: "Minneapolis, MN",
         title: "Associate | TAS"
+    },
+    {
+        id: 14,
+        name: "Diana Muniz",
+        image: "/Diana-Muniz.jpeg",
+        location: "Baltimore, MD",
+        title: "Marketing and Strategy Intern"
     },
 
 ]
