@@ -326,6 +326,13 @@ export const teamMeberData: TeamMemberProps[] = [
     },
     {
         id: 14,
+        name: "Brandon McFadden",
+        image: "/Brandon_McFadden.jpg",
+        location: "Baltimore, MD",
+        title: "Senior Associate | TAS"
+    },
+    {
+        id: 15,
         name: "Diana Muniz",
         image: "/Diana-Muniz.jpeg",
         location: "Baltimore, MD",
