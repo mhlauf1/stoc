@@ -65,7 +65,7 @@ const Hero: React.FC = () => (
           variants={textVariants}
           className="text-[#d7ebf5] text-lg md:text-xl mt-4 md:max-w-[52ch] tracking-tight"
         >
-          At STOC Advisory, we turn complexity into clarity—offering hands-on
+          At STOC Advisory, we turn complexity into clarity offering hands-on
           support in due diligence, negotiation, and integration to ensure your
           transactions deliver measurable value.
         </motion.p>
