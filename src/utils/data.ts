@@ -284,55 +284,41 @@ export const teamMeberData: TeamMemberProps[] = [
     },
     {
         id: 8,
-        name: "Ryan Earp",
-        image: "/ryan_earp.jpg",
-        location: "Minneapolis, MN",
-        title: "Senior Associate | TAS"
-    },
-    {
-        id: 9,
         name: "Thomson Thamsir",
         image: "/Thomson_Thamsir.JPG",
         location: "Minneapolis, MN",
         title: "Senior Associate | TAS"
     },
     {
-        id: 10,
-        name: "John Gliniecki",
-        image: "/JohnGliniecki_Headshot.jpg",
-        location: "Minneapolis, MN",
-        title: "Senior Associate | TAS"
-    },
-    {
-        id: 11,
+        id: 9,
         name: "Lucius Burch",
         image: "/Lucius_Burch.jpg",
         location: "Nashville, TN",
         title: "VP Business Development"
     },
     {
-        id: 12,
+        id: 10,
         name: "Srushti Kulkarni",
         image: "/Srushti_Kulkarni.jpg",
         location: "Baltimore, MD",
         title: "Marketing Manager"
     },
     {
-        id: 13,
+        id: 11,
         name: "Hung Nguyen",
         image: "/HungNguyen.jpg",
         location: "Minneapolis, MN",
         title: "Associate | TAS"
     },
     {
-        id: 14,
+        id: 12,
         name: "Brandon McFadden",
         image: "/Brandon_McFadden.jpg",
         location: "Baltimore, MD",
         title: "Senior Associate | TAS"
     },
     {
-        id: 15,
+        id: 13,
         name: "Diana Muniz",
         image: "/Diana-Muniz.jpeg",
         location: "Baltimore, MD",
