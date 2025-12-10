@@ -19,7 +19,6 @@ type Industry = {
 const industries: Industry[] = [
   { id: 0, title: "Business Services", Icon: Briefcase },
   { id: 1, title: "Healthcare", Icon: BriefcaseMedical },
-  { id: 2, title: "Cannabis", Icon: Leaf },
   { id: 3, title: "Hospitality & Entertainment", Icon: Music },
   { id: 4, title: "Manufacturing & Distribution", Icon: Box },
   { id: 5, title: "Retail & Consumer Products", Icon: ShoppingCart },

@@ -31,7 +31,6 @@ const NAV_ITEMS = [
     href: "/industries",
     children: [
       { label: "Business Services", href: "/industries/business-services" },
-      { label: "Cannabis", href: "/industries/cannabis" },
       { label: "Healthcare", href: "/industries/healthcare" },
       {
         label: "Hospitality & Entertainment",
@@ -89,7 +88,6 @@ export default function Navbar() {
     "/services/corporate-development-support",
     "/home-video",
     "/industries/hospitality-entertainment",
-    "/industries/cannabis",
     "/industries/healthcare",
   ];
   const isDynamicPage = dynamicPages.includes(pathname);

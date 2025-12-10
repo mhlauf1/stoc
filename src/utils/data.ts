@@ -157,19 +157,6 @@ export const industryData: IndustryProps[] = [
         supportText: "Driving profitability and performance across diverse service-based businesses",
         href: "/industries/business-services"
     },
-
-    {
-        id: 1,
-        title: "Cannabis",
-        src: "/cannabis-hero.png",
-        Icon: Leaf,
-        tags: ["Valuation and banking support", "Acquisition disputes", "Regulatory compliance"],
-        badge: "Cannabis Industry Expertise",
-        supportText: "Strategic support across the legal cannabis sector from compliance to valuation",
-        desc1: "As the number of states legalizing cannabis for medical and recreational use increases, businesses involved in the legal cultivation, processing, and distribution of cannabis, as well as those providing ancillary services, face an array of business issues, including: accounting, acquisition disputes, anti-money laundering, banking, branding, IP, cybersecurity, taxation advisory, regulatory compliance, and valuation.",
-        desc2: "Our firm understands these complex business issues. STOC has been active in all sectors multi-faceted legal cannabis industry. We are uniquely qualified to help clients achieve their business goals in this rapidly growing industry.",
-        href: "/industries/cannabis"
-    },
     {
         id: 2,
         title: "Healthcare",
