@@ -3,7 +3,6 @@ import type { LucideIcon } from "lucide-react";
 import {
   Briefcase,
   BriefcaseMedical,
-  Leaf,
   Music,
   Package as Box,
   ShoppingCart,

@@ -6,7 +6,6 @@ import {
     PieChart,
     Briefcase,
     BriefcaseMedical,
-    Leaf,
     Music,
     Package as Box,
     ShoppingCart,
