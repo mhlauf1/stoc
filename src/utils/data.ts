@@ -305,12 +305,11 @@ export const teamMeberData: TeamMemberProps[] = [
     },
     {
         id: 13,
-        name: "Diana Muniz",
-        image: "/Diana-Muniz.jpeg",
-        location: "Baltimore, MD",
-        title: "Marketing and Strategy Intern"
+        name: "Aidan Sheehy",
+        image: "/Aidan-Sheehy.jpg",
+        location: "Minneapolis, MN",
+        title: "Associate | TAS"
     },
-
 ]
 
 
