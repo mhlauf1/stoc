@@ -238,21 +238,21 @@ export const teamMeberData: TeamMemberProps[] = [
         name: "Sam Luetgers",
         image: "/Sam_Luetgers.jpg",
         location: "Tampa, FL",
-        title: "Manager | TAS"
+        title: "Senior Manager | TAS"
     },
     {
         id: 4,
         name: "Anne Gill",
         image: "/Anne_Federico.jpg",
         location: "Baltimore, MD",
-        title: "Manager | TAS"
+        title: "Senior Manager | TAS"
     },
     {
         id: 5,
         name: "Sean Egan",
         image: "/Sean_Egan.jpg",
         location: "Minneapolis, MN",
-        title: "Manager | TAS"
+        title: "Senior Manager | TAS"
     },
     {
         id: 6,
@@ -309,6 +309,13 @@ export const teamMeberData: TeamMemberProps[] = [
         image: "/Aidan-Sheehy.jpg",
         location: "Minneapolis, MN",
         title: "Associate | TAS"
+    },
+    {
+        id: 14,
+        name: "Peyton Evans",
+        image: "/Peyton_Evans.jpeg",
+        location: "Philadelphia, PA",
+        title: "Associate, Business Development"
     },
 ]
 
