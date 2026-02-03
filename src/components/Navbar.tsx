@@ -58,6 +58,7 @@ const NAV_ITEMS = [
       { label: "Team", href: "/about/team" },
       { label: "Locations", href: "/about/locations" },
       { label: "Careers", href: "/about/careers" },
+      { label: "Brands", href: "/about/brands" },
     ],
   },
 ];

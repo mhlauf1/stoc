@@ -121,7 +121,7 @@ export default function Footer() {
             STOC Advisory is not a CPA firm
           </p>
           <p className="text-neutral-300 mt-2 text-start  text-xs md:text-sm leading-6">
-            ©2025 STOC Advisory, LLC.{" "}
+            ©2026 STOC Advisory, LLC.{" "}
             <span className="text-neutral-300  text-xs md:text-sm  text-center md:text-left">
               Designed and developed by{" "}
               <a

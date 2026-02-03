@@ -317,6 +317,13 @@ export const teamMeberData: TeamMemberProps[] = [
         location: "Philadelphia, PA",
         title: "Associate, Business Development"
     },
+    {
+        id: 16,
+        name: "Leah Hudson",
+        image: "/leah-hudson.jpg",
+        location: "Dallas, TX",
+        title: "Manager"
+    },
 ]
 
 
