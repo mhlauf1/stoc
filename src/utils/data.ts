@@ -287,7 +287,7 @@ export const teamMeberData: TeamMemberProps[] = [
         name: "Srushti Kulkarni",
         image: "/Srushti_Kulkarni.jpg",
         location: "Baltimore, MD",
-        title: "Marketing Manager"
+        title: "Market Research Analyst"
     },
     {
         id: 11,
