@@ -14,7 +14,7 @@ const data = [
     id: 1,
     text: "2. Target Screening and Fit Assessment",
     description:
-      "Evaluate opportunities using predefined criteria including strategic alignment, financial performance, operational readiness, and integration feasibilit",
+      "Evaluate opportunities using predefined criteria including strategic alignment, financial performance, operational readiness, and integration feasibility",
   },
   {
     id: 2,
@@ -58,14 +58,14 @@ const Deliverable = ({
   <div
     className="
       group
-      flex flex-col relative items-start py-4 px-2 md:px-4
+      flex flex-col relative items-start py-4 px-6 md:px-8
       text-[#041E40]
       rounded-xl h-full
       transition-colors duration-300 ease-out
       hover:bg-[#FCFCFC]
     "
   >
-    <div className="flex flex-col gap-3 items-start">
+    <div className="flex flex-col gap-1 md:gap-3 items-start">
       <h3 className="text-xl lg:text-2xl tracking-tight font-gambetta ">
         {text}
       </h3>
