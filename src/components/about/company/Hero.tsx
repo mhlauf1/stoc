@@ -66,7 +66,7 @@ const Hero: React.FC = () => (
           className="text-[#041E40] text-lg md:text-xl mt-4 md:max-w-[52ch] tracking-tight"
         >
           STOC Advisory is a business advisory firm specializing in transaction
-          advisory services, corporate development, and CFO advisory.
+          advisory services and corporate development.
         </motion.p>
       </div>
     </div>

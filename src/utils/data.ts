@@ -3,7 +3,7 @@ import {
     TrendingUp,
     Handshake,
     Rocket,
-    PieChart,
+
     Briefcase,
     BriefcaseMedical,
     Music,
@@ -49,16 +49,6 @@ export const servicesData: ServiceProps[] = [
             "Design and implement targeted initiatives that optimize operations and accelerate market expansion.",
         image: "/ges-1.jpeg",
         href: "/services/growth-enablement-services",
-    },
-    {
-        id: 3,
-        title: "CFO Advisory",
-        Icon: PieChart,
-        description:
-            "Enhance reporting, forecasting, and capital strategies to reinforce financial leadership and performance.",
-        longDesc: "Leveraged with our depth in accounting and finance, our team of experts provides interim solutions to better serve early-stage and middle-market corporations. We advise our clients through an array of services to elevate financial strategy, accelerate sustainable growth, optimize financial performance, and maximize value. Our services include financial reporting, financial planning and analysis, budgeting/forecasting, and board/investor management with the distinction of excellence.",
-        image: "/cfo-1.jpeg",
-        href: "/services/cfo-advisory"
     },
 ];
 
@@ -356,16 +346,6 @@ export const servicesPageData: ServicesPageProps[] = [
         badge: "Growth Enablement Services (GES)",
         desc: "Targeted strategies and tools to drive revenue growth and operational efficiency.",
         href: "/services/growth-enablement-services",
-        Component: TASNode,
-
-    },
-    {
-        id: 3,
-        title: "Interim CFO Solutions for Growth & Performance",
-        src: "/cfo-services.jpeg",
-        badge: "CFO Advisory",
-        desc: "Financial leadership to optimize operations and maximize organizational value.",
-        href: "/services/cfo-advisory",
         Component: TASNode,
 
     },

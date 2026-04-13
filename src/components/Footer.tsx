@@ -61,7 +61,6 @@ export default function Footer() {
                 label: "Transaction Advisory Services (TAS)",
                 href: "/services/transaction-advisory-services",
               },
-              { label: "CFO Advisory", href: "/services/cfo-advisory" },
             ].map(({ label, href }) => (
               <li key={label}>
                 <Link

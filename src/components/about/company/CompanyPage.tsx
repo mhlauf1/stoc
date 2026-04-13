@@ -46,8 +46,7 @@ const CompanyPage = () => {
         <div className="md:w-1/2">
           <p className="text-gray-700 leading-relaxed">
             STOC Advisory is a business advisory firm specializing in
-            transaction advisory services, corporate development, and CFO
-            advisory. We leverage decades of experience in accounting, finance,
+            transaction advisory services and corporate development. We leverage decades of experience in accounting, finance,
             and investment banking to support clients through every phase of the
             acquisition lifecycle, from pre-LOI diligence to post-close
             integration.
