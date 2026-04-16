@@ -3,6 +3,7 @@ import {
     TrendingUp,
     Handshake,
     Rocket,
+    BarChart3,
 
     Briefcase,
     BriefcaseMedical,
@@ -17,6 +18,7 @@ import {
 } from "lucide-react";
 import TASNode from "@/components/services/nodes/TASNode";
 import CDSNode from "@/components/services/nodes/CDSNode";
+import FDINode from "@/components/services/nodes/FDINode";
 
 export const servicesData: ServiceProps[] = [
     {
@@ -49,6 +51,16 @@ export const servicesData: ServiceProps[] = [
             "Design and implement targeted initiatives that optimize operations and accelerate market expansion.",
         image: "/ges-1.jpeg",
         href: "/services/growth-enablement-services",
+    },
+    {
+        id: 3,
+        title: "Finance & Data Intelligence",
+        Icon: BarChart3,
+        description:
+            "Connecting underwriting, operational performance, and exit readiness through decision-grade analytics.",
+        longDesc: "STOC Advisory's Finance & Data Intelligence (FDI) offering helps private equity-backed and founder-led companies build a single, reliable view of performance across the deal and portfolio lifecycle. We partner alongside sponsors, CFOs, and operating leaders to centralize financial and operating data, link KPIs to EBITDA, and support better decisions from sourcing through exit.",
+        image: "/cds-main.jpg",
+        href: "/services/finance-data-intelligence",
     },
 ];
 
@@ -252,11 +264,11 @@ export const teamMeberData: TeamMemberProps[] = [
         title: "Manager | TAS"
     },
     {
-        id: 7,
-        name: "Saqib Saddiqui",
-        image: "/Saqib_Saddiqui.jpg",
-        location: "New York, NY",
-        title: "Senior Associate | TAS"
+        id: 16,
+        name: "Leah Hudson",
+        image: "/leah-hudson.jpg",
+        location: "Dallas, TX",
+        title: "Manager | TAS"
     },
     {
         id: 8,
@@ -266,25 +278,11 @@ export const teamMeberData: TeamMemberProps[] = [
         title: "Senior Associate | TAS"
     },
     {
-        id: 9,
-        name: "Lucius Burch",
-        image: "/Lucius_Burch.jpg",
-        location: "Nashville, TN",
-        title: "VP Business Development"
-    },
-    {
-        id: 10,
-        name: "Srushti Kulkarni",
-        image: "/Srushti_Kulkarni.jpg",
-        location: "Baltimore, MD",
-        title: "Market Research Analyst"
-    },
-    {
-        id: 11,
-        name: "Hung Nguyen",
-        image: "/HungNguyen.jpg",
-        location: "Minneapolis, MN",
-        title: "Associate | TAS"
+        id: 7,
+        name: "Saqib Saddiqui",
+        image: "/Saqib_Saddiqui.jpg",
+        location: "New York, NY",
+        title: "Senior Associate | TAS"
     },
     {
         id: 12,
@@ -294,11 +292,25 @@ export const teamMeberData: TeamMemberProps[] = [
         title: "Senior Associate | TAS"
     },
     {
+        id: 11,
+        name: "Hung Nguyen",
+        image: "/HungNguyen.jpg",
+        location: "Minneapolis, MN",
+        title: "Associate | TAS"
+    },
+    {
         id: 13,
         name: "Aidan Sheehy",
         image: "/Aidan-Sheehy.jpg",
         location: "Minneapolis, MN",
         title: "Associate | TAS"
+    },
+    {
+        id: 9,
+        name: "Lucius Burch",
+        image: "/Lucius_Burch.jpg",
+        location: "Nashville, TN",
+        title: "VP Business Development"
     },
     {
         id: 14,
@@ -308,11 +320,11 @@ export const teamMeberData: TeamMemberProps[] = [
         title: "Associate, Business Development"
     },
     {
-        id: 16,
-        name: "Leah Hudson",
-        image: "/leah-hudson.jpg",
-        location: "Dallas, TX",
-        title: "Manager"
+        id: 10,
+        name: "Srushti Kulkarni",
+        image: "/Srushti_Kulkarni.jpg",
+        location: "Baltimore, MD",
+        title: "Market Research Analyst"
     },
 ]
 
@@ -348,5 +360,14 @@ export const servicesPageData: ServicesPageProps[] = [
         href: "/services/growth-enablement-services",
         Component: TASNode,
 
+    },
+    {
+        id: 3,
+        title: "Turning Data Into Investment-Grade Insight",
+        src: "/cds-main.jpg",
+        badge: "Finance & Data Intelligence (FDI)",
+        desc: "Decision-grade analytics connecting underwriting, operational performance, and exit readiness across the deal lifecycle.",
+        href: "/services/finance-data-intelligence",
+        Component: FDINode,
     },
 ]

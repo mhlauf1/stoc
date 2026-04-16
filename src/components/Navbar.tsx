@@ -23,6 +23,10 @@ const NAV_ITEMS = [
         label: "Transaction Advisory Services (TAS)",
         href: "/services/transaction-advisory-services",
       },
+      {
+        label: "Finance & Data Intelligence (FDI)",
+        href: "/services/finance-data-intelligence",
+      },
     ],
   },
   {
@@ -89,6 +93,7 @@ export default function Navbar() {
     "/home-video",
     "/industries/hospitality-entertainment",
     "/industries/healthcare",
+    "/services/finance-data-intelligence",
   ];
   const isDynamicPage = dynamicPages.includes(pathname);
 
