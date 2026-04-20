@@ -63,7 +63,7 @@ const Intro: React.FC = () => (
       </h2>
       <div className="flex flex-col gap-4 mt-4">
         <p className="tracking-tight  md:max-w-[84ch] text-md md:text-lg text-center md:text-start text-neutral-600">
-          The business services sector is undergoing relentless change—new
+          The business services sector is undergoing relentless change: new
           entrants, talent wars and shifting client demands mean that
           differentiation and scale go hand-in-hand. From professional
           consultancies to home-services providers, success hinges on rigorous

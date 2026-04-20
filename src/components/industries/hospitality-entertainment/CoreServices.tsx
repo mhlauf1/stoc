@@ -18,7 +18,7 @@ const cards: OverviewCardProps[] = [
     Icon: Search,
     title: "Innovative Financing & Capital Raising",
     description:
-      "Craft debt and equity solutions—bridge loans, project financing and joint-venture structures—that unlock development and expansion.",
+      "Craft debt and equity solutions, including bridge loans, project financing and joint-venture structures, that unlock development and expansion.",
   },
   {
     id: 1,
@@ -32,7 +32,7 @@ const cards: OverviewCardProps[] = [
     Icon: Handshake,
     title: "Operational Performance Improvement",
     description:
-      "Implement process redesign, cost-control measures and technology deployments—from revenue-management systems to contactless service—to elevate efficiency and guest satisfaction.",
+      "Implement process redesign, cost-control measures and technology deployments, from revenue-management systems to contactless service, to elevate efficiency and guest satisfaction.",
   },
   {
     id: 3,

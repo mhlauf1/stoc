@@ -61,6 +61,10 @@ export default function Footer() {
                 label: "Transaction Advisory Services (TAS)",
                 href: "/services/transaction-advisory-services",
               },
+              {
+                label: "Finance & Data Intelligence (FDI)",
+                href: "/services/finance-data-intelligence",
+              },
             ].map(({ label, href }) => (
               <li key={label}>
                 <Link

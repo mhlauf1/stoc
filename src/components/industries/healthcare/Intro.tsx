@@ -17,8 +17,8 @@ const Intro: React.FC = () => {
             therapies, cyber-security threats and shifting payor models. At the
             same time, telemedicine and digital-health innovations upend
             traditional care delivery. Organizations that can&apos;t
-            adapt—whether hospitals, clinics, senior-care facilities or health
-            plans—risk falling behind.
+            adapt, whether hospitals, clinics, senior-care facilities or health
+            plans, risk falling behind.
           </p>
 
           <motion.div
@@ -34,8 +34,9 @@ const Intro: React.FC = () => {
           </h2>
           <p className="tracking-tight mt-2 text-start md:max-w-[84ch] text-lg md:text-xl text-neutral-600">
             We work hand-in-hand with stakeholders across the healthcare
-            ecosystem—hospitals and health systems, delivery providers,
-            senior-care operators, medical suppliers and payors—to turn
+            ecosystem, including hospitals and health systems, delivery
+            providers, senior-care operators, medical suppliers and payors, to
+            turn
             disruption into opportunity. By combining deep sector expertise with
             rigorous financial and operational analysis, we design and implement
             solutions that optimize both clinical and non-clinical performance.

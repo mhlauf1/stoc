@@ -48,7 +48,7 @@ const Hero: React.FC = () => (
           className="text-[#d7ebf5] text-lg md:text-xl mt-4 md:max-w-[52ch] tracking-tight"
         >
           Strategic financial, operational and transaction solutions that
-          empower providers, payors and suppliers to deliver better care—and
+          empower providers, payors and suppliers to deliver better care, and
           stronger margins.
         </motion.p>
       </div>

@@ -310,7 +310,7 @@ export const teamMeberData: TeamMemberProps[] = [
         name: "Lucius Burch",
         image: "/Lucius_Burch.jpg",
         location: "Nashville, TN",
-        title: "VP Business Development"
+        title: "VP, Business Development"
     },
     {
         id: 14,
