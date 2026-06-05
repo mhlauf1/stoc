@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaLinkedin } from "react-icons/fa";
+import { officeLocations } from "@/utils/locations";
 
 export default function Footer() {
   return (
@@ -84,17 +85,12 @@ export default function Footer() {
             Locations
           </h4>
           <ul className="space-y-3 text-neutral-300">
-            {[
-              "Baltimore, MD",
-              "Minneapolis, MN",
-              "Nashville, TN",
-              "Dallas, TX",
-            ].map((loc) => (
+            {officeLocations.map(({ city }) => (
               <li
-                key={loc}
+                key={city}
                 className="hover:text-white transition-colors duration-200"
               >
-                {loc}
+                {city}
               </li>
             ))}
           </ul>
