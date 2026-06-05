@@ -147,7 +147,7 @@ const Hero: React.FC = () => {
         >
           <div className="relative w-full h-64 sm:h-80 md:w-[85%] md:h-[75%]">
             <Image
-              src="/full-map.png"
+              src="/map-updated-1.png"
               fill
               alt="STOC map"
               className="object-contain"
