@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 import { PrimaryButton } from "@/components/Button";
+import { officeLocations, telHref } from "@/utils/locations";
 
 export default function ContactPage() {
   const [name, setName] = useState("");
@@ -82,53 +83,23 @@ export default function ContactPage() {
 
           <div className="flex flex-col gap-6 text-neutral-700">
             <div className="flex flex-col gap-4 md:gap-8">
-              <div className="flex flex-col gap-2">
-                <span className="font-gambetta tracking-tight text-lg md:text-xl">
-                  Baltimore, MD Office
-                </span>
-                <div className="flex items-center gap-2">
-                  <Phone size={20} className="size-4 md:size-5" />
-                  <a href="tel:+14108126927" className="hover:underline">
-                    (410)-812-6927
-                  </a>
+              {officeLocations.map(({ city, address, phone }) => (
+                <div key={city} className="flex flex-col gap-2">
+                  <span className="font-gambetta tracking-tight text-lg md:text-xl">
+                    {city} Office
+                  </span>
+                  <div className="flex items-center gap-2">
+                    <Phone size={20} className="size-4 md:size-5" />
+                    <a href={telHref(phone)} className="hover:underline">
+                      {phone}
+                    </a>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <MapPin size={20} className="size-4 md:size-5" />
+                    <address className="not-italic">{address}</address>
+                  </div>
                 </div>
-                <div className="flex items-center gap-2">
-                  <MapPin size={20} className="size-4 md:size-5" />
-                  <address className="not-italic">
-                    600 Baltimore Ave., Suite 205, Towson, MD 21204
-                  </address>
-                </div>
-              </div>
-
-              <div className="flex flex-col gap-2">
-                <span className="font-gambetta tracking-tight text-lg md:text-xl">
-                  Minneapolis, MN Office
-                </span>
-                <div className="flex items-center gap-2">
-                  <Phone size={20} className="size-4 md:size-5" />
-                  <a href="tel:+12182448082" className="hover:underline">
-                    (218)-244-8082
-                  </a>
-                </div>
-                <div className="flex items-center gap-2">
-                  <MapPin size={20} className="size-4 md:size-5" />
-                  <address className="not-italic">
-                    7400 Metro Blvd. Suite 450 Edina, MN 55439
-                  </address>
-                </div>
-              </div>
-
-              <div className="flex flex-col gap-2">
-                <span className="font-gambetta tracking-tight text-lg md:text-xl">
-                  Nashville, TN Office
-                </span>
-                <div className="flex items-center gap-2">
-                  <MapPin size={20} className="size-4 md:size-5" />
-                  <address className="not-italic">
-                    6200 Tennessee 100 Suite 302, Nashville, TN 37205
-                  </address>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
         </motion.div>

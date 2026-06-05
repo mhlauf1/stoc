@@ -3,6 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { officeLocations, telHref } from "@/utils/locations";
 
 const textVariants = {
   hidden: { opacity: 0, x: -10 },
@@ -41,27 +42,6 @@ const imageVariants = {
     },
   },
 };
-
-const locations = [
-  {
-    city: "Baltimore, MD",
-    address: "600 Baltimore Ave. Suite 205 Towson, MD 21204",
-    phone: "(410) 812-6927",
-  },
-  {
-    city: "Minneapolis, MN",
-    address: "7400 Metro Blvd. Suite 450 Edina, MN 55439",
-    phone: "(218) 244-8082",
-  },
-  {
-    city: "Nashville, TN",
-    address: "6200 Tennessee 100 Suite 302, Nashville, TN 37205",
-  },
-  {
-    city: "Dallas",
-    address: "Coming Soon",
-  },
-];
 
 const Hero: React.FC = () => {
   return (
@@ -109,10 +89,12 @@ const Hero: React.FC = () => {
             viewport={{ once: true, amount: 0.1 }}
             className="mt-4 md:text-lg text-start text-neutral-600 tracking-tight md:max-w-[90%]"
           >
-            STOC Advisory maintains a strong presence in both Baltimore and
-            Minneapolis to serve our East Coast and Midwest clients efficiently.
-            Each office houses a dedicated team of financial experts ready to
-            partner with you on your next big move.
+            STOC Advisory maintains offices across five markets, supporting
+            private equity sponsors, portfolio companies, and corporate
+            development teams through every stage of the transaction lifecycle.
+            Each office operates under a consistent, partner-led delivery model,
+            providing clients with direct access to senior expertise regardless
+            of geography.
           </motion.p>
 
           <motion.span
@@ -128,7 +110,7 @@ const Hero: React.FC = () => {
           <div className="h-[1px] w-full bg-neutral-200  mt-4"></div>
           {/* Info grid */}
           <div className="mt-4  grid grid-cols-1 gap-7">
-            {locations.map(({ city, address, phone }, idx) => (
+            {officeLocations.map(({ city, address, phone }, idx) => (
               <motion.div
                 key={city}
                 initial="hidden"
@@ -145,7 +127,7 @@ const Hero: React.FC = () => {
                 {phone && (
                   <p className=" text-neutral-600">
                     Phone:{" "}
-                    <a href={`tel:${phone}`} className="hover:text-black">
+                    <a href={telHref(phone)} className="hover:text-black">
                       {phone}
                     </a>
                   </p>
