@@ -54,6 +54,11 @@ const NAV_ITEMS = [
     ],
   },
   {
+    label: "Insights",
+    href: "/insights",
+    children: [],
+  },
+  {
     label: "About",
     href: "/about",
     children: [
@@ -146,7 +151,7 @@ export default function Navbar() {
                 <Link href={item.href} className={``}>
                   {item.label}
                 </Link>
-                <ChevronDown size={20} />
+                {item.children.length > 0 && <ChevronDown size={20} />}
               </div>
 
               {item.children?.length > 0 && (

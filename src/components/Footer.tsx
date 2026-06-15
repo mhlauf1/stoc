@@ -2,9 +2,15 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { FaLinkedin } from "react-icons/fa";
-import { officeLocations } from "@/utils/locations";
+import { sanityFetch } from "@/sanity/lib/client";
+import { OFFICE_LOCATIONS_QUERY } from "@/sanity/lib/queries";
+import type { Office } from "@/sanity/lib/types";
 
-export default function Footer() {
+export default async function Footer() {
+  const offices = await sanityFetch<Office[]>({
+    query: OFFICE_LOCATIONS_QUERY,
+  });
+
   return (
     <footer className="bg-[#041E40] px-6 md:px-[5%] pt-12 pb-6">
       <div className="flex flex-col md:flex-row flex-wrap  justify-between gap-y-10">
@@ -85,7 +91,7 @@ export default function Footer() {
             Locations
           </h4>
           <ul className="space-y-3 text-neutral-300">
-            {officeLocations.map(({ city }) => (
+            {offices.map(({ city }) => (
               <li
                 key={city}
                 className="hover:text-white transition-colors duration-200"

@@ -3,7 +3,8 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { officeLocations, telHref } from "@/utils/locations";
+import { telHref } from "@/utils/locations";
+import type { Office } from "@/sanity/lib/types";
 
 const textVariants = {
   hidden: { opacity: 0, x: -10 },
@@ -43,7 +44,7 @@ const imageVariants = {
   },
 };
 
-const Hero: React.FC = () => {
+const Hero: React.FC<{ offices: Office[] }> = ({ offices }) => {
   return (
     <section className="bg-[#F7F7F7] w-full min-h-screen flex flex-col px-4 md:px-[5%]">
       <div className="flex flex-col md:flex-row pt-[15vh] pb-[5vh] md:py-[15vh] gap-8 flex-1">
@@ -110,7 +111,7 @@ const Hero: React.FC = () => {
           <div className="h-[1px] w-full bg-neutral-200  mt-4"></div>
           {/* Info grid */}
           <div className="mt-4  grid grid-cols-1 gap-7">
-            {officeLocations.map(({ city, address, phone }, idx) => (
+            {offices.map(({ city, streetAddress, cityStateZip, phone }, idx) => (
               <motion.div
                 key={city}
                 initial="hidden"
@@ -123,7 +124,8 @@ const Hero: React.FC = () => {
                 <h4 className="text-neutral-800 text-lg md:text-xl tracking-tight font-gambetta">
                   {city}
                 </h4>
-                <p className=" text-neutral-600 ">{address}</p>
+                <p className=" text-neutral-600 ">{streetAddress}</p>
+                <p className=" text-neutral-600 ">{cityStateZip}</p>
                 {phone && (
                   <p className=" text-neutral-600">
                     Phone:{" "}
