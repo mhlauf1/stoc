@@ -50,7 +50,7 @@ const StepItem: React.FC<StepItemProps> = ({ title, text, number }) => (
 );
 
 const Intro: React.FC = () => (
-  <section className="px-4 bg-[#F7F7F7] w-full md:px-[5%] pb-8 md:pb-12 pt-12 md:pt-20">
+  <section className="px-4 bg-[#F7F7F7] w-full md:px-[5%] pb-8 md:pb-12 pt-16 md:pt-20">
     <div className="flex items-start flex-col">
       <div className="flex items-center mb-4 justify-center gap-4">
         <div className="h-px bg-neutral-300 w-[30px]" />
