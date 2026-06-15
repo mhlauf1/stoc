@@ -50,6 +50,6 @@ export async function POST(req: NextRequest) {
 
   return NextResponse.json({
     ok: true,
-    message: "Thanks — you're on the list.",
+    message: "Thanks, you're on the list.",
   });
 }
