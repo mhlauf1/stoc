@@ -1,27 +1,28 @@
 // src/components/IndustriesSection.tsx
 "use client";
 import React from "react";
-import { industryData } from "@/utils/data";
-import { IndustryProps } from "@/utils/types";
+import type { IndustryDoc } from "@/sanity/lib/types";
 import { PrimaryButton } from "../Button";
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-const IndustryCard: React.FC<IndustryProps> = ({
+const IndustryCard: React.FC<IndustryDoc> = ({
   title,
-  src,
+  imageUrl,
   supportText,
   href,
 }) => (
   <div className="flex relative bg-white flex-col rounded-lg border border-neutral-100">
     <div className="h-[200px] md:h-[250px] w-full relative">
-      <Image
-        src={src!}
-        alt={title}
-        fill
-        className="rounded-t-lg object-cover"
-      />
+      {imageUrl && (
+        <Image
+          src={imageUrl}
+          alt={title}
+          fill
+          className="rounded-t-lg object-cover"
+        />
+      )}
     </div>
     <div className="flex flex-col items-start justify-between pt-5 md:pt-6 mb-6 px-5 md:px-8 gap-2">
       <h3 className="text-2xl md:text-3xl lg:text-4xl mt-2 tracking-tight text-start font-gambetta">
@@ -35,11 +36,13 @@ const IndustryCard: React.FC<IndustryProps> = ({
   </div>
 );
 
-const IndustryGrid: React.FC = () => (
+const IndustryGrid: React.FC<{ industries: IndustryDoc[] }> = ({
+  industries,
+}) => (
   <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
-    {industryData.map((svc, idx) => (
+    {industries.map((svc, idx) => (
       <motion.div
-        key={svc.id}
+        key={svc._id}
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{
@@ -55,7 +58,9 @@ const IndustryGrid: React.FC = () => (
   </div>
 );
 
-const IndustriesSection: React.FC = () => (
+const IndustriesSection: React.FC<{ industries: IndustryDoc[] }> = ({
+  industries,
+}) => (
   <section className="bg-[#F7F7F7] py-16 md:py-28">
     <div className="flex flex-col px-4 sm:px-12 md:px-32">
       <div className="flex flex-col md:flex-row justify-between mb-8 md:mb-16 items-center md:items-end gap-2 md:gap-4">
@@ -81,7 +86,7 @@ const IndustriesSection: React.FC = () => (
           with a breadth of industry specific knowledge and expertise.
         </p>
       </div>
-      <IndustryGrid />
+      <IndustryGrid industries={industries} />
     </div>
   </section>
 );

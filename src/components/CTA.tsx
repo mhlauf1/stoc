@@ -39,7 +39,7 @@ const CTA: React.FC = () => {
                 placeholder="Your business email"
                 className="flex-1 px-6 py-3 focus:outline-none"
               />
-              <Link className="md:block hidden" href="/contact">
+              <Link className="md:block hidden" href="/insights">
                 <button
                   className="
                   bg-[#18598b] text-white
@@ -56,7 +56,7 @@ const CTA: React.FC = () => {
                 </button>
               </Link>
             </div>
-            <Link className="block md:hidden" href="/contact">
+            <Link className="block md:hidden" href="/insights">
               <button
                 className="
                 bg-[#18598b] text-white
