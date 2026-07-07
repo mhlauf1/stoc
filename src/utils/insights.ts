@@ -22,6 +22,11 @@ export const contentTypeLabel = (value?: string): string =>
 export const industryLabel = (value?: string): string =>
   INDUSTRY_OPTIONS.find((o) => o.value === value)?.title ?? value ?? "";
 
-// Where an insight card/link should point: the uploaded PDF or the external URL.
-export const insightHref = (insight: InsightDoc): string | undefined =>
-  insight.sourceType === "url" ? insight.externalUrl : insight.pdfUrl;
+// Where an insight card/link should point: the on-site report page, the
+// uploaded PDF, or the external URL.
+export const insightHref = (insight: InsightDoc): string | undefined => {
+  if (insight.sourceType === "report" && insight.reportSlug) {
+    return `/insights/reports/${insight.reportSlug}`;
+  }
+  return insight.sourceType === "url" ? insight.externalUrl : insight.pdfUrl;
+};

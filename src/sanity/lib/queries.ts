@@ -13,6 +13,7 @@ const insightFields = /* groq */ `
   description,
   featured,
   sourceType,
+  reportSlug,
   externalUrl,
   "pdfUrl": pdfFile.asset->url,
   "coverImageUrl": coverImage.asset->url,

@@ -55,7 +55,8 @@ export const insight = defineType({
       description: "2–3 sentences summarizing the piece.",
       validation: (rule) => rule.required().max(400),
     }),
-    // Content source: PDF upload OR external URL. Toggle decides which is shown.
+    // Content source: PDF upload, external URL, or an on-site report page.
+    // "report" carries both a readable page on the site AND a downloadable PDF.
     defineField({
       name: "sourceType",
       title: "Content Source",
@@ -64,6 +65,7 @@ export const insight = defineType({
         list: [
           { title: "PDF Upload", value: "pdf" },
           { title: "External URL", value: "url" },
+          { title: "Site Report Page (+ PDF)", value: "report" },
         ],
         layout: "radio",
       },
@@ -71,15 +73,35 @@ export const insight = defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
+      name: "reportSlug",
+      title: "Report Slug",
+      type: "string",
+      description:
+        "Must match a report published on the site, e.g. us-veterinary-services-2026 → /insights/reports/us-veterinary-services-2026.",
+      hidden: ({ parent }) => parent?.sourceType !== "report",
+      validation: (rule) =>
+        rule.custom((value, context) => {
+          const parent = context.parent as { sourceType?: string };
+          if (parent?.sourceType === "report" && !value) {
+            return "Enter the slug of the on-site report page.";
+          }
+          return true;
+        }),
+    }),
+    defineField({
       name: "pdfFile",
       title: "PDF File",
       type: "file",
       options: { accept: ".pdf" },
-      hidden: ({ parent }) => parent?.sourceType !== "pdf",
+      hidden: ({ parent }) =>
+        parent?.sourceType !== "pdf" && parent?.sourceType !== "report",
       validation: (rule) =>
         rule.custom((value, context) => {
           const parent = context.parent as { sourceType?: string };
-          if (parent?.sourceType === "pdf" && !value) {
+          if (
+            (parent?.sourceType === "pdf" || parent?.sourceType === "report") &&
+            !value
+          ) {
             return "Upload a PDF or switch the source to External URL.";
           }
           return true;

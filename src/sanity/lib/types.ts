@@ -56,7 +56,8 @@ export interface InsightDoc {
   publishDate: string;
   description: string;
   featured?: boolean;
-  sourceType: "pdf" | "url";
+  sourceType: "pdf" | "url" | "report";
+  reportSlug?: string;
   externalUrl?: string;
   pdfUrl?: string;
   coverImageUrl?: string;

@@ -4,7 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Menu, X } from "lucide-react";
 
 const NAV_ITEMS = [
   {
@@ -76,6 +76,11 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
+  // Close the mobile menu whenever the route changes
+  useEffect(() => {
+    setIsOpen(false);
+  }, [pathname]);
+
   // Lock body scroll when menu is open
   useEffect(() => {
     document.body.style.overflow = isOpen ? "hidden" : "";
@@ -111,8 +116,6 @@ export default function Navbar() {
   const contactBtn = isDarkBg
     ? "border border-[#16333A]/50 text-[#16333A] hover:bg-[#18598b] hover:text-white focus:outline-none"
     : "border border-white/30 text-white hover:bg-white/20 focus:outline-none";
-  const barColor = isDarkBg ? "bg-neutral-800" : "bg-white";
-
   const dropdownBg = isDarkBg
     ? "bg-white border border-neutral-200"
     : "bg-black/80";
@@ -185,36 +188,22 @@ export default function Navbar() {
 
         {/* Mobile Toggle */}
         <button
-          className="md:hidden p-2 focus:outline-none"
+          className={`md:hidden p-2 focus:outline-none ${
+            isOpen ? "text-white" : isDarkBg ? "text-neutral-800" : "text-white"
+          }`}
           onClick={() => setIsOpen((open) => !open)}
           aria-label="Toggle menu"
         >
-          <div className="w-6 h-5 flex flex-col justify-between">
-            <span
-              className={`${barColor} h-[2px] transition-transform duration-200 ${
-                isOpen ? "rotate-45 translate-y-1.5" : ""
-              }`}
-            />
-            <span
-              className={`${barColor} h-[2px] transition-opacity duration-200 ${
-                isOpen ? "opacity-0" : ""
-              }`}
-            />
-            <span
-              className={`${barColor} h-[2px] transition-transform duration-200 ${
-                isOpen ? "-rotate-45 -translate-y-1.5" : ""
-              }`}
-            />
-          </div>
+          {isOpen ? <X size={26} /> : <Menu size={26} />}
         </button>
       </div>
       {/* Mobile Drawer */}
       <AnimatePresence>
         {isOpen && (
           <motion.div
-            initial={{ opacity: 0, x: "100%" }}
-            animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: "100%" }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             transition={{ duration: 0.25, ease: "easeInOut" }}
             className="fixed inset-0 w-full h-full bg-black/80 backdrop-blur-sm p-8 md:hidden overflow-y-auto"
           >
@@ -223,7 +212,7 @@ export default function Navbar() {
               onClick={() => setIsOpen(false)}
               aria-label="Close menu"
             >
-              <span className="text-2xl">×</span>
+              <X size={28} />
             </button>
 
             <div className="mt-16 flex flex-col gap-6">
