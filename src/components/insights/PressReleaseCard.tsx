@@ -26,7 +26,7 @@ const PressReleaseCard: React.FC<{
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut", delay: (index % 3) * 0.08 }}
       viewport={{ once: true, amount: 0.1 }}
-      className="group relative flex flex-col bg-white rounded-2xl border border-neutral-200 overflow-hidden hover:border-neutral-300 hover:shadow-md transition-all"
+      className="flex flex-col bg-white rounded-2xl border border-neutral-200 overflow-hidden hover:border-neutral-300 hover:shadow-md transition-all"
     >
       {release.coverImageUrl && (
         <div className="relative w-full h-[180px]">
@@ -59,22 +59,20 @@ const PressReleaseCard: React.FC<{
           {release.excerpt}
         </p>
 
-        <span className="inline-flex items-center gap-1 text-[#18598b] font-medium group-hover:gap-2 transition-all w-fit">
-          Read
-          <ArrowUpRight size={18} />
-        </span>
+        <div className="flex items-center gap-3 flex-wrap pt-1">
+          <Link
+            href={href}
+            onClick={() => {
+              trackEvent("press_release_click", eventParams);
+              track("Press Release Click", eventParams);
+            }}
+            className="inline-flex items-center gap-1.5 px-5 py-2 rounded-full bg-[#16333A] text-white text-sm font-medium hover:bg-[#18598b] transition-colors"
+          >
+            Read Press Release
+            <ArrowUpRight size={16} />
+          </Link>
+        </div>
       </div>
-
-      {/* Stretched link: makes the whole card open the release page. */}
-      <Link
-        href={href}
-        aria-label={`Read: ${release.title}`}
-        onClick={() => {
-          trackEvent("press_release_click", eventParams);
-          track("Press Release Click", eventParams);
-        }}
-        className="absolute inset-0 z-10"
-      />
     </motion.article>
   );
 };

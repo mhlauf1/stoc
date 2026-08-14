@@ -5,7 +5,6 @@ import type { InsightDoc, PressReleaseDoc } from "@/sanity/lib/types";
 import FeaturedInsight from "@/components/insights/FeaturedInsight";
 import InsightCard from "@/components/insights/InsightCard";
 import ReportCard from "@/components/insights/ReportCard";
-import ComingSoonCard from "@/components/insights/ComingSoonCard";
 import PressReleaseCard from "@/components/insights/PressReleaseCard";
 import NewsletterSignup from "@/components/insights/NewsletterSignup";
 
@@ -54,19 +53,6 @@ export default async function InsightsPage() {
           </p>
         </header>
 
-        {pressReleases.length > 0 && (
-          <section id="news" className="flex flex-col gap-8 scroll-mt-28">
-            <h2 className="text-2xl md:text-3xl font-gambetta tracking-tight text-neutral-800">
-              News &amp; Press
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {pressReleases.map((release, i) => (
-                <PressReleaseCard key={release._id} release={release} index={i} />
-              ))}
-            </div>
-          </section>
-        )}
-
         {reports.length > 0 && (
           <section className="flex flex-col gap-8">
             <h2 className="text-2xl md:text-3xl font-gambetta tracking-tight text-neutral-800">
@@ -76,7 +62,19 @@ export default async function InsightsPage() {
               {reports.map((insight, i) => (
                 <ReportCard key={insight._id} insight={insight} index={i} />
               ))}
-              <ComingSoonCard index={reports.length} />
+            </div>
+          </section>
+        )}
+
+        {pressReleases.length > 0 && (
+          <section id="news" className="flex flex-col gap-8 scroll-mt-28">
+            <h2 className="text-2xl md:text-3xl font-gambetta tracking-tight text-neutral-800">
+              News &amp; Press
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {pressReleases.map((release, i) => (
+                <PressReleaseCard key={release._id} release={release} index={i} />
+              ))}
             </div>
           </section>
         )}

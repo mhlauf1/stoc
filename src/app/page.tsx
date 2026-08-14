@@ -2,6 +2,7 @@
 import { headers } from "next/headers";
 import Hero from "@/components/home/Hero";
 import Trust from "@/components/home/Trust";
+import LatestInsights from "@/components/home/LatestInsights";
 import IntroServices from "@/components/home/IntroServices";
 import OverviewBento from "@/components/home/OverviewBento";
 import CTA from "@/components/CTA";
@@ -31,6 +32,7 @@ export default async function Home() {
       <IntroServices />
       <OverviewBento />
       <Trust />
+      <LatestInsights />
       <CTA />
     </main>
   );
