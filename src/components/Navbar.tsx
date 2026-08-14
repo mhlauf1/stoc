@@ -56,7 +56,7 @@ const NAV_ITEMS = [
   {
     label: "Insights",
     href: "/insights",
-    children: [],
+    children: [{ label: "News & Press", href: "/insights" }],
   },
   {
     label: "About",

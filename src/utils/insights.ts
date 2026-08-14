@@ -16,6 +16,22 @@ export const formatMonthYear = (dateStr?: string): string => {
   }).format(d);
 };
 
+// "2026-08-13" -> "August 13, 2026" (UTC to avoid timezone off-by-one).
+export const formatFullDate = (dateStr?: string): string => {
+  if (!dateStr) return "";
+  const d = new Date(dateStr + "T00:00:00Z");
+  if (isNaN(d.getTime())) return "";
+  return new Intl.DateTimeFormat("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+    timeZone: "UTC",
+  }).format(d);
+};
+
+export const pressReleaseHref = (slug: string): string =>
+  `/insights/news/${slug}`;
+
 export const contentTypeLabel = (value?: string): string =>
   CONTENT_TYPE_OPTIONS.find((o) => o.value === value)?.title ?? value ?? "";
 

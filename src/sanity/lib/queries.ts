@@ -39,6 +39,42 @@ export const RELATED_INSIGHTS_QUERY = defineQuery(/* groq */ `
   }
 `);
 
+// ---------- Press releases ----------
+
+const pressReleaseFields = /* groq */ `
+  _id,
+  title,
+  "slug": slug.current,
+  publishDate,
+  dateline,
+  excerpt,
+  featured,
+  sourceUrl,
+  "coverImageUrl": coverImage.asset->url,
+  "coverImageAlt": coverImage.alt
+`;
+
+// News & Press section on /insights. Body is fetched only on the detail page.
+export const PRESS_RELEASES_QUERY = defineQuery(/* groq */ `
+  *[_type == "pressRelease"] | order(featured desc, publishDate desc) {
+    ${pressReleaseFields}
+  }
+`);
+
+export const PRESS_RELEASE_BY_SLUG_QUERY = defineQuery(/* groq */ `
+  *[_type == "pressRelease" && slug.current == $slug][0] {
+    ${pressReleaseFields},
+    body
+  }
+`);
+
+export const PRESS_RELEASE_SLUGS_QUERY = defineQuery(/* groq */ `
+  *[_type == "pressRelease" && defined(slug.current)] {
+    "slug": slug.current,
+    publishDate
+  }
+`);
+
 // ---------- Job postings ----------
 
 export const JOB_POSTINGS_QUERY = defineQuery(/* groq */ `

@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { sanityFetch } from "@/sanity/lib/client";
-import { INSIGHTS_QUERY } from "@/sanity/lib/queries";
-import type { InsightDoc } from "@/sanity/lib/types";
+import { INSIGHTS_QUERY, PRESS_RELEASES_QUERY } from "@/sanity/lib/queries";
+import type { InsightDoc, PressReleaseDoc } from "@/sanity/lib/types";
 import FeaturedInsight from "@/components/insights/FeaturedInsight";
 import InsightCard from "@/components/insights/InsightCard";
 import ReportCard from "@/components/insights/ReportCard";
 import ComingSoonCard from "@/components/insights/ComingSoonCard";
+import PressReleaseCard from "@/components/insights/PressReleaseCard";
 import NewsletterSignup from "@/components/insights/NewsletterSignup";
 
 export const metadata: Metadata = {
@@ -15,7 +16,10 @@ export const metadata: Metadata = {
 };
 
 export default async function InsightsPage() {
-  const insights = await sanityFetch<InsightDoc[]>({ query: INSIGHTS_QUERY });
+  const [insights, pressReleases] = await Promise.all([
+    sanityFetch<InsightDoc[]>({ query: INSIGHTS_QUERY }),
+    sanityFetch<PressReleaseDoc[]>({ query: PRESS_RELEASES_QUERY }),
+  ]);
 
   // On-site industry reports get their own section; everything else keeps the
   // featured-hero + grid layout.
@@ -49,6 +53,19 @@ export default async function InsightsPage() {
             lines.
           </p>
         </header>
+
+        {pressReleases.length > 0 && (
+          <section id="news" className="flex flex-col gap-8 scroll-mt-28">
+            <h2 className="text-2xl md:text-3xl font-gambetta tracking-tight text-neutral-800">
+              News &amp; Press
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {pressReleases.map((release, i) => (
+                <PressReleaseCard key={release._id} release={release} index={i} />
+              ))}
+            </div>
+          </section>
+        )}
 
         {reports.length > 0 && (
           <section className="flex flex-col gap-8">

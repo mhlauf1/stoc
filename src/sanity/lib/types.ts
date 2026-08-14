@@ -64,6 +64,20 @@ export interface InsightDoc {
   coverImageAlt?: string;
 }
 
+export interface PressReleaseDoc {
+  _id: string;
+  title: string;
+  slug: string;
+  publishDate: string;
+  dateline?: string;
+  excerpt: string;
+  featured?: boolean;
+  sourceUrl?: string;
+  coverImageUrl?: string;
+  coverImageAlt?: string;
+  body?: unknown[]; // Portable Text blocks (detail query only)
+}
+
 export interface JobPostingDoc {
   _id: string;
   title: string;

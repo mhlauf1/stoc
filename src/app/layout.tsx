@@ -11,6 +11,7 @@ import React from "react";
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.stocadvisory.com"),
   title: "STOC Advisory",
   description:
     "Maximize shareholder value through strategic mergers and acquisitions, balance sheet restructuring, debt and equity evaluation, and private capital raising with STOC’s Corporate Advisory team.",
