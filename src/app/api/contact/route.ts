@@ -1,72 +1,134 @@
 import { Resend } from "resend";
+import {
+    createRateLimiter,
+    getClientIp,
+    isHoneypotFilled,
+    readJsonBody,
+    verifyRecaptcha,
+} from "../formSecurity";
+import { CONTACT_RECAPTCHA_ACTION, contactFormSchema } from "./formValidation";
 
 // Initialize Resend instance
 const resend = new Resend(process.env.RESEND_API_KEY);
 
-// Basic in-memory request limiter (super simple version for bots)
-let lastRequestTimestamp = 0;
+const isRateLimited = createRateLimiter({
+    maxRequests: 5,
+    windowMs: 10 * 60 * 1000,
+});
 
-// Optional: helper to pull an IP from common headers
-function getClientIp(req: Request): string | null {
-    const h = req.headers;
-    const xff = h.get("x-forwarded-for"); // "client, proxy1, proxy2"
-    if (xff) return xff.split(",")[0]!.trim();
-    return (
-        h.get("x-real-ip") ||
-        h.get("cf-connecting-ip") ||
-        h.get("true-client-ip") ||
-        null
-    );
-}
-
-type ContactPayload = {
-    name: string;
-    email: string;
-    message: string;
-    phone?: string | null;
-};
+const FALLBACK_CONTACT =
+    "Please try again, or email us directly at inquiry@stocadvisory.com.";
 
 export async function POST(req: Request) {
-    const now = Date.now();
-    if (now - lastRequestTimestamp < 3000) {
-        return new Response(
-            JSON.stringify({ success: false, error: "Rate limit exceeded" }),
-            { status: 429 }
-        );
-    }
-    lastRequestTimestamp = now;
-
     try {
-        const { name, email, phone, message } =
-            (await req.json()) as ContactPayload;
-
-        // Basic validation
-        if (!name || !email || !message || message.length > 2000) {
+        const clientIp = getClientIp(req) ?? "unknown";
+        if (isRateLimited(clientIp)) {
             return new Response(
-                JSON.stringify({ success: false, error: "Invalid input" }),
+                JSON.stringify({
+                    success: false,
+                    error: "Too many requests. Please wait a few minutes and try again.",
+                }),
+                { status: 429, headers: { "Retry-After": "600" } }
+            );
+        }
+
+        const bodyResult = await readJsonBody(req);
+
+        if (bodyResult.status === "too-large") {
+            return new Response(
+                JSON.stringify({ success: false, error: "Request is too large" }),
+                { status: 413 }
+            );
+        }
+
+        if (bodyResult.status === "invalid") {
+            return new Response(
+                JSON.stringify({ success: false, error: "Invalid request body" }),
                 { status: 400 }
             );
         }
 
-        // Optional phone: allow flexible formatting but avoid garbage
-        const phoneStr = typeof phone === "string" ? phone.trim() : "";
-        const hasPhone = phoneStr.length > 0;
+        const untrustedBody = bodyResult.value as Record<string, unknown>;
+
+        // Return the normal success response so the honeypot is not disclosed.
+        if (isHoneypotFilled(untrustedBody.companyWebsite)) {
+            console.warn("Contact form honeypot triggered; submission discarded", {
+                email:
+                    typeof untrustedBody.email === "string"
+                        ? untrustedBody.email
+                        : undefined,
+            });
+            return new Response(JSON.stringify({ success: true }), {
+                status: 200,
+            });
+        }
+
+        const parsedBody = contactFormSchema.safeParse(untrustedBody);
+        if (!parsedBody.success) {
+            return new Response(
+                JSON.stringify({
+                    success: false,
+                    error: "Please check the form fields and try again.",
+                }),
+                { status: 400 }
+            );
+        }
+
+        const { name, email, phone, message, recaptchaToken } = parsedBody.data;
+
+        const recaptchaVerification = await verifyRecaptcha(
+            recaptchaToken,
+            CONTACT_RECAPTCHA_ACTION
+        );
+
+        if (recaptchaVerification.status === "misconfigured") {
+            console.error(
+                "RECAPTCHA_SECRET_KEY is missing in a production environment"
+            );
+            return new Response(
+                JSON.stringify({
+                    success: false,
+                    error: `The contact form is temporarily unavailable. ${FALLBACK_CONTACT}`,
+                }),
+                { status: 503 }
+            );
+        }
+
+        if (recaptchaVerification.status === "rejected") {
+            return new Response(
+                JSON.stringify({
+                    success: false,
+                    error: `Verification failed. ${FALLBACK_CONTACT}`,
+                }),
+                { status: 400 }
+            );
+        }
+
+        const recaptchaUnavailable =
+            recaptchaVerification.status === "unavailable";
+
+        const hasPhone = phone.length > 0;
 
         // Derive consent if phone provided (aligns with on-page consent copy)
         const smsConsent = hasPhone;
         const smsConsentAt = smsConsent ? new Date().toISOString() : null;
 
-        // Server-side metadata for auditability (no explicit any, no .ip off Request)
+        // Server-side metadata for auditability
         const userAgent = req.headers.get("user-agent") || null;
-        const ip = getClientIp(req);
 
         // Build email body
         const lines = [
             `You have received a new inquiry:`,
             ``,
+            ...(recaptchaUnavailable
+                ? [
+                      `Security notice: Google reCAPTCHA could not be reached after two attempts. This submission was delivered to avoid losing a potentially legitimate lead.`,
+                      ``,
+                  ]
+                : []),
             `Name: ${name}`,
             `Email: ${email}`,
-            `Phone: ${hasPhone ? phoneStr : "(not provided)"}`,
+            `Phone: ${hasPhone ? phone : "(not provided)"}`,
             ``,
             `Message:`,
             `${message}`,
@@ -75,7 +137,7 @@ export async function POST(req: Request) {
             `Compliance / Metadata`,
             `SMS Consent: ${smsConsent ? "YES" : "NO"}`,
             `Consent Timestamp: ${smsConsentAt ?? "(n/a)"}`,
-            `IP: ${ip ?? "(n/a)"}`,
+            `IP: ${clientIp}`,
             `User-Agent: ${userAgent ?? "(n/a)"}`,
         ].join("\n");
 
@@ -86,14 +148,14 @@ export async function POST(req: Request) {
                 "aswihart@stocadvisory.com",
                 "moheir@stocadvisory.com",
             ],
-            subject: `New Contact Form Submission: ${name}`,
+            subject: `${recaptchaUnavailable ? "[reCAPTCHA unavailable] " : ""}New Contact Form Submission: ${name}`,
             replyTo: email,
             text: lines,
         });
 
         return new Response(JSON.stringify({ success: true }), { status: 200 });
     } catch (error) {
-        console.error("Resend error:", error);
+        console.error("Contact form error:", error);
         return new Response(
             JSON.stringify({ success: false, error: "Internal error" }),
             { status: 500 }

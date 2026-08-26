@@ -1,10 +1,11 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Mail, Phone, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 import { PrimaryButton } from "@/components/Button";
 import { telHref } from "@/utils/locations";
+import { getRecaptchaToken, loadRecaptcha } from "@/utils/recaptcha";
 import type { Office } from "@/sanity/lib/types";
 
 export default function ContactClient({ offices }: { offices: Office[] }) {
@@ -12,20 +13,30 @@ export default function ContactClient({ offices }: { offices: Office[] }) {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState(""); // NEW
   const [message, setMessage] = useState("");
+  const [companyWebsite, setCompanyWebsite] = useState(""); // honeypot
   const [submitting, setSubmitting] = useState(false);
   const [success, setSuccess] = useState(false);
+  const [errorMessage, setErrorMessage] = useState("");
+
+  useEffect(() => {
+    loadRecaptcha();
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setSubmitting(true);
+    setErrorMessage("");
 
     // If a phone is provided, treat it as consent under the displayed language.
     const smsConsent = Boolean(phone?.trim());
+    const recaptchaToken = await getRecaptchaToken("contact_form");
     const payload = {
       name,
       email,
       phone: phone?.trim() || null,
       message,
+      companyWebsite,
+      ...(recaptchaToken ? { recaptchaToken } : {}),
       // Optional metadata you may want to persist for A2P audit trails:
       smsConsent,
       smsConsentAt: smsConsent ? new Date().toISOString() : null,
@@ -46,11 +57,14 @@ export default function ContactClient({ offices }: { offices: Office[] }) {
         setPhone(""); // NEW
         setMessage("");
       } else {
-        alert("Oops! Something went wrong.");
+        const data = await res.json().catch(() => ({}));
+        setErrorMessage(
+          data.error || "Oops! Something went wrong. Please try again."
+        );
       }
     } catch (err) {
       console.error(err);
-      alert("Network error.");
+      setErrorMessage("Network error. Please try again.");
     } finally {
       setSubmitting(false);
     }
@@ -126,7 +140,32 @@ export default function ContactClient({ offices }: { offices: Office[] }) {
             </motion.div>
           )}
 
+          {errorMessage && (
+            <motion.div
+              className="bg-red-100 text-red-800 p-4 rounded-lg mb-6"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              role="alert"
+            >
+              {errorMessage}
+            </motion.div>
+          )}
+
           <form onSubmit={handleSubmit} className="space-y-6 w-full">
+            {/* Honeypot: hidden from real users, bots tend to fill it */}
+            <div className="sr-only" aria-hidden="true">
+              <label htmlFor="company-website">Company website</label>
+              <input
+                id="company-website"
+                name="companyWebsite"
+                type="text"
+                tabIndex={-1}
+                autoComplete="off"
+                value={companyWebsite}
+                onChange={(e) => setCompanyWebsite(e.target.value)}
+              />
+            </div>
+
             <div className="flex flex-col">
               <label htmlFor="name" className="block text-sm font-medium mb-1">
                 Name
@@ -221,6 +260,28 @@ export default function ContactClient({ offices }: { offices: Office[] }) {
                 {submitting ? "Submitting…" : "Submit"}
               </PrimaryButton>
             </div>
+
+            <p className="text-xs text-neutral-500 text-center">
+              This site is protected by reCAPTCHA and the Google{" "}
+              <a
+                href="https://policies.google.com/privacy"
+                className="underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Privacy Policy
+              </a>{" "}
+              and{" "}
+              <a
+                href="https://policies.google.com/terms"
+                className="underline"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Terms of Service
+              </a>{" "}
+              apply.
+            </p>
           </form>
 
           <div className="flex mt-8 items-center text-neutral-600 gap-2">

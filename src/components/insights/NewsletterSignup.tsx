@@ -1,23 +1,34 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import { getRecaptchaToken, loadRecaptcha } from "@/utils/recaptcha";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
 const NewsletterSignup: React.FC = () => {
   const [email, setEmail] = useState("");
+  const [companyWebsite, setCompanyWebsite] = useState(""); // honeypot
   const [status, setStatus] = useState<Status>("idle");
   const [message, setMessage] = useState("");
+
+  useEffect(() => {
+    loadRecaptcha();
+  }, []);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("submitting");
     setMessage("");
     try {
+      const recaptchaToken = await getRecaptchaToken("newsletter_signup");
       const res = await fetch("/api/newsletter", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({
+          email,
+          companyWebsite,
+          ...(recaptchaToken ? { recaptchaToken } : {}),
+        }),
       });
       const data = await res.json().catch(() => ({}));
       if (res.ok) {
@@ -64,6 +75,21 @@ const NewsletterSignup: React.FC = () => {
             onSubmit={handleSubmit}
             className="flex flex-col sm:flex-row gap-3"
           >
+            {/* Honeypot: hidden from real users, bots tend to fill it */}
+            <div className="sr-only" aria-hidden="true">
+              <label htmlFor="newsletter-company-website">
+                Company website
+              </label>
+              <input
+                id="newsletter-company-website"
+                name="companyWebsite"
+                type="text"
+                tabIndex={-1}
+                autoComplete="off"
+                value={companyWebsite}
+                onChange={(e) => setCompanyWebsite(e.target.value)}
+              />
+            </div>
             <input
               type="email"
               required
