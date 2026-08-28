@@ -67,6 +67,7 @@ export interface InsightDoc {
 export interface PressReleaseDoc {
   _id: string;
   title: string;
+  seoTitle?: string;
   slug: string;
   publishDate: string;
   dateline?: string;

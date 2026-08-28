@@ -8,6 +8,14 @@ import OverviewBento from "@/components/home/OverviewBento";
 import CTA from "@/components/CTA";
 import AnalyticsTracker from "@/components/AnalyticsTracker";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "STOC Advisory | M&A Transaction Advisory & Quality of Earnings",
+  description:
+    "Transaction advisory, quality of earnings, and corporate development support for middle-market businesses and private equity sponsors nationwide.",
+};
+
 export default async function Home() {
   // 1) Read headers() on the server
   const requestHeaders = await headers();

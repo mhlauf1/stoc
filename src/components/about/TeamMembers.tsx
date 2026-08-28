@@ -29,9 +29,9 @@ const TeamMember = ({ name, imageUrl, location, title }: TeamMemberDoc) => (
 const TeamMembers: React.FC<{ members: TeamMemberDoc[] }> = ({ members }) => {
   return (
     <section className="px-6 flex flex-col gap-8 items-start md:px-12 lg:px-32 pb-24 md:pb-32">
-      <h2 className="text-3xl md:text-4xl lg:text-5xl font-gambetta tracking-tight leading-tight max-w-[24ch]">
+      <h1 className="text-3xl md:text-4xl lg:text-5xl font-gambetta tracking-tight leading-tight max-w-[24ch]">
         Meet the team
-      </h2>
+      </h1>
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-8 md:gap-y-12 md:grid-cols-3">
         {members.map((item) => (
           <div key={item._id}>

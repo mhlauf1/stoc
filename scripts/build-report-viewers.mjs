@@ -21,6 +21,8 @@ const REPORTS = [
   {
     slug: "us-veterinary-services-2026",
     title: "U.S. Veterinary Services Market Report 2026",
+    description:
+      "Proprietary 2026 report on the U.S. veterinary services market: national acquisition universe, platform and chain activity analysis.",
     pdfUrl:
       "https://cdn.sanity.io/files/seusdtab/production/e7a2c85251dbb46a0508258053b41576f313a8e9.pdf",
     pdfName: "STOC_US_Veterinary_Services_Market_Report_2026.pdf",
@@ -48,6 +50,8 @@ const REPORTS = [
   {
     slug: "us-medical-aesthetics-2026",
     title: "U.S. Medical Aesthetics Market Report 2026",
+    description:
+      "Proprietary 2026 report on the U.S. medical aesthetics market: geographic supply intelligence and the PE consolidation landscape.",
     pdfUrl:
       "https://cdn.sanity.io/files/seusdtab/production/6078845ca37b9802a2b3da2036f1e548b215a67e.pdf",
     pdfName: "STOC_US_Medical_Aesthetics_Market_Report_2026.pdf",
@@ -66,6 +70,8 @@ const REPORTS = [
   {
     slug: "us-commercial-landscaping-2026",
     title: "U.S. Commercial Landscaping Market Report 2026",
+    description:
+      "Proprietary 2026 report on the U.S. commercial landscaping market: platform landscape, supply mapping, and acquisition-target universe.",
     pdfUrl:
       "https://cdn.sanity.io/files/seusdtab/production/4a52f018cffa5f79db35a4a783f888910864adcc.pdf",
     pdfName: "STOC_US_Commercial_Landscaping_Market_Report_2026.pdf",
@@ -108,7 +114,7 @@ for (const r of REPORTS) {
   // Head additions: base for relative assets, viewport, viewer stylesheet.
   html = html.replace(
     /<head>/i,
-    `<head>\n<base href="/reports-html/${r.slug}/">\n<meta name="viewport" content="width=device-width, initial-scale=1">`
+    `<head>\n<base href="/reports-html/${r.slug}/">\n<meta name="viewport" content="width=device-width, initial-scale=1">\n<meta name="description" content="${r.description}">`
   );
   html = html.replace(
     /<\/head>/i,

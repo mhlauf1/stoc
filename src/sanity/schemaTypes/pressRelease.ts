@@ -13,6 +13,13 @@ export const pressRelease = defineType({
       validation: (rule) => rule.required(),
     }),
     defineField({
+      name: "seoTitle",
+      title: "SEO Title",
+      type: "string",
+      description:
+        "Optional. Overrides the browser/search-result title (used verbatim, so include '| STOC Advisory' if wanted; keep under 60 characters). The visible headline is unchanged.",
+    }),
+    defineField({
       name: "slug",
       type: "slug",
       options: { source: "title", maxLength: 96 },

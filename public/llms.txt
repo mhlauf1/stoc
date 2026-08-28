@@ -1,0 +1,33 @@
+# STOC Advisory
+
+> STOC Advisory is a national M&A transaction advisory firm serving middle-market
+> businesses and private equity sponsors, with offices in Baltimore, Dallas,
+> Minneapolis, Nashville, and Ponte Vedra Beach. Core services include Quality of
+> Earnings (QoE) reports, financial due diligence, net working capital analysis,
+> corporate development support, growth enablement, and finance & data intelligence.
+
+## Services
+- [Transaction Advisory Services](https://www.stocadvisory.com/services/transaction-advisory-services):
+  Quality of Earnings reports, net working capital analysis, cash-to-accrual
+  conversions, and post-transaction support for buyers, sellers, and lenders
+- [Corporate Development Support](https://www.stocadvisory.com/services/corporate-development-support)
+- [Growth Enablement Services](https://www.stocadvisory.com/services/growth-enablement-services)
+- [Finance & Data Intelligence](https://www.stocadvisory.com/services/finance-data-intelligence)
+
+## Industries
+- [Healthcare](https://www.stocadvisory.com/industries/healthcare)
+- [Business Services](https://www.stocadvisory.com/industries/business-services)
+- [Manufacturing & Distribution](https://www.stocadvisory.com/industries/manufacturing-distribution)
+- [Technology, Media & Telecommunications](https://www.stocadvisory.com/industries/technology-media-telecommunications)
+- [Retail & Consumer Products](https://www.stocadvisory.com/industries/retail-consumer-products)
+- [Hospitality & Entertainment](https://www.stocadvisory.com/industries/hospitality-entertainment)
+
+## Insights
+- [U.S. Commercial Landscaping Market Report 2026](https://www.stocadvisory.com/insights/reports/us-commercial-landscaping-2026)
+- [U.S. Veterinary Services Market Report 2026](https://www.stocadvisory.com/insights/reports/us-veterinary-services-2026)
+- [U.S. Medical Aesthetics Market Report 2026](https://www.stocadvisory.com/insights/reports/us-medical-aesthetics-2026)
+
+## Company
+- [About](https://www.stocadvisory.com/about)
+- [Locations](https://www.stocadvisory.com/about/locations)
+- [Contact](https://www.stocadvisory.com/contact)

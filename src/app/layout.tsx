@@ -4,6 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import localFont from "next/font/local";
 import Footer from "@/components/Footer";
+import OrgJsonLd from "@/components/OrgJsonLd";
 import { Analytics } from "@vercel/analytics/next";
 import Script from "next/script";
 import React from "react";
@@ -59,6 +60,8 @@ export default function RootLayout({
           data-key="MH0mfu5FjWumOUu8/TT1JQ"
           async
         ></Script>
+
+        <OrgJsonLd />
       </head>
       <body className={`${inter.className} ${gambetta.style} antialiased`}>
         <Navbar />

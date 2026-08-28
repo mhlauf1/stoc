@@ -77,9 +77,13 @@ const InsightCard: React.FC<{ insight: InsightDoc; index?: number }> = ({
           href={href}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label={`${ctaLabel(insight.contentType)}: ${insight.title}`}
           className="absolute inset-0 z-10"
-        />
+        >
+          {/* Visually hidden anchor text so crawlers/AT see a labeled link */}
+          <span className="sr-only">
+            {ctaLabel(insight.contentType)}: {insight.title}
+          </span>
+        </a>
       )}
     </motion.article>
   );
