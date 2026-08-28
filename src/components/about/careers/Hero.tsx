@@ -52,7 +52,7 @@ const Hero: React.FC<{ jobPostings: JobPostingDoc[] }> = ({ jobPostings }) => {
         </motion.div>
 
         {/* Main heading */}
-        <motion.h2
+        <motion.h1
           initial="hidden"
           whileInView="visible"
           variants={textVariants}
@@ -61,7 +61,7 @@ const Hero: React.FC<{ jobPostings: JobPostingDoc[] }> = ({ jobPostings }) => {
           className="text-neutral-800 text-3xl text-center md:text-4xl lg:text-5xl font-gambetta leading-tight tracking-tight"
         >
           Join Our Team
-        </motion.h2>
+        </motion.h1>
 
         {/* Intro copy */}
         <motion.p

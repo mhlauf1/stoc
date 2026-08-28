@@ -44,6 +44,7 @@ export const RELATED_INSIGHTS_QUERY = defineQuery(/* groq */ `
 const pressReleaseFields = /* groq */ `
   _id,
   title,
+  seoTitle,
   "slug": slug.current,
   publishDate,
   dateline,

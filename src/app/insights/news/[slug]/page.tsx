@@ -36,7 +36,7 @@ export async function generateMetadata({
   if (!release) return {};
 
   return {
-    title: `${release.title} | STOC Advisory`,
+    title: release.seoTitle ?? `${release.title} | STOC Advisory`,
     description: release.excerpt,
     alternates: { canonical: `/insights/news/${release.slug}` },
     openGraph: {

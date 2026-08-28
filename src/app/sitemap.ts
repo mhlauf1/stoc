@@ -19,6 +19,10 @@ const STATIC_ROUTES = [
   "/industries/retail-consumer-products",
   "/industries/technology-media-telecommunications",
   "/insights",
+  // Static report viewers served from public/reports-html via rewrite
+  "/insights/reports/us-commercial-landscaping-2026",
+  "/insights/reports/us-veterinary-services-2026",
+  "/insights/reports/us-medical-aesthetics-2026",
   "/about",
   "/about/company",
   "/about/team",

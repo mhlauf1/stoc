@@ -4,6 +4,14 @@ import { sanityFetch } from "@/sanity/lib/client";
 import { JOB_POSTINGS_QUERY } from "@/sanity/lib/queries";
 import type { JobPostingDoc } from "@/sanity/lib/types";
 
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Careers | STOC Advisory",
+  description:
+    "Careers at STOC Advisory: join a growing national M&A advisory firm. Opportunities in transaction advisory, corporate development, and finance.",
+};
+
 const page = async () => {
   const jobPostings = await sanityFetch<JobPostingDoc[]>({
     query: JOB_POSTINGS_QUERY,

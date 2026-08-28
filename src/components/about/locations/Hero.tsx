@@ -70,7 +70,7 @@ const Hero: React.FC<{ offices: Office[] }> = ({ offices }) => {
           </motion.div>
 
           {/* Main heading */}
-          <motion.h2
+          <motion.h1
             initial="hidden"
             whileInView="visible"
             variants={textVariants}
@@ -79,7 +79,7 @@ const Hero: React.FC<{ offices: Office[] }> = ({ offices }) => {
             className="text-neutral-800 text-3xl text-start md:text-4xl font-gambetta leading-tight tracking-tight"
           >
             Our Locations
-          </motion.h2>
+          </motion.h1>
 
           {/* Intro copy */}
           <motion.p

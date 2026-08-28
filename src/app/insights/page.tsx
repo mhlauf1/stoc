@@ -9,9 +9,9 @@ import PressReleaseCard from "@/components/insights/PressReleaseCard";
 import NewsletterSignup from "@/components/insights/NewsletterSignup";
 
 export const metadata: Metadata = {
-  title: "Insights | STOC Advisory",
+  title: "Insights & Proprietary Market Reports | STOC Advisory",
   description:
-    "Market landscape reports, white papers, and vertical analysis from STOC Advisory.",
+    "Proprietary market reports and M&A insights from STOC Advisory, including industry studies on veterinary services, medical aesthetics, and more.",
 };
 
 export default async function InsightsPage() {
