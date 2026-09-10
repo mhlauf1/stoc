@@ -11,6 +11,7 @@ const TeamMember = ({ name, imageUrl, location, title }: TeamMemberDoc) => (
         fill
         src={imageUrl}
         alt={name}
+        sizes="(min-width: 768px) 33vw, (min-width: 640px) 50vw, 100vw"
         className="rounded-lg object-cover"
       />
     </div>

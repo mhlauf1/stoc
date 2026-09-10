@@ -1,4 +1,5 @@
 // Typed shapes for Sanity-fetched documents (projections defined in queries.ts).
+import type { SanityImageSource } from "@sanity/image-url";
 
 export interface Office {
   _id: string;
@@ -14,6 +15,12 @@ export interface TeamMemberDoc {
   title?: string;
   location?: string;
   imageUrl: string;
+}
+
+// Raw shape returned by TEAM_MEMBERS_QUERY (image object with hotspot/crop);
+// the team page resolves it to a sized imageUrl before rendering.
+export interface TeamMemberRaw extends Omit<TeamMemberDoc, "imageUrl"> {
+  image: SanityImageSource;
 }
 
 export interface ServiceDoc {

@@ -105,8 +105,7 @@ export const OFFICE_LOCATIONS_QUERY = defineQuery(/* groq */ `
 
 export const TEAM_MEMBERS_QUERY = defineQuery(/* groq */ `
   *[_type == "teamMember"] | order(orderRank asc) {
-    _id, name, title, location,
-    "imageUrl": image.asset->url
+    _id, name, title, location, image
   }
 `);
 
