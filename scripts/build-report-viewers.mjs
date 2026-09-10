@@ -4,6 +4,7 @@
 //     source repo goes private) and the external us-states geojson
 //   - adds <base> so relative assets resolve under /reports-html/<slug>/
 //   - adds a viewport meta tag (the documents are print-layout A4 pages)
+//   - adds schema.org Report JSON-LD (structured data for search/AI crawlers)
 //   - injects the shared STOC viewer chrome (top bar, side nav, GA4)
 // and writes public/reports-html/<slug>/index.html.
 //
@@ -20,6 +21,7 @@ const ROOT = join(__dirname, "..");
 const REPORTS = [
   {
     slug: "us-veterinary-services-2026",
+    datePublished: "2026-05-01",
     title: "U.S. Veterinary Services Market Report 2026",
     description:
       "Proprietary 2026 report on the U.S. veterinary services market: national acquisition universe, platform and chain activity analysis.",
@@ -49,6 +51,7 @@ const REPORTS = [
   },
   {
     slug: "us-medical-aesthetics-2026",
+    datePublished: "2026-02-01",
     title: "U.S. Medical Aesthetics Market Report 2026",
     description:
       "Proprietary 2026 report on the U.S. medical aesthetics market: geographic supply intelligence and the PE consolidation landscape.",
@@ -69,6 +72,7 @@ const REPORTS = [
   },
   {
     slug: "us-commercial-landscaping-2026",
+    datePublished: "2026-05-01",
     title: "U.S. Commercial Landscaping Market Report 2026",
     description:
       "Proprietary 2026 report on the U.S. commercial landscaping market: platform landscape, supply mapping, and acquisition-target universe.",
@@ -116,9 +120,37 @@ for (const r of REPORTS) {
     /<head>/i,
     `<head>\n<base href="/reports-html/${r.slug}/">\n<meta name="viewport" content="width=device-width, initial-scale=1">\n<meta name="description" content="${r.description}">`
   );
+  const pageUrl = `https://www.stocadvisory.com/insights/reports/${r.slug}`;
+  const org = {
+    "@type": "Organization",
+    name: "STOC Advisory",
+    url: "https://www.stocadvisory.com",
+  };
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Report",
+    "@id": pageUrl,
+    url: pageUrl,
+    mainEntityOfPage: pageUrl,
+    headline: r.title,
+    name: r.title,
+    description: r.description,
+    datePublished: r.datePublished,
+    inLanguage: "en-US",
+    isAccessibleForFree: true,
+    author: org,
+    publisher: org,
+    encoding: {
+      "@type": "MediaObject",
+      encodingFormat: "application/pdf",
+      contentUrl: r.pdfUrl,
+      name: r.pdfName,
+    },
+  };
   html = html.replace(
     /<\/head>/i,
-    `<link rel="stylesheet" href="/reports-html/viewer.css">\n</head>`
+    `<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>\n` +
+      `<link rel="stylesheet" href="/reports-html/viewer.css">\n</head>`
   );
 
   // Body additions: viewer config + script.
