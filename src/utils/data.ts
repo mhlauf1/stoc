@@ -313,13 +313,6 @@ export const teamMeberData: TeamMemberProps[] = [
         title: "VP, Business Development"
     },
     {
-        id: 14,
-        name: "Peyton Evans",
-        image: "/Peyton_Evans.jpeg",
-        location: "Philadelphia, PA",
-        title: "Associate, Business Development"
-    },
-    {
         id: 10,
         name: "Srushti Kulkarni",
         image: "/Srushti_Kulkarni.jpg",
