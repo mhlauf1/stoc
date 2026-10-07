@@ -213,7 +213,6 @@ const team = [
   { name: "Hung Nguyen", image: "HungNguyen.jpg", location: "Minneapolis, MN", title: "Associate | TAS" },
   { name: "Aidan Sheehy", image: "Aidan-Sheehy.jpg", location: "Minneapolis, MN", title: "Associate | TAS" },
   { name: "Lucius Burch", image: "Lucius_Burch.jpg", location: "Nashville, TN", title: "VP, Business Development" },
-  { name: "Peyton Evans", image: "Peyton_Evans.jpeg", location: "Philadelphia, PA", title: "Associate, Business Development" },
   { name: "Srushti Kulkarni", image: "Srushti_Kulkarni.jpg", location: "Baltimore, MD", title: "Market Research Analyst" },
 ];
 
