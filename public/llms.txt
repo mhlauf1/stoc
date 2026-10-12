@@ -22,6 +22,14 @@
 - [Retail & Consumer Products](https://www.stocadvisory.com/industries/retail-consumer-products)
 - [Hospitality & Entertainment](https://www.stocadvisory.com/industries/hospitality-entertainment)
 
+## Technology
+- [Technology at STOC](https://www.stocadvisory.com/technology): proprietary
+  platforms used across the acquisition lifecycle
+- [Strata](https://www.stocadvisory.com/technology/strata): Quality of Earnings
+  and financial diligence platform
+- [Sourcing OS](https://www.stocadvisory.com/technology/sourcing-os): target
+  sourcing and owner outreach platform
+
 ## Insights
 - [U.S. Commercial Landscaping Market Report 2026](https://www.stocadvisory.com/insights/reports/us-commercial-landscaping-2026)
 - [U.S. Veterinary Services Market Report 2026](https://www.stocadvisory.com/insights/reports/us-veterinary-services-2026)

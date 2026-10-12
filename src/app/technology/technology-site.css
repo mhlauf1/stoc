@@ -1,0 +1,117 @@
+/*
+ * Site alignment for the vendor Technology package
+ * (public/technology-assets/technology.css stays untouched).
+ * Selectors start with #stoc-tech so they outrank the vendor's
+ * .stoc-tech rules, including its !important ones.
+ * Breakpoints match Tailwind: md 768px, lg 1024px.
+ */
+
+/* Start content below the fixed Navbar. The vendor scroll scenes measure
+   progress from this offset; without it the hero loads half faded. */
+#stoc-tech {
+  padding-top: var(--site-header-h);
+}
+
+/* Full-width layout with the site's side gutters (px-4 md:px-[5%]) */
+#stoc-tech .wrap,
+#stoc-tech .chapter .wrap {
+  max-width: none;
+  padding-inline: 16px;
+}
+@media (min-width: 768px) {
+  #stoc-tech .wrap,
+  #stoc-tech .chapter .wrap {
+    padding-inline: 5%;
+  }
+}
+
+/* Headings: Gambetta, tracking-tight, leading-tight */
+#stoc-tech h1,
+#stoc-tech h2,
+#stoc-tech .h-xl,
+#stoc-tech .h-l,
+#stoc-tech .h-m {
+  letter-spacing: -0.025em !important;
+  line-height: 1.25 !important;
+}
+
+/* Page H1: text-3xl md:text-5xl lg:text-6xl */
+#stoc-tech .hero-copy h1,
+#stoc-tech .cover-st h1,
+#stoc-tech .cover-sos h1 {
+  font-size: 30px !important;
+}
+
+/* Section H2: text-2xl md:text-3xl lg:text-4xl */
+#stoc-tech .view h2.h-xl,
+#stoc-tech .view h2.h-l,
+#stoc-tech .chapter-head h2,
+#stoc-tech .cta h2 {
+  font-size: 24px !important;
+}
+
+/* H3: text-xl md:text-2xl */
+#stoc-tech .h-m {
+  font-size: 20px !important;
+}
+
+/* Intro paragraphs: text-lg md:text-xl tracking-tight */
+#stoc-tech .lede,
+#stoc-tech .cv-sub {
+  font-size: 18px !important;
+  line-height: 1.55 !important;
+  letter-spacing: -0.025em;
+}
+
+/* Body copy: text-base md:text-lg tracking-tight */
+#stoc-tech .beat p,
+#stoc-tech .adv-grid p,
+#stoc-tech .stack-detail p,
+#stoc-tech .tri p,
+#stoc-tech .stage p {
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+  letter-spacing: -0.025em;
+}
+
+@media (min-width: 768px) {
+  #stoc-tech .hero-copy h1,
+  #stoc-tech .cover-st h1,
+  #stoc-tech .cover-sos h1 {
+    font-size: 48px !important;
+  }
+  #stoc-tech .view h2.h-xl,
+  #stoc-tech .view h2.h-l,
+  #stoc-tech .chapter-head h2,
+  #stoc-tech .cta h2 {
+    font-size: 30px !important;
+  }
+  #stoc-tech .h-m {
+    font-size: 24px !important;
+  }
+  #stoc-tech .lede,
+  #stoc-tech .cv-sub {
+    font-size: 20px !important;
+  }
+  #stoc-tech .beat p,
+  #stoc-tech .adv-grid p,
+  #stoc-tech .stack-detail p,
+  #stoc-tech .tri p,
+  #stoc-tech .stage p {
+    font-size: 18px !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  #stoc-tech .hero-copy h1,
+  #stoc-tech .cover-st h1,
+  #stoc-tech .cover-sos h1 {
+    font-size: 60px !important;
+  }
+  #stoc-tech .view h2.h-xl,
+  #stoc-tech .view h2.h-l,
+  #stoc-tech .chapter-head h2,
+  #stoc-tech .cta h2 {
+    font-size: 36px !important;
+  }
+}

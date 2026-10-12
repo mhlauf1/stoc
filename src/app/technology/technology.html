@@ -1,0 +1,303 @@
+<!-- STOC Technology: drop-in page fragment.
+     Serve this same fragment for /technology, /technology/strata and /technology/sourcing-os.
+     The script reads the URL and shows the right view; links between views use history.pushState. -->
+<link rel="stylesheet" href="/technology-assets/technology.css">
+<div class="stoc-tech" id="stoc-tech" data-base="/technology" data-assets="/technology-assets/">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="g-strata" viewBox="0 0 32 32"><path d="M16 5 29 11.5 16 18 3 11.5Z" fill="#4aa3f0"/><path d="M5.6 15.3 16 20.5l10.4-5.2L29 16.6 16 23.1 3 16.6Z" fill="#b8c9e6" opacity=".85"/><path d="M5.6 20.4 16 25.6l10.4-5.2L29 21.7 16 28.2 3 21.7Z" fill="#b8c9e6" opacity=".5"/></symbol>
+    <symbol id="g-strata-d" viewBox="0 0 32 32"><path d="M16 5 29 11.5 16 18 3 11.5Z" fill="#1474c4"/><path d="M5.6 15.3 16 20.5l10.4-5.2L29 16.6 16 23.1 3 16.6Z" fill="#0a2447" opacity=".8"/><path d="M5.6 20.4 16 25.6l10.4-5.2L29 21.7 16 28.2 3 21.7Z" fill="#0a2447" opacity=".45"/></symbol>
+    <symbol id="g-sos" viewBox="0 0 32 32"><circle cx="16" cy="16" r="12.5" fill="none" stroke="#b8c9e6" stroke-opacity=".45" stroke-width="1.4"/><circle cx="16" cy="16" r="7.5" fill="none" stroke="#b8c9e6" stroke-opacity=".75" stroke-width="1.4"/><circle cx="16" cy="16" r="3" fill="#4aa3f0"/><circle cx="24.5" cy="9.5" r="1.8" fill="#fff"/><circle cx="7.5" cy="20" r="1.4" fill="#b8c9e6"/><circle cx="21" cy="25" r="1.2" fill="#b8c9e6"/></symbol>
+    <symbol id="g-sos-d" viewBox="0 0 32 32"><circle cx="16" cy="16" r="12.5" fill="none" stroke="#0a2447" stroke-opacity=".35" stroke-width="1.4"/><circle cx="16" cy="16" r="7.5" fill="none" stroke="#0a2447" stroke-opacity=".6" stroke-width="1.4"/><circle cx="16" cy="16" r="3" fill="#1474c4"/><circle cx="24.5" cy="9.5" r="1.8" fill="#0a2447"/><circle cx="7.5" cy="20" r="1.4" fill="#0a2447" opacity=".6"/><circle cx="21" cy="25" r="1.2" fill="#0a2447" opacity=".6"/></symbol>
+    <symbol id="g-ext" viewBox="0 0 16 16"><path d="M6 3h7v7M13 3 4 12" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="g-arrow" viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="g-chev" viewBox="0 0 10 10"><path d="M2 3.5 5 6.5 8 3.5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></symbol>
+    <symbol id="g-loop" viewBox="0 0 24 24"><path d="M20 12a8 8 0 1 1-2.34-5.66M20 4v4h-4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  </defs>
+</svg>
+
+
+
+<div class="stoc-main">
+<!-- =================================================================== HUB -->
+<div class="view" data-view="technology">
+  <section class="scene hero-scene dark" data-scene="hero">
+    <div class="sticky" id="heroSticky">
+      <div class="hero-copy wrap" id="heroCopy">
+        <span class="eyebrow">Technology at STOC</span>
+        <h1>Technology for every stage of the <em>acquisition lifecycle.</em></h1>
+        <p class="lede">STOC builds proprietary intelligence into every stage of the deal. Strata powers our quality of earnings and financial diligence. Sourcing OS turns market intelligence into targeted sourcing and owner outreach.</p>
+        <div class="btns" id="heroBtns">
+          <a class="btn btn-primary" href="/technology/strata">Explore Strata</a>
+          <a class="btn btn-ghost" href="/technology/sourcing-os">Explore Sourcing OS</a>
+        </div>
+      </div>
+      <div class="hero-stage">
+        <div class="hero-rig" id="heroRig">
+          <div class="pair">
+            <a href="/technology/strata" class="hero-card"><div class="fit" data-app="cover-st"></div><div class="hero-cap"><h2><svg><use href="#g-strata-d"/></svg>Strata</h2><p>Quality of earnings and financial diligence.</p></div></a>
+            <a href="/technology/sourcing-os" class="hero-card"><div class="fit" data-app="cover-sos"></div><div class="hero-cap"><h2><svg><use href="#g-sos-d"/></svg>Sourcing OS</h2><p>Target sourcing and owner outreach.</p></div></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="scene principle dark" data-scene="words">
+    <div class="sticky"><div class="wrap">
+      <p class="big" data-words="On most deals, the data is rebuilt in new spreadsheets every time. Our platforms keep it in one place, so the next deal starts with what we already know." data-em="one,place"></p>
+    </div></div>
+  </section>
+
+  <section class="scene life light" data-scene="life">
+    <div class="sticky"><div class="wrap">
+      <span class="eyebrow">Where each platform fits</span>
+      <h2 class="h-xl">From diligence to <em>the next acquisition.</em></h2>
+      <p class="lede">Strata covers diligence through post-close reporting. Sourcing OS finds and engages the next target. The same data moves from one to the other.</p>
+      <div class="track"><div class="track-line"></div><div class="track-fill" id="lifeFill"></div>
+        <div class="stages">
+          <div class="stage"><small>01</small><h3>Evaluate the target</h3><p>Financials mapped, recast and adjusted.</p><span class="who st">Strata</span></div>
+          <div class="stage"><small>02</small><h3>Benchmark</h3><p>Measured against the businesses you own.</p><span class="who st">Strata</span></div>
+          <div class="stage"><small>03</small><h3>Close and integrate</h3><p>Reporting moves into platform financials.</p><span class="who st">Strata</span></div>
+          <div class="stage"><small>04</small><h3>Map the next market</h3><p>Every company in the thesis, found and tiered.</p><span class="who so">Sourcing OS</span></div>
+          <div class="stage"><small>05</small><h3>Engage owners</h3><p>Sequences run through the tiered list.</p><span class="who so">Sourcing OS</span></div>
+          <div class="stage"><small>06</small><h3>Inform the next deal</h3><p>What we learn shapes the next search and diligence.</p><span class="who st">Both</span></div>
+        </div>
+      </div>
+      <p class="loopnote" id="loopNote"><svg><use href="#g-loop"/></svg>Results from each deal are saved, so the next search and the next diligence start with more information.</p>
+    </div></div>
+  </section>
+
+  <section class="chapter dark" data-chapter="strata">
+    <div class="wrap">
+      <div class="chapter-head rv"><div class="prod"><svg><use href="#g-strata-d"/></svg>Strata</div><h2 class="h-xl">Financial diligence built for <em>buy-and-build.</em></h2></div>
+      <div class="chapter-grid">
+        <div class="chapter-media"><div class="fit" data-shot="strata" data-init="home" data-chapter-app></div></div>
+        <div class="beats">
+          <div class="beat" data-st="home"><small>PORTFOLIO</small><h3 class="h-m">Measure each target against what you own.</h3><p>Every engagement sits on one platform, with headline metrics across the portfolio and sector benchmarks drawn from completed and in-flight QoEs.</p></div>
+          <div class="beat" data-st="intake"><small>DATA UPLOAD</small><h3 class="h-m">One intake for the full data request.</h3><p>Files upload in any format or sync from QuickBooks Online, NetSuite and Sage, tracked against a document checklist.</p></div>
+          <div class="beat" data-st="is2"><small>FINANCIAL FOUNDATION</small><h3 class="h-m">One chart of accounts for every target.</h3><p>Every account is mapped to a standard structure by period, entity and location, viewable annually or monthly, in dollars or as a percentage of revenue.</p></div>
+          <div class="beat" data-st="adj"><small>QUALITY OF EARNINGS</small><h3 class="h-m">Every adjustment, fully supported.</h3><p>Management, due diligence and pro forma adjustments, each with its methodology, the deal team’s commentary and its impact on EBITDA.</p></div>
+          <div class="beat" data-st="ti2"><small>TRANSACTION ISSUES</small><h3 class="h-m">The findings that move price or terms.</h3><p>Each risk is written up with what was found, why it matters and the recommended path forward.</p></div>
+          <div class="beat" data-st="val"><small>VALUATION</small><h3 class="h-m">The price, tested under every EBITDA case.</h3><p>The purchase price measured against underwritten, management-adjusted, QoE and synergy-adjusted EBITDA.</p></div>
+          <div class="beat" data-st="xls"><small>REPORTING</small><h3 class="h-m">A databook and an IC-ready deck.</h3><p>The Excel databook and the FDD presentation generate from the same data, so every figure ties back to the source.</p>
+            <div class="chapter-cta"><a class="btn btn-primary" href="/technology/strata">Explore Strata</a><a class="link" href="/technology/strata" data-after="st-tour">Take the product tour</a></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="chapter light" data-chapter="sos">
+    <div class="wrap">
+      <div class="chapter-head rv"><div class="prod"><svg><use href="#g-sos-d"/></svg>Sourcing OS</div><h2 class="h-xl">Target sourcing and owner outreach for <em>private equity.</em></h2></div>
+      <div class="chapter-grid">
+        <div class="chapter-media"><div class="fit" data-shot data-chapter-app></div></div>
+        <div class="beats">
+          <div class="beat" data-st="intake"><small><i class="bdot" style="background:#041E40"></i>INTAKE</small><h3 class="h-m">Start from an approved brief.</h3><p>Every search begins with an intake form: sector, consolidation landscape, target criteria and geography, approved before any data is collected.</p></div>
+          <div class="beat" data-st="scrape"><small><i class="bdot" style="background:#0F75BC;box-shadow:0 0 0 1px #c9d3e2"></i>SCRAPE</small><h3 class="h-m">Map the entire market.</h3><p>Keywords, states and exclusion terms run across every source, and results are deduplicated into one clean table.</p></div>
+          <div class="beat" data-st="transform"><small><i class="bdot" style="background:#5B8FD6;box-shadow:0 0 0 1px #c9d3e2"></i>TRANSFORMATION</small><h3 class="h-m">Clean it into one table.</h3><p>Raw results are cleaned into a single table, with website, reviews, rating, category and social profiles for every company.</p></div>
+          <div class="beat" data-st="map"><small><i class="bdot" style="background:#383B6E;box-shadow:0 0 0 1px #c9d3e2"></i>INTELLIGENCE</small><h3 class="h-m">See every target on the map.</h3><p>Targets are placed by metro area, so the team can see where companies cluster and which have been contacted.</p></div>
+          <div class="beat" data-st="tier"><small><i class="bdot" style="background:#7A7FB8;box-shadow:0 0 0 1px #c9d3e2"></i>TIERING</small><h3 class="h-m">Rank the market with AI.</h3><p>Describe the ideal target in plain language. AI turns it into weighted criteria and ranks every company into Tier 1, 2 and 3, with each weight adjustable before it is applied.</p></div>
+          <div class="beat" data-st="enrich"><small><i class="bdot" style="background:#BACAEC;box-shadow:0 0 0 1px #c9d3e2"></i>ENRICH</small><h3 class="h-m">Reach the decision-makers.</h3><p>Owners and operators are matched to work email and phone, row by row, from the sources you choose.</p></div>
+          <div class="beat" data-st="outbound"><small><i class="bdot" style="background:#FFFFFF;box-shadow:0 0 0 1px #c9d3e2"></i>OUTREACH</small><h3 class="h-m">Sequence through the tiered list.</h3><p>Email sequences run through the tiered list, starting with Tier 1, and every send, reply and opportunity is tracked by campaign.</p>
+            <div class="chapter-cta"><a class="btn btn-primary" href="/technology/sourcing-os">Explore Sourcing OS</a><a class="link" href="/technology/sourcing-os" data-after="so-tour">Take the product tour</a></div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="delivery cloud">
+    <div class="wrap">
+      <span class="eyebrow">How it’s delivered</span>
+      <h2 class="h-xl rv">STOC runs the platforms <em>on your deal.</em></h2>
+      <div class="tri">
+        <article class="rv"><h3>Operated by STOC</h3><p>Our team operates the software and delivers the analysis. Your team does not need to learn or license anything new.</p></article>
+        <article class="rv"><h3>Your data stays yours</h3><p>Target lists and diligence files belong to the fund and carry over to the next engagement.</p></article>
+        <article class="rv"><h3>Traceable to source</h3><p>Every number links back to the account, transaction or document it came from.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta dark" data-contact>
+    <div class="wrap">
+      <h2 class="h-xl rv">See the platforms <em>in action.</em></h2>
+      <p class="lede rv">Start with the product tours, then reach out to schedule a discovery session or a live demonstration with our team.</p>
+      <div class="demo-cards">
+        <a class="demo-card rv" href="/technology/strata"><span class="top"><span class="glyph"><svg><use href="#g-strata"/></svg></span><h3>Strata</h3></span><p>Follow one target from data upload through transaction issues to an IC-ready report.</p><span class="go">Explore Strata →</span></a>
+        <a class="demo-card rv" href="/technology/sourcing-os"><span class="top"><span class="glyph"><svg><use href="#g-sos"/></svg></span><h3>Sourcing OS</h3></span><p>Map a market, enrich decision-makers and follow a campaign to pipeline.</p><span class="go">Explore Sourcing OS →</span></a>
+      </div>
+      <div class="btns rv" style="justify-content:center;margin-top:36px"><a class="btn btn-primary" href="/contact">Contact our team</a></div>
+    </div>
+  </section>
+</div>
+
+<!-- =================================================================== STRATA -->
+<div class="view has-local" data-view="strata" hidden>
+  <div class="localnav"><div class="wrap">
+    <strong><svg><use href="#g-strata-d"/></svg>Strata</strong>
+    <button class="jl" data-scroll="st-tour">Product tour</button>
+    <button class="jl" data-scroll="st-layers">Architecture</button>
+    <button class="jl" data-scroll="st-comp">Advantages</button>
+    <button class="jl" data-scroll="st-path">Process</button>
+    <button class="btn btn-primary" data-scroll="contact" type="button">Book a demo</button>
+  </div></div>
+
+  <section class="cover cover-st">
+    <div class="wrap">
+      <span class="eyebrow">Strata <span class="sep">·</span> Transaction Advisory Services</span>
+      <h1>One Quality of Earnings platform, <em>from kickoff through close.</em></h1>
+      <p class="cv-sub">STOC’s proprietary diligence platform, built for faster, more consistent underwriting across complex buy-and-build targets.</p>
+      <div class="btns"><button class="btn btn-primary" data-scroll="st-tour" type="button">Take the product tour</button><button class="btn btn-ghost" data-scroll="contact" type="button">Book a live demo</button></div>
+    </div>
+  </section>
+
+  <section class="scene tour-scene" data-scene="tour" data-tour="strata" id="st-tour">
+    <div class="sticky"><div class="wrap tour-grid">
+      <div class="tour-copy">
+        <span class="eyebrow">Product tour</span>
+        <ol class="tour-list"></ol>
+        <p class="tour-count">01 / 15</p><p class="tour-note">Sample data · click a screen to enlarge</p>
+      </div>
+      <div class="tour-mcap"><b></b><p></p></div>
+      <div class="tour-stage"><div class="tour-fit"></div></div>
+    </div></div>
+  </section>
+
+
+  <section class="intro-block light">
+    <div class="wrap intro-stack">
+      <span class="eyebrow">Platform overview</span>
+      <h2 class="h-xl rv">Each deal makes the next one <em>faster.</em></h2>
+      <p class="lede rv">Every diligence engagement answers the same questions: how the accounts map, which earnings adjustments apply, what drives performance and what the documents support. Strata keeps that work in one database, so the next target starts from what was already built.</p>
+      <ul class="cv-checks pv-checks rv"><li>Source exports parse straight into a standardized GL and trial balance</li><li>Dashboards and insights ready as soon as data enters the build</li><li>One live Databook, no version management or workbook links required</li><li>Active deals benchmarked against every deal delivered</li></ul>
+    </div>
+  </section>
+
+  <section class="scene stack-scene light" data-scene="stack" id="st-layers">
+    <div class="sticky"><div class="wrap stack-grid">
+      <div class="stack-copy"><span class="eyebrow">Architecture</span><h2 class="h-l">What’s inside Strata.</h2><div class="stack-detail" id="stackDetail"></div><div class="ticks" id="stackTicks"></div></div>
+      <div class="stack-vis"><div class="lyrs" id="stackWheel"></div></div>
+    </div></div>
+  </section>
+
+  <section class="adv-sec cloud" id="st-comp">
+    <div class="wrap">
+      <div class="comp-head"><span class="eyebrow">For repeat acquirers</span><h2 class="h-l">Benchmarks improve with <em>every acquisition.</em></h2></div>
+      <div class="adv-grid"><article class="rv"><h3 class="h-m">Launch each engagement from an established baseline.</h3><p>Recurring accounting treatments, cost categories and operating patterns become easier to recognize deal after deal. STOC starts from proven data structures and prior analysis, then investigates what is specific to the new target.</p></article><article class="rv"><h3 class="h-m">Measure each target against the existing portfolio.</h3><p>A higher margin becomes a question to answer. Does it reflect a different service mix, a more efficient model, or a difference in how costs are recorded? A common financial structure makes the comparison possible.</p></article><article class="rv"><h3 class="h-m">Maintain the depth behind the benchmark.</h3><p>Historical financials, recast statements, adjustments and schedules sit in one place, so any gap against the portfolio can be traced to the accounts behind it.</p></article><article class="rv"><h3 class="h-m">Shorten the timeline on every acquisition.</h3><p>Each engagement starts from existing templates and prior work, so it launches faster and takes less time to review.</p></article></div>
+    </div>
+  </section>
+
+  <section class="scene re-scene dark" data-scene="re">
+    <div class="sticky"><div class="wrap">
+      <span class="eyebrow">What changes</span>
+      <h2 class="h-l">What changes for a <em>repeat acquirer.</em></h2>
+      <div class="re-grid">
+        <div class="rp"><h6>What this replaces</h6><ul><li>Diligence work shelved once the deal closes</li><li>Every new target evaluated from scratch</li><li>Findings evaluated in isolation</li><li>A hand-off between diligence and integration</li><li>Timelines that reset with every deal</li></ul></div>
+        <div class="en"><h6>What this enables</h6><ul><li>One database with every acquisition’s financials</li><li>An established baseline for each new target</li><li>Benchmarks against businesses already in the portfolio</li><li>Source documents behind every comparison</li><li>Financials ready for platform reporting at close</li></ul></div>
+      </div>
+    </div></div>
+  </section>
+
+  <section class="scene path-scene light" data-scene="path" id="st-path">
+    <div class="sticky"><div class="wrap">
+      <span class="eyebrow">From target to platform</span>
+      <h2 class="h-l">Seven steps, the same for <em>every target.</em></h2>
+      <p class="lede">The steps stay the same while the analysis adapts to each target, so timelines and deliverables are predictable.</p>
+      <div class="path"><div class="path-line"></div><div class="path-fill" id="pathFill"></div>
+        <ol><li><b>1</b><span>Ingest target data</span></li><li><b>2</b><span>Standardize the financial framework</span></li><li><b>3</b><span>Apply adjustments</span></li><li><b>4</b><span>Evaluate performance</span></li><li><b>5</b><span>Benchmark against the portfolio</span></li><li><b>6</b><span>Integrate within the platform</span></li><li><b>7</b><span>Inform the next deal</span></li></ol>
+      </div>
+      <p class="endstate" id="endState"><b>End state:</b> a well-supported assessment of every target, and a business ready to report alongside the rest of the platform.</p>
+    </div></div>
+  </section>
+
+  <section class="cta dark" data-contact>
+    <div class="wrap">
+      <h2 class="h-xl rv">Explore <em>Strata.</em></h2>
+      <p class="lede rv">Schedule a discovery session or a live demonstration of the buy-and-build experience with our team.</p>
+      <div class="btns rv" style="justify-content:center;margin-top:32px"><a class="btn btn-primary" href="/contact">Schedule a discovery session</a></div>
+    </div>
+  </section>
+  <section class="xlink dark"><div class="wrap"><a href="/technology/sourcing-os"><div><small>Also from STOC</small><h3>Sourcing OS finds the <em>next target.</em></h3></div><span class="arrow"><svg width="20" height="20"><use href="#g-arrow"/></svg></span></a></div></section>
+</div>
+
+<!-- =================================================================== SOURCING OS -->
+<div class="view has-local" data-view="sourcing-os" hidden>
+  <div class="localnav"><div class="wrap">
+    <strong><svg><use href="#g-sos-d"/></svg>Sourcing OS</strong>
+    <button class="jl" data-scroll="so-tour">Product tour</button>
+    <button class="jl" data-scroll="so-loop">How a search runs</button>
+    <button class="jl" data-scroll="so-layers">System</button>
+    <button class="jl" data-scroll="so-re">What changes</button>
+    <button class="btn btn-primary" data-scroll="contact" type="button">Book a demo</button>
+  </div></div>
+
+  <section class="cover cover-sos">
+    <div class="wrap">
+      <span class="eyebrow">Sourcing OS <span class="sep">·</span> Corporate Development Support</span>
+      <h1>Build, enrich and monitor <em>every target in the market.</em></h1>
+      <p class="cv-sub">The platform behind STOC’s Corporate Development Support. It finds every company in a target market, identifies the owners and runs email outreach.</p>
+      <div class="btns"><button class="btn btn-primary" data-scroll="so-tour" type="button">Take the product tour</button><button class="btn btn-ghost" data-scroll="contact" type="button">Book a live demo</button></div>
+    </div>
+  </section>
+  <section class="scene tour-scene tour-sos" data-scene="tour" data-tour="sos" id="so-tour">
+    <div class="sticky"><div class="wrap tour-grid">
+      <div class="tour-copy"><span class="eyebrow">Product tour</span><ol class="tour-list"></ol><p class="tour-count">01 / 08</p><p class="tour-note">Click a screen to enlarge</p></div>
+      <div class="tour-mcap"><b></b><p></p></div>
+      <div class="tour-stage"><div class="tour-fit"></div></div>
+    </div></div>
+  </section>
+
+  <section class="scene map-scene galaxy" data-scene="map" id="so-loop">
+    <div class="sticky" id="mapSticky">
+      <div class="stars"></div><div id="leafMap" aria-hidden="true"></div>
+      <canvas id="mapCanvas" aria-label="Illustrative map of the United States showing targets being mapped, classified, enriched, prioritized and engaged"></canvas>
+      <div class="map-fade"></div>
+      <div class="map-ui"><div class="wrap">
+        <div class="map-title"><span class="eyebrow">How a search runs</span><h2 class="h-l">From a full market to <em>a signed LOI.</em></h2></div>
+        <div>
+          <div class="map-caption">
+            <div class="step" id="mapStep">STEP 1 OF 7</div>
+            <h3 id="mapH">Map the market</h3>
+            <p id="mapP"></p>
+            <div class="map-legend" id="mapLegend"><span><i style="background:#0F75BC"></i>Independent</span><span><i style="background:#FFFFFF"></i>Multi-location</span><span><i style="background:#BACAEC"></i>Franchise</span></div>
+            <div class="metric"><b id="mapM">0</b><span id="mapMl">targets mapped</span></div>
+            <div class="map-steps" id="mapSteps"></div>
+          </div>
+          <p class="illus">Illustrative data</p>
+        </div>
+      </div></div>
+    </div>
+  </section>
+
+  <section class="scene car-scene light" data-scene="car" id="so-layers">
+    <div class="sticky">
+      <div class="wrap car-head"><div><span class="eyebrow">System overview</span><h2 class="h-l">What’s inside <em>Sourcing OS.</em></h2></div><span class="car-count" id="carCount">01 / 08</span></div>
+      <div class="car-track" id="carTrack"></div>
+    </div>
+  </section>
+
+  <section class="scene re-scene dark" data-scene="re" id="so-re">
+    <div class="sticky"><div class="wrap">
+      <span class="eyebrow">What changes</span>
+      <h2 class="h-l">Replaces list vendors and <em>spreadsheets.</em></h2>
+      <div class="re-grid">
+        <div class="rp"><h6>What this replaces</h6><ul><li>Static list providers like ZoomInfo and Apollo</li><li>Disconnected enrichment tools</li><li>Spreadsheet-based tracking</li><li>Siloed CRM workflows</li><li>Manual prioritization</li></ul></div>
+        <div class="en"><h6>What this enables</h6><ul><li>Every company in the market, in a list the fund owns</li><li>Verified contact details for owners</li><li>Targets ranked automatically</li><li>Outreach sent from the same system</li><li>Replies and meetings tracked by campaign</li></ul></div>
+      </div>
+    </div></div>
+  </section>
+
+
+  <section class="cta dark" data-contact>
+    <div class="wrap">
+      <h2 class="h-xl rv">Use it across <em>your portfolio.</em></h2>
+      <p class="lede rv">Schedule a discovery session or request a deeper walkthrough of the platform with our team.</p>
+      <div class="btns rv" style="justify-content:center;margin-top:32px"><a class="btn btn-primary" href="/contact">Schedule a discovery session</a></div>
+    </div>
+  </section>
+  <section class="xlink dark"><div class="wrap"><a href="/technology/strata"><div><small>Also from STOC</small><h3>Strata runs diligence once <em>a target is found.</em></h3></div><span class="arrow"><svg width="20" height="20"><use href="#g-arrow"/></svg></span></a></div></section>
+</div>
+</div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js" defer></script>
+<script src="/technology-assets/technology.js" defer></script>

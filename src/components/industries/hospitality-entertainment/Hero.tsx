@@ -38,7 +38,7 @@ const Hero: React.FC = () => (
           variants={textVariants}
           className="text-[#d7ebf5] text-3xl md:text-5xl lg:text-6xl font-gambetta md:max-w-[21ch] leading-tight tracking-tight"
         >
-          Future-Proofing Hospitality & Entertainmen
+          Future-Proofing Hospitality & Entertainment
         </motion.h1>
         <motion.p
           custom={2}
