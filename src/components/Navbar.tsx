@@ -54,6 +54,14 @@ const NAV_ITEMS = [
     ],
   },
   {
+    label: "Technology",
+    href: "/technology",
+    children: [
+      { label: "Strata", href: "/technology/strata" },
+      { label: "Sourcing OS", href: "/technology/sourcing-os" },
+    ],
+  },
+  {
     label: "Insights",
     href: "/insights",
     children: [{ label: "News & Press", href: "/insights" }],

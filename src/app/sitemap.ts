@@ -18,6 +18,9 @@ const STATIC_ROUTES = [
   "/industries/manufacturing-distribution",
   "/industries/retail-consumer-products",
   "/industries/technology-media-telecommunications",
+  "/technology",
+  "/technology/strata",
+  "/technology/sourcing-os",
   "/insights",
   // Static report viewers served from public/reports-html via rewrite
   "/insights/reports/us-commercial-landscaping-2026",
