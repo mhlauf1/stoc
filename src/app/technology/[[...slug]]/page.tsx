@@ -2,6 +2,7 @@ import fs from "node:fs";
 import path from "node:path";
 import type { Metadata } from "next";
 import TechnologyScripts from "@/components/technology/TechnologyScripts";
+import "../technology-site.css";
 
 // The Technology section is a client-supplied drop-in package: a markup
 // fragment (../technology.html) plus CSS/JS/screenshots in
