@@ -816,7 +816,7 @@ lb.addEventListener('wheel',e=>{e.preventDefault();const max=lbPanMax(),d=e.delt
   const now=Date.now();if(now<LB.lock||Math.abs(d)<6)return;LB.lock=now+700;lbShow(LB.i+(d>0?1:-1),d>0?1:-1)},{passive:false});
 let lbT=null;lb.addEventListener('touchstart',e=>{lbT=[e.touches[0].clientX,e.touches[0].clientY]},{passive:true});
 lb.addEventListener('touchend',e=>{if(!lbT)return;const dx=e.changedTouches[0].clientX-lbT[0],dy=e.changedTouches[0].clientY-lbT[1];const d=Math.abs(dx)>Math.abs(dy)?-dx:-dy;if(Math.abs(d)>40)lbStep(d>0?1:-1);lbT=null});
-document.addEventListener('click',e=>{const w=e.target.closest('.shotwin');if(!w||!lb.hidden)return;const sc=w.closest('[data-tour]'),T=sc&&TOURS[sc.dataset.tour];
+document.addEventListener('click',e=>{return;const w=e.target.closest('.shotwin');if(!w||!lb.hidden)return;const sc=w.closest('[data-tour]'),T=sc&&TOURS[sc.dataset.tour];
   const imgs=$$('img',w).filter(i=>!i.classList.contains('side'));const C=w.closest('[data-chapter]');
   const capFor=ks=>{if(T){const st=T.steps.find(s=>ks.includes(s[0]));return st?[st[0],st[1],st[2]]:['','','']}
     if(C){const bt=$$('.beat',C).find(b=>ks.includes(b.dataset.st));return bt?['',bt.querySelector('h3').textContent,bt.querySelector('p').textContent]:['','','']}return['','','']};

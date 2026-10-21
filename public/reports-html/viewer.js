@@ -41,8 +41,10 @@
     '" alt="STOC Advisory"></a>' +
     '<div class="stoc-bar-title">' + cfg.title + "</div>" +
     '<a class="stoc-bar-back" href="/insights">&larr; All Insights</a>' +
-    '<a class="stoc-bar-download" href="' + cfg.pdfUrl + "?dl=" + encodeURIComponent(cfg.pdfName) +
-    '" target="_blank" rel="noopener">Download PDF</a>';
+    (cfg.pdfUrl
+      ? '<a class="stoc-bar-download" href="' + cfg.pdfUrl + "?dl=" + encodeURIComponent(cfg.pdfName) +
+        '" target="_blank" rel="noopener">Download PDF</a>'
+      : "");
   document.body.appendChild(bar);
 
   /* ── Side navigation ── */
@@ -138,7 +140,10 @@
   window.addEventListener("resize", fit);
 
   /* Track PDF downloads from the top bar. */
-  bar.querySelector(".stoc-bar-download").addEventListener("click", function () {
-    track("report_download");
-  });
+  var dl = bar.querySelector(".stoc-bar-download");
+  if (dl) {
+    dl.addEventListener("click", function () {
+      track("report_download");
+    });
+  }
 })();

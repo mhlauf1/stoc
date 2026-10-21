@@ -1448,3 +1448,5 @@
 .stoc-tech img{max-width:none}
 .stoc-tech svg{display:inline}
 .stoc-tech .lb-frame img,.stoc-tech .shotwin img{max-width:none}
+.stoc-tech .shotwin, .stoc-tech .shotwin * { cursor: default !important; }
+.stoc-tech .shotwin::after { display: none !important; }
