@@ -1,4 +1,4 @@
-// One-time upload: the three 2026 industry report PDFs (from docs/) as Sanity
+// Upload: the 2026 industry report PDFs (from docs/) as Sanity
 // file assets, plus their insight documents (sourceType "report") so they
 // appear in the Industry Reports section on /insights.
 //
@@ -74,6 +74,24 @@ const REPORTS = [
     description:
       "Market context, platform landscape, and a proprietary target universe for U.S. commercial landscaping: national supply map, regional concentration, route density, and sourcing readiness.",
   },
+  {
+    slug: "us-pest-control-2026",
+    pdf: null,
+    title: "U.S. Pest Control Market Report 2026",
+    industry: "business-services",
+    publishDate: "2026-10-01",
+    description:
+      "Independent supply and consolidation runway in U.S. pest control: priority consolidation markets, the platform and sponsor landscape, a national supply map, and service-line ownership signals.",
+  },
+  {
+    slug: "us-funeral-homes-2026",
+    pdf: null,
+    title: "U.S. Funeral Homes Market Report 2026",
+    industry: "business-services",
+    publishDate: "2026-10-01",
+    description:
+      "Independent supply and succession-driven sourcing in U.S. funeral homes: priority markets, the consolidator landscape, cremation economics, and a state-by-state opportunity table.",
+  },
 ];
 
 const COVER_IMAGE = join(ROOT, "public/reports-html/us-veterinary-services-2026/cover-photo.jpg");
@@ -87,13 +105,17 @@ async function main() {
   console.log("cover image asset:", coverAsset._id);
 
   for (const r of REPORTS) {
-    const pdfPath = join(ROOT, "docs", r.pdf);
-    const asset = await client.assets.upload("file", createReadStream(pdfPath), {
-      filename: r.pdfName,
-      contentType: "application/pdf",
-    });
-    console.log(`${r.slug}: pdf asset ${asset._id}`);
-    console.log(`  url: ${asset.url}`);
+    // Reports without a PDF get a card with Read Report only.
+    let asset = null;
+    if (r.pdf) {
+      const pdfPath = join(ROOT, "docs", r.pdf);
+      asset = await client.assets.upload("file", createReadStream(pdfPath), {
+        filename: r.pdfName,
+        contentType: "application/pdf",
+      });
+      console.log(`${r.slug}: pdf asset ${asset._id}`);
+      console.log(`  url: ${asset.url}`);
+    }
 
     const doc = {
       _id: `report-${r.slug}`,
@@ -107,10 +129,12 @@ async function main() {
       description: r.description,
       sourceType: "report",
       reportSlug: r.slug,
-      pdfFile: {
-        _type: "file",
-        asset: { _type: "reference", _ref: asset._id },
-      },
+      ...(asset && {
+        pdfFile: {
+          _type: "file",
+          asset: { _type: "reference", _ref: asset._id },
+        },
+      }),
       coverImage: {
         _type: "image",
         asset: { _type: "reference", _ref: coverAsset._id },

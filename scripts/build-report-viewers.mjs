@@ -99,6 +99,50 @@ const REPORTS = [
       { label: "Methodology Appendix", page: 20, group: "Part V: Strategic Implications" },
     ],
   },
+  {
+    slug: "us-pest-control-2026",
+    datePublished: "2026-10-01",
+    title: "U.S. Pest Control Market Report 2026",
+    description:
+      "Proprietary 2026 report on the U.S. pest control market: independent supply, platform and sponsor landscape, and priority consolidation markets.",
+    toc: [
+      { label: "Cover", page: 1 },
+      { label: "Executive Summary", page: 4, group: "Part I: Thesis and Priority Markets" },
+      { label: "Priority Consolidation Markets", page: 5, group: "Part I: Thesis and Priority Markets" },
+      { label: "Current Platform and Sponsor Landscape", page: 6, group: "Part I: Thesis and Priority Markets" },
+      { label: "National Supply Map", page: 7, group: "Part II: Market and Geography" },
+      { label: "State Opportunity Table", page: 8, group: "Part II: Market and Geography" },
+      { label: "Independent Operator Base", page: 9, group: "Part III: The Independent Opportunity" },
+      { label: "Service-Line Signals", page: 10, group: "Part III: The Independent Opportunity" },
+      { label: "STOC Execution Framework", page: 11, group: "Part IV: Execution and Reference" },
+      { label: "Methodology Appendix", page: 12, group: "Part IV: Execution and Reference" },
+      { label: "Named Ownership Appendix", page: 13, group: "Part IV: Execution and Reference" },
+      { label: "Deep Dive Appendix", page: 15, group: "Part IV: Execution and Reference" },
+      { label: "Key Contacts", page: 16, group: "Part IV: Execution and Reference" },
+    ],
+  },
+  {
+    slug: "us-funeral-homes-2026",
+    datePublished: "2026-10-01",
+    title: "U.S. Funeral Homes Market Report 2026",
+    description:
+      "Proprietary 2026 report on the U.S. funeral home market: independent supply, succession-driven sourcing, cremation economics, and the consolidator landscape.",
+    toc: [
+      { label: "Cover", page: 1 },
+      { label: "Executive Summary", page: 4, group: "Part I: Thesis and Priority Markets" },
+      { label: "Priority Consolidation Markets", page: 5, group: "Part I: Thesis and Priority Markets" },
+      { label: "Current Platform and Sponsor Landscape", page: 6, group: "Part I: Thesis and Priority Markets" },
+      { label: "National Supply Map", page: 7, group: "Part II: Market and Geography" },
+      { label: "State Opportunity Table", page: 8, group: "Part II: Market and Geography" },
+      { label: "Independent Operator Base", page: 9, group: "Part III: The Independent Opportunity" },
+      { label: "Cremation Economics and Service Signals", page: 10, group: "Part III: The Independent Opportunity" },
+      { label: "STOC Execution Framework", page: 11, group: "Part IV: Execution and Reference" },
+      { label: "Methodology Appendix", page: 12, group: "Part IV: Execution and Reference" },
+      { label: "Named Ownership Appendix", page: 13, group: "Part IV: Execution and Reference" },
+      { label: "Deep Dive Appendix", page: 14, group: "Part IV: Execution and Reference" },
+      { label: "Key Contacts", page: 15, group: "Part IV: Execution and Reference" },
+    ],
+  },
 ];
 
 for (const r of REPORTS) {
@@ -116,9 +160,12 @@ for (const r of REPORTS) {
   );
 
   // Head additions: base for relative assets, viewport, viewer stylesheet.
+  const viewport = /name="viewport"/i.test(html)
+    ? ""
+    : `\n<meta name="viewport" content="width=device-width, initial-scale=1">`;
   html = html.replace(
     /<head>/i,
-    `<head>\n<base href="/reports-html/${r.slug}/">\n<meta name="viewport" content="width=device-width, initial-scale=1">\n<meta name="description" content="${r.description}">`
+    `<head>\n<base href="/reports-html/${r.slug}/">${viewport}\n<meta name="description" content="${r.description}">`
   );
   const pageUrl = `https://www.stocadvisory.com/insights/reports/${r.slug}`;
   const org = {
@@ -140,13 +187,15 @@ for (const r of REPORTS) {
     isAccessibleForFree: true,
     author: org,
     publisher: org,
-    encoding: {
+  };
+  if (r.pdfUrl) {
+    jsonLd.encoding = {
       "@type": "MediaObject",
       encodingFormat: "application/pdf",
       contentUrl: r.pdfUrl,
       name: r.pdfName,
-    },
-  };
+    };
+  }
   html = html.replace(
     /<\/head>/i,
     `<script type="application/ld+json">${JSON.stringify(jsonLd)}</script>\n` +
