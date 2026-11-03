@@ -785,7 +785,7 @@ document.addEventListener('click',e=>{
 
 /* ---------- Interactive demo (Arcade) ---------- */
 const playBtn=$('#arcadePlay');
-if(playBtn&&0)playBtn.addEventListener('click',()=>{$('#arcadeBox').innerHTML='<div class="demo-embed"><iframe src="https://demo.arcade.software/1LUl9cgwY1DG6Ak56XzQ?embed&embed_mobile=tab&embed_desktop=inline&show_copy_link=true" title="Sourcing OS interactive demo" loading="lazy" allowfullscreen allow="clipboard-write; autoplay"></iframe></div>'});
+if(playBtn&&0)playBtn.addEventListener('click',()=>{$('#arcadeBox').innerHTML='<div class="demo-embed"><iframe src="https://demo.arcade.software/1LUl9cgwY1DG6Ak56XzQ?embed&embed_mobile=inline&embed_desktop=inline&show_copy_link=true" title="Sourcing OS interactive demo" loading="lazy" allowfullscreen allow="clipboard-write; autoplay"></iframe></div>'});
 let afterRoute=null;
 $$('a[data-after]').forEach(a=>a.addEventListener('click',()=>{afterRoute=a.dataset.after}));
 

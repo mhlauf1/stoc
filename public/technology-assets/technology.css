@@ -1448,5 +1448,12 @@
 .stoc-tech img{max-width:none}
 .stoc-tech svg{display:inline}
 .stoc-tech .lb-frame img,.stoc-tech .shotwin img{max-width:none}
-.stoc-tech .shotwin, .stoc-tech .shotwin * { cursor: default !important; }
-.stoc-tech .shotwin::after { display: none !important; }
+
+.stoc-tech .video-sec{padding-block:clamp(64px,10vh,110px) clamp(32px,5vh,56px);background:#fff;text-align:center}
+.stoc-tech .video-head h2{margin:14px auto 0!important}
+.stoc-tech .video-frame{max-width:1040px;margin:clamp(28px,4vh,44px) auto 0;border-radius:14px;overflow:hidden;background:#041E40;box-shadow:0 40px 80px -36px rgba(10,36,71,.45),0 0 0 1px #d3dbe6}
+.stoc-tech .shotwin,.stoc-tech .shotwin *{cursor:default!important}
+.stoc-tech .shotwin::after{display:none!important}
+.stoc-tech .chapter-head .prod-logo img{display:block;height:34px;width:auto;margin:0}
+.stoc-tech .cover-st .cv-logo{display:block;height:clamp(40px,4.4vw,56px);width:auto;margin:0 auto 26px;opacity:0;animation:heroIn 1.1s cubic-bezier(.22,.61,.36,1) forwards}
+@media (prefers-reduced-motion:reduce){.stoc-tech .cover-st .cv-logo{animation:none;opacity:1}}

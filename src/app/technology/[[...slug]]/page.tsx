@@ -18,7 +18,7 @@ const PAGES: Record<string, { title: string; description: string }> = {
   strata: {
     title: "Strata: Quality of Earnings Platform | STOC Advisory",
     description:
-      "Strata is STOC's proprietary diligence platform: one Quality of Earnings database from kickoff through close, built for buy-and-build targets.",
+      "Strata is STOC's proprietary diligence platform: one Quality of Earnings database from kickoff through close, built for faster, more consistent underwriting on every deal.",
   },
   "sourcing-os": {
     title: "Sourcing OS: Target Sourcing & Owner Outreach | STOC Advisory",
